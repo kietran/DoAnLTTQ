@@ -1,5 +1,4 @@
-﻿using ePOSOne.btnProduct;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,10 +17,9 @@ namespace DoAnLTTQ
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button17_Resize(object sender, EventArgs e)
         {
-            Button_WOC butt = new Button_WOC();
-            
+
         }
     }
 }
