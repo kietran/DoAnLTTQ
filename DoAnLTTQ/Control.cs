@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,9 +13,9 @@ namespace DoAnLTTQ1
         static public void init(Form1 f) {
             form1 = f;
         }
-        static public void insertContent(string content)
+        static public void insertContentIntoInputText(string content)
         {
-
+            form1.InputText.Text =  form1.InputText.Text.Insert(form1.currentCursorPosition, content);
         }
         //AC
         static public void Perform_Ac()
