@@ -25,7 +25,7 @@ namespace DoAnLTTQ1
         /// INSERT BLOCK
         private void NUMB_0_Click(object sender, EventArgs e)
         {
-            InputText.Text =  InputText.Text.Insert(currentCursorPosition, "0");
+            Control.insertContentIntoInputText("0");
         }
 
         private void MISC_Dot_Click(object sender, EventArgs e)
