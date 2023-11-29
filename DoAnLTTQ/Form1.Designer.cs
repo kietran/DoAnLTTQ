@@ -79,16 +79,20 @@ namespace DoAnLTTQ1
             this.customButton4 = new CustomControls.CustomButton.CustomButton();
             this.customButton6 = new CustomControls.CustomButton.CustomButton();
             this.customButton5 = new CustomControls.CustomButton.CustomButton();
+            this.FUNC_PowerOfTen_LABEL = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // NUMB_0
             // 
             this.NUMB_0.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_0.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_0.Location = new System.Drawing.Point(28, 575);
+            this.NUMB_0.Location = new System.Drawing.Point(21, 467);
+            this.NUMB_0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NUMB_0.Name = "NUMB_0";
-            this.NUMB_0.Size = new System.Drawing.Size(60, 45);
+            this.NUMB_0.Size = new System.Drawing.Size(47, 37);
             this.NUMB_0.TabIndex = 0;
             this.NUMB_0.Text = "0";
             this.NUMB_0.UseVisualStyleBackColor = true;
@@ -98,9 +102,10 @@ namespace DoAnLTTQ1
             // 
             this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button21.Location = new System.Drawing.Point(31, 166);
+            this.button21.Location = new System.Drawing.Point(23, 135);
+            this.button21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(45, 45);
+            this.button21.Size = new System.Drawing.Size(34, 37);
             this.button21.TabIndex = 38;
             this.button21.Text = "button21";
             this.button21.UseVisualStyleBackColor = true;
@@ -110,9 +115,10 @@ namespace DoAnLTTQ1
             // 
             this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button22.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button22.Location = new System.Drawing.Point(82, 178);
+            this.button22.Location = new System.Drawing.Point(62, 145);
+            this.button22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(45, 45);
+            this.button22.Size = new System.Drawing.Size(34, 37);
             this.button22.TabIndex = 39;
             this.button22.Text = "button22";
             this.button22.UseVisualStyleBackColor = true;
@@ -122,9 +128,10 @@ namespace DoAnLTTQ1
             // 
             this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button23.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button23.Location = new System.Drawing.Point(312, 166);
+            this.button23.Location = new System.Drawing.Point(234, 135);
+            this.button23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(45, 45);
+            this.button23.Size = new System.Drawing.Size(34, 37);
             this.button23.TabIndex = 41;
             this.button23.Text = "button23";
             this.button23.UseVisualStyleBackColor = true;
@@ -134,9 +141,10 @@ namespace DoAnLTTQ1
             // 
             this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button24.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button24.Location = new System.Drawing.Point(261, 178);
+            this.button24.Location = new System.Drawing.Point(196, 145);
+            this.button24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(45, 45);
+            this.button24.Size = new System.Drawing.Size(34, 37);
             this.button24.TabIndex = 40;
             this.button24.Text = "button24";
             this.button24.UseVisualStyleBackColor = true;
@@ -146,9 +154,10 @@ namespace DoAnLTTQ1
             // 
             this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button25.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button25.Location = new System.Drawing.Point(30, 339);
+            this.button25.Location = new System.Drawing.Point(22, 275);
+            this.button25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(50, 30);
+            this.button25.Size = new System.Drawing.Size(38, 24);
             this.button25.TabIndex = 42;
             this.button25.Text = "button25";
             this.button25.UseVisualStyleBackColor = true;
@@ -158,9 +167,10 @@ namespace DoAnLTTQ1
             // 
             this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button26.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button26.Location = new System.Drawing.Point(84, 339);
+            this.button26.Location = new System.Drawing.Point(63, 275);
+            this.button26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(50, 30);
+            this.button26.Size = new System.Drawing.Size(38, 24);
             this.button26.TabIndex = 43;
             this.button26.Text = "button26";
             this.button26.UseVisualStyleBackColor = true;
@@ -170,9 +180,10 @@ namespace DoAnLTTQ1
             // 
             this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button27.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button27.Location = new System.Drawing.Point(140, 339);
+            this.button27.Location = new System.Drawing.Point(105, 275);
+            this.button27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(50, 30);
+            this.button27.Size = new System.Drawing.Size(38, 24);
             this.button27.TabIndex = 44;
             this.button27.Text = "button27";
             this.button27.UseVisualStyleBackColor = true;
@@ -182,9 +193,10 @@ namespace DoAnLTTQ1
             // 
             this.button28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button28.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button28.Location = new System.Drawing.Point(192, 339);
+            this.button28.Location = new System.Drawing.Point(144, 275);
+            this.button28.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(50, 30);
+            this.button28.Size = new System.Drawing.Size(38, 24);
             this.button28.TabIndex = 45;
             this.button28.Text = "button28";
             this.button28.UseVisualStyleBackColor = true;
@@ -194,9 +206,10 @@ namespace DoAnLTTQ1
             // 
             this.button29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button29.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button29.Location = new System.Drawing.Point(248, 339);
+            this.button29.Location = new System.Drawing.Point(186, 275);
+            this.button29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(50, 30);
+            this.button29.Size = new System.Drawing.Size(38, 24);
             this.button29.TabIndex = 46;
             this.button29.Text = "button29";
             this.button29.UseVisualStyleBackColor = true;
@@ -206,9 +219,10 @@ namespace DoAnLTTQ1
             // 
             this.button30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button30.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button30.Location = new System.Drawing.Point(304, 339);
+            this.button30.Location = new System.Drawing.Point(228, 275);
+            this.button30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(50, 30);
+            this.button30.Size = new System.Drawing.Size(38, 24);
             this.button30.TabIndex = 47;
             this.button30.Text = "button30";
             this.button30.UseVisualStyleBackColor = true;
@@ -218,9 +232,10 @@ namespace DoAnLTTQ1
             // 
             this.button31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button31.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button31.Location = new System.Drawing.Point(304, 303);
+            this.button31.Location = new System.Drawing.Point(228, 246);
+            this.button31.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(50, 30);
+            this.button31.Size = new System.Drawing.Size(38, 24);
             this.button31.TabIndex = 54;
             this.button31.Text = "button31";
             this.button31.UseVisualStyleBackColor = true;
@@ -230,9 +245,10 @@ namespace DoAnLTTQ1
             // 
             this.button32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button32.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button32.Location = new System.Drawing.Point(248, 303);
+            this.button32.Location = new System.Drawing.Point(186, 246);
+            this.button32.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(50, 30);
+            this.button32.Size = new System.Drawing.Size(38, 24);
             this.button32.TabIndex = 53;
             this.button32.Text = "button32";
             this.button32.UseVisualStyleBackColor = true;
@@ -242,9 +258,10 @@ namespace DoAnLTTQ1
             // 
             this.button33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button33.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button33.Location = new System.Drawing.Point(192, 303);
+            this.button33.Location = new System.Drawing.Point(144, 246);
+            this.button33.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(50, 30);
+            this.button33.Size = new System.Drawing.Size(38, 24);
             this.button33.TabIndex = 52;
             this.button33.Text = "button33";
             this.button33.UseVisualStyleBackColor = true;
@@ -254,9 +271,10 @@ namespace DoAnLTTQ1
             // 
             this.button34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button34.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button34.Location = new System.Drawing.Point(138, 303);
+            this.button34.Location = new System.Drawing.Point(104, 246);
+            this.button34.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(50, 30);
+            this.button34.Size = new System.Drawing.Size(38, 24);
             this.button34.TabIndex = 51;
             this.button34.Text = "button34";
             this.button34.UseVisualStyleBackColor = true;
@@ -266,9 +284,10 @@ namespace DoAnLTTQ1
             // 
             this.button35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button35.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button35.Location = new System.Drawing.Point(84, 303);
+            this.button35.Location = new System.Drawing.Point(63, 246);
+            this.button35.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(50, 30);
+            this.button35.Size = new System.Drawing.Size(38, 24);
             this.button35.TabIndex = 50;
             this.button35.Text = "button35";
             this.button35.UseVisualStyleBackColor = true;
@@ -278,9 +297,10 @@ namespace DoAnLTTQ1
             // 
             this.button36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button36.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button36.Location = new System.Drawing.Point(31, 302);
+            this.button36.Location = new System.Drawing.Point(23, 245);
+            this.button36.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(50, 30);
+            this.button36.Size = new System.Drawing.Size(38, 24);
             this.button36.TabIndex = 49;
             this.button36.Text = "button36";
             this.button36.UseVisualStyleBackColor = true;
@@ -290,9 +310,10 @@ namespace DoAnLTTQ1
             // 
             this.button37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button37.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button37.Location = new System.Drawing.Point(304, 267);
+            this.button37.Location = new System.Drawing.Point(228, 217);
+            this.button37.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(50, 30);
+            this.button37.Size = new System.Drawing.Size(38, 24);
             this.button37.TabIndex = 60;
             this.button37.Text = "button37";
             this.button37.UseVisualStyleBackColor = true;
@@ -302,9 +323,10 @@ namespace DoAnLTTQ1
             // 
             this.button38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button38.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button38.Location = new System.Drawing.Point(248, 267);
+            this.button38.Location = new System.Drawing.Point(186, 217);
+            this.button38.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(50, 30);
+            this.button38.Size = new System.Drawing.Size(38, 24);
             this.button38.TabIndex = 59;
             this.button38.Text = "button38";
             this.button38.UseVisualStyleBackColor = true;
@@ -314,9 +336,10 @@ namespace DoAnLTTQ1
             // 
             this.button39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button39.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button39.Location = new System.Drawing.Point(192, 267);
+            this.button39.Location = new System.Drawing.Point(144, 217);
+            this.button39.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(50, 30);
+            this.button39.Size = new System.Drawing.Size(38, 24);
             this.button39.TabIndex = 58;
             this.button39.Text = "button39";
             this.button39.UseVisualStyleBackColor = true;
@@ -326,9 +349,10 @@ namespace DoAnLTTQ1
             // 
             this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button40.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button40.Location = new System.Drawing.Point(138, 267);
+            this.button40.Location = new System.Drawing.Point(104, 217);
+            this.button40.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(50, 30);
+            this.button40.Size = new System.Drawing.Size(38, 24);
             this.button40.TabIndex = 57;
             this.button40.Text = "button40";
             this.button40.UseVisualStyleBackColor = true;
@@ -338,9 +362,10 @@ namespace DoAnLTTQ1
             // 
             this.button41.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button41.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button41.Location = new System.Drawing.Point(84, 267);
+            this.button41.Location = new System.Drawing.Point(63, 217);
+            this.button41.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(50, 30);
+            this.button41.Size = new System.Drawing.Size(38, 24);
             this.button41.TabIndex = 56;
             this.button41.Text = "button41";
             this.button41.UseVisualStyleBackColor = true;
@@ -350,9 +375,10 @@ namespace DoAnLTTQ1
             // 
             this.button42.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button42.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button42.Location = new System.Drawing.Point(31, 267);
+            this.button42.Location = new System.Drawing.Point(23, 217);
+            this.button42.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(50, 30);
+            this.button42.Size = new System.Drawing.Size(38, 24);
             this.button42.TabIndex = 55;
             this.button42.Text = "button42";
             this.button42.UseVisualStyleBackColor = true;
@@ -362,9 +388,10 @@ namespace DoAnLTTQ1
             // 
             this.MISC_Dot.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.MISC_Dot.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_Dot.Location = new System.Drawing.Point(94, 575);
+            this.MISC_Dot.Location = new System.Drawing.Point(70, 467);
+            this.MISC_Dot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MISC_Dot.Name = "MISC_Dot";
-            this.MISC_Dot.Size = new System.Drawing.Size(60, 45);
+            this.MISC_Dot.Size = new System.Drawing.Size(47, 37);
             this.MISC_Dot.TabIndex = 62;
             this.MISC_Dot.Text = ".";
             this.MISC_Dot.UseVisualStyleBackColor = true;
@@ -374,11 +401,11 @@ namespace DoAnLTTQ1
             // 
             this.MISC_Ans.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Bold);
             this.MISC_Ans.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_Ans.Location = new System.Drawing.Point(226, 575);
+            this.MISC_Ans.Location = new System.Drawing.Point(170, 467);
+            this.MISC_Ans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MISC_Ans.Name = "MISC_Ans";
-            this.MISC_Ans.Size = new System.Drawing.Size(60, 45);
+            this.MISC_Ans.Size = new System.Drawing.Size(47, 37);
             this.MISC_Ans.TabIndex = 64;
-            this.MISC_Ans.Text = "Ans";
             this.MISC_Ans.UseVisualStyleBackColor = true;
             this.MISC_Ans.Click += new System.EventHandler(this.MISC_Ans_Click);
             // 
@@ -386,11 +413,11 @@ namespace DoAnLTTQ1
             // 
             this.FUNC_PowerOfTen.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold);
             this.FUNC_PowerOfTen.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_PowerOfTen.Location = new System.Drawing.Point(160, 575);
+            this.FUNC_PowerOfTen.Location = new System.Drawing.Point(120, 467);
+            this.FUNC_PowerOfTen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FUNC_PowerOfTen.Name = "FUNC_PowerOfTen";
-            this.FUNC_PowerOfTen.Size = new System.Drawing.Size(60, 45);
+            this.FUNC_PowerOfTen.Size = new System.Drawing.Size(47, 37);
             this.FUNC_PowerOfTen.TabIndex = 63;
-            this.FUNC_PowerOfTen.Text = "x10x";
             this.FUNC_PowerOfTen.UseVisualStyleBackColor = true;
             this.FUNC_PowerOfTen.Click += new System.EventHandler(this.FUNC_PowerOfTen_Click);
             // 
@@ -398,9 +425,10 @@ namespace DoAnLTTQ1
             // 
             this.CTRL_Equal.Font = new System.Drawing.Font("Sans Serif Collection", 12F, System.Drawing.FontStyle.Bold);
             this.CTRL_Equal.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Equal.Location = new System.Drawing.Point(292, 575);
+            this.CTRL_Equal.Location = new System.Drawing.Point(219, 467);
+            this.CTRL_Equal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CTRL_Equal.Name = "CTRL_Equal";
-            this.CTRL_Equal.Size = new System.Drawing.Size(60, 45);
+            this.CTRL_Equal.Size = new System.Drawing.Size(47, 37);
             this.CTRL_Equal.TabIndex = 65;
             this.CTRL_Equal.Text = "=";
             this.CTRL_Equal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -411,9 +439,10 @@ namespace DoAnLTTQ1
             // 
             this.OPER_Sub.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.OPER_Sub.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.OPER_Sub.Location = new System.Drawing.Point(292, 524);
+            this.OPER_Sub.Location = new System.Drawing.Point(219, 426);
+            this.OPER_Sub.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OPER_Sub.Name = "OPER_Sub";
-            this.OPER_Sub.Size = new System.Drawing.Size(60, 45);
+            this.OPER_Sub.Size = new System.Drawing.Size(47, 37);
             this.OPER_Sub.TabIndex = 70;
             this.OPER_Sub.Text = "-";
             this.OPER_Sub.UseVisualStyleBackColor = true;
@@ -423,9 +452,10 @@ namespace DoAnLTTQ1
             // 
             this.OPER_Add.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.OPER_Add.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.OPER_Add.Location = new System.Drawing.Point(226, 524);
+            this.OPER_Add.Location = new System.Drawing.Point(170, 426);
+            this.OPER_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OPER_Add.Name = "OPER_Add";
-            this.OPER_Add.Size = new System.Drawing.Size(60, 45);
+            this.OPER_Add.Size = new System.Drawing.Size(47, 37);
             this.OPER_Add.TabIndex = 69;
             this.OPER_Add.Text = "+";
             this.OPER_Add.UseVisualStyleBackColor = true;
@@ -435,9 +465,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_3.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_3.Location = new System.Drawing.Point(160, 524);
+            this.NUMB_3.Location = new System.Drawing.Point(120, 426);
+            this.NUMB_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NUMB_3.Name = "NUMB_3";
-            this.NUMB_3.Size = new System.Drawing.Size(60, 45);
+            this.NUMB_3.Size = new System.Drawing.Size(47, 37);
             this.NUMB_3.TabIndex = 68;
             this.NUMB_3.Text = "3";
             this.NUMB_3.UseVisualStyleBackColor = true;
@@ -447,9 +478,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_2.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_2.Location = new System.Drawing.Point(94, 524);
+            this.NUMB_2.Location = new System.Drawing.Point(70, 426);
+            this.NUMB_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NUMB_2.Name = "NUMB_2";
-            this.NUMB_2.Size = new System.Drawing.Size(60, 45);
+            this.NUMB_2.Size = new System.Drawing.Size(47, 37);
             this.NUMB_2.TabIndex = 67;
             this.NUMB_2.Text = "2";
             this.NUMB_2.UseVisualStyleBackColor = true;
@@ -459,9 +491,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_1.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_1.Location = new System.Drawing.Point(28, 524);
+            this.NUMB_1.Location = new System.Drawing.Point(21, 426);
+            this.NUMB_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NUMB_1.Name = "NUMB_1";
-            this.NUMB_1.Size = new System.Drawing.Size(60, 45);
+            this.NUMB_1.Size = new System.Drawing.Size(45, 37);
             this.NUMB_1.TabIndex = 66;
             this.NUMB_1.Text = "1";
             this.NUMB_1.UseVisualStyleBackColor = true;
@@ -471,9 +504,10 @@ namespace DoAnLTTQ1
             // 
             this.OPER_Div.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.OPER_Div.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.OPER_Div.Location = new System.Drawing.Point(292, 473);
+            this.OPER_Div.Location = new System.Drawing.Point(219, 384);
+            this.OPER_Div.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OPER_Div.Name = "OPER_Div";
-            this.OPER_Div.Size = new System.Drawing.Size(60, 45);
+            this.OPER_Div.Size = new System.Drawing.Size(47, 37);
             this.OPER_Div.TabIndex = 75;
             this.OPER_Div.Text = "/";
             this.OPER_Div.UseVisualStyleBackColor = true;
@@ -483,9 +517,10 @@ namespace DoAnLTTQ1
             // 
             this.OPER_Mul.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.OPER_Mul.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.OPER_Mul.Location = new System.Drawing.Point(226, 473);
+            this.OPER_Mul.Location = new System.Drawing.Point(170, 384);
+            this.OPER_Mul.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OPER_Mul.Name = "OPER_Mul";
-            this.OPER_Mul.Size = new System.Drawing.Size(60, 45);
+            this.OPER_Mul.Size = new System.Drawing.Size(47, 37);
             this.OPER_Mul.TabIndex = 74;
             this.OPER_Mul.Text = "x";
             this.OPER_Mul.UseVisualStyleBackColor = true;
@@ -495,9 +530,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_6.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_6.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_6.Location = new System.Drawing.Point(160, 473);
+            this.NUMB_6.Location = new System.Drawing.Point(120, 384);
+            this.NUMB_6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NUMB_6.Name = "NUMB_6";
-            this.NUMB_6.Size = new System.Drawing.Size(60, 45);
+            this.NUMB_6.Size = new System.Drawing.Size(47, 37);
             this.NUMB_6.TabIndex = 73;
             this.NUMB_6.Text = "6";
             this.NUMB_6.UseVisualStyleBackColor = true;
@@ -507,9 +543,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_5.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_5.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_5.Location = new System.Drawing.Point(94, 473);
+            this.NUMB_5.Location = new System.Drawing.Point(70, 384);
+            this.NUMB_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NUMB_5.Name = "NUMB_5";
-            this.NUMB_5.Size = new System.Drawing.Size(60, 45);
+            this.NUMB_5.Size = new System.Drawing.Size(47, 37);
             this.NUMB_5.TabIndex = 72;
             this.NUMB_5.Text = "5";
             this.NUMB_5.UseVisualStyleBackColor = true;
@@ -519,9 +556,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_4.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_4.Location = new System.Drawing.Point(28, 473);
+            this.NUMB_4.Location = new System.Drawing.Point(21, 384);
+            this.NUMB_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NUMB_4.Name = "NUMB_4";
-            this.NUMB_4.Size = new System.Drawing.Size(60, 45);
+            this.NUMB_4.Size = new System.Drawing.Size(47, 37);
             this.NUMB_4.TabIndex = 71;
             this.NUMB_4.Text = "4";
             this.NUMB_4.UseVisualStyleBackColor = true;
@@ -531,11 +569,11 @@ namespace DoAnLTTQ1
             // 
             this.CTRL_Ac.Font = new System.Drawing.Font("Sans Serif Collection", 8F, System.Drawing.FontStyle.Bold);
             this.CTRL_Ac.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Ac.Location = new System.Drawing.Point(294, 422);
+            this.CTRL_Ac.Location = new System.Drawing.Point(220, 343);
+            this.CTRL_Ac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CTRL_Ac.Name = "CTRL_Ac";
-            this.CTRL_Ac.Size = new System.Drawing.Size(60, 45);
+            this.CTRL_Ac.Size = new System.Drawing.Size(47, 37);
             this.CTRL_Ac.TabIndex = 80;
-            this.CTRL_Ac.Text = "AC";
             this.CTRL_Ac.UseVisualStyleBackColor = true;
             this.CTRL_Ac.Click += new System.EventHandler(this.CTRL_Ac_Click);
             // 
@@ -543,11 +581,11 @@ namespace DoAnLTTQ1
             // 
             this.CTRL_Del.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Bold);
             this.CTRL_Del.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Del.Location = new System.Drawing.Point(228, 422);
+            this.CTRL_Del.Location = new System.Drawing.Point(171, 343);
+            this.CTRL_Del.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CTRL_Del.Name = "CTRL_Del";
-            this.CTRL_Del.Size = new System.Drawing.Size(60, 45);
+            this.CTRL_Del.Size = new System.Drawing.Size(47, 37);
             this.CTRL_Del.TabIndex = 79;
-            this.CTRL_Del.Text = "DEL";
             this.CTRL_Del.UseVisualStyleBackColor = true;
             this.CTRL_Del.Click += new System.EventHandler(this.CTRL_Del_Click);
             // 
@@ -555,9 +593,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_9.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_9.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_9.Location = new System.Drawing.Point(162, 422);
+            this.NUMB_9.Location = new System.Drawing.Point(122, 343);
+            this.NUMB_9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NUMB_9.Name = "NUMB_9";
-            this.NUMB_9.Size = new System.Drawing.Size(60, 45);
+            this.NUMB_9.Size = new System.Drawing.Size(47, 37);
             this.NUMB_9.TabIndex = 78;
             this.NUMB_9.Text = "9";
             this.NUMB_9.UseVisualStyleBackColor = true;
@@ -567,9 +606,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_8.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_8.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_8.Location = new System.Drawing.Point(96, 422);
+            this.NUMB_8.Location = new System.Drawing.Point(72, 343);
+            this.NUMB_8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NUMB_8.Name = "NUMB_8";
-            this.NUMB_8.Size = new System.Drawing.Size(60, 45);
+            this.NUMB_8.Size = new System.Drawing.Size(47, 37);
             this.NUMB_8.TabIndex = 77;
             this.NUMB_8.Text = "8";
             this.NUMB_8.UseVisualStyleBackColor = true;
@@ -580,9 +620,10 @@ namespace DoAnLTTQ1
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(269, 100);
+            this.label1.Location = new System.Drawing.Point(202, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 29);
+            this.label1.Size = new System.Drawing.Size(66, 25);
             this.label1.TabIndex = 86;
             this.label1.Text = "output";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -592,9 +633,10 @@ namespace DoAnLTTQ1
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 37);
+            this.label3.Location = new System.Drawing.Point(27, 30);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 20);
+            this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 88;
             this.label3.Text = "Flag1";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -604,9 +646,10 @@ namespace DoAnLTTQ1
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(84, 37);
+            this.label4.Location = new System.Drawing.Point(63, 30);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.Size = new System.Drawing.Size(43, 17);
             this.label4.TabIndex = 89;
             this.label4.Text = "Flag1";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -622,9 +665,10 @@ namespace DoAnLTTQ1
             this.NUMB_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NUMB_7.Font = new System.Drawing.Font("Sans Serif Collection", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_7.ForeColor = System.Drawing.Color.Black;
-            this.NUMB_7.Location = new System.Drawing.Point(28, 422);
+            this.NUMB_7.Location = new System.Drawing.Point(21, 343);
+            this.NUMB_7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NUMB_7.Name = "NUMB_7";
-            this.NUMB_7.Size = new System.Drawing.Size(59, 44);
+            this.NUMB_7.Size = new System.Drawing.Size(47, 37);
             this.NUMB_7.TabIndex = 90;
             this.NUMB_7.Text = "7";
             this.NUMB_7.TextColor = System.Drawing.Color.Black;
@@ -642,9 +686,10 @@ namespace DoAnLTTQ1
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton2.ForeColor = System.Drawing.Color.Black;
-            this.customButton2.Location = new System.Drawing.Point(23, 28);
+            this.customButton2.Location = new System.Drawing.Point(17, 23);
+            this.customButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(340, 116);
+            this.customButton2.Size = new System.Drawing.Size(255, 94);
             this.customButton2.TabIndex = 81;
             this.customButton2.Text = " ";
             this.customButton2.TextColor = System.Drawing.Color.Black;
@@ -662,9 +707,10 @@ namespace DoAnLTTQ1
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton1.ForeColor = System.Drawing.Color.Black;
-            this.customButton1.Location = new System.Drawing.Point(171, 68);
+            this.customButton1.Location = new System.Drawing.Point(128, 55);
+            this.customButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(51, 40);
+            this.customButton1.Size = new System.Drawing.Size(38, 32);
             this.customButton1.TabIndex = 61;
             this.customButton1.Text = "customButton1";
             this.customButton1.TextColor = System.Drawing.Color.Black;
@@ -682,9 +728,10 @@ namespace DoAnLTTQ1
             this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton3.ForeColor = System.Drawing.Color.Black;
-            this.customButton3.Location = new System.Drawing.Point(23, 150);
+            this.customButton3.Location = new System.Drawing.Point(17, 122);
+            this.customButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customButton3.Name = "customButton3";
-            this.customButton3.Size = new System.Drawing.Size(340, 82);
+            this.customButton3.Size = new System.Drawing.Size(255, 67);
             this.customButton3.TabIndex = 82;
             this.customButton3.Text = " ";
             this.customButton3.TextColor = System.Drawing.Color.Black;
@@ -702,9 +749,10 @@ namespace DoAnLTTQ1
             this.customButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton4.ForeColor = System.Drawing.Color.Black;
-            this.customButton4.Location = new System.Drawing.Point(24, 252);
+            this.customButton4.Location = new System.Drawing.Point(14, 205);
+            this.customButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customButton4.Name = "customButton4";
-            this.customButton4.Size = new System.Drawing.Size(346, 133);
+            this.customButton4.Size = new System.Drawing.Size(260, 108);
             this.customButton4.TabIndex = 83;
             this.customButton4.Text = " ";
             this.customButton4.TextColor = System.Drawing.Color.Black;
@@ -722,9 +770,10 @@ namespace DoAnLTTQ1
             this.customButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton6.ForeColor = System.Drawing.Color.Black;
-            this.customButton6.Location = new System.Drawing.Point(17, 408);
+            this.customButton6.Location = new System.Drawing.Point(13, 332);
+            this.customButton6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customButton6.Name = "customButton6";
-            this.customButton6.Size = new System.Drawing.Size(346, 225);
+            this.customButton6.Size = new System.Drawing.Size(260, 183);
             this.customButton6.TabIndex = 85;
             this.customButton6.Text = " ";
             this.customButton6.TextColor = System.Drawing.Color.Black;
@@ -742,34 +791,76 @@ namespace DoAnLTTQ1
             this.customButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton5.ForeColor = System.Drawing.Color.Black;
-            this.customButton5.Location = new System.Drawing.Point(1, 4);
+            this.customButton5.Location = new System.Drawing.Point(1, 3);
+            this.customButton5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customButton5.Name = "customButton5";
-            this.customButton5.Size = new System.Drawing.Size(380, 647);
+            this.customButton5.Size = new System.Drawing.Size(285, 526);
             this.customButton5.TabIndex = 84;
             this.customButton5.Text = " ";
             this.customButton5.TextColor = System.Drawing.Color.Black;
             this.customButton5.UseVisualStyleBackColor = false;
             this.customButton5.Click += new System.EventHandler(this.customButton5_Click);
             // 
+            // FUNC_PowerOfTen_LABEL
+            // 
+            this.FUNC_PowerOfTen_LABEL.AutoSize = true;
+            this.FUNC_PowerOfTen_LABEL.BackColor = System.Drawing.Color.White;
+            this.FUNC_PowerOfTen_LABEL.Font = new System.Drawing.Font("Sans Serif Collection", 4.75F, System.Drawing.FontStyle.Bold);
+            this.FUNC_PowerOfTen_LABEL.Location = new System.Drawing.Point(122, 478);
+            this.FUNC_PowerOfTen_LABEL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FUNC_PowerOfTen_LABEL.Name = "FUNC_PowerOfTen_LABEL";
+            this.FUNC_PowerOfTen_LABEL.Size = new System.Drawing.Size(43, 17);
+            this.FUNC_PowerOfTen_LABEL.TabIndex = 91;
+            this.FUNC_PowerOfTen_LABEL.Text = "x10X";
+            this.FUNC_PowerOfTen_LABEL.Click += new System.EventHandler(this.label2_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(167, 588);
+            this.label2.Font = new System.Drawing.Font("Sans Serif Collection", 7.5F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(172, 349);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
-            this.label2.TabIndex = 91;
-            this.label2.Text = "x10^x";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Size = new System.Drawing.Size(42, 24);
+            this.label2.TabIndex = 94;
+            this.label2.Text = "DEL";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Sans Serif Collection", 7.5F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(226, 349);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 24);
+            this.label5.TabIndex = 95;
+            this.label5.Text = "AC";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Sans Serif Collection", 7.5F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(175, 475);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 24);
+            this.label7.TabIndex = 93;
+            this.label7.Text = "Ans";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(382, 663);
+            this.ClientSize = new System.Drawing.Size(286, 539);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.FUNC_PowerOfTen_LABEL);
             this.Controls.Add(this.NUMB_7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -823,6 +914,7 @@ namespace DoAnLTTQ1
             this.Controls.Add(this.customButton5);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -883,7 +975,10 @@ namespace DoAnLTTQ1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private CustomControls.CustomButton.CustomButton NUMB_7;
+        private System.Windows.Forms.Label FUNC_PowerOfTen_LABEL;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
     }
 }
 
