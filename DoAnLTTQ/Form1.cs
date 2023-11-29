@@ -12,8 +12,10 @@ namespace DoAnLTTQ1
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
+            Control.init(this);
             InitializeComponent();
         }
 
