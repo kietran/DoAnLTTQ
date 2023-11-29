@@ -2,9 +2,9 @@ C:\Users\KIET\source\C#\DoAnLTTQ\DoAnLTTQ\bin\Debug\DoAnLTTQ.exe.config
 C:\Users\KIET\source\C#\DoAnLTTQ\DoAnLTTQ\bin\Debug\DoAnLTTQ.exe
 C:\Users\KIET\source\C#\DoAnLTTQ\DoAnLTTQ\bin\Debug\DoAnLTTQ.pdb
 C:\Users\KIET\source\C#\DoAnLTTQ\DoAnLTTQ\obj\Debug\DoAnLTTQ.csproj.AssemblyReference.cache
-C:\Users\KIET\source\C#\DoAnLTTQ\DoAnLTTQ\obj\Debug\DoAnLTTQ.Form1.resources
 C:\Users\KIET\source\C#\DoAnLTTQ\DoAnLTTQ\obj\Debug\DoAnLTTQ.Properties.Resources.resources
 C:\Users\KIET\source\C#\DoAnLTTQ\DoAnLTTQ\obj\Debug\DoAnLTTQ.csproj.GenerateResource.cache
 C:\Users\KIET\source\C#\DoAnLTTQ\DoAnLTTQ\obj\Debug\DoAnLTTQ.csproj.CoreCompileInputs.cache
 C:\Users\KIET\source\C#\DoAnLTTQ\DoAnLTTQ\obj\Debug\DoAnLTTQ.exe
 C:\Users\KIET\source\C#\DoAnLTTQ\DoAnLTTQ\obj\Debug\DoAnLTTQ.pdb
+C:\Users\KIET\source\C#\DoAnLTTQ\DoAnLTTQ\obj\Debug\DoAnLTTQ1.Form1.resources
