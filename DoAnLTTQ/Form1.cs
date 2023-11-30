@@ -23,14 +23,83 @@ namespace DoAnLTTQ1
         }
 
         /// INSERT BLOCK
+       
+        //NUMBER BUTTON
         private void NUMB_0_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("0");
         }
 
+        private void NUMB_1_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("1");
+        }
+
+        private void NUMB_2_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("2");
+        }
+
+        private void NUMB_3_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("3");
+        }
+
+        private void NUMB_4_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("4");
+        }
+
+        private void NUMB_5_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("5");
+        }
+
+        private void NUMB_6_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("6");
+        }
+
+        private void NUMB_7_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("7");
+        }
+
+        private void NUMB_8_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("8");
+        }
+
+        private void NUMB_9_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("9");
+        }
+
+        //OPERATION BUTTON
+        private void OPER_Sub_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("-");
+        }
+
+        private void OPER_Add_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("+");
+        }
+
+        private void OPER_Div_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("/");
+        }
+
+        private void OPER_Mul_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("x");
+        }
+
+        //OTHER MISC BUTTON
         private void MISC_Dot_Click(object sender, EventArgs e)
         {
-
+            Control.insertContentIntoInputText(".");
         }
 
         private void MISC_Ans_Click(object sender, EventArgs e)
@@ -40,94 +109,10 @@ namespace DoAnLTTQ1
 
         private void FUNC_PowerOfTen_Click(object sender, EventArgs e)
         {
-
+            Control.insertContentIntoInputText("x10");
         }
 
-        
-
-        private void OPER_Sub_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OPER_Add_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NUMB_3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NUMB_2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NUMB_1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OPER_Div_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OPER_Mul_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NUMB_6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NUMB_5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NUMB_4_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void NUMB_9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NUMB_8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NUMB_7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customButton5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customButton4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customButton6_Click(object sender, EventArgs e)
-        {
-
-        }
+    
         //CONTROL BLOCK
         private void InputText_Click(object sender, EventArgs e)
         {
@@ -146,6 +131,12 @@ namespace DoAnLTTQ1
         {
 
         }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
 
