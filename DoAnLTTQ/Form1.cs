@@ -13,17 +13,24 @@ namespace DoAnLTTQ1
     public partial class Form1 : Form
     {
         //state
+        //public string 
         public bool onShiftMode, onAlphaMode;
+        public bool onInvalidExpressionMode;
         public int currentCursorPosition;
 
         public Form1()
         {
+            onShiftMode = false;
+            onAlphaMode = false;
+            onInvalidExpressionMode = false;
+
+            currentCursorPosition = 0;
             Control.init(this);
             InitializeComponent();
         }
 
         /// INSERT BLOCK
-       
+
         //LOWEST BLOCK
         //NUMBER BUTTON
         private void NUMB_0_Click(object sender, EventArgs e)
@@ -94,7 +101,7 @@ namespace DoAnLTTQ1
 
         private void OPER_Mul_Click(object sender, EventArgs e)
         {
-            Control.insertContentIntoInputText("x");
+            Control.insertContentIntoInputText("*");
         }
 
         //OTHER MISC BUTTON
@@ -105,7 +112,7 @@ namespace DoAnLTTQ1
 
         private void MISC_Ans_Click(object sender, EventArgs e)
         {
-            if(onShiftMode)
+            if (onShiftMode)
                 Control.insertContentIntoInputText("%");
             else
                 Control.insertContentIntoInputText("Ans");
@@ -113,9 +120,9 @@ namespace DoAnLTTQ1
 
         private void FUNC_PowerOfTen_Click(object sender, EventArgs e)
         {
-            if(onShiftMode)
+            if (onShiftMode)
                 Control.insertContentIntoInputText("pi");
-            else if(onAlphaMode)
+            else if (onAlphaMode)
                 Control.insertContentIntoInputText("e");
             else
                 Control.insertContentIntoInputText("x10");
@@ -232,9 +239,6 @@ namespace DoAnLTTQ1
         {
 
         }
-
-
-
         //CONTROL BLOCK
         private void InputText_Click(object sender, EventArgs e)
         {
@@ -242,12 +246,14 @@ namespace DoAnLTTQ1
         }
         private void CTRL_Equal_Click(object sender, EventArgs e)
         {
-            
+            Control.Perform_Equal();
         }
         private void CTRL_Ac_Click(object sender, EventArgs e)
         {
-            InputText.Clear();
-            this.currentCursorPosition = 0;
+            if (onInvalidExpressionMode)
+            {
+                Control.turnOffInvalidExpressionMode();
+            }
         }
 
         private void CTRL_Del_Click(object sender, EventArgs e)
@@ -255,7 +261,12 @@ namespace DoAnLTTQ1
 
         }
 
-        private void customButton1_Click(object sender, EventArgs e)
+        private void InputText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OutputText_Click(object sender, EventArgs e)
         {
 
         }
