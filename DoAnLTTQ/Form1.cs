@@ -13,8 +13,8 @@ namespace DoAnLTTQ1
     public partial class Form1 : Form
     {
         //state
-        bool onShiftMode, onAlphaMode;
-        int currentCursorPosition;
+        public bool onShiftMode, onAlphaMode;
+        public int currentCursorPosition;
 
         public Form1()
         {
