@@ -98,10 +98,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_0.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_0.Location = new System.Drawing.Point(21, 467);
-            this.NUMB_0.Margin = new System.Windows.Forms.Padding(2);
+            this.NUMB_0.Location = new System.Drawing.Point(28, 575);
+            this.NUMB_0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_0.Name = "NUMB_0";
-            this.NUMB_0.Size = new System.Drawing.Size(47, 37);
+            this.NUMB_0.Size = new System.Drawing.Size(63, 46);
             this.NUMB_0.TabIndex = 0;
             this.NUMB_0.Text = "0";
             this.NUMB_0.UseVisualStyleBackColor = true;
@@ -111,10 +111,10 @@ namespace DoAnLTTQ1
             // 
             this.STATE_Shift.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STATE_Shift.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.STATE_Shift.Location = new System.Drawing.Point(23, 135);
-            this.STATE_Shift.Margin = new System.Windows.Forms.Padding(2);
+            this.STATE_Shift.Location = new System.Drawing.Point(31, 166);
+            this.STATE_Shift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.STATE_Shift.Name = "STATE_Shift";
-            this.STATE_Shift.Size = new System.Drawing.Size(34, 37);
+            this.STATE_Shift.Size = new System.Drawing.Size(45, 46);
             this.STATE_Shift.TabIndex = 38;
             this.STATE_Shift.Text = "button21";
             this.STATE_Shift.UseVisualStyleBackColor = true;
@@ -123,10 +123,10 @@ namespace DoAnLTTQ1
             // 
             this.STATE_Alpha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STATE_Alpha.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.STATE_Alpha.Location = new System.Drawing.Point(62, 145);
-            this.STATE_Alpha.Margin = new System.Windows.Forms.Padding(2);
+            this.STATE_Alpha.Location = new System.Drawing.Point(83, 178);
+            this.STATE_Alpha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.STATE_Alpha.Name = "STATE_Alpha";
-            this.STATE_Alpha.Size = new System.Drawing.Size(34, 37);
+            this.STATE_Alpha.Size = new System.Drawing.Size(45, 46);
             this.STATE_Alpha.TabIndex = 39;
             this.STATE_Alpha.Text = "button22";
             this.STATE_Alpha.UseVisualStyleBackColor = true;
@@ -135,10 +135,10 @@ namespace DoAnLTTQ1
             // 
             this.STATE_Power.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STATE_Power.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.STATE_Power.Location = new System.Drawing.Point(234, 135);
-            this.STATE_Power.Margin = new System.Windows.Forms.Padding(2);
+            this.STATE_Power.Location = new System.Drawing.Point(312, 166);
+            this.STATE_Power.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.STATE_Power.Name = "STATE_Power";
-            this.STATE_Power.Size = new System.Drawing.Size(34, 37);
+            this.STATE_Power.Size = new System.Drawing.Size(45, 46);
             this.STATE_Power.TabIndex = 41;
             this.STATE_Power.Text = "button23";
             this.STATE_Power.UseVisualStyleBackColor = true;
@@ -147,10 +147,10 @@ namespace DoAnLTTQ1
             // 
             this.STATE_Mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STATE_Mode.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.STATE_Mode.Location = new System.Drawing.Point(196, 145);
-            this.STATE_Mode.Margin = new System.Windows.Forms.Padding(2);
+            this.STATE_Mode.Location = new System.Drawing.Point(261, 178);
+            this.STATE_Mode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.STATE_Mode.Name = "STATE_Mode";
-            this.STATE_Mode.Size = new System.Drawing.Size(34, 37);
+            this.STATE_Mode.Size = new System.Drawing.Size(45, 46);
             this.STATE_Mode.TabIndex = 40;
             this.STATE_Mode.Text = "button24";
             this.STATE_Mode.UseVisualStyleBackColor = true;
@@ -159,226 +159,244 @@ namespace DoAnLTTQ1
             // 
             this.CTRL_Sto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_Sto.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Sto.Location = new System.Drawing.Point(20, 288);
-            this.CTRL_Sto.Margin = new System.Windows.Forms.Padding(2);
+            this.CTRL_Sto.Location = new System.Drawing.Point(27, 354);
+            this.CTRL_Sto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CTRL_Sto.Name = "CTRL_Sto";
-            this.CTRL_Sto.Size = new System.Drawing.Size(38, 24);
+            this.CTRL_Sto.Size = new System.Drawing.Size(51, 30);
             this.CTRL_Sto.TabIndex = 42;
             this.CTRL_Sto.Text = "button25";
             this.CTRL_Sto.UseVisualStyleBackColor = true;
+            this.CTRL_Sto.Click += new System.EventHandler(this.CTRL_Sto_Click);
             // 
             // CTRL_Eng
             // 
             this.CTRL_Eng.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_Eng.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Eng.Location = new System.Drawing.Point(62, 288);
-            this.CTRL_Eng.Margin = new System.Windows.Forms.Padding(2);
+            this.CTRL_Eng.Location = new System.Drawing.Point(83, 354);
+            this.CTRL_Eng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CTRL_Eng.Name = "CTRL_Eng";
-            this.CTRL_Eng.Size = new System.Drawing.Size(38, 24);
+            this.CTRL_Eng.Size = new System.Drawing.Size(51, 30);
             this.CTRL_Eng.TabIndex = 43;
             this.CTRL_Eng.Text = "button26";
             this.CTRL_Eng.UseVisualStyleBackColor = true;
+            this.CTRL_Eng.Click += new System.EventHandler(this.CTRL_Eng_Click);
             // 
             // MISC_OpenBracket
             // 
             this.MISC_OpenBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_OpenBracket.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_OpenBracket.Location = new System.Drawing.Point(104, 288);
-            this.MISC_OpenBracket.Margin = new System.Windows.Forms.Padding(2);
+            this.MISC_OpenBracket.Location = new System.Drawing.Point(139, 354);
+            this.MISC_OpenBracket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MISC_OpenBracket.Name = "MISC_OpenBracket";
-            this.MISC_OpenBracket.Size = new System.Drawing.Size(38, 24);
+            this.MISC_OpenBracket.Size = new System.Drawing.Size(51, 30);
             this.MISC_OpenBracket.TabIndex = 44;
             this.MISC_OpenBracket.Text = "(";
             this.MISC_OpenBracket.UseVisualStyleBackColor = true;
+            this.MISC_OpenBracket.Click += new System.EventHandler(this.MISC_OpenBracket_Click);
             // 
             // MISC_CloseBracket
             // 
             this.MISC_CloseBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_CloseBracket.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_CloseBracket.Location = new System.Drawing.Point(142, 288);
-            this.MISC_CloseBracket.Margin = new System.Windows.Forms.Padding(2);
+            this.MISC_CloseBracket.Location = new System.Drawing.Point(189, 354);
+            this.MISC_CloseBracket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MISC_CloseBracket.Name = "MISC_CloseBracket";
-            this.MISC_CloseBracket.Size = new System.Drawing.Size(38, 24);
+            this.MISC_CloseBracket.Size = new System.Drawing.Size(51, 30);
             this.MISC_CloseBracket.TabIndex = 45;
             this.MISC_CloseBracket.Text = ")";
             this.MISC_CloseBracket.UseVisualStyleBackColor = true;
+            this.MISC_CloseBracket.Click += new System.EventHandler(this.MISC_CloseBracket_Click);
             // 
             // MISC_ConvertSToD
             // 
             this.MISC_ConvertSToD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_ConvertSToD.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_ConvertSToD.Location = new System.Drawing.Point(184, 288);
-            this.MISC_ConvertSToD.Margin = new System.Windows.Forms.Padding(2);
+            this.MISC_ConvertSToD.Location = new System.Drawing.Point(245, 354);
+            this.MISC_ConvertSToD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MISC_ConvertSToD.Name = "MISC_ConvertSToD";
-            this.MISC_ConvertSToD.Size = new System.Drawing.Size(38, 24);
+            this.MISC_ConvertSToD.Size = new System.Drawing.Size(51, 30);
             this.MISC_ConvertSToD.TabIndex = 46;
             this.MISC_ConvertSToD.Text = "button29";
             this.MISC_ConvertSToD.UseVisualStyleBackColor = true;
+            this.MISC_ConvertSToD.Click += new System.EventHandler(this.MISC_ConvertSToD_Click);
             // 
             // MISC_MemoryAdd
             // 
             this.MISC_MemoryAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_MemoryAdd.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_MemoryAdd.Location = new System.Drawing.Point(226, 288);
-            this.MISC_MemoryAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.MISC_MemoryAdd.Location = new System.Drawing.Point(301, 354);
+            this.MISC_MemoryAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MISC_MemoryAdd.Name = "MISC_MemoryAdd";
-            this.MISC_MemoryAdd.Size = new System.Drawing.Size(38, 24);
+            this.MISC_MemoryAdd.Size = new System.Drawing.Size(51, 30);
             this.MISC_MemoryAdd.TabIndex = 47;
             this.MISC_MemoryAdd.Text = "button30";
             this.MISC_MemoryAdd.UseVisualStyleBackColor = true;
+            this.MISC_MemoryAdd.Click += new System.EventHandler(this.MISC_MemoryAdd_Click);
             // 
             // FUNC_Tan
             // 
             this.FUNC_Tan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Tan.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Tan.Location = new System.Drawing.Point(226, 260);
-            this.FUNC_Tan.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_Tan.Location = new System.Drawing.Point(301, 320);
+            this.FUNC_Tan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Tan.Name = "FUNC_Tan";
-            this.FUNC_Tan.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_Tan.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Tan.TabIndex = 54;
             this.FUNC_Tan.Text = "tan";
             this.FUNC_Tan.UseVisualStyleBackColor = true;
+            this.FUNC_Tan.Click += new System.EventHandler(this.FUNC_Tan_Click);
             // 
             // FUNC_Cos
             // 
             this.FUNC_Cos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Cos.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Cos.Location = new System.Drawing.Point(184, 260);
-            this.FUNC_Cos.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_Cos.Location = new System.Drawing.Point(245, 320);
+            this.FUNC_Cos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Cos.Name = "FUNC_Cos";
-            this.FUNC_Cos.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_Cos.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Cos.TabIndex = 53;
             this.FUNC_Cos.Text = "cos";
             this.FUNC_Cos.UseVisualStyleBackColor = true;
+            this.FUNC_Cos.Click += new System.EventHandler(this.FUNC_Cos_Click);
             // 
             // FUNC_Sin
             // 
             this.FUNC_Sin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Sin.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Sin.Location = new System.Drawing.Point(142, 260);
-            this.FUNC_Sin.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_Sin.Location = new System.Drawing.Point(189, 320);
+            this.FUNC_Sin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Sin.Name = "FUNC_Sin";
-            this.FUNC_Sin.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_Sin.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Sin.TabIndex = 52;
             this.FUNC_Sin.Text = "sin";
             this.FUNC_Sin.UseVisualStyleBackColor = true;
+            this.FUNC_Sin.Click += new System.EventHandler(this.FUNC_Sin_Click);
             // 
             // FUNC_NumericalInverse
             // 
             this.FUNC_NumericalInverse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_NumericalInverse.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_NumericalInverse.Location = new System.Drawing.Point(103, 260);
-            this.FUNC_NumericalInverse.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_NumericalInverse.Location = new System.Drawing.Point(137, 320);
+            this.FUNC_NumericalInverse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_NumericalInverse.Name = "FUNC_NumericalInverse";
-            this.FUNC_NumericalInverse.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_NumericalInverse.Size = new System.Drawing.Size(51, 30);
             this.FUNC_NumericalInverse.TabIndex = 51;
             this.FUNC_NumericalInverse.Text = "button34";
             this.FUNC_NumericalInverse.UseVisualStyleBackColor = true;
+            this.FUNC_NumericalInverse.Click += new System.EventHandler(this.FUNC_NumericalInverse_Click);
             // 
             // MISC_Degree
             // 
             this.MISC_Degree.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_Degree.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_Degree.Location = new System.Drawing.Point(62, 260);
-            this.MISC_Degree.Margin = new System.Windows.Forms.Padding(2);
+            this.MISC_Degree.Location = new System.Drawing.Point(83, 320);
+            this.MISC_Degree.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MISC_Degree.Name = "MISC_Degree";
-            this.MISC_Degree.Size = new System.Drawing.Size(38, 24);
+            this.MISC_Degree.Size = new System.Drawing.Size(51, 30);
             this.MISC_Degree.TabIndex = 50;
             this.MISC_Degree.Text = "button35";
             this.MISC_Degree.UseVisualStyleBackColor = true;
+            this.MISC_Degree.Click += new System.EventHandler(this.MISC_Degree_Click);
             // 
             // MISC_Sub
             // 
             this.MISC_Sub.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_Sub.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_Sub.Location = new System.Drawing.Point(22, 259);
-            this.MISC_Sub.Margin = new System.Windows.Forms.Padding(2);
+            this.MISC_Sub.Location = new System.Drawing.Point(29, 319);
+            this.MISC_Sub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MISC_Sub.Name = "MISC_Sub";
-            this.MISC_Sub.Size = new System.Drawing.Size(38, 24);
+            this.MISC_Sub.Size = new System.Drawing.Size(51, 30);
             this.MISC_Sub.TabIndex = 49;
             this.MISC_Sub.Text = "button36";
             this.MISC_Sub.UseVisualStyleBackColor = true;
+            this.MISC_Sub.Click += new System.EventHandler(this.MISC_Sub_Click);
             // 
             // FUNC_Ln
             // 
             this.FUNC_Ln.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Ln.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Ln.Location = new System.Drawing.Point(226, 231);
-            this.FUNC_Ln.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_Ln.Location = new System.Drawing.Point(301, 284);
+            this.FUNC_Ln.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Ln.Name = "FUNC_Ln";
-            this.FUNC_Ln.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_Ln.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Ln.TabIndex = 60;
             this.FUNC_Ln.Text = "ln";
             this.FUNC_Ln.UseVisualStyleBackColor = true;
+            this.FUNC_Ln.Click += new System.EventHandler(this.FUNC_Ln_Click);
             // 
             // FUNC_Logarit
             // 
             this.FUNC_Logarit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Logarit.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Logarit.Location = new System.Drawing.Point(184, 231);
-            this.FUNC_Logarit.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_Logarit.Location = new System.Drawing.Point(245, 284);
+            this.FUNC_Logarit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Logarit.Name = "FUNC_Logarit";
-            this.FUNC_Logarit.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_Logarit.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Logarit.TabIndex = 59;
             this.FUNC_Logarit.Text = "button38";
             this.FUNC_Logarit.UseVisualStyleBackColor = true;
+            this.FUNC_Logarit.Click += new System.EventHandler(this.FUNC_Logarit_Click);
             // 
             // FUNC_Pow
             // 
             this.FUNC_Pow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Pow.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Pow.Location = new System.Drawing.Point(142, 231);
-            this.FUNC_Pow.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_Pow.Location = new System.Drawing.Point(189, 284);
+            this.FUNC_Pow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Pow.Name = "FUNC_Pow";
-            this.FUNC_Pow.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_Pow.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Pow.TabIndex = 58;
             this.FUNC_Pow.Text = "button39";
             this.FUNC_Pow.UseVisualStyleBackColor = true;
+            this.FUNC_Pow.Click += new System.EventHandler(this.FUNC_Pow_Click);
             // 
             // FUNC_Square
             // 
             this.FUNC_Square.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Square.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Square.Location = new System.Drawing.Point(103, 231);
-            this.FUNC_Square.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_Square.Location = new System.Drawing.Point(137, 284);
+            this.FUNC_Square.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Square.Name = "FUNC_Square";
-            this.FUNC_Square.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_Square.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Square.TabIndex = 57;
             this.FUNC_Square.Text = "button40";
             this.FUNC_Square.UseVisualStyleBackColor = true;
+            this.FUNC_Square.Click += new System.EventHandler(this.FUNC_Square_Click);
             // 
             // FUNC_Sqrt
             // 
             this.FUNC_Sqrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Sqrt.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Sqrt.Location = new System.Drawing.Point(62, 231);
-            this.FUNC_Sqrt.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_Sqrt.Location = new System.Drawing.Point(83, 284);
+            this.FUNC_Sqrt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Sqrt.Name = "FUNC_Sqrt";
-            this.FUNC_Sqrt.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_Sqrt.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Sqrt.TabIndex = 56;
             this.FUNC_Sqrt.Text = "button41";
             this.FUNC_Sqrt.UseVisualStyleBackColor = true;
+            this.FUNC_Sqrt.Click += new System.EventHandler(this.FUNC_Sqrt_Click);
             // 
             // FUNC_Fraction
             // 
             this.FUNC_Fraction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Fraction.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Fraction.Location = new System.Drawing.Point(22, 231);
-            this.FUNC_Fraction.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_Fraction.Location = new System.Drawing.Point(29, 284);
+            this.FUNC_Fraction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Fraction.Name = "FUNC_Fraction";
-            this.FUNC_Fraction.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_Fraction.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Fraction.TabIndex = 55;
             this.FUNC_Fraction.Text = "button42";
             this.FUNC_Fraction.UseVisualStyleBackColor = true;
+            this.FUNC_Fraction.Click += new System.EventHandler(this.FUNC_Fraction_Click);
             // 
             // MISC_Dot
             // 
             this.MISC_Dot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.MISC_Dot.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_Dot.Location = new System.Drawing.Point(70, 467);
-            this.MISC_Dot.Margin = new System.Windows.Forms.Padding(2);
+            this.MISC_Dot.Location = new System.Drawing.Point(93, 575);
+            this.MISC_Dot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MISC_Dot.Name = "MISC_Dot";
-            this.MISC_Dot.Size = new System.Drawing.Size(47, 37);
+            this.MISC_Dot.Size = new System.Drawing.Size(63, 46);
             this.MISC_Dot.TabIndex = 62;
             this.MISC_Dot.Text = ".";
             this.MISC_Dot.UseVisualStyleBackColor = true;
@@ -388,10 +406,10 @@ namespace DoAnLTTQ1
             // 
             this.MISC_Ans.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.MISC_Ans.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_Ans.Location = new System.Drawing.Point(170, 467);
-            this.MISC_Ans.Margin = new System.Windows.Forms.Padding(2);
+            this.MISC_Ans.Location = new System.Drawing.Point(227, 575);
+            this.MISC_Ans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MISC_Ans.Name = "MISC_Ans";
-            this.MISC_Ans.Size = new System.Drawing.Size(47, 37);
+            this.MISC_Ans.Size = new System.Drawing.Size(63, 46);
             this.MISC_Ans.TabIndex = 64;
             this.MISC_Ans.UseVisualStyleBackColor = true;
             this.MISC_Ans.Click += new System.EventHandler(this.MISC_Ans_Click);
@@ -400,10 +418,10 @@ namespace DoAnLTTQ1
             // 
             this.FUNC_PowerOfTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
             this.FUNC_PowerOfTen.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_PowerOfTen.Location = new System.Drawing.Point(120, 467);
-            this.FUNC_PowerOfTen.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_PowerOfTen.Location = new System.Drawing.Point(160, 575);
+            this.FUNC_PowerOfTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_PowerOfTen.Name = "FUNC_PowerOfTen";
-            this.FUNC_PowerOfTen.Size = new System.Drawing.Size(47, 37);
+            this.FUNC_PowerOfTen.Size = new System.Drawing.Size(63, 46);
             this.FUNC_PowerOfTen.TabIndex = 63;
             this.FUNC_PowerOfTen.UseVisualStyleBackColor = true;
             this.FUNC_PowerOfTen.Click += new System.EventHandler(this.FUNC_PowerOfTen_Click);
@@ -412,10 +430,10 @@ namespace DoAnLTTQ1
             // 
             this.CTRL_Equal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.CTRL_Equal.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Equal.Location = new System.Drawing.Point(219, 467);
-            this.CTRL_Equal.Margin = new System.Windows.Forms.Padding(2);
+            this.CTRL_Equal.Location = new System.Drawing.Point(292, 575);
+            this.CTRL_Equal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CTRL_Equal.Name = "CTRL_Equal";
-            this.CTRL_Equal.Size = new System.Drawing.Size(47, 37);
+            this.CTRL_Equal.Size = new System.Drawing.Size(63, 46);
             this.CTRL_Equal.TabIndex = 65;
             this.CTRL_Equal.Text = "=";
             this.CTRL_Equal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -426,10 +444,10 @@ namespace DoAnLTTQ1
             // 
             this.OPER_Sub.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.OPER_Sub.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.OPER_Sub.Location = new System.Drawing.Point(219, 426);
-            this.OPER_Sub.Margin = new System.Windows.Forms.Padding(2);
+            this.OPER_Sub.Location = new System.Drawing.Point(292, 524);
+            this.OPER_Sub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OPER_Sub.Name = "OPER_Sub";
-            this.OPER_Sub.Size = new System.Drawing.Size(47, 37);
+            this.OPER_Sub.Size = new System.Drawing.Size(63, 46);
             this.OPER_Sub.TabIndex = 70;
             this.OPER_Sub.Text = "-";
             this.OPER_Sub.UseVisualStyleBackColor = true;
@@ -439,10 +457,10 @@ namespace DoAnLTTQ1
             // 
             this.OPER_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.OPER_Add.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.OPER_Add.Location = new System.Drawing.Point(170, 426);
-            this.OPER_Add.Margin = new System.Windows.Forms.Padding(2);
+            this.OPER_Add.Location = new System.Drawing.Point(227, 524);
+            this.OPER_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OPER_Add.Name = "OPER_Add";
-            this.OPER_Add.Size = new System.Drawing.Size(47, 37);
+            this.OPER_Add.Size = new System.Drawing.Size(63, 46);
             this.OPER_Add.TabIndex = 69;
             this.OPER_Add.Text = "+";
             this.OPER_Add.UseVisualStyleBackColor = true;
@@ -452,10 +470,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_3.Location = new System.Drawing.Point(120, 426);
-            this.NUMB_3.Margin = new System.Windows.Forms.Padding(2);
+            this.NUMB_3.Location = new System.Drawing.Point(160, 524);
+            this.NUMB_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_3.Name = "NUMB_3";
-            this.NUMB_3.Size = new System.Drawing.Size(47, 37);
+            this.NUMB_3.Size = new System.Drawing.Size(63, 46);
             this.NUMB_3.TabIndex = 68;
             this.NUMB_3.Text = "3";
             this.NUMB_3.UseVisualStyleBackColor = true;
@@ -465,10 +483,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_2.Location = new System.Drawing.Point(70, 426);
-            this.NUMB_2.Margin = new System.Windows.Forms.Padding(2);
+            this.NUMB_2.Location = new System.Drawing.Point(93, 524);
+            this.NUMB_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_2.Name = "NUMB_2";
-            this.NUMB_2.Size = new System.Drawing.Size(47, 37);
+            this.NUMB_2.Size = new System.Drawing.Size(63, 46);
             this.NUMB_2.TabIndex = 67;
             this.NUMB_2.Text = "2";
             this.NUMB_2.UseVisualStyleBackColor = true;
@@ -478,10 +496,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_1.Location = new System.Drawing.Point(21, 426);
-            this.NUMB_1.Margin = new System.Windows.Forms.Padding(2);
+            this.NUMB_1.Location = new System.Drawing.Point(28, 524);
+            this.NUMB_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_1.Name = "NUMB_1";
-            this.NUMB_1.Size = new System.Drawing.Size(45, 37);
+            this.NUMB_1.Size = new System.Drawing.Size(60, 46);
             this.NUMB_1.TabIndex = 66;
             this.NUMB_1.Text = "1";
             this.NUMB_1.UseVisualStyleBackColor = true;
@@ -491,10 +509,10 @@ namespace DoAnLTTQ1
             // 
             this.OPER_Div.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.OPER_Div.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.OPER_Div.Location = new System.Drawing.Point(219, 384);
-            this.OPER_Div.Margin = new System.Windows.Forms.Padding(2);
+            this.OPER_Div.Location = new System.Drawing.Point(292, 473);
+            this.OPER_Div.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OPER_Div.Name = "OPER_Div";
-            this.OPER_Div.Size = new System.Drawing.Size(47, 37);
+            this.OPER_Div.Size = new System.Drawing.Size(63, 46);
             this.OPER_Div.TabIndex = 75;
             this.OPER_Div.Text = "/";
             this.OPER_Div.UseVisualStyleBackColor = true;
@@ -504,10 +522,10 @@ namespace DoAnLTTQ1
             // 
             this.OPER_Mul.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.OPER_Mul.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.OPER_Mul.Location = new System.Drawing.Point(170, 384);
-            this.OPER_Mul.Margin = new System.Windows.Forms.Padding(2);
+            this.OPER_Mul.Location = new System.Drawing.Point(227, 473);
+            this.OPER_Mul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OPER_Mul.Name = "OPER_Mul";
-            this.OPER_Mul.Size = new System.Drawing.Size(47, 37);
+            this.OPER_Mul.Size = new System.Drawing.Size(63, 46);
             this.OPER_Mul.TabIndex = 74;
             this.OPER_Mul.Text = "x";
             this.OPER_Mul.UseVisualStyleBackColor = true;
@@ -517,10 +535,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_6.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_6.Location = new System.Drawing.Point(120, 384);
-            this.NUMB_6.Margin = new System.Windows.Forms.Padding(2);
+            this.NUMB_6.Location = new System.Drawing.Point(160, 473);
+            this.NUMB_6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_6.Name = "NUMB_6";
-            this.NUMB_6.Size = new System.Drawing.Size(47, 37);
+            this.NUMB_6.Size = new System.Drawing.Size(63, 46);
             this.NUMB_6.TabIndex = 73;
             this.NUMB_6.Text = "6";
             this.NUMB_6.UseVisualStyleBackColor = true;
@@ -530,10 +548,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_5.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_5.Location = new System.Drawing.Point(70, 384);
-            this.NUMB_5.Margin = new System.Windows.Forms.Padding(2);
+            this.NUMB_5.Location = new System.Drawing.Point(93, 473);
+            this.NUMB_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_5.Name = "NUMB_5";
-            this.NUMB_5.Size = new System.Drawing.Size(47, 37);
+            this.NUMB_5.Size = new System.Drawing.Size(63, 46);
             this.NUMB_5.TabIndex = 72;
             this.NUMB_5.Text = "5";
             this.NUMB_5.UseVisualStyleBackColor = true;
@@ -543,10 +561,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_4.Location = new System.Drawing.Point(21, 384);
-            this.NUMB_4.Margin = new System.Windows.Forms.Padding(2);
+            this.NUMB_4.Location = new System.Drawing.Point(28, 473);
+            this.NUMB_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_4.Name = "NUMB_4";
-            this.NUMB_4.Size = new System.Drawing.Size(47, 37);
+            this.NUMB_4.Size = new System.Drawing.Size(63, 46);
             this.NUMB_4.TabIndex = 71;
             this.NUMB_4.Text = "4";
             this.NUMB_4.UseVisualStyleBackColor = true;
@@ -556,10 +574,10 @@ namespace DoAnLTTQ1
             // 
             this.CTRL_Ac.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.CTRL_Ac.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Ac.Location = new System.Drawing.Point(220, 343);
-            this.CTRL_Ac.Margin = new System.Windows.Forms.Padding(2);
+            this.CTRL_Ac.Location = new System.Drawing.Point(293, 422);
+            this.CTRL_Ac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CTRL_Ac.Name = "CTRL_Ac";
-            this.CTRL_Ac.Size = new System.Drawing.Size(47, 37);
+            this.CTRL_Ac.Size = new System.Drawing.Size(63, 46);
             this.CTRL_Ac.TabIndex = 80;
             this.CTRL_Ac.UseVisualStyleBackColor = true;
             this.CTRL_Ac.Click += new System.EventHandler(this.CTRL_Ac_Click);
@@ -568,10 +586,10 @@ namespace DoAnLTTQ1
             // 
             this.CTRL_Del.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.CTRL_Del.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Del.Location = new System.Drawing.Point(171, 343);
-            this.CTRL_Del.Margin = new System.Windows.Forms.Padding(2);
+            this.CTRL_Del.Location = new System.Drawing.Point(228, 422);
+            this.CTRL_Del.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CTRL_Del.Name = "CTRL_Del";
-            this.CTRL_Del.Size = new System.Drawing.Size(47, 37);
+            this.CTRL_Del.Size = new System.Drawing.Size(63, 46);
             this.CTRL_Del.TabIndex = 79;
             this.CTRL_Del.UseVisualStyleBackColor = true;
             this.CTRL_Del.Click += new System.EventHandler(this.CTRL_Del_Click);
@@ -580,10 +598,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_9.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_9.Location = new System.Drawing.Point(122, 343);
-            this.NUMB_9.Margin = new System.Windows.Forms.Padding(2);
+            this.NUMB_9.Location = new System.Drawing.Point(163, 422);
+            this.NUMB_9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_9.Name = "NUMB_9";
-            this.NUMB_9.Size = new System.Drawing.Size(47, 37);
+            this.NUMB_9.Size = new System.Drawing.Size(63, 46);
             this.NUMB_9.TabIndex = 78;
             this.NUMB_9.Text = "9";
             this.NUMB_9.UseVisualStyleBackColor = true;
@@ -593,10 +611,10 @@ namespace DoAnLTTQ1
             // 
             this.NUMB_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.NUMB_8.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.NUMB_8.Location = new System.Drawing.Point(72, 343);
-            this.NUMB_8.Margin = new System.Windows.Forms.Padding(2);
+            this.NUMB_8.Location = new System.Drawing.Point(96, 422);
+            this.NUMB_8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_8.Name = "NUMB_8";
-            this.NUMB_8.Size = new System.Drawing.Size(47, 37);
+            this.NUMB_8.Size = new System.Drawing.Size(63, 46);
             this.NUMB_8.TabIndex = 77;
             this.NUMB_8.Text = "8";
             this.NUMB_8.UseVisualStyleBackColor = true;
@@ -607,10 +625,9 @@ namespace DoAnLTTQ1
             this.OutputText.AutoSize = true;
             this.OutputText.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.OutputText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OutputText.Location = new System.Drawing.Point(202, 81);
-            this.OutputText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OutputText.Location = new System.Drawing.Point(269, 100);
             this.OutputText.Name = "OutputText";
-            this.OutputText.Size = new System.Drawing.Size(66, 25);
+            this.OutputText.Size = new System.Drawing.Size(83, 29);
             this.OutputText.TabIndex = 86;
             this.OutputText.Text = "output";
             // 
@@ -619,10 +636,9 @@ namespace DoAnLTTQ1
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 30);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(36, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 17);
+            this.label3.Size = new System.Drawing.Size(50, 20);
             this.label3.TabIndex = 88;
             this.label3.Text = "Flag1";
             // 
@@ -631,10 +647,9 @@ namespace DoAnLTTQ1
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(63, 30);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(84, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 17);
+            this.label4.Size = new System.Drawing.Size(50, 20);
             this.label4.TabIndex = 89;
             this.label4.Text = "Flag1";
             // 
@@ -643,10 +658,9 @@ namespace DoAnLTTQ1
             this.FUNC_PowerOfTen_LABEL.AutoSize = true;
             this.FUNC_PowerOfTen_LABEL.BackColor = System.Drawing.Color.White;
             this.FUNC_PowerOfTen_LABEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 4.75F, System.Drawing.FontStyle.Bold);
-            this.FUNC_PowerOfTen_LABEL.Location = new System.Drawing.Point(122, 478);
-            this.FUNC_PowerOfTen_LABEL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FUNC_PowerOfTen_LABEL.Location = new System.Drawing.Point(163, 588);
             this.FUNC_PowerOfTen_LABEL.Name = "FUNC_PowerOfTen_LABEL";
-            this.FUNC_PowerOfTen_LABEL.Size = new System.Drawing.Size(25, 7);
+            this.FUNC_PowerOfTen_LABEL.Size = new System.Drawing.Size(26, 9);
             this.FUNC_PowerOfTen_LABEL.TabIndex = 91;
             this.FUNC_PowerOfTen_LABEL.Text = "x10X";
             // 
@@ -655,10 +669,9 @@ namespace DoAnLTTQ1
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(172, 349);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(229, 430);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 94;
             this.label2.Text = "DEL";
             // 
@@ -667,10 +680,9 @@ namespace DoAnLTTQ1
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(226, 349);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(301, 430);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.Size = new System.Drawing.Size(27, 16);
             this.label5.TabIndex = 95;
             this.label5.Text = "AC";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -680,10 +692,9 @@ namespace DoAnLTTQ1
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(175, 475);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(233, 585);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 13);
+            this.label7.Size = new System.Drawing.Size(33, 16);
             this.label7.TabIndex = 93;
             this.label7.Text = "Ans";
             // 
@@ -691,58 +702,62 @@ namespace DoAnLTTQ1
             // 
             this.FUNC_X.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_X.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_X.Location = new System.Drawing.Point(227, 202);
-            this.FUNC_X.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_X.Location = new System.Drawing.Point(303, 249);
+            this.FUNC_X.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_X.Name = "FUNC_X";
-            this.FUNC_X.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_X.Size = new System.Drawing.Size(51, 30);
             this.FUNC_X.TabIndex = 99;
             this.FUNC_X.Text = "x";
             this.FUNC_X.UseVisualStyleBackColor = true;
+            this.FUNC_X.Click += new System.EventHandler(this.FUNC_X_Click);
             // 
             // FUNC_Integral
             // 
             this.FUNC_Integral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Integral.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Integral.Location = new System.Drawing.Point(185, 202);
-            this.FUNC_Integral.Margin = new System.Windows.Forms.Padding(2);
+            this.FUNC_Integral.Location = new System.Drawing.Point(247, 249);
+            this.FUNC_Integral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Integral.Name = "FUNC_Integral";
-            this.FUNC_Integral.Size = new System.Drawing.Size(38, 24);
+            this.FUNC_Integral.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Integral.TabIndex = 98;
             this.FUNC_Integral.Text = "button2";
             this.FUNC_Integral.UseVisualStyleBackColor = true;
+            this.FUNC_Integral.Click += new System.EventHandler(this.FUNC_Integral_Click);
             // 
             // CTRL_Calc
             // 
             this.CTRL_Calc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_Calc.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Calc.Location = new System.Drawing.Point(62, 202);
-            this.CTRL_Calc.Margin = new System.Windows.Forms.Padding(2);
+            this.CTRL_Calc.Location = new System.Drawing.Point(83, 249);
+            this.CTRL_Calc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CTRL_Calc.Name = "CTRL_Calc";
-            this.CTRL_Calc.Size = new System.Drawing.Size(38, 24);
+            this.CTRL_Calc.Size = new System.Drawing.Size(51, 30);
             this.CTRL_Calc.TabIndex = 97;
             this.CTRL_Calc.Text = "CALC";
             this.CTRL_Calc.UseVisualStyleBackColor = true;
+            this.CTRL_Calc.Click += new System.EventHandler(this.CTRL_Calc_Click);
             // 
             // CTRL_Optn
             // 
             this.CTRL_Optn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_Optn.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Optn.Location = new System.Drawing.Point(22, 202);
-            this.CTRL_Optn.Margin = new System.Windows.Forms.Padding(2);
+            this.CTRL_Optn.Location = new System.Drawing.Point(29, 249);
+            this.CTRL_Optn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CTRL_Optn.Name = "CTRL_Optn";
-            this.CTRL_Optn.Size = new System.Drawing.Size(38, 24);
+            this.CTRL_Optn.Size = new System.Drawing.Size(51, 30);
             this.CTRL_Optn.TabIndex = 96;
             this.CTRL_Optn.Text = "OPTN";
             this.CTRL_Optn.UseVisualStyleBackColor = true;
+            this.CTRL_Optn.Click += new System.EventHandler(this.CTRL_Optn_Click);
             // 
             // CTRL_MoveRight
             // 
             this.CTRL_MoveRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_MoveRight.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_MoveRight.Location = new System.Drawing.Point(162, 161);
-            this.CTRL_MoveRight.Margin = new System.Windows.Forms.Padding(2);
+            this.CTRL_MoveRight.Location = new System.Drawing.Point(216, 198);
+            this.CTRL_MoveRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CTRL_MoveRight.Name = "CTRL_MoveRight";
-            this.CTRL_MoveRight.Size = new System.Drawing.Size(22, 41);
+            this.CTRL_MoveRight.Size = new System.Drawing.Size(29, 50);
             this.CTRL_MoveRight.TabIndex = 101;
             this.CTRL_MoveRight.Text = "R";
             this.CTRL_MoveRight.UseVisualStyleBackColor = true;
@@ -751,10 +766,10 @@ namespace DoAnLTTQ1
             // 
             this.CTRL_MoveUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_MoveUp.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_MoveUp.Location = new System.Drawing.Point(124, 135);
-            this.CTRL_MoveUp.Margin = new System.Windows.Forms.Padding(2);
+            this.CTRL_MoveUp.Location = new System.Drawing.Point(165, 166);
+            this.CTRL_MoveUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CTRL_MoveUp.Name = "CTRL_MoveUp";
-            this.CTRL_MoveUp.Size = new System.Drawing.Size(38, 24);
+            this.CTRL_MoveUp.Size = new System.Drawing.Size(51, 30);
             this.CTRL_MoveUp.TabIndex = 102;
             this.CTRL_MoveUp.Text = "Up";
             this.CTRL_MoveUp.UseVisualStyleBackColor = true;
@@ -763,10 +778,10 @@ namespace DoAnLTTQ1
             // 
             this.CTRL_MoveLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_MoveLeft.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_MoveLeft.Location = new System.Drawing.Point(100, 158);
-            this.CTRL_MoveLeft.Margin = new System.Windows.Forms.Padding(2);
+            this.CTRL_MoveLeft.Location = new System.Drawing.Point(133, 194);
+            this.CTRL_MoveLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CTRL_MoveLeft.Name = "CTRL_MoveLeft";
-            this.CTRL_MoveLeft.Size = new System.Drawing.Size(22, 41);
+            this.CTRL_MoveLeft.Size = new System.Drawing.Size(29, 50);
             this.CTRL_MoveLeft.TabIndex = 103;
             this.CTRL_MoveLeft.Text = "L";
             this.CTRL_MoveLeft.UseVisualStyleBackColor = true;
@@ -775,10 +790,10 @@ namespace DoAnLTTQ1
             // 
             this.CTRL_MoveDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_MoveDown.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_MoveDown.Location = new System.Drawing.Point(124, 197);
-            this.CTRL_MoveDown.Margin = new System.Windows.Forms.Padding(2);
+            this.CTRL_MoveDown.Location = new System.Drawing.Point(165, 242);
+            this.CTRL_MoveDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CTRL_MoveDown.Name = "CTRL_MoveDown";
-            this.CTRL_MoveDown.Size = new System.Drawing.Size(38, 24);
+            this.CTRL_MoveDown.Size = new System.Drawing.Size(51, 30);
             this.CTRL_MoveDown.TabIndex = 104;
             this.CTRL_MoveDown.Text = "Down";
             this.CTRL_MoveDown.UseVisualStyleBackColor = true;
@@ -788,10 +803,10 @@ namespace DoAnLTTQ1
             this.InputText.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.InputText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.InputText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InputText.Location = new System.Drawing.Point(23, 52);
-            this.InputText.Margin = new System.Windows.Forms.Padding(2);
+            this.InputText.Location = new System.Drawing.Point(31, 64);
+            this.InputText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.InputText.Name = "InputText";
-            this.InputText.Size = new System.Drawing.Size(244, 23);
+            this.InputText.Size = new System.Drawing.Size(325, 29);
             this.InputText.TabIndex = 105;
             this.InputText.Click += new System.EventHandler(this.InputText_Click);
             // 
@@ -806,10 +821,10 @@ namespace DoAnLTTQ1
             this.NUMB_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NUMB_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_7.ForeColor = System.Drawing.Color.Black;
-            this.NUMB_7.Location = new System.Drawing.Point(21, 343);
-            this.NUMB_7.Margin = new System.Windows.Forms.Padding(2);
+            this.NUMB_7.Location = new System.Drawing.Point(28, 422);
+            this.NUMB_7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_7.Name = "NUMB_7";
-            this.NUMB_7.Size = new System.Drawing.Size(47, 37);
+            this.NUMB_7.Size = new System.Drawing.Size(63, 46);
             this.NUMB_7.TabIndex = 90;
             this.NUMB_7.Text = "7";
             this.NUMB_7.TextColor = System.Drawing.Color.Black;
@@ -827,10 +842,10 @@ namespace DoAnLTTQ1
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton2.ForeColor = System.Drawing.Color.Black;
-            this.customButton2.Location = new System.Drawing.Point(17, 23);
-            this.customButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.customButton2.Location = new System.Drawing.Point(23, 28);
+            this.customButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(255, 94);
+            this.customButton2.Size = new System.Drawing.Size(340, 116);
             this.customButton2.TabIndex = 81;
             this.customButton2.Text = " ";
             this.customButton2.TextColor = System.Drawing.Color.Black;
@@ -847,10 +862,10 @@ namespace DoAnLTTQ1
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton1.ForeColor = System.Drawing.Color.Black;
-            this.customButton1.Location = new System.Drawing.Point(128, 55);
-            this.customButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.customButton1.Location = new System.Drawing.Point(171, 68);
+            this.customButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(38, 32);
+            this.customButton1.Size = new System.Drawing.Size(51, 39);
             this.customButton1.TabIndex = 61;
             this.customButton1.Text = "customButton1";
             this.customButton1.TextColor = System.Drawing.Color.Black;
@@ -867,10 +882,10 @@ namespace DoAnLTTQ1
             this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton3.ForeColor = System.Drawing.Color.Black;
-            this.customButton3.Location = new System.Drawing.Point(17, 122);
-            this.customButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.customButton3.Location = new System.Drawing.Point(23, 150);
+            this.customButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customButton3.Name = "customButton3";
-            this.customButton3.Size = new System.Drawing.Size(255, 67);
+            this.customButton3.Size = new System.Drawing.Size(340, 82);
             this.customButton3.TabIndex = 82;
             this.customButton3.Text = " ";
             this.customButton3.TextColor = System.Drawing.Color.Black;
@@ -887,10 +902,10 @@ namespace DoAnLTTQ1
             this.customButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton4.ForeColor = System.Drawing.Color.Black;
-            this.customButton4.Location = new System.Drawing.Point(13, 197);
-            this.customButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.customButton4.Location = new System.Drawing.Point(17, 242);
+            this.customButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customButton4.Name = "customButton4";
-            this.customButton4.Size = new System.Drawing.Size(260, 127);
+            this.customButton4.Size = new System.Drawing.Size(347, 156);
             this.customButton4.TabIndex = 83;
             this.customButton4.Text = " ";
             this.customButton4.TextColor = System.Drawing.Color.Black;
@@ -907,10 +922,10 @@ namespace DoAnLTTQ1
             this.customButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton6.ForeColor = System.Drawing.Color.Black;
-            this.customButton6.Location = new System.Drawing.Point(13, 332);
-            this.customButton6.Margin = new System.Windows.Forms.Padding(2);
+            this.customButton6.Location = new System.Drawing.Point(17, 409);
+            this.customButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customButton6.Name = "customButton6";
-            this.customButton6.Size = new System.Drawing.Size(260, 183);
+            this.customButton6.Size = new System.Drawing.Size(347, 225);
             this.customButton6.TabIndex = 85;
             this.customButton6.Text = " ";
             this.customButton6.TextColor = System.Drawing.Color.Black;
@@ -927,10 +942,10 @@ namespace DoAnLTTQ1
             this.customButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton5.ForeColor = System.Drawing.Color.Black;
-            this.customButton5.Location = new System.Drawing.Point(1, 3);
-            this.customButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.customButton5.Location = new System.Drawing.Point(1, 4);
+            this.customButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customButton5.Name = "customButton5";
-            this.customButton5.Size = new System.Drawing.Size(285, 526);
+            this.customButton5.Size = new System.Drawing.Size(380, 647);
             this.customButton5.TabIndex = 84;
             this.customButton5.Text = " ";
             this.customButton5.TextColor = System.Drawing.Color.Black;
@@ -938,10 +953,10 @@ namespace DoAnLTTQ1
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(286, 539);
+            this.ClientSize = new System.Drawing.Size(381, 663);
             this.Controls.Add(this.InputText);
             this.Controls.Add(this.CTRL_MoveDown);
             this.Controls.Add(this.CTRL_MoveLeft);
@@ -1008,7 +1023,7 @@ namespace DoAnLTTQ1
             this.Controls.Add(this.customButton5);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

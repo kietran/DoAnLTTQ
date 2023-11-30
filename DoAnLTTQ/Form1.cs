@@ -24,6 +24,7 @@ namespace DoAnLTTQ1
 
         /// INSERT BLOCK
        
+        //LOWEST BLOCK
         //NUMBER BUTTON
         private void NUMB_0_Click(object sender, EventArgs e)
         {
@@ -104,15 +105,136 @@ namespace DoAnLTTQ1
 
         private void MISC_Ans_Click(object sender, EventArgs e)
         {
-
+            if(onShiftMode)
+                Control.insertContentIntoInputText("%");
+            else
+                Control.insertContentIntoInputText("Ans");
         }
 
         private void FUNC_PowerOfTen_Click(object sender, EventArgs e)
         {
-            Control.insertContentIntoInputText("x10");
+            if(onShiftMode)
+                Control.insertContentIntoInputText("pi");
+            else if(onAlphaMode)
+                Control.insertContentIntoInputText("e");
+            else
+                Control.insertContentIntoInputText("x10");
         }
 
-    
+        //MIDDLE BLOCK
+
+        private void CTRL_Optn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CTRL_Calc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FUNC_Integral_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FUNC_X_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("x");
+        }
+
+        private void FUNC_Fraction_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("/");
+        }
+
+        private void FUNC_Sqrt_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("sqrt(");
+        }
+
+        private void FUNC_Square_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("^2");
+        }
+
+        private void FUNC_Pow_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("^");
+        }
+
+        private void FUNC_Logarit_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("log(");
+        }
+
+        private void FUNC_Ln_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("ln(");
+        }
+
+        private void MISC_Sub_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MISC_Degree_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FUNC_NumericalInverse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FUNC_Sin_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("sin(");
+        }
+
+        private void FUNC_Cos_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("cos(");
+        }
+
+        private void FUNC_Tan_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("tan(");
+        }
+
+        private void CTRL_Sto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CTRL_Eng_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MISC_OpenBracket_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText("(");
+        }
+
+        private void MISC_CloseBracket_Click(object sender, EventArgs e)
+        {
+            Control.insertContentIntoInputText(")");
+        }
+
+        private void MISC_ConvertSToD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MISC_MemoryAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
         //CONTROL BLOCK
         private void InputText_Click(object sender, EventArgs e)
         {
@@ -120,11 +242,12 @@ namespace DoAnLTTQ1
         }
         private void CTRL_Equal_Click(object sender, EventArgs e)
         {
-
+            
         }
         private void CTRL_Ac_Click(object sender, EventArgs e)
         {
-
+            InputText.Clear();
+            this.currentCursorPosition = 0;
         }
 
         private void CTRL_Del_Click(object sender, EventArgs e)
