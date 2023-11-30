@@ -16,6 +16,7 @@ namespace DoAnLTTQ1
         static public void insertContentIntoInputText(string content)
         {
             form1.InputText.Text =  form1.InputText.Text.Insert(form1.currentCursorPosition, content);
+            form1.currentCursorPosition += content.Length;
         }
         //AC
         static public void Perform_Ac()
