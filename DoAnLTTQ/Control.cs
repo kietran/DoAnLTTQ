@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace DoAnLTTQ1
 {
     internal class Control
@@ -15,7 +14,11 @@ namespace DoAnLTTQ1
         }
         static public void insertContentIntoInputText(string content)
         {
-            form1.InputText.Text =  form1.InputText.Text.Insert(form1.currentCursorPosition, content);
+            if (form1.onInvalidExpressionMode)
+            {
+                return;
+            }
+            form1.InputText.Text = form1.InputText.Text.Insert(form1.currentCursorPosition, content);
             form1.currentCursorPosition += content.Length;
         }
         //AC
@@ -31,7 +34,29 @@ namespace DoAnLTTQ1
         //EQUAL
         static public void Perform_Equal()
         {
-
+            //init expression
+            Expression e = new Expression();
+            e.setContent(form1.InputText.Text);        
+            //check if expression is valid
+            if (!e.checkValidity())
+            {
+                turnOnInvalidExpressionMode();
+                return;
+            }
+            //compute result
+            e.buildComputingTree();
+            double result = e.computeResult();
+            form1.OutputText.Text = result.ToString();
+        }
+        static public void turnOnInvalidExpressionMode()
+        {
+            form1.InputText.Text = "Expression Invalid";
+            form1.onInvalidExpressionMode = true;
+        }
+        static public void turnOffInvalidExpressionMode()
+        {
+            form1.InputText.Text = "";
+            form1.onInvalidExpressionMode = false;
         }
         //SHIFT MODE
         static public void Toggle_ShiftMode()

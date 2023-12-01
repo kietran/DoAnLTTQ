@@ -622,14 +622,15 @@ namespace DoAnLTTQ1
             // 
             // OutputText
             // 
-            this.OutputText.AutoSize = true;
             this.OutputText.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.OutputText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OutputText.Location = new System.Drawing.Point(269, 100);
+            this.OutputText.Location = new System.Drawing.Point(40, 100);
             this.OutputText.Name = "OutputText";
-            this.OutputText.Size = new System.Drawing.Size(83, 29);
+            this.OutputText.Size = new System.Drawing.Size(312, 29);
             this.OutputText.TabIndex = 86;
             this.OutputText.Text = "output";
+            this.OutputText.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.OutputText.Click += new System.EventHandler(this.OutputText_Click);
             // 
             // label3
             // 
@@ -809,6 +810,7 @@ namespace DoAnLTTQ1
             this.InputText.Size = new System.Drawing.Size(325, 29);
             this.InputText.TabIndex = 105;
             this.InputText.Click += new System.EventHandler(this.InputText_Click);
+            this.InputText.TextChanged += new System.EventHandler(this.InputText_TextChanged);
             // 
             // NUMB_7
             // 
@@ -1079,7 +1081,7 @@ namespace DoAnLTTQ1
         private CustomControls.CustomButton.CustomButton customButton4;
         private CustomControls.CustomButton.CustomButton customButton5;
         private CustomControls.CustomButton.CustomButton customButton6;
-        private System.Windows.Forms.Label OutputText;
+        public System.Windows.Forms.Label OutputText;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private CustomControls.CustomButton.CustomButton NUMB_7;
