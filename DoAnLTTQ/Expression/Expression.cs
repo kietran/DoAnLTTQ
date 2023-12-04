@@ -1,36 +1,136 @@
-﻿using System.Collections.Generic;
-using System.Text;
+using System.Collections.Generic;
+using System.Globalization;
 using System;
 
+partial class Math
+{
+    public static long GCD(long  a, long  b)
+    {
+        while (b != 0)
+        {
+            long  temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+    public static long LCM(long  x, long  y)
+    {
+        long  a;
+        // a is greater number
+        a = (x > y) ? x : y;
+
+        while (true)
+        {
+            if (a % x == 0 && a % y == 0)
+                return a;
+            ++a;
+        }
+    }
+    public static long Fact(long  n)
+    {
+        if (n == 0)
+        {
+            return 0;
+        }
+        long res = 1;
+        for (int i = 1; i <= n; ++i)
+        {
+            res *= i;
+        }
+        return res;
+    }
+    public static double NOT(int n)
+    {
+        return n != 0 ? 0 : 1;
+    }
+    public static double BitwiseNegate(long  n)
+    {
+        return ~n;
+    }
+    public static bool convertToBoolean(double d)
+    {
+        long  i = (long)d;
+        if (d != i)
+        {
+            return false;
+        }
+        if (i != 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public static long Poly(long a, long b)
+    {
+        long top = Fact(a), bot = Fact(a-b);
+        return top / bot;
+    }
+    public static long Comb(long a, long b)
+    {
+        long top = Fact(a), bot = Fact(b)*Fact(a-b);
+        return top / bot;
+    }
+}
 class Expression_Helper
 {
     static public void init()
     {
-        functionHeaders = new List<string> {
-                "asin",
-                "acos",
-                "atan",
-                "sin",
-                "cos",
-                "tan",
-                "hyp",
-                "log10",
-                "ln",
-                "sqrt"
+        FunctionHeaders = new List<string> {
+                "sinh", "cosh", "tanh",
+
+                "asin","acos","atan",
+
+                "sin", "cos", "tan",
+
+                "log10","ln", "sqrt",
+
+                "abs", "fact",
+
+                "GCD", "LCM", "log",
+
+                "NOT","~",
+
+                "poly","comb"
            };
-    }
-    static public List<string> functionHeaders;
-    static public void forwardReplacePattern(string input, string patternToReplace, string tobeReplaced)
-    {
-        StringBuilder result = new StringBuilder(input);
-        for (int i = 0; i < input.Length; i++)
-        {
-            if (checkThereIsAPatternStartHere(input, i, patternToReplace))
+        List<string> Prior1 = new List<string>()
             {
-                result.Replace(patternToReplace, tobeReplaced);
-            }
+                "*", "/","^"
+            };
+        List<string> Prior2 = new List<string>()
+            {
+                "+",
+            };
+        List<string> Prior3 = new List<string>()
+            {
+                ">>", "<<"
+            };
+        List<string> Prior4 = new List<string>()
+            {  
+                "AND", "OR", "NOT",
+                "<=", ">=", "==", "!=","<", ">"
+            };
+        List<string> Prior5 = new List<string>()
+            {
+                "&", "|","$"
+            };
+        Operators = new List<string>[5];
+        for (int i = 0; i < 5; i++)
+        {
+            Operators[i] = new List<string>();
         }
+        Operators[0].AddRange(Prior1);
+        Operators[1].AddRange(Prior2);
+        Operators[2].AddRange(Prior3);
+        Operators[3].AddRange(Prior4);
+        Operators[4].AddRange(Prior5);
+
     }
+    static public List<string> FunctionHeaders;
+    static public List<string>[] Operators;
     static public bool checkThereIsAPatternStartHere(string input, int pos, string pattern)
     {
         if (pos + pattern.Length > input.Length)
@@ -59,18 +159,23 @@ class Expression_Helper
         return true;
     }
 
-
     static public string getFunctionHeader(string input)
     {
         if (input.Length == 0)
         {
             return "NONE";
         }
-        foreach (string content in functionHeaders)
+        foreach (string content in FunctionHeaders)
         {
             if (checkThereIsAPatternStartHere(input, 0, content))
             {
-                if (!checkValidBracket(input.Substring(content.Length + 1, input.Length - content.Length - 2)))
+                int start = content.Length + 1;
+                int length = input.Length - content.Length - 2;
+                if (length <= 0 || start >= input.Length)
+                {
+                    continue;
+                }
+                if (!checkValidBracket(input.Substring(start, length)))
                 {
                     continue;
                 }
@@ -79,21 +184,14 @@ class Expression_Helper
         }
         return "NONE";
     }
-    static public double applyFunction(double input, string functionHeader)
+    static public int getNumberOfOperands(string functionHeader)
     {
-        if (functionHeader == "sin") return Math.Sin(input);
-        else if (functionHeader == "cos") return Math.Cos(input);
-        else if (functionHeader == "tan") return Math.Tan(input);
-        else if (functionHeader == "hyp") return (input);
-        else if (functionHeader == "log10") return Math.Log10(input);
-        else if (functionHeader == "ln") return Math.Log(input - 1);
-        else if (functionHeader == "sqrt") return Math.Sqrt(input);
-        else if (functionHeader == "asin") return Math.Asin(input);
-        else if (functionHeader == "acos") return Math.Acos(input);
-        else if (functionHeader == "atan") return Math.Atan(input);
-        return input;
+        if (functionHeader == "GCD" || functionHeader == "LCM" || functionHeader == "log" || functionHeader == "poly" || functionHeader == "comb")
+        {
+            return 2;
+        }
+        return 1;
     }
-
     static public bool peelOffExtraBracket(ref string input)
     {
         if (input.Length == 0)
@@ -111,15 +209,17 @@ class Expression_Helper
         input = input.Substring(1, input.Length - 2);
         return true;
     }
-
-    static public bool isOperator(char c)
-    {
-        return c == '+' || c == '*' || c == '/' || c == '^';
-    }
     static public bool isNumber(string input)
     {
-        bool isNumber = double.TryParse(input, out double number);
-        return isNumber;
+        if (input[0] == '-' || input[0] == '+')
+        {
+            input = input.Substring(1);
+        }
+        if (double.TryParse(input, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out double result))
+        {
+            return true;
+        }
+        return false;
     }
     static public bool checkValidBracket(string input)
     {
@@ -141,16 +241,47 @@ class Expression_Helper
         }
         return valid == 0;
     }
+
+    //return start index of op if it appears in input, else return -1.
+    static public int findOperatorNotEnclosed(string input, string op)
+    {
+        while (Expression_Helper.peelOffExtraBracket(ref input)) ;
+        int i = 0;
+        int outOfExpression = 0;
+
+        while (i < input.Length)
+        {
+            if (checkThereIsAPatternStartHere(input, i, op))
+            {
+                if (outOfExpression == 0)
+                {
+                    return i;
+                }
+            }
+            if (input[i] == '(')
+            {
+                outOfExpression++;
+            }
+            else if (input[i] == ')')
+            {
+                outOfExpression--;
+            }
+            i++;
+        }
+        return -1;
+    }
 };
 //Node
 abstract class BaseNode
 {
     public BaseNode left, right;
+    public int numberOfChild;
     public BaseNode()
     {
-
+        left = right = null;
+        numberOfChild = 0;
     }
-    public abstract double computeResult(Dictionary<char, double> variablePair);
+    public abstract double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood);
 
 
 };
@@ -159,8 +290,9 @@ class NumberNode : BaseNode
     public NumberNode(double val = 0)
     {
         data = val;
+        numberOfChild = 0;
     }
-    override public double computeResult(Dictionary<char, double> variablePair)
+    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood)
     {
         return data;
     }
@@ -171,8 +303,9 @@ class VariableNode : BaseNode
     public VariableNode(char c = 'x')
     {
         variable = c;
+        numberOfChild = 0;
     }
-    override public double computeResult(Dictionary<char, double> variablePair)
+    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood)
     {
         if (variablePair.ContainsKey(variable))
         {
@@ -188,51 +321,214 @@ class FunctionNode : BaseNode
     public FunctionNode(string header = "NONE")
     {
         functionHeader = header;
+        numberOfChild = 0;
     }
-    override public double computeResult(Dictionary<char, double> variablePair)
+    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood)
     {
-        return Expression_Helper.applyFunction(left.computeResult(variablePair), functionHeader);
+        if (numberOfChild == 1)
+        {
+            double result = left.computeResult(variablePair, ref soFarSoGood);
+            if (functionHeader == "sin") return System.Math.Sin(result);
+            else if (functionHeader == "cos") return System.Math.Cos(result);
+            else if (functionHeader == "tan") return System.Math.Tan(result);
+            else if (functionHeader == "asin") return System.Math.Asin(result);
+            else if (functionHeader == "acos") return System.Math.Acos(result);
+            else if (functionHeader == "atan") return System.Math.Atan(result);
+            else if (functionHeader == "sinh") return System.Math.Sinh(result);
+            else if (functionHeader == "cosh") return System.Math.Cosh(result);
+            else if (functionHeader == "tanh") return System.Math.Tanh(result);
+
+            else if (functionHeader == "log10") return System.Math.Log10(result);
+            else if (functionHeader == "ln") return System.Math.Log(result - 1);
+            else if (functionHeader == "sqrt")
+            {
+                if (result < 0)
+                {
+                    soFarSoGood = false;
+                }
+                else
+                {
+                    return System.Math.Sqrt(result);
+                }
+
+            }
+            else if (functionHeader == "abs") return System.Math.Abs(result);
+
+
+            int iResult = (int)result;
+            if (iResult != result)
+            {
+                soFarSoGood = false;
+                return -1;
+            }
+
+            else if (functionHeader == "NOT") return Math.NOT(iResult);
+            else if (functionHeader == "~") return Math.BitwiseNegate(iResult);
+        }
+        else if (numberOfChild == 2)
+        {
+            double result1 = left.computeResult(variablePair, ref soFarSoGood);
+            double result2 = right.computeResult(variablePair, ref soFarSoGood);
+            if (functionHeader == "log") return System.Math.Log(result1, result2);
+
+            int iResult1 = (int)result1;
+            int iResult2 = (int)result2;
+            if (iResult1 != result1 || iResult2 != result2)
+            {
+                soFarSoGood = false;
+                return -1;
+            }
+            if (functionHeader == "GCD")
+            {
+                return Math.GCD(iResult1, iResult2);
+            }
+            else if (functionHeader == "LCM")
+            {
+                if (iResult1 != result1 || (int)result2 != result2)
+                {
+                    soFarSoGood = false;
+                }
+                else
+                {
+                    return Math.LCM(iResult1, iResult2);
+                }
+            }
+            else if (functionHeader == "poly")
+            {
+                if(iResult1<=0 || iResult2 <= 0 || iResult1 < iResult2)
+                {
+                    soFarSoGood = false;
+                    return -1;
+                }
+                return Math.Poly(iResult1, iResult2);
+            }
+            else if (functionHeader == "comb")
+            {
+                if (iResult1 <= 0 || iResult2 <= 0 || iResult1 < iResult2)
+                {
+                    soFarSoGood = false;
+                    return -1;
+                }
+                return Math.Comb(iResult1, iResult2);
+            }
+        }
+        soFarSoGood = false;
+        return -1;
+
     }
     string functionHeader;
 };
 class OperatorNode : BaseNode
 {
-    public OperatorNode(char c = 'a')
+    public OperatorNode(string c = "x")
     {
         oper = c;
     }
-    override public double computeResult(Dictionary<char, double> variablePair)
+    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood)
     {
-        if (oper == '+')
+        double leftResult = left.computeResult(variablePair, ref soFarSoGood);
+        double rightResult = right.computeResult(variablePair, ref soFarSoGood);
+        //normal op
+        if (oper == "+")
         {
-            return left.computeResult(variablePair) + right.computeResult(variablePair);
+            return leftResult + rightResult;
         }
-        if (oper == '-')
+        if (oper == "-")
         {
-            return left.computeResult(variablePair) - right.computeResult(variablePair);
+            return leftResult - rightResult;
         }
-        if (oper == '*')
+        if (oper == "*")
         {
-            return left.computeResult(variablePair) * right.computeResult(variablePair);
+            return leftResult * rightResult;
         }
-        if (oper == '/')
+        if (oper == "/")
         {
-            return left.computeResult(variablePair) / right.computeResult(variablePair);
+            return leftResult / rightResult;
         }
-        if (oper == '^')
+        if (oper == "^")
         {
-            return Math.Pow(left.computeResult(variablePair), right.computeResult(variablePair));
+            return System.Math.Pow(leftResult, rightResult);
         }
-        //error log
+
+        //compare op
+        if (oper == ">")
+        {
+            return Convert.ToDouble(leftResult > rightResult);
+        }
+        if (oper == "<")
+        {
+            return Convert.ToDouble(leftResult < rightResult);
+        }
+        if (oper == ">=")
+        {
+            return Convert.ToDouble(leftResult >= rightResult);
+        }
+        if (oper == "<=")
+        {
+            return Convert.ToDouble(leftResult <= rightResult);
+        }
+        if (oper == "==")
+        {
+            return Convert.ToDouble(leftResult == rightResult);
+        }
+        if (oper == "!=")
+        {
+            return Convert.ToDouble(leftResult != rightResult);
+        }
+
+        //logic op
+        bool bLeft = Math.convertToBoolean(leftResult);
+        bool bRight = Math.convertToBoolean(rightResult);
+
+        if (oper == "AND")
+        {
+            return Convert.ToDouble(bLeft && bRight);
+        }
+        if (oper == "OR")
+        {
+            return Convert.ToDouble(bLeft || bRight);
+        }
+
+        //bitwise op
+        int iLeft = (int)leftResult, iRight = (int)rightResult;
+        if (iLeft != leftResult || iRight != rightResult)
+        {
+            soFarSoGood = false;
+            return -1;
+        }
+        if (oper == ">>")
+        {
+            return iLeft >> iRight;
+        }
+        if (oper == "<<")
+        {
+            return iLeft << iRight;
+        }
+        if (oper == "|")
+        {
+            return iLeft | iRight;
+        }
+        if (oper == "&")
+        {
+            return iLeft & iRight;
+        }
+        if (oper == "$")
+        {
+            return iLeft ^ iRight;
+        }
         return -1;
+
     }
-    char oper;
+
+    string oper;
 };
 class Expression_BinaryTree
 {
     public Expression_BinaryTree()
     {
         root = null;
+        builtSucceeded = true;
+        computedSucceeded = true;
     }
     public void buildTreeFromExpression(string s, Dictionary<char, double> variablePair)
     {
@@ -240,32 +536,53 @@ class Expression_BinaryTree
     }
     public double computeResult(Dictionary<char, double> variablePair)
     {
-        return root.computeResult(variablePair);
+        return root.computeResult(variablePair, ref computedSucceeded);
     }
 
     public bool isEmpty()
     {
         return root == null;
     }
+    public bool isOverallValid()
+    {
+        return builtSucceeded;
+    }
+    public bool isComputingValid()
+    {
+        return computedSucceeded;
+    }
+    public string getErrorMessage()
+    {
+        return errorMessage;
+    }
     public void buildTreeFromExpression_Helper(ref BaseNode root, string s, Dictionary<char, double> variablePairs)
     {
-        //Console.WriteLine(s);
-        while (Expression_Helper.peelOffExtraBracket(ref s)) { }
+        if (s.Length == 0)
+        {
+            builtSucceeded = false;
+            errorMessage = "Can't identify Expression";
+        }
+        if (!builtSucceeded)
+        {
+            return;
+        }
+        //Console.WriteLine("Working with: {0}",s);
+        //remove extra bracket
+        while (Expression_Helper.peelOffExtraBracket(ref s)) ;
 
+        //check if s is a number;
         if (Expression_Helper.isNumber(s))
         {
             root = new NumberNode(double.Parse(s));
             return;
         }
+        //check if s is a variable
         if (s.Length == 1)
         {
-            foreach (KeyValuePair<char, double> keyValuePair in variablePairs)
+            if (variablePairs.ContainsKey(s[0]))
             {
-                if (s[0] == keyValuePair.Key)
-                {
-                    root = new VariableNode(s[0]);
-                    return;
-                }
+                root = new VariableNode(s[0]);
+                return;
             }
         }
 
@@ -274,77 +591,78 @@ class Expression_BinaryTree
         if (header != "NONE")
         {
             root = new FunctionNode(header);
+            //Console.WriteLine("     Header: {0}", header);
             s = s.Substring(header.Length, s.Length - header.Length);
-            while (Expression_Helper.peelOffExtraBracket(ref s)) { }
-            buildTreeFromExpression_Helper(ref root.left, s, variablePairs);
-            return;
-        }
-
-        int i = 0;
-        int outOfExpression = 0;
-
-        while (i < s.Length)
-        {
-            if (s[i] == '+')
+            while (Expression_Helper.peelOffExtraBracket(ref s)) ;
+            root.numberOfChild = Expression_Helper.getNumberOfOperands(header);
+            if (root.numberOfChild == 1)
             {
-                if (outOfExpression == 0)
-                {
-                    break;
-                }
-            }
-            if (s[i] == '(')
-            {
-                outOfExpression++;
-            }
-            else if (s[i] == ')')
-            {
-                outOfExpression--;
-            }
-            i++;
-        }
-
-        if (i != s.Length)
-        {
-            root = new OperatorNode(s[i]);
-            if (i == 0)
-            {
-                root.left = new NumberNode(0);
+                buildTreeFromExpression_Helper(ref root.left, s, variablePairs);
+                return;
             }
             else
             {
-                buildTreeFromExpression_Helper(ref root.left, s.Substring(0, i), variablePairs);
-            }
+                string param1, param2;
+                int commaPos = Expression_Helper.findOperatorNotEnclosed(s, ",");
 
-            buildTreeFromExpression_Helper(ref root.right, s.Substring(i + 1, s.Length - (i + 1)), variablePairs);
-            return;
-        }
-        i = 0;
-        outOfExpression = 0;
-        while (i < s.Length)
-        {
-            if (s[i] == '*' || s[i] == '/' || s[i] == '^')
-            {
-                if (outOfExpression == 0)
+                if (commaPos == -1)
                 {
-                    break;
+                    //can't find enough param
+                    builtSucceeded = false;
+                    errorMessage = "Invalid use of Functions";
+                    return;
+                }
+                else
+                {
+                    param1 = s.Substring(0, commaPos);
+                    param2 = s.Substring(commaPos + 1);
+                    //Console.WriteLine("     param1: {0}", param1);
+                    //Console.WriteLine("     param2: {0}", param2);
+                    buildTreeFromExpression_Helper(ref root.left, param1, variablePairs);
+                    buildTreeFromExpression_Helper(ref root.right, param2, variablePairs);
+                    return;
+                }
+                //// dect ,
+            }
+        }
+        int prior = Expression_Helper.Operators.Length - 1;
+        for (int i = prior; i >= 0; i--)
+        {
+            foreach (string op_holder in Expression_Helper.Operators[i])
+            {
+                string op = op_holder;
+                int startIndex = Expression_Helper.findOperatorNotEnclosed(s, op);
+                if (startIndex != -1)
+                {
+                    if (op == ">" && Expression_Helper.checkThereIsAPatternStartHere(s, startIndex, ">>"))
+                    {
+                        op = ">>";
+                    }
+                    root = new OperatorNode(op);
+                    //Console.WriteLine("     Operator: {0}", op);
+                    //left
+                    if (op == "+" && startIndex == 0)
+                    {
+                        root.left = new NumberNode(0);
+                    }
+                    else
+                    {
+                        buildTreeFromExpression_Helper(ref root.left, s.Substring(0, startIndex), variablePairs);
+                    }
+                    //right, renem to accout for op length
+                    buildTreeFromExpression_Helper(ref root.right, s.Substring(startIndex + op.Length), variablePairs);
+                    return;
                 }
             }
-            if (s[i] == '(')
-            {
-                outOfExpression++;
-            }
-            else if (s[i] == ')')
-            {
-                outOfExpression--;
-            }
-            i++;
         }
-        root = new OperatorNode(s[i]);
-        buildTreeFromExpression_Helper(ref root.left, s.Substring(0, i), variablePairs);
-        buildTreeFromExpression_Helper(ref root.right, s.Substring(i + 1, s.Length - (i + 1)), variablePairs);
+        errorMessage = "Can't identify expression";
+        builtSucceeded = false;
     }
 
     private BaseNode root;
+    private bool builtSucceeded;
+    private bool computedSucceeded;
+    private string errorMessage;
 };
 
 //Expression
@@ -366,21 +684,21 @@ class Expression
     {
         foreach (KeyValuePair<string, string> convert in convertingRules)
         {
-            Expression_Helper.forwardReplacePattern(expression, convert.Key, convert.Value);
+            expression = expression.Replace(convert.Key, convert.Value);
         }
     }
-    public bool checkValidity()
+    public bool checkOverallValidity()
     {
         string temp = expression;
         foreach (KeyValuePair<string, string> convert in convertingRules)
         {
-            Expression_Helper.forwardReplacePattern(temp, convert.Key, "+1");
+            temp = temp.Replace(convert.Key, Convert.ToString(convert.Value));
         }
         if (!Expression_Helper.checkValidBracket(temp))
         {
             return false;
         }
-        return checkValidity_Helper(temp);
+        return eB.isOverallValid();
     }
 
     public void buildComputingTree()
@@ -400,6 +718,14 @@ class Expression
     public void setVariableValue(char c, double value)
     {
         variablePairs[c] = value;
+    }
+    public bool checkComputingValidity()
+    {
+        return eB.isComputingValid();
+    }
+    public string getErrorMessage()
+    {
+        return eB.getErrorMessage();
     }
     public double computeResult()
     {
@@ -434,66 +760,4 @@ class Expression
     Dictionary<string, string> convertingRules;
     Dictionary<char, double> variablePairs;
 
-    bool checkValidity_Helper(string input)
-    {
-        //Console.WriteLine("Checking " + input);
-        if (input.Length == 0)
-        {
-            return false;
-        }
-        //get rid off extra bracket
-        while (Expression_Helper.peelOffExtraBracket(ref input)) ;
-
-        string functionHeader = Expression_Helper.getFunctionHeader(input);
-        while (functionHeader != "NONE")
-        {
-            input = input.Remove(0, functionHeader.Length);
-            Expression_Helper.peelOffExtraBracket(ref input);
-            functionHeader = Expression_Helper.getFunctionHeader(input);
-        }
-        while (Expression_Helper.peelOffExtraBracket(ref input)) ;
-
-        //2 cases: 2 operands with an operator or an operand that is a number
-        int i = 0;
-        int outOfExpression = 0;
-
-        while (i < input.Length)
-        {
-            if (Expression_Helper.isOperator(input[i]))
-            {
-                if (outOfExpression == 0)
-                {
-                    break;
-                }
-            }
-            if (input[i] == '(')
-            {
-                outOfExpression++;
-            }
-            else if (input[i] == ')')
-            {
-                outOfExpression--;
-            }
-            i++;
-        }
-        //check for first case
-        if (i == 0)
-        {
-            if (input[i] == '+')
-            {
-                return checkValidity_Helper(input.Substring(1, input.Length - 1));
-            }
-            else
-            {
-                return false;
-            }
-        }
-        if (i < input.Length)
-        {
-            //cout<<input<<endl;
-            return checkValidity_Helper(input.Substring(0, i)) && checkValidity_Helper(input.Substring(i + 1, input.Length - i - 1));
-        }
-        //check for second case
-        return Expression_Helper.isNumber(input);
-    }
-}
+};
