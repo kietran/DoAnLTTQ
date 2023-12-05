@@ -1,3 +1,7 @@
+﻿using System.Drawing;
+using System.Drawing.Text;
+using System.Runtime.InteropServices;
+
 namespace DoAnLTTQ1
 {
     partial class Form1
@@ -5,7 +9,7 @@ namespace DoAnLTTQ1
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        internal System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -26,25 +30,25 @@ namespace DoAnLTTQ1
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        internal void InitializeComponent()
         {
             this.NUMB_0 = new System.Windows.Forms.Button();
             this.STATE_Shift = new System.Windows.Forms.Button();
             this.STATE_Alpha = new System.Windows.Forms.Button();
             this.STATE_Power = new System.Windows.Forms.Button();
             this.STATE_Mode = new System.Windows.Forms.Button();
-            this.CTRL_Sto = new System.Windows.Forms.Button();
-            this.CTRL_Eng = new System.Windows.Forms.Button();
-            this.MISC_OpenBracket = new System.Windows.Forms.Button();
-            this.MISC_CloseBracket = new System.Windows.Forms.Button();
-            this.MISC_ConvertSToD = new System.Windows.Forms.Button();
-            this.MISC_MemoryAdd = new System.Windows.Forms.Button();
+            this.OPER_Gt = new System.Windows.Forms.Button();
+            this.OPER_Lt = new System.Windows.Forms.Button();
+            this.OPER_Ge = new System.Windows.Forms.Button();
+            this.OPER_Le = new System.Windows.Forms.Button();
+            this.OPER_Eq = new System.Windows.Forms.Button();
+            this.OPER_Ne = new System.Windows.Forms.Button();
             this.FUNC_Tan = new System.Windows.Forms.Button();
             this.FUNC_Cos = new System.Windows.Forms.Button();
             this.FUNC_Sin = new System.Windows.Forms.Button();
-            this.FUNC_NumericalInverse = new System.Windows.Forms.Button();
-            this.MISC_Degree = new System.Windows.Forms.Button();
-            this.MISC_Sub = new System.Windows.Forms.Button();
+            this.OPER_Not = new System.Windows.Forms.Button();
+            this.OPER_Or = new System.Windows.Forms.Button();
+            this.OPER_And = new System.Windows.Forms.Button();
             this.FUNC_Ln = new System.Windows.Forms.Button();
             this.FUNC_Logarit = new System.Windows.Forms.Button();
             this.FUNC_Pow = new System.Windows.Forms.Button();
@@ -72,19 +76,17 @@ namespace DoAnLTTQ1
             this.OutputText = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.FUNC_PowerOfTen_LABEL = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.DelLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.FUNC_X = new System.Windows.Forms.Button();
-            this.FUNC_Integral = new System.Windows.Forms.Button();
-            this.CTRL_Calc = new System.Windows.Forms.Button();
-            this.CTRL_Optn = new System.Windows.Forms.Button();
+            this.CTRL_Redo = new System.Windows.Forms.Button();
+            this.CTRL_Undo = new System.Windows.Forms.Button();
+            this.MISC_CloseBracket = new System.Windows.Forms.Button();
+            this.MISC_OpenBracket = new System.Windows.Forms.Button();
             this.CTRL_MoveRight = new System.Windows.Forms.Button();
             this.CTRL_MoveUp = new System.Windows.Forms.Button();
             this.CTRL_MoveLeft = new System.Windows.Forms.Button();
             this.CTRL_MoveDown = new System.Windows.Forms.Button();
-            this.InputText = new System.Windows.Forms.TextBox();
+            this.InputText = new CustomControls.CalculatorTextbox.CalculatorTextbox();
             this.NUMB_7 = new CustomControls.CustomButton.CustomButton();
             this.customButton2 = new CustomControls.CustomButton.CustomButton();
             this.customButton1 = new CustomControls.CustomButton.CustomButton();
@@ -109,27 +111,30 @@ namespace DoAnLTTQ1
             // 
             // STATE_Shift
             // 
-            this.STATE_Shift.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STATE_Shift.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STATE_Shift.ForeColor = System.Drawing.SystemColors.WindowText;
             this.STATE_Shift.Location = new System.Drawing.Point(31, 166);
             this.STATE_Shift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.STATE_Shift.Name = "STATE_Shift";
             this.STATE_Shift.Size = new System.Drawing.Size(45, 46);
             this.STATE_Shift.TabIndex = 38;
-            this.STATE_Shift.Text = "button21";
+            this.STATE_Shift.Text = "SHIFT";
+            this.STATE_Shift.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.STATE_Shift.UseVisualStyleBackColor = true;
+            this.STATE_Shift.Click += new System.EventHandler(this.STATE_Shift_Click);
             // 
             // STATE_Alpha
             // 
-            this.STATE_Alpha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STATE_Alpha.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STATE_Alpha.ForeColor = System.Drawing.SystemColors.WindowText;
             this.STATE_Alpha.Location = new System.Drawing.Point(83, 178);
             this.STATE_Alpha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.STATE_Alpha.Name = "STATE_Alpha";
             this.STATE_Alpha.Size = new System.Drawing.Size(45, 46);
             this.STATE_Alpha.TabIndex = 39;
-            this.STATE_Alpha.Text = "button22";
+            this.STATE_Alpha.Text = "ALPHA";
             this.STATE_Alpha.UseVisualStyleBackColor = true;
+            this.STATE_Alpha.Click += new System.EventHandler(this.STATE_Alpha_Click);
             // 
             // STATE_Power
             // 
@@ -155,83 +160,83 @@ namespace DoAnLTTQ1
             this.STATE_Mode.Text = "button24";
             this.STATE_Mode.UseVisualStyleBackColor = true;
             // 
-            // CTRL_Sto
+            // OPER_Gt
             // 
-            this.CTRL_Sto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CTRL_Sto.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Sto.Location = new System.Drawing.Point(27, 354);
-            this.CTRL_Sto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CTRL_Sto.Name = "CTRL_Sto";
-            this.CTRL_Sto.Size = new System.Drawing.Size(51, 30);
-            this.CTRL_Sto.TabIndex = 42;
-            this.CTRL_Sto.Text = "button25";
-            this.CTRL_Sto.UseVisualStyleBackColor = true;
-            this.CTRL_Sto.Click += new System.EventHandler(this.CTRL_Sto_Click);
+            this.OPER_Gt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Gt.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.OPER_Gt.Location = new System.Drawing.Point(28, 354);
+            this.OPER_Gt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OPER_Gt.Name = "OPER_Gt";
+            this.OPER_Gt.Size = new System.Drawing.Size(51, 30);
+            this.OPER_Gt.TabIndex = 42;
+            this.OPER_Gt.Text = ">";
+            this.OPER_Gt.UseVisualStyleBackColor = true;
+            this.OPER_Gt.Click += new System.EventHandler(this.OPER_Gt_Click);
             // 
-            // CTRL_Eng
+            // OPER_Lt
             // 
-            this.CTRL_Eng.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CTRL_Eng.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Eng.Location = new System.Drawing.Point(83, 354);
-            this.CTRL_Eng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CTRL_Eng.Name = "CTRL_Eng";
-            this.CTRL_Eng.Size = new System.Drawing.Size(51, 30);
-            this.CTRL_Eng.TabIndex = 43;
-            this.CTRL_Eng.Text = "button26";
-            this.CTRL_Eng.UseVisualStyleBackColor = true;
-            this.CTRL_Eng.Click += new System.EventHandler(this.CTRL_Eng_Click);
+            this.OPER_Lt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Lt.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.OPER_Lt.Location = new System.Drawing.Point(83, 354);
+            this.OPER_Lt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OPER_Lt.Name = "OPER_Lt";
+            this.OPER_Lt.Size = new System.Drawing.Size(51, 30);
+            this.OPER_Lt.TabIndex = 43;
+            this.OPER_Lt.Text = "<";
+            this.OPER_Lt.UseVisualStyleBackColor = true;
+            this.OPER_Lt.Click += new System.EventHandler(this.OPER_Lt_Click);
             // 
-            // MISC_OpenBracket
+            // OPER_Ge
             // 
-            this.MISC_OpenBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MISC_OpenBracket.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_OpenBracket.Location = new System.Drawing.Point(139, 354);
-            this.MISC_OpenBracket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MISC_OpenBracket.Name = "MISC_OpenBracket";
-            this.MISC_OpenBracket.Size = new System.Drawing.Size(51, 30);
-            this.MISC_OpenBracket.TabIndex = 44;
-            this.MISC_OpenBracket.Text = "(";
-            this.MISC_OpenBracket.UseVisualStyleBackColor = true;
-            this.MISC_OpenBracket.Click += new System.EventHandler(this.MISC_OpenBracket_Click);
+            this.OPER_Ge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Ge.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.OPER_Ge.Location = new System.Drawing.Point(137, 354);
+            this.OPER_Ge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OPER_Ge.Name = "OPER_Ge";
+            this.OPER_Ge.Size = new System.Drawing.Size(51, 30);
+            this.OPER_Ge.TabIndex = 44;
+            this.OPER_Ge.Text = "≥";
+            this.OPER_Ge.UseVisualStyleBackColor = true;
+            this.OPER_Ge.Click += new System.EventHandler(this.OPER_Ge_Click);
             // 
-            // MISC_CloseBracket
+            // OPER_Le
             // 
-            this.MISC_CloseBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MISC_CloseBracket.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_CloseBracket.Location = new System.Drawing.Point(189, 354);
-            this.MISC_CloseBracket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MISC_CloseBracket.Name = "MISC_CloseBracket";
-            this.MISC_CloseBracket.Size = new System.Drawing.Size(51, 30);
-            this.MISC_CloseBracket.TabIndex = 45;
-            this.MISC_CloseBracket.Text = ")";
-            this.MISC_CloseBracket.UseVisualStyleBackColor = true;
-            this.MISC_CloseBracket.Click += new System.EventHandler(this.MISC_CloseBracket_Click);
+            this.OPER_Le.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Le.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.OPER_Le.Location = new System.Drawing.Point(191, 354);
+            this.OPER_Le.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OPER_Le.Name = "OPER_Le";
+            this.OPER_Le.Size = new System.Drawing.Size(51, 30);
+            this.OPER_Le.TabIndex = 45;
+            this.OPER_Le.Text = "≤";
+            this.OPER_Le.UseVisualStyleBackColor = true;
+            this.OPER_Le.Click += new System.EventHandler(this.OPER_Le_Click);
             // 
-            // MISC_ConvertSToD
+            // OPER_Eq
             // 
-            this.MISC_ConvertSToD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MISC_ConvertSToD.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_ConvertSToD.Location = new System.Drawing.Point(245, 354);
-            this.MISC_ConvertSToD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MISC_ConvertSToD.Name = "MISC_ConvertSToD";
-            this.MISC_ConvertSToD.Size = new System.Drawing.Size(51, 30);
-            this.MISC_ConvertSToD.TabIndex = 46;
-            this.MISC_ConvertSToD.Text = "button29";
-            this.MISC_ConvertSToD.UseVisualStyleBackColor = true;
-            this.MISC_ConvertSToD.Click += new System.EventHandler(this.MISC_ConvertSToD_Click);
+            this.OPER_Eq.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Eq.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.OPER_Eq.Location = new System.Drawing.Point(246, 354);
+            this.OPER_Eq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OPER_Eq.Name = "OPER_Eq";
+            this.OPER_Eq.Size = new System.Drawing.Size(51, 30);
+            this.OPER_Eq.TabIndex = 46;
+            this.OPER_Eq.Text = "==";
+            this.OPER_Eq.UseVisualStyleBackColor = true;
+            this.OPER_Eq.Click += new System.EventHandler(this.OPER_Eq_Click);
             // 
-            // MISC_MemoryAdd
+            // OPER_Ne
             // 
-            this.MISC_MemoryAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MISC_MemoryAdd.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_MemoryAdd.Location = new System.Drawing.Point(301, 354);
-            this.MISC_MemoryAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MISC_MemoryAdd.Name = "MISC_MemoryAdd";
-            this.MISC_MemoryAdd.Size = new System.Drawing.Size(51, 30);
-            this.MISC_MemoryAdd.TabIndex = 47;
-            this.MISC_MemoryAdd.Text = "button30";
-            this.MISC_MemoryAdd.UseVisualStyleBackColor = true;
-            this.MISC_MemoryAdd.Click += new System.EventHandler(this.MISC_MemoryAdd_Click);
+            this.OPER_Ne.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Ne.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.OPER_Ne.Location = new System.Drawing.Point(301, 354);
+            this.OPER_Ne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OPER_Ne.Name = "OPER_Ne";
+            this.OPER_Ne.Size = new System.Drawing.Size(51, 30);
+            this.OPER_Ne.TabIndex = 47;
+            this.OPER_Ne.Text = "!=";
+            this.OPER_Ne.UseVisualStyleBackColor = true;
+            this.OPER_Ne.Click += new System.EventHandler(this.OPER_Ne_Click);
             // 
             // FUNC_Tan
             // 
@@ -250,7 +255,7 @@ namespace DoAnLTTQ1
             // 
             this.FUNC_Cos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Cos.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Cos.Location = new System.Drawing.Point(245, 320);
+            this.FUNC_Cos.Location = new System.Drawing.Point(246, 320);
             this.FUNC_Cos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Cos.Name = "FUNC_Cos";
             this.FUNC_Cos.Size = new System.Drawing.Size(51, 30);
@@ -263,7 +268,7 @@ namespace DoAnLTTQ1
             // 
             this.FUNC_Sin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Sin.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Sin.Location = new System.Drawing.Point(189, 320);
+            this.FUNC_Sin.Location = new System.Drawing.Point(191, 320);
             this.FUNC_Sin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Sin.Name = "FUNC_Sin";
             this.FUNC_Sin.Size = new System.Drawing.Size(51, 30);
@@ -272,44 +277,44 @@ namespace DoAnLTTQ1
             this.FUNC_Sin.UseVisualStyleBackColor = true;
             this.FUNC_Sin.Click += new System.EventHandler(this.FUNC_Sin_Click);
             // 
-            // FUNC_NumericalInverse
+            // OPER_Not
             // 
-            this.FUNC_NumericalInverse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FUNC_NumericalInverse.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_NumericalInverse.Location = new System.Drawing.Point(137, 320);
-            this.FUNC_NumericalInverse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FUNC_NumericalInverse.Name = "FUNC_NumericalInverse";
-            this.FUNC_NumericalInverse.Size = new System.Drawing.Size(51, 30);
-            this.FUNC_NumericalInverse.TabIndex = 51;
-            this.FUNC_NumericalInverse.Text = "button34";
-            this.FUNC_NumericalInverse.UseVisualStyleBackColor = true;
-            this.FUNC_NumericalInverse.Click += new System.EventHandler(this.FUNC_NumericalInverse_Click);
+            this.OPER_Not.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Not.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.OPER_Not.Location = new System.Drawing.Point(137, 320);
+            this.OPER_Not.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OPER_Not.Name = "OPER_Not";
+            this.OPER_Not.Size = new System.Drawing.Size(51, 30);
+            this.OPER_Not.TabIndex = 51;
+            this.OPER_Not.Text = "not";
+            this.OPER_Not.UseVisualStyleBackColor = true;
+            this.OPER_Not.Click += new System.EventHandler(this.OPER_Not_Click);
             // 
-            // MISC_Degree
+            // OPER_Or
             // 
-            this.MISC_Degree.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MISC_Degree.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_Degree.Location = new System.Drawing.Point(83, 320);
-            this.MISC_Degree.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MISC_Degree.Name = "MISC_Degree";
-            this.MISC_Degree.Size = new System.Drawing.Size(51, 30);
-            this.MISC_Degree.TabIndex = 50;
-            this.MISC_Degree.Text = "button35";
-            this.MISC_Degree.UseVisualStyleBackColor = true;
-            this.MISC_Degree.Click += new System.EventHandler(this.MISC_Degree_Click);
+            this.OPER_Or.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Or.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.OPER_Or.Location = new System.Drawing.Point(83, 320);
+            this.OPER_Or.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OPER_Or.Name = "OPER_Or";
+            this.OPER_Or.Size = new System.Drawing.Size(51, 30);
+            this.OPER_Or.TabIndex = 50;
+            this.OPER_Or.Text = "or";
+            this.OPER_Or.UseVisualStyleBackColor = true;
+            this.OPER_Or.Click += new System.EventHandler(this.OPER_Or_Click);
             // 
-            // MISC_Sub
+            // OPER_And
             // 
-            this.MISC_Sub.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MISC_Sub.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MISC_Sub.Location = new System.Drawing.Point(29, 319);
-            this.MISC_Sub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MISC_Sub.Name = "MISC_Sub";
-            this.MISC_Sub.Size = new System.Drawing.Size(51, 30);
-            this.MISC_Sub.TabIndex = 49;
-            this.MISC_Sub.Text = "button36";
-            this.MISC_Sub.UseVisualStyleBackColor = true;
-            this.MISC_Sub.Click += new System.EventHandler(this.MISC_Sub_Click);
+            this.OPER_And.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_And.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.OPER_And.Location = new System.Drawing.Point(29, 319);
+            this.OPER_And.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OPER_And.Name = "OPER_And";
+            this.OPER_And.Size = new System.Drawing.Size(51, 30);
+            this.OPER_And.TabIndex = 49;
+            this.OPER_And.Text = "and";
+            this.OPER_And.UseVisualStyleBackColor = true;
+            this.OPER_And.Click += new System.EventHandler(this.OPER_And_Click);
             // 
             // FUNC_Ln
             // 
@@ -328,12 +333,12 @@ namespace DoAnLTTQ1
             // 
             this.FUNC_Logarit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Logarit.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Logarit.Location = new System.Drawing.Point(245, 284);
+            this.FUNC_Logarit.Location = new System.Drawing.Point(246, 284);
             this.FUNC_Logarit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Logarit.Name = "FUNC_Logarit";
             this.FUNC_Logarit.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Logarit.TabIndex = 59;
-            this.FUNC_Logarit.Text = "button38";
+            this.FUNC_Logarit.Text = "log";
             this.FUNC_Logarit.UseVisualStyleBackColor = true;
             this.FUNC_Logarit.Click += new System.EventHandler(this.FUNC_Logarit_Click);
             // 
@@ -341,12 +346,12 @@ namespace DoAnLTTQ1
             // 
             this.FUNC_Pow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Pow.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Pow.Location = new System.Drawing.Point(189, 284);
+            this.FUNC_Pow.Location = new System.Drawing.Point(191, 284);
             this.FUNC_Pow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Pow.Name = "FUNC_Pow";
             this.FUNC_Pow.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Pow.TabIndex = 58;
-            this.FUNC_Pow.Text = "button39";
+            this.FUNC_Pow.Text = "x^";
             this.FUNC_Pow.UseVisualStyleBackColor = true;
             this.FUNC_Pow.Click += new System.EventHandler(this.FUNC_Pow_Click);
             // 
@@ -359,7 +364,7 @@ namespace DoAnLTTQ1
             this.FUNC_Square.Name = "FUNC_Square";
             this.FUNC_Square.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Square.TabIndex = 57;
-            this.FUNC_Square.Text = "button40";
+            this.FUNC_Square.Text = "x^2";
             this.FUNC_Square.UseVisualStyleBackColor = true;
             this.FUNC_Square.Click += new System.EventHandler(this.FUNC_Square_Click);
             // 
@@ -372,20 +377,20 @@ namespace DoAnLTTQ1
             this.FUNC_Sqrt.Name = "FUNC_Sqrt";
             this.FUNC_Sqrt.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Sqrt.TabIndex = 56;
-            this.FUNC_Sqrt.Text = "button41";
+            this.FUNC_Sqrt.Text = "√";
             this.FUNC_Sqrt.UseVisualStyleBackColor = true;
             this.FUNC_Sqrt.Click += new System.EventHandler(this.FUNC_Sqrt_Click);
             // 
             // FUNC_Fraction
             // 
-            this.FUNC_Fraction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Fraction.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Bold);
             this.FUNC_Fraction.ForeColor = System.Drawing.SystemColors.WindowText;
             this.FUNC_Fraction.Location = new System.Drawing.Point(29, 284);
             this.FUNC_Fraction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_Fraction.Name = "FUNC_Fraction";
             this.FUNC_Fraction.Size = new System.Drawing.Size(51, 30);
             this.FUNC_Fraction.TabIndex = 55;
-            this.FUNC_Fraction.Text = "button42";
+            this.FUNC_Fraction.Text = "/";
             this.FUNC_Fraction.UseVisualStyleBackColor = true;
             this.FUNC_Fraction.Click += new System.EventHandler(this.FUNC_Fraction_Click);
             // 
@@ -404,25 +409,27 @@ namespace DoAnLTTQ1
             // 
             // MISC_Ans
             // 
-            this.MISC_Ans.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.MISC_Ans.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_Ans.ForeColor = System.Drawing.SystemColors.WindowText;
             this.MISC_Ans.Location = new System.Drawing.Point(227, 575);
             this.MISC_Ans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MISC_Ans.Name = "MISC_Ans";
             this.MISC_Ans.Size = new System.Drawing.Size(63, 46);
             this.MISC_Ans.TabIndex = 64;
+            this.MISC_Ans.Text = "Ans";
             this.MISC_Ans.UseVisualStyleBackColor = true;
             this.MISC_Ans.Click += new System.EventHandler(this.MISC_Ans_Click);
             // 
             // FUNC_PowerOfTen
             // 
-            this.FUNC_PowerOfTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
+            this.FUNC_PowerOfTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_PowerOfTen.ForeColor = System.Drawing.SystemColors.WindowText;
             this.FUNC_PowerOfTen.Location = new System.Drawing.Point(160, 575);
             this.FUNC_PowerOfTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FUNC_PowerOfTen.Name = "FUNC_PowerOfTen";
             this.FUNC_PowerOfTen.Size = new System.Drawing.Size(63, 46);
             this.FUNC_PowerOfTen.TabIndex = 63;
+            this.FUNC_PowerOfTen.Text = "x10X";
             this.FUNC_PowerOfTen.UseVisualStyleBackColor = true;
             this.FUNC_PowerOfTen.Click += new System.EventHandler(this.FUNC_PowerOfTen_Click);
             // 
@@ -436,13 +443,12 @@ namespace DoAnLTTQ1
             this.CTRL_Equal.Size = new System.Drawing.Size(63, 46);
             this.CTRL_Equal.TabIndex = 65;
             this.CTRL_Equal.Text = "=";
-            this.CTRL_Equal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.CTRL_Equal.UseVisualStyleBackColor = true;
             this.CTRL_Equal.Click += new System.EventHandler(this.CTRL_Equal_Click);
             // 
             // OPER_Sub
             // 
-            this.OPER_Sub.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.OPER_Sub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OPER_Sub.ForeColor = System.Drawing.SystemColors.WindowText;
             this.OPER_Sub.Location = new System.Drawing.Point(292, 524);
             this.OPER_Sub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -455,7 +461,7 @@ namespace DoAnLTTQ1
             // 
             // OPER_Add
             // 
-            this.OPER_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.OPER_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OPER_Add.ForeColor = System.Drawing.SystemColors.WindowText;
             this.OPER_Add.Location = new System.Drawing.Point(227, 524);
             this.OPER_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -507,27 +513,27 @@ namespace DoAnLTTQ1
             // 
             // OPER_Div
             // 
-            this.OPER_Div.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.OPER_Div.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OPER_Div.ForeColor = System.Drawing.SystemColors.WindowText;
             this.OPER_Div.Location = new System.Drawing.Point(292, 473);
             this.OPER_Div.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OPER_Div.Name = "OPER_Div";
             this.OPER_Div.Size = new System.Drawing.Size(63, 46);
             this.OPER_Div.TabIndex = 75;
-            this.OPER_Div.Text = "/";
+            this.OPER_Div.Text = "÷";
             this.OPER_Div.UseVisualStyleBackColor = true;
             this.OPER_Div.Click += new System.EventHandler(this.OPER_Div_Click);
             // 
             // OPER_Mul
             // 
-            this.OPER_Mul.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.OPER_Mul.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OPER_Mul.ForeColor = System.Drawing.SystemColors.WindowText;
             this.OPER_Mul.Location = new System.Drawing.Point(227, 473);
             this.OPER_Mul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OPER_Mul.Name = "OPER_Mul";
             this.OPER_Mul.Size = new System.Drawing.Size(63, 46);
             this.OPER_Mul.TabIndex = 74;
-            this.OPER_Mul.Text = "x";
+            this.OPER_Mul.Text = "×";
             this.OPER_Mul.UseVisualStyleBackColor = true;
             this.OPER_Mul.Click += new System.EventHandler(this.OPER_Mul_Click);
             // 
@@ -626,11 +632,10 @@ namespace DoAnLTTQ1
             this.OutputText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputText.Location = new System.Drawing.Point(40, 100);
             this.OutputText.Name = "OutputText";
-            this.OutputText.Size = new System.Drawing.Size(312, 29);
+            this.OutputText.Size = new System.Drawing.Size(312, 30);
             this.OutputText.TabIndex = 86;
             this.OutputText.Text = "output";
             this.OutputText.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.OutputText.Click += new System.EventHandler(this.OutputText_Click);
             // 
             // label3
             // 
@@ -654,102 +659,80 @@ namespace DoAnLTTQ1
             this.label4.TabIndex = 89;
             this.label4.Text = "Flag1";
             // 
-            // FUNC_PowerOfTen_LABEL
+            // DelLabel
             // 
-            this.FUNC_PowerOfTen_LABEL.AutoSize = true;
-            this.FUNC_PowerOfTen_LABEL.BackColor = System.Drawing.Color.White;
-            this.FUNC_PowerOfTen_LABEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 4.75F, System.Drawing.FontStyle.Bold);
-            this.FUNC_PowerOfTen_LABEL.Location = new System.Drawing.Point(163, 588);
-            this.FUNC_PowerOfTen_LABEL.Name = "FUNC_PowerOfTen_LABEL";
-            this.FUNC_PowerOfTen_LABEL.Size = new System.Drawing.Size(26, 9);
-            this.FUNC_PowerOfTen_LABEL.TabIndex = 91;
-            this.FUNC_PowerOfTen_LABEL.Text = "x10X";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(229, 430);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 16);
-            this.label2.TabIndex = 94;
-            this.label2.Text = "DEL";
+            this.DelLabel.AutoSize = true;
+            this.DelLabel.BackColor = System.Drawing.Color.White;
+            this.DelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DelLabel.Location = new System.Drawing.Point(242, 438);
+            this.DelLabel.Name = "DelLabel";
+            this.DelLabel.Size = new System.Drawing.Size(40, 18);
+            this.DelLabel.TabIndex = 94;
+            this.DelLabel.Text = "DEL";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(301, 430);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(309, 438);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 16);
+            this.label5.Size = new System.Drawing.Size(30, 18);
             this.label5.TabIndex = 95;
             this.label5.Text = "AC";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // CTRL_Redo
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(233, 585);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 16);
-            this.label7.TabIndex = 93;
-            this.label7.Text = "Ans";
+            this.CTRL_Redo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTRL_Redo.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.CTRL_Redo.Location = new System.Drawing.Point(303, 249);
+            this.CTRL_Redo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CTRL_Redo.Name = "CTRL_Redo";
+            this.CTRL_Redo.Size = new System.Drawing.Size(51, 30);
+            this.CTRL_Redo.TabIndex = 99;
+            this.CTRL_Redo.Text = "Redo";
+            this.CTRL_Redo.UseVisualStyleBackColor = true;
+            this.CTRL_Redo.Click += CTRL_Redo_Click;
             // 
-            // FUNC_X
+            // CTRL_Undo
             // 
-            this.FUNC_X.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FUNC_X.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_X.Location = new System.Drawing.Point(303, 249);
-            this.FUNC_X.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FUNC_X.Name = "FUNC_X";
-            this.FUNC_X.Size = new System.Drawing.Size(51, 30);
-            this.FUNC_X.TabIndex = 99;
-            this.FUNC_X.Text = "x";
-            this.FUNC_X.UseVisualStyleBackColor = true;
-            this.FUNC_X.Click += new System.EventHandler(this.FUNC_X_Click);
+            this.CTRL_Undo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTRL_Undo.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.CTRL_Undo.Location = new System.Drawing.Point(247, 249);
+            this.CTRL_Undo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CTRL_Undo.Name = "CTRL_Undo";
+            this.CTRL_Undo.Size = new System.Drawing.Size(51, 30);
+            this.CTRL_Undo.TabIndex = 98;
+            this.CTRL_Undo.Text = "Undo";
+            this.CTRL_Undo.UseVisualStyleBackColor = true;
+            this.CTRL_Undo.Click += CTRL_Undo_Click;
             // 
-            // FUNC_Integral
+            // MISC_CloseBracket
             // 
-            this.FUNC_Integral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FUNC_Integral.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FUNC_Integral.Location = new System.Drawing.Point(247, 249);
-            this.FUNC_Integral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FUNC_Integral.Name = "FUNC_Integral";
-            this.FUNC_Integral.Size = new System.Drawing.Size(51, 30);
-            this.FUNC_Integral.TabIndex = 98;
-            this.FUNC_Integral.Text = "button2";
-            this.FUNC_Integral.UseVisualStyleBackColor = true;
-            this.FUNC_Integral.Click += new System.EventHandler(this.FUNC_Integral_Click);
+            this.MISC_CloseBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_CloseBracket.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.MISC_CloseBracket.Location = new System.Drawing.Point(83, 249);
+            this.MISC_CloseBracket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MISC_CloseBracket.Name = "MISC_CloseBracket";
+            this.MISC_CloseBracket.Size = new System.Drawing.Size(51, 30);
+            this.MISC_CloseBracket.TabIndex = 97;
+            this.MISC_CloseBracket.Text = ")";
+            this.MISC_CloseBracket.UseVisualStyleBackColor = true;
+            this.MISC_CloseBracket.Click += new System.EventHandler(this.MISC_CloseBracket_Click);
             // 
-            // CTRL_Calc
+            // MISC_OpenBracket
             // 
-            this.CTRL_Calc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CTRL_Calc.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Calc.Location = new System.Drawing.Point(83, 249);
-            this.CTRL_Calc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CTRL_Calc.Name = "CTRL_Calc";
-            this.CTRL_Calc.Size = new System.Drawing.Size(51, 30);
-            this.CTRL_Calc.TabIndex = 97;
-            this.CTRL_Calc.Text = "CALC";
-            this.CTRL_Calc.UseVisualStyleBackColor = true;
-            this.CTRL_Calc.Click += new System.EventHandler(this.CTRL_Calc_Click);
-            // 
-            // CTRL_Optn
-            // 
-            this.CTRL_Optn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CTRL_Optn.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CTRL_Optn.Location = new System.Drawing.Point(29, 249);
-            this.CTRL_Optn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CTRL_Optn.Name = "CTRL_Optn";
-            this.CTRL_Optn.Size = new System.Drawing.Size(51, 30);
-            this.CTRL_Optn.TabIndex = 96;
-            this.CTRL_Optn.Text = "OPTN";
-            this.CTRL_Optn.UseVisualStyleBackColor = true;
-            this.CTRL_Optn.Click += new System.EventHandler(this.CTRL_Optn_Click);
+            this.MISC_OpenBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_OpenBracket.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.MISC_OpenBracket.Location = new System.Drawing.Point(29, 249);
+            this.MISC_OpenBracket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MISC_OpenBracket.Name = "MISC_OpenBracket";
+            this.MISC_OpenBracket.Size = new System.Drawing.Size(51, 30);
+            this.MISC_OpenBracket.TabIndex = 96;
+            this.MISC_OpenBracket.Text = "(";
+            this.MISC_OpenBracket.UseVisualStyleBackColor = true;
+            this.MISC_OpenBracket.Click += new System.EventHandler(this.MISC_OpenBracket_Click);
             // 
             // CTRL_MoveRight
             // 
@@ -762,6 +745,7 @@ namespace DoAnLTTQ1
             this.CTRL_MoveRight.TabIndex = 101;
             this.CTRL_MoveRight.Text = "R";
             this.CTRL_MoveRight.UseVisualStyleBackColor = true;
+            this.CTRL_MoveRight.Click += new System.EventHandler(this.CTRL_MoveRight_Click);
             // 
             // CTRL_MoveUp
             // 
@@ -786,6 +770,7 @@ namespace DoAnLTTQ1
             this.CTRL_MoveLeft.TabIndex = 103;
             this.CTRL_MoveLeft.Text = "L";
             this.CTRL_MoveLeft.UseVisualStyleBackColor = true;
+            this.CTRL_MoveLeft.Click += new System.EventHandler(this.CTRL_MoveLeft_Click);
             // 
             // CTRL_MoveDown
             // 
@@ -807,10 +792,9 @@ namespace DoAnLTTQ1
             this.InputText.Location = new System.Drawing.Point(31, 64);
             this.InputText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.InputText.Name = "InputText";
+            this.InputText.ReadOnly = true;
             this.InputText.Size = new System.Drawing.Size(325, 29);
             this.InputText.TabIndex = 105;
-            this.InputText.Click += new System.EventHandler(this.InputText_Click);
-            this.InputText.TextChanged += new System.EventHandler(this.InputText_TextChanged);
             // 
             // NUMB_7
             // 
@@ -831,7 +815,6 @@ namespace DoAnLTTQ1
             this.NUMB_7.Text = "7";
             this.NUMB_7.TextColor = System.Drawing.Color.Black;
             this.NUMB_7.UseVisualStyleBackColor = false;
-            this.NUMB_7.Click += new System.EventHandler(this.NUMB_7_Click);
             // 
             // customButton2
             // 
@@ -964,14 +947,12 @@ namespace DoAnLTTQ1
             this.Controls.Add(this.CTRL_MoveLeft);
             this.Controls.Add(this.CTRL_MoveUp);
             this.Controls.Add(this.CTRL_MoveRight);
-            this.Controls.Add(this.FUNC_X);
-            this.Controls.Add(this.FUNC_Integral);
-            this.Controls.Add(this.CTRL_Calc);
-            this.Controls.Add(this.CTRL_Optn);
+            this.Controls.Add(this.CTRL_Redo);
+            this.Controls.Add(this.CTRL_Undo);
+            this.Controls.Add(this.MISC_CloseBracket);
+            this.Controls.Add(this.MISC_OpenBracket);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.FUNC_PowerOfTen_LABEL);
+            this.Controls.Add(this.DelLabel);
             this.Controls.Add(this.NUMB_7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -1005,15 +986,15 @@ namespace DoAnLTTQ1
             this.Controls.Add(this.FUNC_Tan);
             this.Controls.Add(this.FUNC_Cos);
             this.Controls.Add(this.FUNC_Sin);
-            this.Controls.Add(this.FUNC_NumericalInverse);
-            this.Controls.Add(this.MISC_Degree);
-            this.Controls.Add(this.MISC_Sub);
-            this.Controls.Add(this.MISC_MemoryAdd);
-            this.Controls.Add(this.MISC_ConvertSToD);
-            this.Controls.Add(this.MISC_CloseBracket);
-            this.Controls.Add(this.MISC_OpenBracket);
-            this.Controls.Add(this.CTRL_Eng);
-            this.Controls.Add(this.CTRL_Sto);
+            this.Controls.Add(this.OPER_Not);
+            this.Controls.Add(this.OPER_Or);
+            this.Controls.Add(this.OPER_And);
+            this.Controls.Add(this.OPER_Ne);
+            this.Controls.Add(this.OPER_Eq);
+            this.Controls.Add(this.OPER_Le);
+            this.Controls.Add(this.OPER_Ge);
+            this.Controls.Add(this.OPER_Lt);
+            this.Controls.Add(this.OPER_Gt);
             this.Controls.Add(this.STATE_Power);
             this.Controls.Add(this.STATE_Mode);
             this.Controls.Add(this.STATE_Alpha);
@@ -1028,75 +1009,75 @@ namespace DoAnLTTQ1
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button NUMB_0;
-        private System.Windows.Forms.Button STATE_Shift;
-        private System.Windows.Forms.Button STATE_Alpha;
-        private System.Windows.Forms.Button STATE_Power;
-        private System.Windows.Forms.Button STATE_Mode;
-        private System.Windows.Forms.Button CTRL_Sto;
-        private System.Windows.Forms.Button CTRL_Eng;
-        private System.Windows.Forms.Button MISC_OpenBracket;
-        private System.Windows.Forms.Button MISC_CloseBracket;
-        private System.Windows.Forms.Button MISC_ConvertSToD;
-        private System.Windows.Forms.Button MISC_MemoryAdd;
-        private System.Windows.Forms.Button FUNC_Tan;
-        private System.Windows.Forms.Button FUNC_Cos;
-        private System.Windows.Forms.Button FUNC_Sin;
-        private System.Windows.Forms.Button FUNC_NumericalInverse;
-        private System.Windows.Forms.Button MISC_Degree;
-        private System.Windows.Forms.Button MISC_Sub;
-        private System.Windows.Forms.Button FUNC_Ln;
-        private System.Windows.Forms.Button FUNC_Logarit;
-        private System.Windows.Forms.Button FUNC_Pow;
-        private System.Windows.Forms.Button FUNC_Square;
-        private System.Windows.Forms.Button FUNC_Sqrt;
-        private System.Windows.Forms.Button FUNC_Fraction;
-        private CustomControls.CustomButton.CustomButton customButton1;
-        private System.Windows.Forms.Button MISC_Dot;
-        private System.Windows.Forms.Button MISC_Ans;
-        private System.Windows.Forms.Button FUNC_PowerOfTen;
-        private System.Windows.Forms.Button CTRL_Equal;
-        private System.Windows.Forms.Button OPER_Sub;
-        private System.Windows.Forms.Button OPER_Add;
-        private System.Windows.Forms.Button NUMB_3;
-        private System.Windows.Forms.Button NUMB_2;
-        private System.Windows.Forms.Button NUMB_1;
-        private System.Windows.Forms.Button OPER_Div;
-        private System.Windows.Forms.Button OPER_Mul;
-        private System.Windows.Forms.Button NUMB_6;
-        private System.Windows.Forms.Button NUMB_5;
-        private System.Windows.Forms.Button NUMB_4;
-        private System.Windows.Forms.Button CTRL_Ac;
-        private System.Windows.Forms.Button CTRL_Del;
-        private System.Windows.Forms.Button NUMB_9;
-        private System.Windows.Forms.Button NUMB_8;
-        private CustomControls.CustomButton.CustomButton customButton2;
-        private CustomControls.CustomButton.CustomButton customButton3;
-        private CustomControls.CustomButton.CustomButton customButton4;
-        private CustomControls.CustomButton.CustomButton customButton5;
-        private CustomControls.CustomButton.CustomButton customButton6;
+        internal System.Windows.Forms.Button NUMB_0;
+        internal System.Windows.Forms.Button STATE_Shift;
+        internal System.Windows.Forms.Button STATE_Alpha;
+        internal System.Windows.Forms.Button STATE_Power;
+        internal System.Windows.Forms.Button STATE_Mode;
+        internal System.Windows.Forms.Button OPER_Gt;
+        internal System.Windows.Forms.Button OPER_Lt;
+        internal System.Windows.Forms.Button OPER_Ge;
+        internal System.Windows.Forms.Button OPER_Le;
+        internal System.Windows.Forms.Button OPER_Eq;
+        internal System.Windows.Forms.Button OPER_Ne;
+        internal System.Windows.Forms.Button FUNC_Tan;
+        internal System.Windows.Forms.Button FUNC_Cos;
+        internal System.Windows.Forms.Button FUNC_Sin;
+        internal System.Windows.Forms.Button OPER_Not;
+        internal System.Windows.Forms.Button OPER_Or;
+        internal System.Windows.Forms.Button OPER_And;
+        internal System.Windows.Forms.Button FUNC_Ln;
+        internal System.Windows.Forms.Button FUNC_Logarit;
+        internal System.Windows.Forms.Button FUNC_Pow;
+        internal System.Windows.Forms.Button FUNC_Square;
+        internal System.Windows.Forms.Button FUNC_Sqrt;
+        internal System.Windows.Forms.Button FUNC_Fraction;
+        internal CustomControls.CustomButton.CustomButton customButton1;
+        internal System.Windows.Forms.Button MISC_Dot;
+        internal System.Windows.Forms.Button MISC_Ans;
+        internal System.Windows.Forms.Button FUNC_PowerOfTen;
+        internal System.Windows.Forms.Button CTRL_Equal;
+        internal System.Windows.Forms.Button OPER_Sub;
+        internal System.Windows.Forms.Button OPER_Add;
+        internal System.Windows.Forms.Button NUMB_3;
+        internal System.Windows.Forms.Button NUMB_2;
+        internal System.Windows.Forms.Button NUMB_1;
+        internal System.Windows.Forms.Button OPER_Div;
+        internal System.Windows.Forms.Button OPER_Mul;
+        internal System.Windows.Forms.Button NUMB_6;
+        internal System.Windows.Forms.Button NUMB_5;
+        internal System.Windows.Forms.Button NUMB_4;
+        internal System.Windows.Forms.Button CTRL_Ac;
+        internal System.Windows.Forms.Button CTRL_Del;
+        internal System.Windows.Forms.Button NUMB_9;
+        internal System.Windows.Forms.Button NUMB_8;
+        internal CustomControls.CustomButton.CustomButton customButton2;
+        internal CustomControls.CustomButton.CustomButton customButton3;
+        internal CustomControls.CustomButton.CustomButton customButton4;
+        internal CustomControls.CustomButton.CustomButton customButton5;
+        internal CustomControls.CustomButton.CustomButton customButton6;
         public System.Windows.Forms.Label OutputText;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private CustomControls.CustomButton.CustomButton NUMB_7;
-        private System.Windows.Forms.Label FUNC_PowerOfTen_LABEL;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button FUNC_X;
-        private System.Windows.Forms.Button FUNC_Integral;
-        private System.Windows.Forms.Button CTRL_Calc;
-        private System.Windows.Forms.Button CTRL_Optn;
-        private System.Windows.Forms.Button CTRL_MoveRight;
-        private System.Windows.Forms.Button CTRL_MoveUp;
-        private System.Windows.Forms.Button CTRL_MoveLeft;
-        private System.Windows.Forms.Button CTRL_MoveDown;
-        public System.Windows.Forms.TextBox InputText;
+        internal System.Windows.Forms.Label label3;
+        internal System.Windows.Forms.Label label4;
+        internal CustomControls.CustomButton.CustomButton NUMB_7;
+        internal System.Windows.Forms.Label DelLabel;
+        internal System.Windows.Forms.Label label5;
+        internal System.Windows.Forms.Button CTRL_Redo;
+        internal System.Windows.Forms.Button CTRL_Undo;
+        internal System.Windows.Forms.Button MISC_CloseBracket;
+        internal System.Windows.Forms.Button MISC_OpenBracket;
+        internal System.Windows.Forms.Button CTRL_MoveRight;
+        internal System.Windows.Forms.Button CTRL_MoveUp;
+        internal System.Windows.Forms.Button CTRL_MoveLeft;
+        internal System.Windows.Forms.Button CTRL_MoveDown;
+        public CustomControls.CalculatorTextbox.CalculatorTextbox InputText;
     }
 }
