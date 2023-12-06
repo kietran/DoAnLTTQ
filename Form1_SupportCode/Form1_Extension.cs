@@ -1,4 +1,4 @@
-﻿using CustomControls.CalculatorTextbox;
+using CustomControls.CalculatorTextbox;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoAnLTTQ1 {
+namespace DoAnLTTQ1
+{
     //insert
     public partial class Form1 : Form
     {
@@ -64,12 +65,14 @@ namespace DoAnLTTQ1 {
                 Control.insertContentIntoInputText("-");
             else if (e.KeyCode == Keys.Escape)
                 Control.Perform_Ac();
+            else if(e.KeyCode >= Keys.A && e.KeyCode <= Keys.Z)
+                Control.insertContentIntoInputText(Convert.ToChar(e.KeyValue).ToString().ToLower());
         }
 
         /// INSERT BLOCK
-       
+
         //state button
     }
-    
+
     //control
 }
