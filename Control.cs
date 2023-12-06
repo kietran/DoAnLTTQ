@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -11,9 +11,9 @@ namespace DoAnLTTQ1
     internal partial class Control
     {
         //form we are working with
-        static private Form1 form1;
+        static private MainCalculator form1;
         static private string currentInputText;
-        static public void init(Form1 f) {
+        static public void init(MainCalculator f) {
             form1 = f;
         }
         static public void insertContentIntoInputText(string content)
@@ -219,8 +219,22 @@ namespace DoAnLTTQ1
         }
 
         //SWITCH MENU
-        static public void Open_Menu()
+        static public void ShowMenu()
         {
+            form1.onMenuViewingMode = true;
+            form1.MENU_Normal.Show();
+            form1.MENU_Graph.Show();
+            form1.MENU_Equation.Show();
+            form1.MENU_Matrix.Show();
+
+        }
+        static public void HideMenu()
+        {
+            form1.onMenuViewingMode = false;
+            form1.MENU_Normal.Hide();
+            form1.MENU_Graph.Hide();
+            form1.MENU_Equation.Hide();
+            form1.MENU_Matrix.Hide();
 
         }
     }
