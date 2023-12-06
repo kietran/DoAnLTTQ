@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace DoAnLTTQ1
 {
     //init
-    public partial class MainCalculator : Form
+    public partial class Form1 : Form
     {
         //mode
         public bool onShiftMode, onAlphaMode;
@@ -27,7 +27,7 @@ namespace DoAnLTTQ1
         public int maxMemoryCachesSize; //so lg luu toi da
         public int currentCachePosition; //vi tri cache dang xem
 
-        public MainCalculator()
+        public Form1()
         {
             InitializeComponent();
             Control.init(this);
@@ -46,7 +46,7 @@ namespace DoAnLTTQ1
             maxMemoryCachesSize = 5;
             memoryCaches = new Tuple<string, string>[maxMemoryCachesSize];
 
-                     
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -59,62 +59,74 @@ namespace DoAnLTTQ1
         private void NUMB_0_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("0");
+            label1.Focus();
         }
 
         private void NUMB_1_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("1");
+            label1.Focus();
         }
 
         private void NUMB_2_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("2");
+            label1.Focus();
         }
 
         private void NUMB_3_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("3");
+            label1.Focus();
         }
 
         private void NUMB_4_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("4");
+            label1.Focus();
         }
 
         private void NUMB_5_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("5");
+            label1.Focus();
         }
 
         private void NUMB_6_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("6");
+            label1.Focus();
         }
 
         private void NUMB_7_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("7");
+            label1.Focus();
         }
 
         private void NUMB_8_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("8");
+            label1.Focus();
         }
 
         private void NUMB_9_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("9");
+            label1.Focus();
         }
 
         //OPERATION BUTTON
         private void OPER_Sub_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("-");
+            label1.Focus();
         }
 
         private void OPER_Add_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("+");
+            label1.Focus();
         }
 
         private void OPER_Div_Click(object sender, EventArgs e)
@@ -123,6 +135,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("LCM(");
             else
                 Control.insertContentIntoInputText("/");
+            label1.Focus();
         }
 
         private void OPER_Mul_Click(object sender, EventArgs e)
@@ -131,6 +144,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("GCD(");
             else
                 Control.insertContentIntoInputText("*");
+            label1.Focus();
         }
 
         //OTHER MISC BUTTON
@@ -140,6 +154,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("Rand(");
             else
                 Control.insertContentIntoInputText(".");
+            label1.Focus();
         }
 
         private void MISC_Ans_Click(object sender, EventArgs e)
@@ -148,6 +163,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("PreAns");
             else
                 Control.insertContentIntoInputText("Ans");
+            label1.Focus();
         }
 
         private void FUNC_PowerOfTen_Click(object sender, EventArgs e)
@@ -156,12 +172,14 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("e");
             else
                 Control.insertContentIntoInputText("x10");
+            label1.Focus();
         }
 
         //MIDDLE BLOCK
         private void FUNC_Fraction_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("/");
+            label1.Focus();
         }
 
         private void FUNC_Sqrt_Click(object sender, EventArgs e)
@@ -170,6 +188,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("∛");
             else
                 Control.insertContentIntoInputText("sqrt");
+            label1.Focus();
         }
 
         private void FUNC_Square_Click(object sender, EventArgs e)
@@ -178,11 +197,13 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("^3");
             else
                 Control.insertContentIntoInputText("^2");
+            label1.Focus();
         }
 
         private void FUNC_Pow_Click(object sender, EventArgs e)
         {
             Control.insertContentIntoInputText("^");
+            label1.Focus();
         }
 
         private void FUNC_Logarit_Click(object sender, EventArgs e)
@@ -191,6 +212,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("10^");
             else
                 Control.insertContentIntoInputText("log(");
+            label1.Focus();
         }
 
         private void FUNC_Ln_Click(object sender, EventArgs e)
@@ -199,6 +221,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("e^");
             else
                 Control.insertContentIntoInputText("ln(");
+            label1.Focus();
         }
 
         private void OPER_And_Click(object sender, EventArgs e)
@@ -207,6 +230,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("NAND");
             else
                 Control.insertContentIntoInputText("and");
+            label1.Focus();
         }
 
         private void OPER_Or_Click(object sender, EventArgs e)
@@ -215,6 +239,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("NOR");
             else
                 Control.insertContentIntoInputText("or");
+            label1.Focus();
         }
 
         private void OPER_Not_Click(object sender, EventArgs e)
@@ -225,6 +250,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("XOR");
             else
                 Control.insertContentIntoInputText("!");
+            label1.Focus();
         }
 
         private void FUNC_Sin_Click(object sender, EventArgs e)
@@ -235,6 +261,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("asin(");
             else
                 Control.insertContentIntoInputText("sin(");
+            label1.Focus();
         }
 
         private void FUNC_Cos_Click(object sender, EventArgs e)
@@ -245,6 +272,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("acos(");
             else
                 Control.insertContentIntoInputText("cos(");
+            label1.Focus();
         }
 
         private void FUNC_Tan_Click(object sender, EventArgs e)
@@ -255,6 +283,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("atan(");
             else
                 Control.insertContentIntoInputText("tan(");
+            label1.Focus();
         }
 
         private void MISC_OpenBracket_Click(object sender, EventArgs e)
@@ -263,6 +292,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("Abs(");
             else
                 Control.insertContentIntoInputText("(");
+            label1.Focus();
         }
 
         private void MISC_CloseBracket_Click(object sender, EventArgs e)
@@ -271,6 +301,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("Fact(");
             else
                 Control.insertContentIntoInputText(")");
+            label1.Focus();
         }
 
         private void OPER_Gt_Click(object sender, EventArgs e)
@@ -279,6 +310,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText(">>");
             else
                 Control.insertContentIntoInputText(">");
+            label1.Focus();
         }
 
         private void OPER_Lt_Click(object sender, EventArgs e)
@@ -287,6 +319,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("<<");
             else
                 Control.insertContentIntoInputText("<");
+            label1.Focus();
         }
 
         private void OPER_Ge_Click(object sender, EventArgs e)
@@ -295,6 +328,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("|");
             else
                 Control.insertContentIntoInputText(">=");
+            label1.Focus();
         }
 
         private void OPER_Le_Click(object sender, EventArgs e)
@@ -303,6 +337,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("&");
             else
                 Control.insertContentIntoInputText("<=");
+            label1.Focus();
         }
 
         private void OPER_Eq_Click(object sender, EventArgs e)
@@ -311,6 +346,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("~");
             else
                 Control.insertContentIntoInputText("==");
+            label1.Focus();
         }
 
         private void OPER_Ne_Click(object sender, EventArgs e)
@@ -319,6 +355,7 @@ namespace DoAnLTTQ1
                 Control.insertContentIntoInputText("^");
             else
                 Control.insertContentIntoInputText("!=");
+            label1.Focus();
         }
 
         //CONTROL 
@@ -346,6 +383,7 @@ namespace DoAnLTTQ1
                 onShiftMode = false;
                 Control.NormalMode();
             }
+            label1.Focus();
         }
         private void STATE_Alpha_Click(object sender, EventArgs e)
         {
@@ -371,46 +409,67 @@ namespace DoAnLTTQ1
                 onAlphaMode = false;
                 Control.NormalMode();
             }
+            label1.Focus();
         }
 
         //Control
         private void CTRL_Undo_Click(object sender, EventArgs e)
         {
             this.InputText.Undo();
+            label1.Focus();
         }
         private void CTRL_Redo_Click(object sender, EventArgs e)
         {
             this.InputText.Redo();
+            label1.Focus();
         }
         private void CTRL_Equal_Click(object sender, EventArgs e)
         {
             Control.Perform_Equal();
+            label1.Focus();
         }
         private void CTRL_Ac_Click(object sender, EventArgs e)
         {
             Control.Perform_Ac();
+            label1.Focus();
         }
         private void CTRL_Del_Click(object sender, EventArgs e)
         {
             Control.Perform_Del();
+            label1.Focus();
         }
+        private void DelLabel_Click(object sender, EventArgs e)
+        {
+            Control.Perform_Del();
+            label1.Focus();
+        }
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Control.Perform_Ac();
+            label1.Focus();
+        }
+
         private void CTRL_MoveUp_Click(object sender, EventArgs e)
         {
             Control.loadPreviousCache();
             Control.displayCache();
+            label1.Focus();
         }
         private void CTRL_MoveDown_Click(object sender, EventArgs e)
         {
             Control.loadNextCache();
             Control.displayCache();
+            label1.Focus();
         }
         private void CTRL_MoveLeft_Click(object sender, EventArgs e)
         {
             InputText.moveCursorLeft();
+            label1.Focus();
         }
         private void CTRL_MoveRight_Click(object sender, EventArgs e)
         {
             InputText.moveCursorRight();
+            label1.Focus();
         }
 
         private void STATE_Mode_Click(object sender, EventArgs e)
@@ -418,10 +477,12 @@ namespace DoAnLTTQ1
             if (onMenuViewingMode)
             {
                 Control.HideMenu();
+                label1.Focus();
             }
             else
             {
                 Control.ShowMenu();
+                label1.Focus();
             }
         }
 
@@ -429,6 +490,7 @@ namespace DoAnLTTQ1
         {
             //nothing
             Control.HideMenu();
+            label1.Focus();
         }
 
         private void MENU_Graph_Click(object sender, EventArgs e)
@@ -442,15 +504,19 @@ namespace DoAnLTTQ1
             //Control.OpenMatrixForm();
 
             Control.HideMenu();
+            label1.Focus();
         }
         private void MENU_Equation_Click(object sender, EventArgs e)
         {
             //Control.OpenEquationForm();
             Control.HideMenu();
+            label1.Focus();
         }
+
         private void STATE_Power_Click(object sender, EventArgs e)
         {
             Control.reset();
+            label1.Focus();
         }
     }
 }
