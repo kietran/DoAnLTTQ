@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace DoAnLTTQ1
 {
-    partial class MainCalculator
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -108,7 +108,7 @@ namespace DoAnLTTQ1
             this.NUMB_0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_0.Name = "NUMB_0";
             this.NUMB_0.Size = new System.Drawing.Size(63, 46);
-            this.NUMB_0.TabIndex = 0;
+            this.NUMB_0.TabIndex = 1;
             this.NUMB_0.Text = "0";
             this.NUMB_0.UseVisualStyleBackColor = true;
             this.NUMB_0.Click += new System.EventHandler(this.NUMB_0_Click);
@@ -837,7 +837,7 @@ namespace DoAnLTTQ1
             this.InputText.Name = "InputText";
             this.InputText.ReadOnly = true;
             this.InputText.Size = new System.Drawing.Size(325, 29);
-            this.InputText.TabIndex = 105;
+            this.InputText.TabIndex = 0;
             // 
             // NUMB_7
             // 
@@ -992,7 +992,7 @@ namespace DoAnLTTQ1
             this.MENU_Normal.Visible = false;
             this.MENU_Normal.Click += new System.EventHandler(this.MENU_Normal_Click);
             // 
-            // MainCalculator
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1067,7 +1067,7 @@ namespace DoAnLTTQ1
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "MainCalculator";
+            this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
