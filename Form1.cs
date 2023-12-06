@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +12,13 @@ using System.Windows.Forms;
 namespace DoAnLTTQ1
 {
     //init
-    public partial class Form1 : Form
+    public partial class MainCalculator : Form
     {
         //mode
         public bool onShiftMode, onAlphaMode;
         public bool onInvalidExpressionMode;
         public bool onDisplayMode;
+        public bool onMenuViewingMode;
 
         //screen
         //khai bao cache
@@ -26,22 +27,26 @@ namespace DoAnLTTQ1
         public int maxMemoryCachesSize; //so lg luu toi da
         public int currentCachePosition; //vi tri cache dang xem
 
-        public Form1()
+        public MainCalculator()
         {
+            InitializeComponent();
+            Control.init(this);
+
             KeyPreview = true;
 
             onShiftMode = false;
             onAlphaMode = false;
             onDisplayMode = false;
             onInvalidExpressionMode = false;
+            onMenuViewingMode = false;
+            Control.HideMenu();
 
             currentMemoryCachesSize = 0;
             currentCachePosition = 0;
             maxMemoryCachesSize = 5;
             memoryCaches = new Tuple<string, string>[maxMemoryCachesSize];
 
-            Control.init(this);
-            InitializeComponent();
+                     
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -324,7 +329,6 @@ namespace DoAnLTTQ1
                 //Normal mode activate
                 //Change shift mode to true
                 onShiftMode = true;
-                Form1_Load(sender, e);
                 Control.Toggle_ShiftMode();
             }
             else if (!onShiftMode && onAlphaMode)
@@ -350,7 +354,6 @@ namespace DoAnLTTQ1
                 //Normal mode activate
                 //Change alpha mode to true
                 onAlphaMode = true;
-                Form1_Load(sender,e);
                 Control.Toggle_AlphaMode();
             }
             else if (onShiftMode && !onAlphaMode)
@@ -396,14 +399,6 @@ namespace DoAnLTTQ1
             Control.loadPreviousCache();
             Control.displayCache();
         }
-        private void DelLabel_Click(object sender, EventArgs e)
-        {
-            Control.Perform_Del();
-        }
-        private void label5_Click(object sender, EventArgs e)
-        {
-            Control.Perform_Ac();
-        }
         private void CTRL_MoveDown_Click(object sender, EventArgs e)
         {
             Control.loadNextCache();
@@ -418,6 +413,41 @@ namespace DoAnLTTQ1
             InputText.moveCursorRight();
         }
 
+        private void STATE_Mode_Click(object sender, EventArgs e)
+        {
+            if (onMenuViewingMode)
+            {
+                Control.HideMenu();
+            }
+            else
+            {
+                Control.ShowMenu();
+            }
+        }
+
+        private void MENU_Normal_Click(object sender, EventArgs e)
+        {
+            //nothing
+            Control.HideMenu();
+        }
+
+        private void MENU_Graph_Click(object sender, EventArgs e)
+        {
+            //Control.OpenGraphForm();
+            Control.HideMenu();
+        }
+
+        private void MENU_Matrix_Click(object sender, EventArgs e)
+        {
+            //Control.OpenMatrixForm();
+
+            Control.HideMenu();
+        }
+        private void MENU_Equation_Click(object sender, EventArgs e)
+        {
+            //Control.OpenEquationForm();
+            Control.HideMenu();
+        }
         private void STATE_Power_Click(object sender, EventArgs e)
         {
             Control.reset();
