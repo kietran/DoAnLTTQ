@@ -1,10 +1,10 @@
-﻿using System.Drawing;
+using System.Drawing;
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
 
 namespace DoAnLTTQ1
 {
-    partial class Form1
+    partial class MainCalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -86,6 +86,9 @@ namespace DoAnLTTQ1
             this.CTRL_MoveUp = new System.Windows.Forms.Button();
             this.CTRL_MoveLeft = new System.Windows.Forms.Button();
             this.CTRL_MoveDown = new System.Windows.Forms.Button();
+            this.MENU_Graph = new System.Windows.Forms.Button();
+            this.MENU_Equation = new System.Windows.Forms.Button();
+            this.MENU_Matrix = new System.Windows.Forms.Button();
             this.InputText = new CustomControls.CalculatorTextbox.CalculatorTextbox();
             this.NUMB_7 = new CustomControls.CustomButton.CustomButton();
             this.customButton2 = new CustomControls.CustomButton.CustomButton();
@@ -94,6 +97,7 @@ namespace DoAnLTTQ1
             this.customButton4 = new CustomControls.CustomButton.CustomButton();
             this.customButton6 = new CustomControls.CustomButton.CustomButton();
             this.customButton5 = new CustomControls.CustomButton.CustomButton();
+            this.MENU_Normal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NUMB_0
@@ -104,7 +108,7 @@ namespace DoAnLTTQ1
             this.NUMB_0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUMB_0.Name = "NUMB_0";
             this.NUMB_0.Size = new System.Drawing.Size(63, 46);
-            this.NUMB_0.TabIndex = 1;
+            this.NUMB_0.TabIndex = 0;
             this.NUMB_0.Text = "0";
             this.NUMB_0.UseVisualStyleBackColor = true;
             this.NUMB_0.Click += new System.EventHandler(this.NUMB_0_Click);
@@ -159,6 +163,7 @@ namespace DoAnLTTQ1
             this.STATE_Mode.TabIndex = 40;
             this.STATE_Mode.Text = "button24";
             this.STATE_Mode.UseVisualStyleBackColor = true;
+            this.STATE_Mode.Click += new System.EventHandler(this.STATE_Mode_Click);
             // 
             // OPER_Gt
             // 
@@ -669,7 +674,6 @@ namespace DoAnLTTQ1
             this.DelLabel.Size = new System.Drawing.Size(40, 18);
             this.DelLabel.TabIndex = 94;
             this.DelLabel.Text = "DEL";
-            this.DelLabel.Click += new System.EventHandler(this.DelLabel_Click);
             // 
             // label5
             // 
@@ -682,7 +686,6 @@ namespace DoAnLTTQ1
             this.label5.TabIndex = 95;
             this.label5.Text = "AC";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // CTRL_Redo
             // 
@@ -788,6 +791,42 @@ namespace DoAnLTTQ1
             this.CTRL_MoveDown.UseVisualStyleBackColor = true;
             this.CTRL_MoveDown.Click += new System.EventHandler(this.CTRL_MoveDown_Click);
             // 
+            // MENU_Graph
+            // 
+            this.MENU_Graph.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MENU_Graph.Location = new System.Drawing.Point(196, 33);
+            this.MENU_Graph.Name = "MENU_Graph";
+            this.MENU_Graph.Size = new System.Drawing.Size(154, 50);
+            this.MENU_Graph.TabIndex = 107;
+            this.MENU_Graph.Text = "Graph";
+            this.MENU_Graph.UseVisualStyleBackColor = true;
+            this.MENU_Graph.Visible = false;
+            this.MENU_Graph.Click += new System.EventHandler(this.MENU_Graph_Click);
+            // 
+            // MENU_Equation
+            // 
+            this.MENU_Equation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MENU_Equation.Location = new System.Drawing.Point(196, 89);
+            this.MENU_Equation.Name = "MENU_Equation";
+            this.MENU_Equation.Size = new System.Drawing.Size(154, 50);
+            this.MENU_Equation.TabIndex = 109;
+            this.MENU_Equation.Text = "Equation/\r\nEquation sys\r\n\r\n";
+            this.MENU_Equation.UseVisualStyleBackColor = true;
+            this.MENU_Equation.Visible = false;
+            this.MENU_Equation.Click += new System.EventHandler(this.MENU_Equation_Click);
+            // 
+            // MENU_Matrix
+            // 
+            this.MENU_Matrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MENU_Matrix.Location = new System.Drawing.Point(38, 89);
+            this.MENU_Matrix.Name = "MENU_Matrix";
+            this.MENU_Matrix.Size = new System.Drawing.Size(154, 50);
+            this.MENU_Matrix.TabIndex = 108;
+            this.MENU_Matrix.Text = "Matrix";
+            this.MENU_Matrix.UseVisualStyleBackColor = true;
+            this.MENU_Matrix.Visible = false;
+            this.MENU_Matrix.Click += new System.EventHandler(this.MENU_Matrix_Click);
+            // 
             // InputText
             // 
             this.InputText.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -798,7 +837,7 @@ namespace DoAnLTTQ1
             this.InputText.Name = "InputText";
             this.InputText.ReadOnly = true;
             this.InputText.Size = new System.Drawing.Size(325, 29);
-            this.InputText.TabIndex = 0;
+            this.InputText.TabIndex = 105;
             // 
             // NUMB_7
             // 
@@ -941,12 +980,28 @@ namespace DoAnLTTQ1
             this.customButton5.TextColor = System.Drawing.Color.Black;
             this.customButton5.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // MENU_Normal
+            // 
+            this.MENU_Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MENU_Normal.Location = new System.Drawing.Point(38, 33);
+            this.MENU_Normal.Name = "MENU_Normal";
+            this.MENU_Normal.Size = new System.Drawing.Size(154, 50);
+            this.MENU_Normal.TabIndex = 106;
+            this.MENU_Normal.Text = "Normal";
+            this.MENU_Normal.UseVisualStyleBackColor = true;
+            this.MENU_Normal.Visible = false;
+            this.MENU_Normal.Click += new System.EventHandler(this.MENU_Normal_Click);
+            // 
+            // MainCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(381, 663);
+            this.ClientSize = new System.Drawing.Size(382, 663);
+            this.Controls.Add(this.MENU_Equation);
+            this.Controls.Add(this.MENU_Matrix);
+            this.Controls.Add(this.MENU_Graph);
+            this.Controls.Add(this.MENU_Normal);
             this.Controls.Add(this.InputText);
             this.Controls.Add(this.CTRL_MoveDown);
             this.Controls.Add(this.CTRL_MoveLeft);
@@ -1012,7 +1067,7 @@ namespace DoAnLTTQ1
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form1";
+            this.Name = "MainCalculator";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -1084,5 +1139,9 @@ namespace DoAnLTTQ1
         internal System.Windows.Forms.Button CTRL_MoveLeft;
         internal System.Windows.Forms.Button CTRL_MoveDown;
         public CustomControls.CalculatorTextbox.CalculatorTextbox InputText;
+        internal System.Windows.Forms.Button MENU_Graph;
+        internal System.Windows.Forms.Button MENU_Equation;
+        internal System.Windows.Forms.Button MENU_Matrix;
+        internal System.Windows.Forms.Button MENU_Normal;
     }
 }
