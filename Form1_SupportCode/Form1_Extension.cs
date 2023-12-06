@@ -66,7 +66,7 @@ namespace DoAnLTTQ1
             else if (e.KeyCode == Keys.Escape)
                 Control.Perform_Ac();
             else if(e.KeyCode >= Keys.A && e.KeyCode <= Keys.Z)
-                Control.insertContentIntoInputText(Convert.ToChar(e.KeyValue).ToString().ToLower());
+                Control.insertContentIntoInputText(e.KeyCode.ToString().ToLower());
         }
 
         /// INSERT BLOCK
