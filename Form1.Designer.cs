@@ -89,6 +89,7 @@ namespace DoAnLTTQ1
             this.MENU_Graph = new System.Windows.Forms.Button();
             this.MENU_Equation = new System.Windows.Forms.Button();
             this.MENU_Matrix = new System.Windows.Forms.Button();
+            this.MENU_Normal = new System.Windows.Forms.Button();
             this.InputText = new CustomControls.CalculatorTextbox.CalculatorTextbox();
             this.NUMB_7 = new CustomControls.CustomButton.CustomButton();
             this.customButton2 = new CustomControls.CustomButton.CustomButton();
@@ -97,7 +98,7 @@ namespace DoAnLTTQ1
             this.customButton4 = new CustomControls.CustomButton.CustomButton();
             this.customButton6 = new CustomControls.CustomButton.CustomButton();
             this.customButton5 = new CustomControls.CustomButton.CustomButton();
-            this.MENU_Normal = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // NUMB_0
@@ -525,6 +526,7 @@ namespace DoAnLTTQ1
             this.OPER_Div.Name = "OPER_Div";
             this.OPER_Div.Size = new System.Drawing.Size(63, 46);
             this.OPER_Div.TabIndex = 75;
+            this.OPER_Div.TabStop = false;
             this.OPER_Div.Text = "÷";
             this.OPER_Div.UseVisualStyleBackColor = true;
             this.OPER_Div.Click += new System.EventHandler(this.OPER_Div_Click);
@@ -590,6 +592,7 @@ namespace DoAnLTTQ1
             this.CTRL_Ac.Name = "CTRL_Ac";
             this.CTRL_Ac.Size = new System.Drawing.Size(63, 46);
             this.CTRL_Ac.TabIndex = 80;
+            this.CTRL_Ac.TabStop = false;
             this.CTRL_Ac.UseVisualStyleBackColor = true;
             this.CTRL_Ac.Click += new System.EventHandler(this.CTRL_Ac_Click);
             // 
@@ -674,6 +677,7 @@ namespace DoAnLTTQ1
             this.DelLabel.Size = new System.Drawing.Size(40, 18);
             this.DelLabel.TabIndex = 94;
             this.DelLabel.Text = "DEL";
+            this.DelLabel.Click += new System.EventHandler(this.DelLabel_Click);
             // 
             // label5
             // 
@@ -686,6 +690,7 @@ namespace DoAnLTTQ1
             this.label5.TabIndex = 95;
             this.label5.Text = "AC";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // CTRL_Redo
             // 
@@ -826,6 +831,18 @@ namespace DoAnLTTQ1
             this.MENU_Matrix.UseVisualStyleBackColor = true;
             this.MENU_Matrix.Visible = false;
             this.MENU_Matrix.Click += new System.EventHandler(this.MENU_Matrix_Click);
+            // 
+            // MENU_Normal
+            // 
+            this.MENU_Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MENU_Normal.Location = new System.Drawing.Point(38, 33);
+            this.MENU_Normal.Name = "MENU_Normal";
+            this.MENU_Normal.Size = new System.Drawing.Size(154, 50);
+            this.MENU_Normal.TabIndex = 106;
+            this.MENU_Normal.Text = "Normal";
+            this.MENU_Normal.UseVisualStyleBackColor = true;
+            this.MENU_Normal.Visible = false;
+            this.MENU_Normal.Click += new System.EventHandler(this.MENU_Normal_Click);
             // 
             // InputText
             // 
@@ -980,17 +997,13 @@ namespace DoAnLTTQ1
             this.customButton5.TextColor = System.Drawing.Color.Black;
             this.customButton5.UseVisualStyleBackColor = false;
             // 
-            // MENU_Normal
+            // label1
             // 
-            this.MENU_Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MENU_Normal.Location = new System.Drawing.Point(38, 33);
-            this.MENU_Normal.Name = "MENU_Normal";
-            this.MENU_Normal.Size = new System.Drawing.Size(154, 50);
-            this.MENU_Normal.TabIndex = 106;
-            this.MENU_Normal.Text = "Normal";
-            this.MENU_Normal.UseVisualStyleBackColor = true;
-            this.MENU_Normal.Visible = false;
-            this.MENU_Normal.Click += new System.EventHandler(this.MENU_Normal_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(172, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.TabIndex = 110;
             // 
             // Form1
             // 
@@ -998,6 +1011,7 @@ namespace DoAnLTTQ1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(382, 663);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.MENU_Equation);
             this.Controls.Add(this.MENU_Matrix);
             this.Controls.Add(this.MENU_Graph);
