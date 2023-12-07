@@ -1143,5 +1143,6 @@ namespace DoAnLTTQ1
         internal System.Windows.Forms.Button MENU_Equation;
         internal System.Windows.Forms.Button MENU_Matrix;
         internal System.Windows.Forms.Button MENU_Normal;
+        private System.Windows.Forms.Label label1;
     }
 }
