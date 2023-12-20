@@ -1,0 +1,11 @@
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\DoAnLTTQ1\bin\Debug\DoAnLTTQ1.exe.config
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\DoAnLTTQ1\bin\Debug\DoAnLTTQ1.exe
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\DoAnLTTQ1\bin\Debug\DoAnLTTQ1.pdb
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\DoAnLTTQ1\obj\Debug\DoAnLTTQ1.csproj.AssemblyReference.cache
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\DoAnLTTQ1\obj\Debug\DoAnLTTQ1.MainCalculator.resources
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\DoAnLTTQ1\obj\Debug\DoAnLTTQ1.MatrixCalculator.resources
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\DoAnLTTQ1\obj\Debug\DoAnLTTQ1.Properties.Resources.resources
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\DoAnLTTQ1\obj\Debug\DoAnLTTQ1.csproj.GenerateResource.cache
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\DoAnLTTQ1\obj\Debug\DoAnLTTQ1.csproj.CoreCompileInputs.cache
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\DoAnLTTQ1\obj\Debug\DoAnLTTQ1.exe
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\DoAnLTTQ1\obj\Debug\DoAnLTTQ1.pdb
