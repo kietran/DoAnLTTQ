@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculatorControls\StandardCalculatorControl.cs" />
+    <Compile Include="CustomControls\CalculatorTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="StandardCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
