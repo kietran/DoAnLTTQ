@@ -30,7 +30,6 @@
         {
             this.MainPanel_OpenModePanelButton = new System.Windows.Forms.PictureBox();
             this.MainPanel_CurrentModeTitle = new System.Windows.Forms.Label();
-            this.MainPanel_InputTextBox = new System.Windows.Forms.Label();
             this.MainPanel_OutputTextbox = new System.Windows.Forms.Label();
             this.MainPanel_OpenNumberPanelButton = new System.Windows.Forms.PictureBox();
             this.MainPanel_OpenFuncPanelButton = new System.Windows.Forms.PictureBox();
@@ -41,7 +40,9 @@
             this.MainPanel_DecorLine4 = new System.Windows.Forms.PictureBox();
             this.MainPanel_OnTopButton = new System.Windows.Forms.PictureBox();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BUGBUG = new System.Windows.Forms.Button();
+            this.MainPanel_NotifyOutput = new System.Windows.Forms.Label();
+            this.MainPanel_PromptUserToEnter = new System.Windows.Forms.Label();
             this.NumberPanel = new System.Windows.Forms.Panel();
             this.CTRL_Ac = new System.Windows.Forms.Button();
             this.NUMB_7 = new System.Windows.Forms.Button();
@@ -63,6 +64,7 @@
             this.OPER_Sub = new System.Windows.Forms.Button();
             this.OPER_Plus = new System.Windows.Forms.Button();
             this.CTRL_Equal = new System.Windows.Forms.Button();
+            this.FUNC_Sin = new System.Windows.Forms.Button();
             this.FunctionPanel = new System.Windows.Forms.Panel();
             this.STATE_Degree = new System.Windows.Forms.Button();
             this.FUNC_Not = new System.Windows.Forms.Button();
@@ -78,10 +80,10 @@
             this.FUNC_Cos = new System.Windows.Forms.Button();
             this.FUNC_Pi = new System.Windows.Forms.Button();
             this.MISC_OpenBracket = new System.Windows.Forms.Button();
-            this.FUNC_Sin = new System.Windows.Forms.Button();
             this.MemoryPanel = new System.Windows.Forms.Panel();
             this.MemoryPanel_DecorLine1 = new System.Windows.Forms.PictureBox();
             this.MemoryPanel_Title = new System.Windows.Forms.Label();
+            this.MainPanel_InputTextBox = new CustomUserControls.CalculatorTextBox.CalculatorTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenModePanelButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenNumberPanelButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenFuncPanelButton)).BeginInit();
@@ -118,23 +120,13 @@
             this.MainPanel_CurrentModeTitle.TabIndex = 1;
             this.MainPanel_CurrentModeTitle.Text = "Standard";
             // 
-            // MainPanel_InputTextBox
-            // 
-            this.MainPanel_InputTextBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_InputTextBox.ForeColor = System.Drawing.Color.DimGray;
-            this.MainPanel_InputTextBox.Location = new System.Drawing.Point(29, 100);
-            this.MainPanel_InputTextBox.Name = "MainPanel_InputTextBox";
-            this.MainPanel_InputTextBox.Size = new System.Drawing.Size(380, 33);
-            this.MainPanel_InputTextBox.TabIndex = 2;
-            // 
             // MainPanel_OutputTextbox
             // 
             this.MainPanel_OutputTextbox.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_OutputTextbox.Location = new System.Drawing.Point(78, 147);
+            this.MainPanel_OutputTextbox.Location = new System.Drawing.Point(29, 147);
             this.MainPanel_OutputTextbox.Name = "MainPanel_OutputTextbox";
-            this.MainPanel_OutputTextbox.Size = new System.Drawing.Size(329, 59);
+            this.MainPanel_OutputTextbox.Size = new System.Drawing.Size(378, 59);
             this.MainPanel_OutputTextbox.TabIndex = 3;
-            this.MainPanel_OutputTextbox.Text = "0.11111111111";
             this.MainPanel_OutputTextbox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MainPanel_OpenNumberPanelButton
@@ -221,34 +213,55 @@
             // 
             this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.MainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MainPanel.Controls.Add(this.textBox1);
+            this.MainPanel.Controls.Add(this.BUGBUG);
             this.MainPanel.Controls.Add(this.MainPanel_OnTopButton);
             this.MainPanel.Controls.Add(this.MainPanel_DecorLine1);
-            this.MainPanel.Controls.Add(this.MainPanel_OutputTextbox);
             this.MainPanel.Controls.Add(this.MainPanel_DecorLine2);
             this.MainPanel.Controls.Add(this.MainPanel_DecorLine3);
-            this.MainPanel.Controls.Add(this.MainPanel_InputTextBox);
             this.MainPanel.Controls.Add(this.MainPanel_OpenMemoryPanelButton);
             this.MainPanel.Controls.Add(this.MainPanel_OpenFuncPanelButton);
             this.MainPanel.Controls.Add(this.MainPanel_OpenNumberPanelButton);
             this.MainPanel.Controls.Add(this.MainPanel_CurrentModeTitle);
             this.MainPanel.Controls.Add(this.MainPanel_OpenModePanelButton);
-            this.MainPanel.Location = new System.Drawing.Point(2, 0);
+            this.MainPanel.Controls.Add(this.MainPanel_NotifyOutput);
+            this.MainPanel.Controls.Add(this.MainPanel_OutputTextbox);
+            this.MainPanel.Controls.Add(this.MainPanel_PromptUserToEnter);
+            this.MainPanel.Controls.Add(this.MainPanel_InputTextBox);
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(415, 275);
             this.MainPanel.TabIndex = 12;
             // 
-            // textBox1
+            // BUGBUG
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(29, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 33);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "Enter expression...";
+            this.BUGBUG.Location = new System.Drawing.Point(80, 235);
+            this.BUGBUG.Name = "BUGBUG";
+            this.BUGBUG.Size = new System.Drawing.Size(97, 35);
+            this.BUGBUG.TabIndex = 0;
+            this.BUGBUG.Text = "BUGCHECK";
+            this.BUGBUG.UseVisualStyleBackColor = true;
+            this.BUGBUG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BUGBUG_MouseClick);
+            // 
+            // MainPanel_NotifyOutput
+            // 
+            this.MainPanel_NotifyOutput.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_NotifyOutput.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.MainPanel_NotifyOutput.Location = new System.Drawing.Point(29, 147);
+            this.MainPanel_NotifyOutput.Name = "MainPanel_NotifyOutput";
+            this.MainPanel_NotifyOutput.Size = new System.Drawing.Size(378, 59);
+            this.MainPanel_NotifyOutput.TabIndex = 14;
+            this.MainPanel_NotifyOutput.Text = "Output here...";
+            this.MainPanel_NotifyOutput.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // MainPanel_PromptUserToEnter
+            // 
+            this.MainPanel_PromptUserToEnter.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_PromptUserToEnter.ForeColor = System.Drawing.Color.DimGray;
+            this.MainPanel_PromptUserToEnter.Location = new System.Drawing.Point(29, 97);
+            this.MainPanel_PromptUserToEnter.Name = "MainPanel_PromptUserToEnter";
+            this.MainPanel_PromptUserToEnter.Size = new System.Drawing.Size(366, 33);
+            this.MainPanel_PromptUserToEnter.TabIndex = 13;
+            this.MainPanel_PromptUserToEnter.Text = "Enter expression here...";
             // 
             // NumberPanel
             // 
@@ -274,14 +287,14 @@
             this.NumberPanel.Controls.Add(this.OPER_Sub);
             this.NumberPanel.Controls.Add(this.OPER_Plus);
             this.NumberPanel.Controls.Add(this.CTRL_Equal);
-            this.NumberPanel.Location = new System.Drawing.Point(2, 447);
+            this.NumberPanel.Location = new System.Drawing.Point(0, 447);
             this.NumberPanel.Name = "NumberPanel";
             this.NumberPanel.Size = new System.Drawing.Size(415, 330);
             this.NumberPanel.TabIndex = 13;
             // 
             // CTRL_Ac
             // 
-            this.CTRL_Ac.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTRL_Ac.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_Ac.Location = new System.Drawing.Point(8, 8);
             this.CTRL_Ac.Name = "CTRL_Ac";
             this.CTRL_Ac.Size = new System.Drawing.Size(95, 58);
@@ -291,7 +304,7 @@
             // 
             // NUMB_7
             // 
-            this.NUMB_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_7.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_7.Location = new System.Drawing.Point(8, 72);
             this.NUMB_7.Name = "NUMB_7";
             this.NUMB_7.Size = new System.Drawing.Size(95, 58);
@@ -302,7 +315,7 @@
             // 
             // NUMB_4
             // 
-            this.NUMB_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_4.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_4.Location = new System.Drawing.Point(8, 136);
             this.NUMB_4.Name = "NUMB_4";
             this.NUMB_4.Size = new System.Drawing.Size(95, 58);
@@ -313,7 +326,7 @@
             // 
             // NUMB_1
             // 
-            this.NUMB_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_1.Location = new System.Drawing.Point(8, 200);
             this.NUMB_1.Name = "NUMB_1";
             this.NUMB_1.Size = new System.Drawing.Size(95, 58);
@@ -324,7 +337,7 @@
             // 
             // NUMB_0
             // 
-            this.NUMB_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_0.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_0.Location = new System.Drawing.Point(8, 264);
             this.NUMB_0.Name = "NUMB_0";
             this.NUMB_0.Size = new System.Drawing.Size(95, 58);
@@ -335,7 +348,7 @@
             // 
             // FUNC_Percentage
             // 
-            this.FUNC_Percentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Percentage.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Percentage.Location = new System.Drawing.Point(108, 8);
             this.FUNC_Percentage.Name = "FUNC_Percentage";
             this.FUNC_Percentage.Size = new System.Drawing.Size(95, 58);
@@ -346,7 +359,7 @@
             // 
             // NUMB_8
             // 
-            this.NUMB_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_8.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_8.Location = new System.Drawing.Point(108, 72);
             this.NUMB_8.Name = "NUMB_8";
             this.NUMB_8.Size = new System.Drawing.Size(95, 58);
@@ -357,7 +370,7 @@
             // 
             // NUMB_5
             // 
-            this.NUMB_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_5.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_5.Location = new System.Drawing.Point(108, 136);
             this.NUMB_5.Name = "NUMB_5";
             this.NUMB_5.Size = new System.Drawing.Size(95, 58);
@@ -368,7 +381,7 @@
             // 
             // NUMB_2
             // 
-            this.NUMB_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_2.Location = new System.Drawing.Point(108, 200);
             this.NUMB_2.Name = "NUMB_2";
             this.NUMB_2.Size = new System.Drawing.Size(95, 58);
@@ -379,7 +392,7 @@
             // 
             // MISC_Dot
             // 
-            this.MISC_Dot.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_Dot.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_Dot.Location = new System.Drawing.Point(108, 264);
             this.MISC_Dot.Name = "MISC_Dot";
             this.MISC_Dot.Size = new System.Drawing.Size(95, 58);
@@ -390,17 +403,18 @@
             // 
             // CTRL_Del
             // 
-            this.CTRL_Del.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTRL_Del.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_Del.Location = new System.Drawing.Point(209, 8);
             this.CTRL_Del.Name = "CTRL_Del";
             this.CTRL_Del.Size = new System.Drawing.Size(95, 58);
             this.CTRL_Del.TabIndex = 9;
             this.CTRL_Del.Text = "DEL";
             this.CTRL_Del.UseVisualStyleBackColor = true;
+            this.CTRL_Del.Click += new System.EventHandler(this.CTRL_Del_Click);
             // 
             // NUMB_9
             // 
-            this.NUMB_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_9.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_9.Location = new System.Drawing.Point(209, 72);
             this.NUMB_9.Name = "NUMB_9";
             this.NUMB_9.Size = new System.Drawing.Size(95, 58);
@@ -411,7 +425,7 @@
             // 
             // NUMB_6
             // 
-            this.NUMB_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_6.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_6.Location = new System.Drawing.Point(209, 136);
             this.NUMB_6.Name = "NUMB_6";
             this.NUMB_6.Size = new System.Drawing.Size(95, 58);
@@ -422,7 +436,7 @@
             // 
             // NUMB_3
             // 
-            this.NUMB_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_3.Location = new System.Drawing.Point(209, 200);
             this.NUMB_3.Name = "NUMB_3";
             this.NUMB_3.Size = new System.Drawing.Size(95, 58);
@@ -433,7 +447,7 @@
             // 
             // MISC_Ans
             // 
-            this.MISC_Ans.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_Ans.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_Ans.Location = new System.Drawing.Point(209, 264);
             this.MISC_Ans.Name = "MISC_Ans";
             this.MISC_Ans.Size = new System.Drawing.Size(95, 58);
@@ -443,7 +457,7 @@
             // 
             // OPER_Div
             // 
-            this.OPER_Div.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Div.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OPER_Div.Location = new System.Drawing.Point(310, 8);
             this.OPER_Div.Name = "OPER_Div";
             this.OPER_Div.Size = new System.Drawing.Size(95, 58);
@@ -454,7 +468,7 @@
             // 
             // OPER_Mul
             // 
-            this.OPER_Mul.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Mul.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OPER_Mul.Location = new System.Drawing.Point(310, 72);
             this.OPER_Mul.Name = "OPER_Mul";
             this.OPER_Mul.Size = new System.Drawing.Size(95, 58);
@@ -465,7 +479,7 @@
             // 
             // OPER_Sub
             // 
-            this.OPER_Sub.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Sub.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OPER_Sub.Location = new System.Drawing.Point(310, 136);
             this.OPER_Sub.Name = "OPER_Sub";
             this.OPER_Sub.Size = new System.Drawing.Size(95, 58);
@@ -476,7 +490,7 @@
             // 
             // OPER_Plus
             // 
-            this.OPER_Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Plus.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OPER_Plus.Location = new System.Drawing.Point(310, 200);
             this.OPER_Plus.Name = "OPER_Plus";
             this.OPER_Plus.Size = new System.Drawing.Size(95, 58);
@@ -487,13 +501,25 @@
             // 
             // CTRL_Equal
             // 
-            this.CTRL_Equal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTRL_Equal.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_Equal.Location = new System.Drawing.Point(310, 264);
             this.CTRL_Equal.Name = "CTRL_Equal";
             this.CTRL_Equal.Size = new System.Drawing.Size(95, 58);
             this.CTRL_Equal.TabIndex = 0;
             this.CTRL_Equal.Text = "=";
             this.CTRL_Equal.UseVisualStyleBackColor = true;
+            this.CTRL_Equal.Click += new System.EventHandler(this.CTRL_Equal_Click);
+            // 
+            // FUNC_Sin
+            // 
+            this.FUNC_Sin.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Sin.Location = new System.Drawing.Point(5, 14);
+            this.FUNC_Sin.Name = "FUNC_Sin";
+            this.FUNC_Sin.Size = new System.Drawing.Size(75, 40);
+            this.FUNC_Sin.TabIndex = 20;
+            this.FUNC_Sin.Text = "sin";
+            this.FUNC_Sin.UseVisualStyleBackColor = true;
+            this.FUNC_Sin.Click += new System.EventHandler(this.FUNC_Sin_Click);
             // 
             // FunctionPanel
             // 
@@ -514,14 +540,14 @@
             this.FunctionPanel.Controls.Add(this.FUNC_Pi);
             this.FunctionPanel.Controls.Add(this.MISC_OpenBracket);
             this.FunctionPanel.Controls.Add(this.FUNC_Sin);
-            this.FunctionPanel.Location = new System.Drawing.Point(2, 281);
+            this.FunctionPanel.Location = new System.Drawing.Point(0, 281);
             this.FunctionPanel.Name = "FunctionPanel";
             this.FunctionPanel.Size = new System.Drawing.Size(415, 160);
             this.FunctionPanel.TabIndex = 14;
             // 
             // STATE_Degree
             // 
-            this.STATE_Degree.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STATE_Degree.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STATE_Degree.Location = new System.Drawing.Point(329, 106);
             this.STATE_Degree.Name = "STATE_Degree";
             this.STATE_Degree.Size = new System.Drawing.Size(75, 40);
@@ -532,7 +558,7 @@
             // 
             // FUNC_Not
             // 
-            this.FUNC_Not.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Not.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Not.Location = new System.Drawing.Point(329, 60);
             this.FUNC_Not.Name = "FUNC_Not";
             this.FUNC_Not.Size = new System.Drawing.Size(75, 40);
@@ -543,7 +569,7 @@
             // 
             // FUNC_Ln
             // 
-            this.FUNC_Ln.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Ln.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Ln.Location = new System.Drawing.Point(329, 14);
             this.FUNC_Ln.Name = "FUNC_Ln";
             this.FUNC_Ln.Size = new System.Drawing.Size(75, 40);
@@ -555,7 +581,7 @@
             // STATE_Radian
             // 
             this.STATE_Radian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(239)))), ((int)(((byte)(139)))));
-            this.STATE_Radian.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STATE_Radian.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STATE_Radian.Location = new System.Drawing.Point(248, 106);
             this.STATE_Radian.Name = "STATE_Radian";
             this.STATE_Radian.Size = new System.Drawing.Size(75, 40);
@@ -566,7 +592,7 @@
             // 
             // FUNC_Sqrt
             // 
-            this.FUNC_Sqrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Sqrt.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Sqrt.Location = new System.Drawing.Point(248, 60);
             this.FUNC_Sqrt.Name = "FUNC_Sqrt";
             this.FUNC_Sqrt.Size = new System.Drawing.Size(75, 40);
@@ -577,7 +603,7 @@
             // 
             // FUNC_Logarit
             // 
-            this.FUNC_Logarit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Logarit.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Logarit.Location = new System.Drawing.Point(248, 14);
             this.FUNC_Logarit.Name = "FUNC_Logarit";
             this.FUNC_Logarit.Size = new System.Drawing.Size(75, 40);
@@ -588,7 +614,7 @@
             // 
             // STATE_INV
             // 
-            this.STATE_INV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STATE_INV.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STATE_INV.Location = new System.Drawing.Point(167, 106);
             this.STATE_INV.Name = "STATE_INV";
             this.STATE_INV.Size = new System.Drawing.Size(75, 40);
@@ -599,7 +625,7 @@
             // 
             // FUNC_Pow
             // 
-            this.FUNC_Pow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Pow.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Pow.Location = new System.Drawing.Point(167, 60);
             this.FUNC_Pow.Name = "FUNC_Pow";
             this.FUNC_Pow.Size = new System.Drawing.Size(75, 40);
@@ -610,7 +636,7 @@
             // 
             // FUNC_Tan
             // 
-            this.FUNC_Tan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Tan.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Tan.Location = new System.Drawing.Point(167, 14);
             this.FUNC_Tan.Name = "FUNC_Tan";
             this.FUNC_Tan.Size = new System.Drawing.Size(75, 40);
@@ -621,7 +647,7 @@
             // 
             // FUNC_EulerNumber
             // 
-            this.FUNC_EulerNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_EulerNumber.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_EulerNumber.Location = new System.Drawing.Point(86, 106);
             this.FUNC_EulerNumber.Name = "FUNC_EulerNumber";
             this.FUNC_EulerNumber.Size = new System.Drawing.Size(75, 40);
@@ -632,7 +658,7 @@
             // 
             // MISC_CloseBracket
             // 
-            this.MISC_CloseBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_CloseBracket.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_CloseBracket.Location = new System.Drawing.Point(86, 60);
             this.MISC_CloseBracket.Name = "MISC_CloseBracket";
             this.MISC_CloseBracket.Size = new System.Drawing.Size(75, 40);
@@ -643,7 +669,7 @@
             // 
             // FUNC_Cos
             // 
-            this.FUNC_Cos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Cos.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Cos.Location = new System.Drawing.Point(86, 14);
             this.FUNC_Cos.Name = "FUNC_Cos";
             this.FUNC_Cos.Size = new System.Drawing.Size(75, 40);
@@ -654,7 +680,7 @@
             // 
             // FUNC_Pi
             // 
-            this.FUNC_Pi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Pi.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Pi.Location = new System.Drawing.Point(5, 106);
             this.FUNC_Pi.Name = "FUNC_Pi";
             this.FUNC_Pi.Size = new System.Drawing.Size(75, 40);
@@ -665,7 +691,7 @@
             // 
             // MISC_OpenBracket
             // 
-            this.MISC_OpenBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_OpenBracket.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_OpenBracket.Location = new System.Drawing.Point(5, 60);
             this.MISC_OpenBracket.Name = "MISC_OpenBracket";
             this.MISC_OpenBracket.Size = new System.Drawing.Size(75, 40);
@@ -673,17 +699,6 @@
             this.MISC_OpenBracket.Text = "(";
             this.MISC_OpenBracket.UseVisualStyleBackColor = true;
             this.MISC_OpenBracket.Click += new System.EventHandler(this.MISC_OpenBracket_Click);
-            // 
-            // FUNC_Sin
-            // 
-            this.FUNC_Sin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FUNC_Sin.Location = new System.Drawing.Point(5, 14);
-            this.FUNC_Sin.Name = "FUNC_Sin";
-            this.FUNC_Sin.Size = new System.Drawing.Size(75, 40);
-            this.FUNC_Sin.TabIndex = 20;
-            this.FUNC_Sin.Text = "sin";
-            this.FUNC_Sin.UseVisualStyleBackColor = true;
-            this.FUNC_Sin.Click += new System.EventHandler(this.FUNC_Sin_Click);
             // 
             // MemoryPanel
             // 
@@ -715,6 +730,21 @@
             this.MemoryPanel_Title.TabIndex = 0;
             this.MemoryPanel_Title.Text = "Memory";
             // 
+            // MainPanel_InputTextBox
+            // 
+            this.MainPanel_InputTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.MainPanel_InputTextBox.BlinkingCursorWidth = 1;
+            this.MainPanel_InputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MainPanel_InputTextBox.CurrentCursorPosition = 0;
+            this.MainPanel_InputTextBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_InputTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MainPanel_InputTextBox.Location = new System.Drawing.Point(29, 97);
+            this.MainPanel_InputTextBox.Name = "MainPanel_InputTextBox";
+            this.MainPanel_InputTextBox.ReadOnly = true;
+            this.MainPanel_InputTextBox.Size = new System.Drawing.Size(366, 33);
+            this.MainPanel_InputTextBox.TabIndex = 15;
+            this.MainPanel_InputTextBox.TickInterval = 700;
+            // 
             // StandardCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -728,9 +758,12 @@
             this.Controls.Add(this.NumberPanel);
             this.Controls.Add(this.MainPanel_DecorLine4);
             this.Controls.Add(this.MainPanel);
+            this.DoubleBuffered = true;
+            this.MaximizeBox = false;
             this.Name = "StandardCalculator";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.StandardCalculator_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.StandardCalculator_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenModePanelButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenNumberPanelButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenFuncPanelButton)).EndInit();
@@ -755,7 +788,6 @@
 
         internal System.Windows.Forms.PictureBox MainPanel_OpenModePanelButton;
         internal System.Windows.Forms.Label MainPanel_CurrentModeTitle;
-        internal System.Windows.Forms.Label MainPanel_InputTextBox;
         internal System.Windows.Forms.Label MainPanel_OutputTextbox;
         internal System.Windows.Forms.PictureBox MainPanel_OpenNumberPanelButton;
         internal System.Windows.Forms.PictureBox MainPanel_OpenFuncPanelButton;
@@ -767,6 +799,8 @@
         internal System.Windows.Forms.PictureBox MainPanel_OnTopButton;
         internal System.Windows.Forms.Panel MainPanel;
         internal System.Windows.Forms.Panel NumberPanel;
+        internal System.Windows.Forms.Panel FunctionPanel;
+     
         internal System.Windows.Forms.Button OPER_Div;
         internal System.Windows.Forms.Button OPER_Mul;
         internal System.Windows.Forms.Button OPER_Sub;
@@ -787,7 +821,6 @@
         internal System.Windows.Forms.Button NUMB_6;
         internal System.Windows.Forms.Button NUMB_3;
         internal System.Windows.Forms.Button MISC_Ans;
-        internal System.Windows.Forms.Panel FunctionPanel;
         internal System.Windows.Forms.Button STATE_Degree;
         internal System.Windows.Forms.Button FUNC_Not;
         internal System.Windows.Forms.Button FUNC_Ln;
@@ -803,10 +836,16 @@
         internal System.Windows.Forms.Button FUNC_Pi;
         internal System.Windows.Forms.Button MISC_OpenBracket;
         internal System.Windows.Forms.Button FUNC_Sin;
+        /// <summary>
+        /// 
+        /// </summary>
         internal System.Windows.Forms.Panel MemoryPanel;
         internal System.Windows.Forms.PictureBox MemoryPanel_DecorLine1;
         internal System.Windows.Forms.Label MemoryPanel_Title;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BUGBUG;
+        private System.Windows.Forms.Label MainPanel_PromptUserToEnter;
+        internal System.Windows.Forms.Label MainPanel_NotifyOutput;
+        internal CustomUserControls.CalculatorTextBox.CalculatorTextbox MainPanel_InputTextBox;
     }
 }
 
