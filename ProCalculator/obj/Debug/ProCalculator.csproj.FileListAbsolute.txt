@@ -8,13 +8,4 @@ C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\De
 C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.csproj.CoreCompileInputs.cache
 C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.exe
 C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.pdb
-C:\Users\KIET\source\C#\ProCalculator\bin\Debug\ProCalculator.exe.config
-C:\Users\KIET\source\C#\ProCalculator\bin\Debug\ProCalculator.exe
-C:\Users\KIET\source\C#\ProCalculator\bin\Debug\ProCalculator.pdb
-C:\Users\KIET\source\C#\ProCalculator\obj\Debug\ProCalculator.csproj.AssemblyReference.cache
-C:\Users\KIET\source\C#\ProCalculator\obj\Debug\ProCalculator.Properties.Resources.resources
-C:\Users\KIET\source\C#\ProCalculator\obj\Debug\ProCalculator.StandardCalculator.resources
-C:\Users\KIET\source\C#\ProCalculator\obj\Debug\ProCalculator.csproj.GenerateResource.cache
-C:\Users\KIET\source\C#\ProCalculator\obj\Debug\ProCalculator.csproj.CoreCompileInputs.cache
-C:\Users\KIET\source\C#\ProCalculator\obj\Debug\ProCalculator.exe
-C:\Users\KIET\source\C#\ProCalculator\obj\Debug\ProCalculator.pdb
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.MatrixCalculator.resources
