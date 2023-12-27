@@ -1,20 +1,30 @@
-﻿using System;
+﻿using CustomUserControls.RoundedPanel;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace ProCalculator
 {
     //insert + panel open/close
     internal partial class StandardCalculatorControl
     {
         static private StandardCalculator form1;
-        
+
+        //Save calculated history
+        //First-item: input, second-item: output
+        static private Queue<Tuple<string, string>> history = new Queue<Tuple<string, string>>();
+        static private List<RoundedPanel> memoryBlocks = new List<RoundedPanel>();
+        static private int index = 0;
+
         static public void Init(StandardCalculator f)
         {
             form1 = f;
         }
+        
         static public void InsertContentAtCursor(string content)
         {
             string text = form1.MainPanel_InputTextBox.Text.Insert(form1.MainPanel_InputTextBox.CurrentCursorPosition, content);
@@ -78,7 +88,7 @@ namespace ProCalculator
             form1.FunctionPanel.Hide();
             form1.MemoryPanel.Height -= form1.FunctionPanel.Height;
         }
-        //meory panel
+        //memory panel
         static public void OpenMemoryPanel()
         {
             form1.MainPanel_OpenMemoryPanelButton.BackColor = Color.FromArgb(248, 206, 204);
@@ -92,7 +102,56 @@ namespace ProCalculator
         }
         static public void UpdateMemoryPanelHeight()
         {
-            form1.MemoryPanel.Height = form1.Height - 55;
+            form1.MemoryPanel.Height = form1.Height - 50;
+        }
+
+        static private void AddRoundedPanelsToList()
+        {
+            foreach (RoundedPanel p in form1.MemoryPanel.Controls.OfType<RoundedPanel>())
+                memoryBlocks.Add(p);
+        }
+
+        static public void AddToMemoryPanel(string input, string output)
+        {
+            Tuple<string, string> inputOutput = new Tuple<string, string>(input, output);
+            //Display om-screen memory block
+            var temp = inputOutput;
+            string inputString = temp.Item1;
+            string outputString = temp.Item2;
+
+            //Saving input and output to the queue
+            if (index >= 10)
+            {
+                index = 0;
+                history.Dequeue();
+            }
+            history.Enqueue(inputOutput);
+            index++;
+            AddRoundedPanelsToList();
+
+            //
+            RoundedPanel block = memoryBlocks[index - 1];
+            block.Visible = true;
+            block.Controls[0].Text = inputString;
+            block.Controls[1].Text = outputString;
+        }   
+
+        static public void ClearMemory()
+        {
+            //Disappear all blocks
+            foreach (RoundedPanel p in form1.MemoryPanel.Controls.OfType<RoundedPanel>())
+                p.Visible = false;
+
+            //Clear memory queue and reset index
+            history.Clear();
+            index = 0;
+        }
+
+        static public void MemoryBlockClick(RoundedPanel p1)
+        {
+            ClearCalculatorScreen();
+            InsertContentAtCursor(p1.Controls[0].Text);
+            form1.MainPanel_OutputTextbox.Text = p1.Controls[1].Text;
         }
 
         //INV Mode Toggle
@@ -151,7 +210,7 @@ namespace ProCalculator
                 return false;
             }
             form1.MainPanel_OutputTextbox.Text = result.ToString();
-
+            AddToMemoryPanel(input, result.ToString());
             //cachesNewMemory();
             //form1.on = true;
             return true;
@@ -190,6 +249,7 @@ namespace ProCalculator
             form1.MainPanel_InputTextBox.Clear();
 
             form1.MainPanel_OutputTextbox.Text = string.Empty;
+            form1.Invalidate();
         }
 
     }

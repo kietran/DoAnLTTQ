@@ -83,7 +83,7 @@ namespace CustomUserControls.RoundedPanel
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-            Width = 600;
+            Width = 280;
         }
         protected override void OnBackColorChanged(EventArgs e)
         {

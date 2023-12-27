@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomUserControls.RoundedPanel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,8 +15,6 @@ namespace ProCalculator
     {
         //panel mode
         public bool numberPanelOn = false, funcPanelOn = false, memoryPanelOn = false;
-        bool dockingOn = false;
-        bool modeChoosingPanelOn = false;
 
         private bool onINVMode = false;
         private bool radianMode = true, degreeMode = false;
@@ -28,7 +27,6 @@ namespace ProCalculator
 
         //fake label onTop of in/output
         bool fakeInputLabelOn = true, fakeOutputLabelOn = true;
-
         /// <INIT>
         /// 
         /// </summary>
@@ -470,6 +468,12 @@ namespace ProCalculator
                 STATE_Degree.Enabled = true;
             }
         }
+
+        private void CTRL_Ac_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.ClearCalculatorScreen();
+        }
+
         private void CTRL_Equal_Click(object sender, EventArgs e)
         {
             StandardCalculatorControl.CheckValidityAndComputeResult();
@@ -495,10 +499,66 @@ namespace ProCalculator
                 STATE_Radian.Enabled = true;
             }
         }
+
         private void BUGBUG_MouseClick(object sender, MouseEventArgs e)
         {
             StandardCalculatorControl.CheckValidityAndComputeResult();
         }
-        
+
+        private void ClearMemory_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.ClearMemory();
+        }
+
+        //Click on memory blocks
+        private void History1_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.MemoryBlockClick(History1);
+        }
+
+        private void History2_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.MemoryBlockClick(History2);
+        }
+
+        private void History3_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.MemoryBlockClick(History3);
+        }
+
+        private void History4_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.MemoryBlockClick(History4);
+        }
+
+        private void History5_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.MemoryBlockClick(History5);
+        }
+
+        private void History6_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.MemoryBlockClick(History6);
+        }
+
+        private void History7_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.MemoryBlockClick(History7);
+        }
+
+        private void History8_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.MemoryBlockClick(History8);
+        }
+
+        private void History9_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.MemoryBlockClick(History9);
+        }
+
+        private void History10_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.MemoryBlockClick(History10);
+        }
     }
 }
