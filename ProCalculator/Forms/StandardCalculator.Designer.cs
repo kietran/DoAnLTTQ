@@ -44,8 +44,8 @@
             this.MainPanel_OnTopButtonWithDeclineMark = new System.Windows.Forms.PictureBox();
             this.MainPanel_CurrentModeTitle = new System.Windows.Forms.Label();
             this.MainPanel_DecorLine4 = new System.Windows.Forms.PictureBox();
-            this.MainPanel_PromptUserToEnter = new System.Windows.Forms.Label();
             this.MainPanel_InputTextBox = new CustomUserControls.CalculatorTextBox.CalculatorTextbox();
+            this.MainPanel_PromptUserToEnter = new System.Windows.Forms.Label();
             this.FormOpenerPanel = new CustomUserControls.RoundedPanel.RoundedPanel();
             this.FormOpenerPanel_DarkTheme = new CustomUserControls.RoundedButton.RoundedButton();
             this.FormOpenerPanel_LightTheme = new CustomUserControls.RoundedButton.RoundedButton();
@@ -96,6 +96,7 @@
             this.MemoryPanel = new CustomUserControls.RoundedPanel.RoundedPanel();
             this.MemoryPanel_DecorLine1 = new System.Windows.Forms.PictureBox();
             this.MemoryPanel_Title = new System.Windows.Forms.Label();
+            this.ClearMemory = new System.Windows.Forms.Button();
             this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenFormOpenerPanelButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_DecorLine1)).BeginInit();
@@ -307,16 +308,6 @@
             this.MainPanel_DecorLine4.TabIndex = 10;
             this.MainPanel_DecorLine4.TabStop = false;
             // 
-            // MainPanel_PromptUserToEnter
-            // 
-            this.MainPanel_PromptUserToEnter.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_PromptUserToEnter.ForeColor = System.Drawing.Color.DimGray;
-            this.MainPanel_PromptUserToEnter.Location = new System.Drawing.Point(29, 97);
-            this.MainPanel_PromptUserToEnter.Name = "MainPanel_PromptUserToEnter";
-            this.MainPanel_PromptUserToEnter.Size = new System.Drawing.Size(366, 35);
-            this.MainPanel_PromptUserToEnter.TabIndex = 13;
-            this.MainPanel_PromptUserToEnter.Text = "Enter expression here...";
-            // 
             // MainPanel_InputTextBox
             // 
             this.MainPanel_InputTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
@@ -332,6 +323,16 @@
             this.MainPanel_InputTextBox.Size = new System.Drawing.Size(366, 35);
             this.MainPanel_InputTextBox.TabIndex = 15;
             this.MainPanel_InputTextBox.TickInterval = 700;
+            // 
+            // MainPanel_PromptUserToEnter
+            // 
+            this.MainPanel_PromptUserToEnter.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_PromptUserToEnter.ForeColor = System.Drawing.Color.DimGray;
+            this.MainPanel_PromptUserToEnter.Location = new System.Drawing.Point(29, 97);
+            this.MainPanel_PromptUserToEnter.Name = "MainPanel_PromptUserToEnter";
+            this.MainPanel_PromptUserToEnter.Size = new System.Drawing.Size(366, 35);
+            this.MainPanel_PromptUserToEnter.TabIndex = 13;
+            this.MainPanel_PromptUserToEnter.Text = "Enter expression here...";
             // 
             // FormOpenerPanel
             // 
@@ -1284,11 +1285,13 @@
             // MemoryPanel
             // 
             this.MemoryPanel.ArcSize = 15;
+            this.MemoryPanel.AutoScroll = true;
             this.MemoryPanel.BackColor = System.Drawing.Color.Transparent;
             this.MemoryPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.MemoryPanel.BorderWidth = 1;
             this.MemoryPanel.Controls.Add(this.MemoryPanel_DecorLine1);
             this.MemoryPanel.Controls.Add(this.MemoryPanel_Title);
+            this.MemoryPanel.Controls.Add(this.ClearMemory);
             this.MemoryPanel.InteriorColor = System.Drawing.Color.Transparent;
             this.MemoryPanel.Location = new System.Drawing.Point(421, 0);
             this.MemoryPanel.Name = "MemoryPanel";
@@ -1314,6 +1317,18 @@
             this.MemoryPanel_Title.Size = new System.Drawing.Size(100, 31);
             this.MemoryPanel_Title.TabIndex = 0;
             this.MemoryPanel_Title.Text = "Memory";
+            // 
+            // ClearMemory
+            // 
+            this.ClearMemory.BackgroundImage = global::ProCalculator.Properties.Resources.basket;
+            this.ClearMemory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClearMemory.Location = new System.Drawing.Point(242, 38);
+            this.ClearMemory.Name = "ClearMemory";
+            this.ClearMemory.Size = new System.Drawing.Size(35, 35);
+            this.ClearMemory.TabIndex = 13;
+            this.ClearMemory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ClearMemory.UseVisualStyleBackColor = true;
+            this.ClearMemory.Click += new System.EventHandler(this.ClearMemory_Click);
             // 
             // StandardCalculator
             // 
@@ -1428,6 +1443,8 @@
         internal System.Windows.Forms.PictureBox FormOpenerPanel_CloseButton;
         internal System.Windows.Forms.Panel DummyPanel;
         internal CustomUserControls.RoundedButton.RoundedButton MISC_Ans;
+
+        private System.Windows.Forms.Button ClearMemory;
     }
 }
 

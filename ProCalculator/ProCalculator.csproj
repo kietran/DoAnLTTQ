@@ -33,8 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MathNet.Numerics.5.0.0\lib\net48\MathNet.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +60,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomUserControls\MatrixOnDisplay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomUserControls\MemoryBlock.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomUserControls\ResultLogComponent.cs">
@@ -104,6 +111,7 @@
     <EmbeddedResource Include="Forms\StandardCalculator.resx">
       <DependentUpon>StandardCalculator.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,16 +143,13 @@
     <None Include="Resources\ArrowUp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\menuIcon-dark.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menuIcon-white.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\menuIcon_white.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menuIcon_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basket.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

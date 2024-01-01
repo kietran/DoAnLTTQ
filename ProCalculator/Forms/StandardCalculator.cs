@@ -862,6 +862,9 @@ namespace ProCalculator
             StandardCalculatorControl.SwitchToDegreeMode();
             unitForFunction = true;
         }
-        
+        private void ClearMemory_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.ClearMemory();
+        }
     }
 }

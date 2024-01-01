@@ -1,4 +1,5 @@
-﻿using CustomUserControls.RoundedButton;
+﻿using CustomUserControls.MemoryBlock;
+using CustomUserControls.RoundedButton;
 using MatrixExpression;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Forms;
+
 namespace ProCalculator
 {
     //insert + panel open/close
@@ -557,6 +560,7 @@ namespace ProCalculator
             string text = (System.Math.Round(result,15)).ToString();
             form1.MainPanel_OutputTextbox.Text = text;
             form1.ans = text;
+            AddToMemoryPanel(input, text.ToString());
             //cachesNewMemory();
             //form1.on = true;
             return true;
@@ -635,5 +639,98 @@ namespace ProCalculator
         {
             CloseFormOpenerPanel();
         }
+    }
+    //memory
+    internal partial class StandardCalculatorControl
+    {
+        static private List<Tuple<string, string>> history = new List<Tuple<string, string>>();
+        static private List<MemoryBlock> memoryBlocks = new List<MemoryBlock>();
+
+        static private void AddRoundedPanelsToList(MemoryBlock comp)
+        {
+            if (memoryBlocks.Count == 0)
+            {
+                comp.Location = new Point(0, 80);
+                comp.Index = 1;
+            }
+            else
+            {
+                MemoryBlock last = memoryBlocks[memoryBlocks.Count - 1];
+                comp.Location = new Point(0, last.Location.Y + last.Height + 10);
+                comp.Index = memoryBlocks.Count + 1;
+            }
+            //handle event
+            comp.quitButton.Click += (sender, arg) =>
+            {
+                Label lb = sender as Label;
+                MemoryBlock parent = lb.Parent as MemoryBlock;
+                removeMemoryBlockComponentAtPos(parent.Index - 1);
+            };
+            memoryBlocks.Add(comp);
+        }
+        static public void removeMemoryBlockComponentAtPos(int pos)
+        {
+            //handle location
+            if (memoryBlocks.Count == 0)
+            {
+                return;
+            }
+            memoryBlocks.RemoveRange(pos, 1);
+            history.RemoveRange(pos, 1);
+            for (int i = pos; i < memoryBlocks.Count; i++)
+            {
+                memoryBlocks[i].Index = i + 1;
+            }
+            if (memoryBlocks.Count == 0)
+            {
+                return;
+            }
+            if (pos == 0)
+            {
+                memoryBlocks[0].Location = new Point(0, 80);
+                updateMemoryBlockPositionStartAfterPos(0);
+            }
+            else
+            {
+                updateMemoryBlockPositionStartAfterPos(pos - 1);
+            }
+        }
+        static public void updateMemoryBlockPositionStartAfterPos(int startPos)
+        {
+            for (int i = startPos + 1; i < memoryBlocks.Count; i++)
+            {
+                int posY = memoryBlocks[i - 1].Location.Y + memoryBlocks[i - 1].Height + 10;
+                memoryBlocks[i].Location = new Point(0, posY);
+            }
+        }
+        static public void AddToMemoryPanel(string input, string output)
+        {
+            Tuple<string, string> inputOutput = new Tuple<string, string>(input, output);
+            MemoryBlock comp = new MemoryBlock();
+            form1.MemoryPanel.Controls.Add(comp);
+            //Display om-screen memory block
+            var temp = inputOutput;
+            string inputString = temp.Item1;
+            string outputString = temp.Item2;
+
+            //Saving input and output to the queue
+            history.Add(inputOutput);
+            AddRoundedPanelsToList(comp);
+
+            //
+            MemoryBlock block = memoryBlocks[memoryBlocks.Count - 1];
+            //block.Visible = true;
+            block.Controls[0].Text = inputString;
+            block.Controls[1].Text = outputString;
+        }
+        static public void ClearMemory()
+        {
+            foreach (MemoryBlock comp in memoryBlocks)
+                comp.Dispose();
+            history.Clear();
+            memoryBlocks.Clear();
+            updateMemoryBlockPositionStartAfterPos(0);
+        }
+
     }
 }
