@@ -15,12 +15,11 @@ namespace ProCalculator
     {
         //panel mode
         public bool numberPanelOn = false, funcPanelOn = false, memoryPanelOn = false;
-        public bool formOpenerPanelOn = false;
+        bool formOpenerPanelOn = false;
         bool dockingOn = false;
-        public bool darkModeOn = false;
-
+        
         //calculating
-        public bool onINVMode = false;
+        private bool onINVMode = false;
         public bool unitForFunction = false; //false: RAD, true: DEG
 
         //display invalid result timeout
@@ -91,11 +90,6 @@ namespace ProCalculator
         }
         private void StandardCalculator_Load(object sender, EventArgs e)
         {
-            NumberPanel.BringToFront();
-            FunctionPanel.BringToFront();
-            MainPanel.BringToFront();
-            DummyPanel.SendToBack();
-            MemoryPanel.SendToBack();
             StandardCalculatorControl.CloseFuncPanel();
             StandardCalculatorControl.CloseNumberPanel();
             StandardCalculatorControl.CloseMemoryPanel();
@@ -143,6 +137,12 @@ namespace ProCalculator
                 }
             };
             MainPanel_PromptUserToEnter.Click += (sender, args) =>
+            {
+                MainPanel_InputTextBox.Select();
+                MainPanel_InputTextBox.ShowBlinkingCursor();
+            };
+
+            ClearMemory.Click += (sender, args) =>
             {
                 MainPanel_InputTextBox.Select();
                 MainPanel_InputTextBox.ShowBlinkingCursor();
@@ -723,7 +723,7 @@ namespace ProCalculator
         }
         private void FUNC_Pi_Click(object sender, EventArgs e)
         {
-            StandardCalculatorControl.InsertContentAtCursor("π");
+            StandardCalculatorControl.InsertContentAtCursor("𝝅");
         }
         private void FUNC_EulerNumber_Click(object sender, EventArgs e)
         {
@@ -801,39 +801,14 @@ namespace ProCalculator
             StandardCalculatorControl.OpenConverter();
         }
 
-
-
-        private void FormOpenerPanel_LightTheme_Click(object sender, EventArgs e)
+        private void FUNC_Ln_MouseHover(object sender, EventArgs e)
         {
-            StandardCalculatorControl.SwitchToLightTheme();
-            darkModeOn = false;
+
         }
 
-        private void FormOpenerPanel_DarkTheme_Click(object sender, EventArgs e)
+        private void ClearMemory_Click(object sender, EventArgs e)
         {
-            StandardCalculatorControl.SwitchToDarkTheme();
-            darkModeOn = true;
-        }
-
-        private void FunctionPanel_LocationChanged(object sender, EventArgs e)
-        {
-            int currentHeight = System.Math.Max(MainPanel.Height, NumberPanel.Location.Y + NumberPanel.Height);
-            currentHeight = System.Math.Max(currentHeight, FunctionPanel.Location.Y + FunctionPanel.Height);
-            Height = currentHeight+47;
-            MemoryPanel.Height = currentHeight;
-        }
-
-        private void NumberPanel_LocationChanged(object sender, EventArgs e)
-        {
-            int currentHeight = System.Math.Max(MainPanel.Height, NumberPanel.Location.Y + NumberPanel.Height);
-            currentHeight = System.Math.Max(currentHeight, FunctionPanel.Location.Y + FunctionPanel.Height);
-            Height = currentHeight+47;
-            MemoryPanel.Height = currentHeight;
-        }
-
-        private void MemoryPanel_LocationChanged(object sender, EventArgs e)
-        {
-            Width = MemoryPanel.Width + MemoryPanel.Location.X + 20;
+            StandardCalculatorControl.ClearMemory();
         }
 
         private void CTRL_Equal_Click(object sender, EventArgs e)
@@ -851,6 +826,5 @@ namespace ProCalculator
             StandardCalculatorControl.SwitchToDegreeMode();
             unitForFunction = true;
         }
-        
     }
 }

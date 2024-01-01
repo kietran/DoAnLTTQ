@@ -1,4 +1,6 @@
-﻿namespace ProCalculator
+﻿using System.Windows.Forms;
+
+namespace ProCalculator
 {
     partial class StandardCalculator
     {
@@ -81,8 +83,49 @@
             this.FUNC_Pi = new System.Windows.Forms.Button();
             this.MISC_OpenBracket = new System.Windows.Forms.Button();
             this.MemoryPanel = new System.Windows.Forms.Panel();
+            this.ClearMemory = new System.Windows.Forms.Button();
             this.MemoryPanel_DecorLine1 = new System.Windows.Forms.PictureBox();
             this.MemoryPanel_Title = new System.Windows.Forms.Label();
+            this.History1 = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.MemBlock1Input = new System.Windows.Forms.Label();
+            this.MemBlock1Output = new System.Windows.Forms.Label();
+            this.MemBlock1Index = new System.Windows.Forms.Label();
+            this.History2 = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.MemBlock2Input = new System.Windows.Forms.Label();
+            this.MemBlock2Output = new System.Windows.Forms.Label();
+            this.MemBlock2Index = new System.Windows.Forms.Label();
+            this.History3 = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.MemBlock3Input = new System.Windows.Forms.Label();
+            this.MemBlock3Output = new System.Windows.Forms.Label();
+            this.MemBlock3Index = new System.Windows.Forms.Label();
+            this.History4 = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.MemBlock4Input = new System.Windows.Forms.Label();
+            this.MemBlock4Output = new System.Windows.Forms.Label();
+            this.MemBlock4Index = new System.Windows.Forms.Label();
+            this.History5 = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.MemBlock5Input = new System.Windows.Forms.Label();
+            this.MemBlock5Output = new System.Windows.Forms.Label();
+            this.MemBlock5Index = new System.Windows.Forms.Label();
+            this.History6 = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.MemBlock6Input = new System.Windows.Forms.Label();
+            this.MemBlock6Output = new System.Windows.Forms.Label();
+            this.MemBlock6Index = new System.Windows.Forms.Label();
+            this.History7 = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.MemBlock7Input = new System.Windows.Forms.Label();
+            this.MemBlock7Output = new System.Windows.Forms.Label();
+            this.MemBlock7Index = new System.Windows.Forms.Label();
+            this.History8 = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.MemBlock8Input = new System.Windows.Forms.Label();
+            this.MemBlock8Output = new System.Windows.Forms.Label();
+            this.MemBlock8Index = new System.Windows.Forms.Label();
+            this.History9 = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.MemBlock9Input = new System.Windows.Forms.Label();
+            this.MemBlock9Output = new System.Windows.Forms.Label();
+            this.MemBlock9Index = new System.Windows.Forms.Label();
+            this.History10 = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.MemBlock10Input = new System.Windows.Forms.Label();
+            this.MemBlock10Output = new System.Windows.Forms.Label();
+            this.MemBlock10Index = new System.Windows.Forms.Label();
             this.MainPanel_InputTextBox = new CustomUserControls.CalculatorTextBox.CalculatorTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenModePanelButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenNumberPanelButton)).BeginInit();
@@ -98,6 +141,16 @@
             this.FunctionPanel.SuspendLayout();
             this.MemoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemoryPanel_DecorLine1)).BeginInit();
+            this.History1.SuspendLayout();
+            this.History2.SuspendLayout();
+            this.History3.SuspendLayout();
+            this.History4.SuspendLayout();
+            this.History5.SuspendLayout();
+            this.History6.SuspendLayout();
+            this.History7.SuspendLayout();
+            this.History8.SuspendLayout();
+            this.History9.SuspendLayout();
+            this.History10.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPanel_OpenModePanelButton
@@ -301,6 +354,7 @@
             this.CTRL_Ac.TabIndex = 19;
             this.CTRL_Ac.Text = "C";
             this.CTRL_Ac.UseVisualStyleBackColor = true;
+            this.CTRL_Ac.Click += new System.EventHandler(this.CTRL_Ac_Click);
             // 
             // NUMB_7
             // 
@@ -512,7 +566,7 @@
             // 
             // FUNC_Sin
             // 
-            this.FUNC_Sin.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Sin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Sin.Location = new System.Drawing.Point(5, 14);
             this.FUNC_Sin.Name = "FUNC_Sin";
             this.FUNC_Sin.Size = new System.Drawing.Size(75, 40);
@@ -636,7 +690,7 @@
             // 
             // FUNC_Tan
             // 
-            this.FUNC_Tan.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Tan.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Tan.Location = new System.Drawing.Point(167, 14);
             this.FUNC_Tan.Name = "FUNC_Tan";
             this.FUNC_Tan.Size = new System.Drawing.Size(75, 40);
@@ -669,7 +723,7 @@
             // 
             // FUNC_Cos
             // 
-            this.FUNC_Cos.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Cos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FUNC_Cos.Location = new System.Drawing.Point(86, 14);
             this.FUNC_Cos.Name = "FUNC_Cos";
             this.FUNC_Cos.Size = new System.Drawing.Size(75, 40);
@@ -702,14 +756,38 @@
             // 
             // MemoryPanel
             // 
+            this.MemoryPanel.AutoScroll = true;
             this.MemoryPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.MemoryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MemoryPanel.Controls.Add(this.ClearMemory);
+            this.MemoryPanel.Controls.Add(this.History1);
+            this.MemoryPanel.Controls.Add(this.History2);
+            this.MemoryPanel.Controls.Add(this.History3);
+            this.MemoryPanel.Controls.Add(this.History4);
+            this.MemoryPanel.Controls.Add(this.History5);
+            this.MemoryPanel.Controls.Add(this.History6);
+            this.MemoryPanel.Controls.Add(this.History7);
+            this.MemoryPanel.Controls.Add(this.History8);
+            this.MemoryPanel.Controls.Add(this.History9);
+            this.MemoryPanel.Controls.Add(this.History10);
             this.MemoryPanel.Controls.Add(this.MemoryPanel_DecorLine1);
             this.MemoryPanel.Controls.Add(this.MemoryPanel_Title);
             this.MemoryPanel.Location = new System.Drawing.Point(421, 0);
             this.MemoryPanel.Name = "MemoryPanel";
-            this.MemoryPanel.Size = new System.Drawing.Size(280, 784);
+            this.MemoryPanel.Size = new System.Drawing.Size(305, 784);
             this.MemoryPanel.TabIndex = 15;
+            // 
+            // ClearMemory
+            // 
+            this.ClearMemory.BackgroundImage = global::ProCalculator.Properties.Resources.basket;
+            this.ClearMemory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClearMemory.Location = new System.Drawing.Point(247, 39);
+            this.ClearMemory.Name = "ClearMemory";
+            this.ClearMemory.Size = new System.Drawing.Size(35, 35);
+            this.ClearMemory.TabIndex = 23;
+            this.ClearMemory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ClearMemory.UseVisualStyleBackColor = true;
+            this.ClearMemory.Click += new System.EventHandler(this.ClearMemory_Click);
             // 
             // MemoryPanel_DecorLine1
             // 
@@ -729,6 +807,507 @@
             this.MemoryPanel_Title.Size = new System.Drawing.Size(100, 31);
             this.MemoryPanel_Title.TabIndex = 0;
             this.MemoryPanel_Title.Text = "Memory";
+            // 
+            // History1
+            // 
+            this.History1.ArcSize = 15;
+            this.History1.BackColor = System.Drawing.Color.Transparent;
+            this.History1.BorderColor = System.Drawing.Color.Black;
+            this.History1.BorderWidth = 2;
+            this.History1.Controls.Add(this.MemBlock1Input);
+            this.History1.Controls.Add(this.MemBlock1Output);
+            this.History1.Controls.Add(this.MemBlock1Index);
+            this.History1.InteriorColor = System.Drawing.Color.White;
+            this.History1.Location = new System.Drawing.Point(2, 80);
+            this.History1.Name = "History1";
+            this.History1.Size = new System.Drawing.Size(280, 63);
+            this.History1.TabIndex = 13;
+            this.History1.Visible = false;
+            this.History1.Click += new System.EventHandler(this.History1_Click);
+            // 
+            // MemBlock1Input
+            // 
+            this.MemBlock1Input.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock1Input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.MemBlock1Input.Location = new System.Drawing.Point(45, 0);
+            this.MemBlock1Input.Name = "MemBlock1Input";
+            this.MemBlock1Input.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MemBlock1Input.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock1Input.TabIndex = 1;
+            this.MemBlock1Input.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock1Input.Click += new System.EventHandler(this.History1_Click);
+            // 
+            // MemBlock1Output
+            // 
+            this.MemBlock1Output.Font = new System.Drawing.Font("Comic Sans MS", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock1Output.Location = new System.Drawing.Point(45, 30);
+            this.MemBlock1Output.Name = "MemBlock1Output";
+            this.MemBlock1Output.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MemBlock1Output.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock1Output.TabIndex = 14;
+            this.MemBlock1Output.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock1Output.Click += new System.EventHandler(this.History1_Click);
+            // 
+            // MemBlock1Index
+            // 
+            this.MemBlock1Index.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock1Index.Location = new System.Drawing.Point(-2, 12);
+            this.MemBlock1Index.Name = "MemBlock1Index";
+            this.MemBlock1Index.Size = new System.Drawing.Size(60, 35);
+            this.MemBlock1Index.TabIndex = 0;
+            this.MemBlock1Index.Text = "1.";
+            this.MemBlock1Index.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MemBlock1Index.Click += new System.EventHandler(this.History1_Click);
+            // 
+            // History2
+            // 
+            this.History2.ArcSize = 15;
+            this.History2.BackColor = System.Drawing.Color.Transparent;
+            this.History2.BorderColor = System.Drawing.Color.Black;
+            this.History2.BorderWidth = 2;
+            this.History2.Controls.Add(this.MemBlock2Input);
+            this.History2.Controls.Add(this.MemBlock2Output);
+            this.History2.Controls.Add(this.MemBlock2Index);
+            this.History2.InteriorColor = System.Drawing.Color.White;
+            this.History2.Location = new System.Drawing.Point(2, 150);
+            this.History2.Name = "History2";
+            this.History2.Size = new System.Drawing.Size(280, 63);
+            this.History2.TabIndex = 15;
+            this.History2.Visible = false;
+            this.History2.Click += new System.EventHandler(this.History2_Click);
+            // 
+            // MemBlock2Input
+            // 
+            this.MemBlock2Input.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock2Input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.MemBlock2Input.Location = new System.Drawing.Point(45, 0);
+            this.MemBlock2Input.Name = "MemBlock2Input";
+            this.MemBlock2Input.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MemBlock2Input.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock2Input.TabIndex = 1;
+            this.MemBlock2Input.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock2Input.Click += new System.EventHandler(this.History2_Click);
+            // 
+            // MemBlock2Output
+            // 
+            this.MemBlock2Output.Font = new System.Drawing.Font("Comic Sans MS", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock2Output.Location = new System.Drawing.Point(45, 30);
+            this.MemBlock2Output.Name = "MemBlock2Output";
+            this.MemBlock2Output.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock2Output.TabIndex = 14;
+            this.MemBlock2Output.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock2Output.Click += new System.EventHandler(this.History2_Click);
+            // 
+            // MemBlock2Index
+            // 
+            this.MemBlock2Index.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock2Index.Location = new System.Drawing.Point(-2, 12);
+            this.MemBlock2Index.Name = "MemBlock2Index";
+            this.MemBlock2Index.Size = new System.Drawing.Size(60, 35);
+            this.MemBlock2Index.TabIndex = 0;
+            this.MemBlock2Index.Text = "2.";
+            this.MemBlock2Index.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MemBlock2Index.Click += new System.EventHandler(this.History2_Click);
+            // 
+            // History3
+            // 
+            this.History3.ArcSize = 15;
+            this.History3.BackColor = System.Drawing.Color.Transparent;
+            this.History3.BorderColor = System.Drawing.Color.Black;
+            this.History3.BorderWidth = 2;
+            this.History3.Controls.Add(this.MemBlock3Input);
+            this.History3.Controls.Add(this.MemBlock3Output);
+            this.History3.Controls.Add(this.MemBlock3Index);
+            this.History3.InteriorColor = System.Drawing.Color.White;
+            this.History3.Location = new System.Drawing.Point(2, 220);
+            this.History3.Name = "History3";
+            this.History3.Size = new System.Drawing.Size(280, 63);
+            this.History3.TabIndex = 16;
+            this.History3.Visible = false;
+            this.History3.Click += new System.EventHandler(this.History3_Click);
+            // 
+            // MemBlock3Input
+            // 
+            this.MemBlock3Input.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock3Input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.MemBlock3Input.Location = new System.Drawing.Point(45, 0);
+            this.MemBlock3Input.Name = "MemBlock3Input";
+            this.MemBlock3Input.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MemBlock3Input.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock3Input.TabIndex = 1;
+            this.MemBlock3Input.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock3Input.Click += new System.EventHandler(this.History3_Click);
+            // 
+            // MemBlock3Output
+            // 
+            this.MemBlock3Output.Font = new System.Drawing.Font("Comic Sans MS", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock3Output.Location = new System.Drawing.Point(45, 30);
+            this.MemBlock3Output.Name = "MemBlock3Output";
+            this.MemBlock3Output.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock3Output.TabIndex = 14;
+            this.MemBlock3Output.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock3Output.Click += new System.EventHandler(this.History3_Click);
+            // 
+            // MemBlock3Index
+            // 
+            this.MemBlock3Index.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock3Index.Location = new System.Drawing.Point(-2, 12);
+            this.MemBlock3Index.Name = "MemBlock3Index";
+            this.MemBlock3Index.Size = new System.Drawing.Size(60, 35);
+            this.MemBlock3Index.TabIndex = 0;
+            this.MemBlock3Index.Text = "3.";
+            this.MemBlock3Index.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MemBlock3Index.Click += new System.EventHandler(this.History3_Click);
+            // 
+            // History4
+            // 
+            this.History4.ArcSize = 15;
+            this.History4.BackColor = System.Drawing.Color.Transparent;
+            this.History4.BorderColor = System.Drawing.Color.Black;
+            this.History4.BorderWidth = 2;
+            this.History4.Controls.Add(this.MemBlock4Input);
+            this.History4.Controls.Add(this.MemBlock4Output);
+            this.History4.Controls.Add(this.MemBlock4Index);
+            this.History4.InteriorColor = System.Drawing.Color.White;
+            this.History4.Location = new System.Drawing.Point(2, 290);
+            this.History4.Name = "History4";
+            this.History4.Size = new System.Drawing.Size(280, 63);
+            this.History4.TabIndex = 17;
+            this.History4.Visible = false;
+            this.History4.Click += new System.EventHandler(this.History4_Click);
+            // 
+            // MemBlock4Input
+            // 
+            this.MemBlock4Input.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock4Input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.MemBlock4Input.Location = new System.Drawing.Point(45, 0);
+            this.MemBlock4Input.Name = "MemBlock4Input";
+            this.MemBlock4Input.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MemBlock4Input.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock4Input.TabIndex = 1;
+            this.MemBlock4Input.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock4Input.Click += new System.EventHandler(this.History4_Click);
+            // 
+            // MemBlock4Output
+            // 
+            this.MemBlock4Output.Font = new System.Drawing.Font("Comic Sans MS", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock4Output.Location = new System.Drawing.Point(45, 30);
+            this.MemBlock4Output.Name = "MemBlock4Output";
+            this.MemBlock4Output.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock4Output.TabIndex = 14;
+            this.MemBlock4Output.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock4Output.Click += new System.EventHandler(this.History4_Click);
+            // 
+            // MemBlock4Index
+            // 
+            this.MemBlock4Index.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock4Index.Location = new System.Drawing.Point(-2, 12);
+            this.MemBlock4Index.Name = "MemBlock4Index";
+            this.MemBlock4Index.Size = new System.Drawing.Size(60, 35);
+            this.MemBlock4Index.TabIndex = 0;
+            this.MemBlock4Index.Text = "4.";
+            this.MemBlock4Index.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MemBlock4Index.Click += new System.EventHandler(this.History4_Click);
+            // 
+            // History5
+            // 
+            this.History5.ArcSize = 15;
+            this.History5.BackColor = System.Drawing.Color.Transparent;
+            this.History5.BorderColor = System.Drawing.Color.Black;
+            this.History5.BorderWidth = 2;
+            this.History5.Controls.Add(this.MemBlock5Input);
+            this.History5.Controls.Add(this.MemBlock5Output);
+            this.History5.Controls.Add(this.MemBlock5Index);
+            this.History5.InteriorColor = System.Drawing.Color.White;
+            this.History5.Location = new System.Drawing.Point(2, 360);
+            this.History5.Name = "History5";
+            this.History5.Size = new System.Drawing.Size(280, 63);
+            this.History5.TabIndex = 18;
+            this.History5.Visible = false;
+            this.History5.Click += new System.EventHandler(this.History5_Click);
+            // 
+            // MemBlock5Input
+            // 
+            this.MemBlock5Input.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock5Input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.MemBlock5Input.Location = new System.Drawing.Point(45, 0);
+            this.MemBlock5Input.Name = "MemBlock5Input";
+            this.MemBlock5Input.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MemBlock5Input.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock5Input.TabIndex = 1;
+            this.MemBlock5Input.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock5Input.Click += new System.EventHandler(this.History5_Click);
+            // 
+            // MemBlock5Output
+            // 
+            this.MemBlock5Output.Font = new System.Drawing.Font("Comic Sans MS", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock5Output.Location = new System.Drawing.Point(45, 30);
+            this.MemBlock5Output.Name = "MemBlock5Output";
+            this.MemBlock5Output.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock5Output.TabIndex = 14;
+            this.MemBlock5Output.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock5Output.Click += new System.EventHandler(this.History5_Click);
+            // 
+            // MemBlock5Index
+            // 
+            this.MemBlock5Index.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock5Index.Location = new System.Drawing.Point(-2, 12);
+            this.MemBlock5Index.Name = "MemBlock5Index";
+            this.MemBlock5Index.Size = new System.Drawing.Size(60, 35);
+            this.MemBlock5Index.TabIndex = 0;
+            this.MemBlock5Index.Text = "5.";
+            this.MemBlock5Index.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MemBlock5Index.Click += new System.EventHandler(this.History5_Click);
+            // 
+            // History6
+            // 
+            this.History6.ArcSize = 15;
+            this.History6.BackColor = System.Drawing.Color.Transparent;
+            this.History6.BorderColor = System.Drawing.Color.Black;
+            this.History6.BorderWidth = 2;
+            this.History6.Controls.Add(this.MemBlock6Input);
+            this.History6.Controls.Add(this.MemBlock6Output);
+            this.History6.Controls.Add(this.MemBlock6Index);
+            this.History6.InteriorColor = System.Drawing.Color.White;
+            this.History6.Location = new System.Drawing.Point(2, 430);
+            this.History6.Name = "History6";
+            this.History6.Size = new System.Drawing.Size(280, 63);
+            this.History6.TabIndex = 19;
+            this.History6.Visible = false;
+            this.History6.Click += new System.EventHandler(this.History6_Click);
+            // 
+            // MemBlock6Input
+            // 
+            this.MemBlock6Input.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock6Input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.MemBlock6Input.Location = new System.Drawing.Point(45, 0);
+            this.MemBlock6Input.Name = "MemBlock6Input";
+            this.MemBlock6Input.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MemBlock6Input.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock6Input.TabIndex = 1;
+            this.MemBlock6Input.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock6Input.Click += new System.EventHandler(this.History6_Click);
+            // 
+            // MemBlock6Output
+            // 
+            this.MemBlock6Output.Font = new System.Drawing.Font("Comic Sans MS", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock6Output.Location = new System.Drawing.Point(45, 33);
+            this.MemBlock6Output.Name = "MemBlock6Output";
+            this.MemBlock6Output.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock6Output.TabIndex = 14;
+            this.MemBlock6Output.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock6Output.Click += new System.EventHandler(this.History6_Click);
+            // 
+            // MemBlock6Index
+            // 
+            this.MemBlock6Index.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock6Index.Location = new System.Drawing.Point(-2, 12);
+            this.MemBlock6Index.Name = "MemBlock6Index";
+            this.MemBlock6Index.Size = new System.Drawing.Size(60, 35);
+            this.MemBlock6Index.TabIndex = 0;
+            this.MemBlock6Index.Text = "6.";
+            this.MemBlock6Index.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MemBlock6Index.Click += new System.EventHandler(this.History6_Click);
+            // 
+            // History7
+            // 
+            this.History7.ArcSize = 15;
+            this.History7.BackColor = System.Drawing.Color.Transparent;
+            this.History7.BorderColor = System.Drawing.Color.Black;
+            this.History7.BorderWidth = 2;
+            this.History7.Controls.Add(this.MemBlock7Input);
+            this.History7.Controls.Add(this.MemBlock7Output);
+            this.History7.Controls.Add(this.MemBlock7Index);
+            this.History7.InteriorColor = System.Drawing.Color.White;
+            this.History7.Location = new System.Drawing.Point(2, 500);
+            this.History7.Name = "History7";
+            this.History7.Size = new System.Drawing.Size(280, 63);
+            this.History7.TabIndex = 20;
+            this.History7.Visible = false;
+            this.History7.Click += new System.EventHandler(this.History7_Click);
+            // 
+            // MemBlock7Input
+            // 
+            this.MemBlock7Input.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock7Input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.MemBlock7Input.Location = new System.Drawing.Point(45, 0);
+            this.MemBlock7Input.Name = "MemBlock7Input";
+            this.MemBlock7Input.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MemBlock7Input.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock7Input.TabIndex = 1;
+            this.MemBlock7Input.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock7Input.Click += new System.EventHandler(this.History7_Click);
+            // 
+            // MemBlock7Output
+            // 
+            this.MemBlock7Output.Font = new System.Drawing.Font("Comic Sans MS", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock7Output.Location = new System.Drawing.Point(45, 33);
+            this.MemBlock7Output.Name = "MemBlock7Output";
+            this.MemBlock7Output.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock7Output.TabIndex = 14;
+            this.MemBlock7Output.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock7Output.Click += new System.EventHandler(this.History7_Click);
+            // 
+            // MemBlock7Index
+            // 
+            this.MemBlock7Index.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock7Index.Location = new System.Drawing.Point(-2, 12);
+            this.MemBlock7Index.Name = "MemBlock7Index";
+            this.MemBlock7Index.Size = new System.Drawing.Size(60, 35);
+            this.MemBlock7Index.TabIndex = 0;
+            this.MemBlock7Index.Text = "7.";
+            this.MemBlock7Index.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MemBlock7Index.Click += new System.EventHandler(this.History7_Click);
+            // 
+            // History8
+            // 
+            this.History8.ArcSize = 15;
+            this.History8.BackColor = System.Drawing.Color.Transparent;
+            this.History8.BorderColor = System.Drawing.Color.Black;
+            this.History8.BorderWidth = 2;
+            this.History8.Controls.Add(this.MemBlock8Input);
+            this.History8.Controls.Add(this.MemBlock8Output);
+            this.History8.Controls.Add(this.MemBlock8Index);
+            this.History8.InteriorColor = System.Drawing.Color.White;
+            this.History8.Location = new System.Drawing.Point(2, 570);
+            this.History8.Name = "History8";
+            this.History8.Size = new System.Drawing.Size(280, 63);
+            this.History8.TabIndex = 21;
+            this.History8.Visible = false;
+            this.History8.Click += new System.EventHandler(this.History8_Click);
+            // 
+            // MemBlock8Input
+            // 
+            this.MemBlock8Input.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock8Input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.MemBlock8Input.Location = new System.Drawing.Point(45, 0);
+            this.MemBlock8Input.Name = "MemBlock8Input";
+            this.MemBlock8Input.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MemBlock8Input.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock8Input.TabIndex = 1;
+            this.MemBlock8Input.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock8Input.Click += new System.EventHandler(this.History8_Click);
+            // 
+            // MemBlock8Output
+            // 
+            this.MemBlock8Output.Font = new System.Drawing.Font("Comic Sans MS", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock8Output.Location = new System.Drawing.Point(45, 33);
+            this.MemBlock8Output.Name = "MemBlock8Output";
+            this.MemBlock8Output.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock8Output.TabIndex = 14;
+            this.MemBlock8Output.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock8Output.Click += new System.EventHandler(this.History8_Click);
+            // 
+            // MemBlock8Index
+            // 
+            this.MemBlock8Index.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock8Index.Location = new System.Drawing.Point(-2, 12);
+            this.MemBlock8Index.Name = "MemBlock8Index";
+            this.MemBlock8Index.Size = new System.Drawing.Size(60, 35);
+            this.MemBlock8Index.TabIndex = 0;
+            this.MemBlock8Index.Text = "8.";
+            this.MemBlock8Index.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MemBlock8Index.Click += new System.EventHandler(this.History8_Click);
+            // 
+            // History9
+            // 
+            this.History9.ArcSize = 15;
+            this.History9.BackColor = System.Drawing.Color.Transparent;
+            this.History9.BorderColor = System.Drawing.Color.Black;
+            this.History9.BorderWidth = 2;
+            this.History9.Controls.Add(this.MemBlock9Input);
+            this.History9.Controls.Add(this.MemBlock9Output);
+            this.History9.Controls.Add(this.MemBlock9Index);
+            this.History9.InteriorColor = System.Drawing.Color.White;
+            this.History9.Location = new System.Drawing.Point(2, 640);
+            this.History9.Name = "History9";
+            this.History9.Size = new System.Drawing.Size(280, 63);
+            this.History9.TabIndex = 22;
+            this.History9.Visible = false;
+            this.History9.Click += new System.EventHandler(this.History9_Click);
+            // 
+            // MemBlock9Input
+            // 
+            this.MemBlock9Input.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock9Input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.MemBlock9Input.Location = new System.Drawing.Point(45, 0);
+            this.MemBlock9Input.Name = "MemBlock9Input";
+            this.MemBlock9Input.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MemBlock9Input.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock9Input.TabIndex = 1;
+            this.MemBlock9Input.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock9Input.Click += new System.EventHandler(this.History9_Click);
+            // 
+            // MemBlock9Output
+            // 
+            this.MemBlock9Output.Font = new System.Drawing.Font("Comic Sans MS", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock9Output.Location = new System.Drawing.Point(45, 33);
+            this.MemBlock9Output.Name = "MemBlock9Output";
+            this.MemBlock9Output.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock9Output.TabIndex = 14;
+            this.MemBlock9Output.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock9Output.Click += new System.EventHandler(this.History9_Click);
+            // 
+            // MemBlock9Index
+            // 
+            this.MemBlock9Index.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock9Index.Location = new System.Drawing.Point(-2, 12);
+            this.MemBlock9Index.Name = "MemBlock9Index";
+            this.MemBlock9Index.Size = new System.Drawing.Size(60, 35);
+            this.MemBlock9Index.TabIndex = 0;
+            this.MemBlock9Index.Text = "9.";
+            this.MemBlock9Index.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MemBlock9Index.Click += new System.EventHandler(this.History9_Click);
+            // 
+            // History10
+            // 
+            this.History10.ArcSize = 15;
+            this.History10.BackColor = System.Drawing.Color.Transparent;
+            this.History10.BorderColor = System.Drawing.Color.Black;
+            this.History10.BorderWidth = 2;
+            this.History10.Controls.Add(this.MemBlock10Input);
+            this.History10.Controls.Add(this.MemBlock10Output);
+            this.History10.Controls.Add(this.MemBlock10Index);
+            this.History10.InteriorColor = System.Drawing.Color.White;
+            this.History10.Location = new System.Drawing.Point(2, 710);
+            this.History10.Name = "History10";
+            this.History10.Size = new System.Drawing.Size(280, 63);
+            this.History10.TabIndex = 19;
+            this.History10.Visible = false;
+            this.History10.Click += new System.EventHandler(this.History10_Click);
+            // 
+            // MemBlock10Input
+            // 
+            this.MemBlock10Input.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock10Input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.MemBlock10Input.Location = new System.Drawing.Point(45, 0);
+            this.MemBlock10Input.Name = "MemBlock10Input";
+            this.MemBlock10Input.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MemBlock10Input.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock10Input.TabIndex = 1;
+            this.MemBlock10Input.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock10Input.Click += new System.EventHandler(this.History10_Click);
+            // 
+            // MemBlock10Output
+            // 
+            this.MemBlock10Output.Font = new System.Drawing.Font("Comic Sans MS", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock10Output.Location = new System.Drawing.Point(45, 33);
+            this.MemBlock10Output.Name = "MemBlock10Output";
+            this.MemBlock10Output.Size = new System.Drawing.Size(230, 30);
+            this.MemBlock10Output.TabIndex = 14;
+            this.MemBlock10Output.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemBlock10Output.Click += new System.EventHandler(this.History10_Click);
+            // 
+            // MemBlock10Index
+            // 
+            this.MemBlock10Index.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemBlock10Index.Location = new System.Drawing.Point(-1, 12);
+            this.MemBlock10Index.Name = "MemBlock10Index";
+            this.MemBlock10Index.Size = new System.Drawing.Size(60, 35);
+            this.MemBlock10Index.TabIndex = 0;
+            this.MemBlock10Index.Text = "10.";
+            this.MemBlock10Index.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MemBlock10Index.Click += new System.EventHandler(this.History10_Click);
             // 
             // MainPanel_InputTextBox
             // 
@@ -752,7 +1331,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(701, 784);
+            this.ClientSize = new System.Drawing.Size(725, 784);
             this.Controls.Add(this.MemoryPanel);
             this.Controls.Add(this.FunctionPanel);
             this.Controls.Add(this.NumberPanel);
@@ -780,6 +1359,16 @@
             this.MemoryPanel.ResumeLayout(false);
             this.MemoryPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemoryPanel_DecorLine1)).EndInit();
+            this.History1.ResumeLayout(false);
+            this.History2.ResumeLayout(false);
+            this.History3.ResumeLayout(false);
+            this.History4.ResumeLayout(false);
+            this.History5.ResumeLayout(false);
+            this.History6.ResumeLayout(false);
+            this.History7.ResumeLayout(false);
+            this.History8.ResumeLayout(false);
+            this.History9.ResumeLayout(false);
+            this.History10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -846,6 +1435,47 @@
         private System.Windows.Forms.Label MainPanel_PromptUserToEnter;
         internal System.Windows.Forms.Label MainPanel_NotifyOutput;
         internal CustomUserControls.CalculatorTextBox.CalculatorTextbox MainPanel_InputTextBox;
+        internal CustomUserControls.RoundedPanel.RoundedPanel History1;
+        private System.Windows.Forms.Label MemBlock1Output;
+        private System.Windows.Forms.Label MemBlock1Input;
+        private System.Windows.Forms.Label MemBlock1Index;
+        internal CustomUserControls.RoundedPanel.RoundedPanel History2;
+        private System.Windows.Forms.Label MemBlock2Output;
+        private System.Windows.Forms.Label MemBlock2Input;
+        private System.Windows.Forms.Label MemBlock2Index;
+        internal CustomUserControls.RoundedPanel.RoundedPanel History10;
+        private System.Windows.Forms.Label MemBlock10Output;
+        private System.Windows.Forms.Label MemBlock10Input;
+        private System.Windows.Forms.Label MemBlock10Index;
+        internal CustomUserControls.RoundedPanel.RoundedPanel History9;
+        private System.Windows.Forms.Label MemBlock9Output;
+        private System.Windows.Forms.Label MemBlock9Input;
+        private System.Windows.Forms.Label MemBlock9Index;
+        internal CustomUserControls.RoundedPanel.RoundedPanel History8;
+        private System.Windows.Forms.Label MemBlock8Output;
+        private System.Windows.Forms.Label MemBlock8Input;
+        private System.Windows.Forms.Label MemBlock8Index;
+        internal CustomUserControls.RoundedPanel.RoundedPanel History7;
+        private System.Windows.Forms.Label MemBlock7Output;
+        private System.Windows.Forms.Label MemBlock7Input;
+        private System.Windows.Forms.Label MemBlock7Index;
+        internal CustomUserControls.RoundedPanel.RoundedPanel History6;
+        private System.Windows.Forms.Label MemBlock6Output;
+        private System.Windows.Forms.Label MemBlock6Input;
+        private System.Windows.Forms.Label MemBlock6Index;
+        internal CustomUserControls.RoundedPanel.RoundedPanel History5;
+        private System.Windows.Forms.Label MemBlock5Output;
+        private System.Windows.Forms.Label MemBlock5Input;
+        private System.Windows.Forms.Label MemBlock5Index;
+        internal CustomUserControls.RoundedPanel.RoundedPanel History4;
+        private System.Windows.Forms.Label MemBlock4Output;
+        private System.Windows.Forms.Label MemBlock4Input;
+        private System.Windows.Forms.Label MemBlock4Index;
+        internal CustomUserControls.RoundedPanel.RoundedPanel History3;
+        private System.Windows.Forms.Label MemBlock3Output;
+        private System.Windows.Forms.Label MemBlock3Input;
+        private System.Windows.Forms.Label MemBlock3Index;
+        private Button ClearMemory;
     }
 }
 

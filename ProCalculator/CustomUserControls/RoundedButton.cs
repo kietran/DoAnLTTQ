@@ -95,18 +95,6 @@ namespace CustomUserControls.RoundedButton
                 }
             }
         }
-        [Category("Text")]
-        public ContentAlignment TextAlignment
-        {
-            get { return buttonLabel.TextAlign; }
-            set
-            {
-                if (value != buttonLabel.TextAlign)
-                {
-                    buttonLabel.TextAlign = value;
-                }
-            }
-        }
         public RoundedButton()
         {
             DoubleBuffered = true;
@@ -184,10 +172,7 @@ namespace CustomUserControls.RoundedButton
             g.FillEllipse(b, ArcBotRight);
 
             //draw border
-            if(BorderWidth == 0)
-            {
-                return;
-            }
+
             Pen p = new Pen(BorderColor, _borderWidth);
             g.SmoothingMode = SmoothingMode.AntiAlias;
             //draw Border;
