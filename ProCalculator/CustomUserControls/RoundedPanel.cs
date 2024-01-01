@@ -10,10 +10,10 @@ namespace CustomUserControls.RoundedPanel
     partial class RoundedPanel : Panel
     {
 
-        int _borderWidth = 3;
-        Color _borderColor = Color.Black;
-        Color _interiorColor = Color.White;
-        int _arcSize = 15;
+        protected int _borderWidth = 3;
+        protected Color _borderColor = Color.Black;
+        protected Color _interiorColor = Color.White;
+        protected int _arcSize = 15;
 
         //only use odd number for consistency
         [Category("Border")]
@@ -79,16 +79,26 @@ namespace CustomUserControls.RoundedPanel
         public RoundedPanel()
         {
             DoubleBuffered = true;
+            
         }
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-            Width = 600;
         }
         protected override void OnBackColorChanged(EventArgs e)
         {
             base.OnBackColorChanged(e);
-            BackColor = Color.Transparent;
+        }
+
+        protected override void OnSizeChanged(EventArgs e)
+        {
+            base.OnSizeChanged(e);
+            Invalidate();
+        }
+        protected override void OnLocationChanged(EventArgs e)
+        {
+            base.OnLocationChanged(e);
+            Invalidate();
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -143,15 +153,6 @@ namespace CustomUserControls.RoundedPanel
             g.DrawArc(p, ArcTopRight, 270, 90);
             g.DrawArc(p, ArcBotLeft, 90, 90);
             g.DrawArc(p, ArcBotRight, 0, 90);
-        }
-
-        protected override void OnLocationChanged(EventArgs e)
-        {
-            base.OnLocationChanged(e);
-        }
-        protected override void OnSizeChanged(EventArgs e)
-        {
-            base.OnSizeChanged(e);
         }
     }
 }
