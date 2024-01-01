@@ -73,16 +73,6 @@ namespace ProCalculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap basket {
-            get {
-                object obj = ResourceManager.GetObject("basket", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap del_icon60 {
             get {
                 object obj = ResourceManager.GetObject("del-icon60", resourceCulture);
@@ -93,9 +83,19 @@ namespace ProCalculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menuIcon {
+        internal static System.Drawing.Bitmap menuIcon_dark {
             get {
-                object obj = ResourceManager.GetObject("menuIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("menuIcon_dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menuIcon_white {
+            get {
+                object obj = ResourceManager.GetObject("menuIcon_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

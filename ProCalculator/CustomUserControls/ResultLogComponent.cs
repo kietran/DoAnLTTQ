@@ -145,7 +145,7 @@ namespace CustomUserControls.ResultLogComponent
             resultMatrix.Font = new Font("Comic Sans MS", 9.8F);
 
             quitButton.ForeColor = Color.Brown;
-            quitButton.Location = new Point(170, 0);
+            quitButton.Location = new Point(573, 0);
             quitButton.AutoSize = true;
             quitButton.BackColor = Color.Transparent;
             quitButton.Font = new Font("Comic Sans MS", 12F);
@@ -177,7 +177,7 @@ namespace CustomUserControls.ResultLogComponent
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-            Width = 200;    
+            Width = 600;    
             alignContentInMiddle();
         }
         protected override void OnBackColorChanged(EventArgs e)

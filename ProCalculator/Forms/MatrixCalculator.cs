@@ -344,5 +344,6 @@ namespace ProCalculator
                 MatrixCalculatorControl.CheckValidityAndComputeResultOfMatrixExpression(InputPanel_InputTextbox.Text);
             }
         }
+
     }
 }

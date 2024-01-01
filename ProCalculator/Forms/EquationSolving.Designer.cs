@@ -1,4 +1,6 @@
-﻿namespace ProCalculator
+﻿using CustomUserControls.RoundedPanel;
+
+namespace ProCalculator
 {
     partial class EquationSolving
     {
@@ -28,21 +30,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Menu = new System.Windows.Forms.Panel();
-            this.TwoDegreeMenu = new System.Windows.Forms.Button();
-            this.FourUnknowsMenu = new System.Windows.Forms.Button();
-            this.ThreeUnknowsMenu = new System.Windows.Forms.Button();
-            this.TwoUnknowsMenu = new System.Windows.Forms.Button();
-            this.EquaMenu = new System.Windows.Forms.Label();
-            this.FourDegreeMenu = new System.Windows.Forms.Button();
-            this.ThreeDegreeMenu = new System.Windows.Forms.Button();
-            this.PolyMenu = new System.Windows.Forms.Label();
+            this.MenuPanel = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.MenuPanel_SecondDeg = new CustomUserControls.RoundedButton.RoundedButton();
+            this.MenuPanel_FourUnknowns = new CustomUserControls.RoundedButton.RoundedButton();
+            this.MenuPanel_ThreeUnknowsMenu = new CustomUserControls.RoundedButton.RoundedButton();
+            this.MenuPanel_TwoUnknowns = new CustomUserControls.RoundedButton.RoundedButton();
+            this.MenuPanel_EquationTitle = new System.Windows.Forms.Label();
+            this.MenuPanel_FourthDeg = new CustomUserControls.RoundedButton.RoundedButton();
+            this.MenuPanel_ThirdDeg = new CustomUserControls.RoundedButton.RoundedButton();
+            this.MenuPanel_PolyTitle = new System.Windows.Forms.Label();
             this.PolyTwoDegreeScreen = new System.Windows.Forms.Panel();
-            this.PolyTwoDegreeResult2 = new System.Windows.Forms.TextBox();
-            this.PolyTwoDegreeResult1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.PolyTwoDegreeTextBox4 = new System.Windows.Forms.TextBox();
             this.PolyTwoDegreeLabel6 = new System.Windows.Forms.Label();
+            this.PolyTwoDegreeResultButton = new CustomUserControls.CustomButton.CustomButton();
             this.PolyTwoDegreeTextBox3 = new System.Windows.Forms.TextBox();
             this.PolyTwoDegreeTextBox2 = new System.Windows.Forms.TextBox();
             this.PolyTwoDegreeTextBox1 = new System.Windows.Forms.TextBox();
@@ -50,17 +51,16 @@
             this.PolyTwoDegreeLabel4 = new System.Windows.Forms.Label();
             this.PolyTwoDegreeLabel3 = new System.Windows.Forms.Label();
             this.PolyTwoDegreeLabel2 = new System.Windows.Forms.Label();
-            this.NamePagePanel = new System.Windows.Forms.Panel();
+            this.PolyTwoDegreeLabel1 = new CustomUserControls.CustomButton.CustomButton();
+            this.NamePagePanel = new CustomUserControls.RoundedPanel.RoundedPanel();
             this.NamePageLabel = new System.Windows.Forms.Label();
             this.PolyThreeDegreeScreen = new System.Windows.Forms.Panel();
-            this.PolyThreeDegreeResult3 = new System.Windows.Forms.TextBox();
-            this.PolyThreeDegreeResult2 = new System.Windows.Forms.TextBox();
-            this.PolyThreeDegreeResult1 = new System.Windows.Forms.TextBox();
             this.PolyThreeDegreeTextBox4 = new System.Windows.Forms.TextBox();
             this.PolyThreeDegreeLabel6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.PolyThreeDegreeTextBox5 = new System.Windows.Forms.TextBox();
             this.PolyThreeDegreeLabel7 = new System.Windows.Forms.Label();
+            this.PolyThreeDegreeResultButton = new CustomUserControls.CustomButton.CustomButton();
             this.PolyThreeDegreeTextBox3 = new System.Windows.Forms.TextBox();
             this.PolyThreeDegreeTextBox2 = new System.Windows.Forms.TextBox();
             this.PolyThreeDegreeTextBox1 = new System.Windows.Forms.TextBox();
@@ -68,28 +68,25 @@
             this.PolyThreeDegreeLabel4 = new System.Windows.Forms.Label();
             this.PolyThreeDegreeLabel3 = new System.Windows.Forms.Label();
             this.PolyThreeDegreeLabel2 = new System.Windows.Forms.Label();
+            this.PolyThreeDegreeLabel1 = new CustomUserControls.CustomButton.CustomButton();
             this.PolyFourDegreeScreen = new System.Windows.Forms.Panel();
-            this.PolyFourDegreeResult4 = new System.Windows.Forms.TextBox();
-            this.PolyFourDegreeResult3 = new System.Windows.Forms.TextBox();
-            this.PolyFourDegreeResult2 = new System.Windows.Forms.TextBox();
-            this.PolyFourDegreeResult1 = new System.Windows.Forms.TextBox();
-            this.PolyFourDegreeLTextBox5 = new System.Windows.Forms.TextBox();
+            this.PolyFourDegreeLTextBox3 = new System.Windows.Forms.TextBox();
             this.PolyFourDegreeLabel5 = new System.Windows.Forms.Label();
-            this.PolyFourDegreeLTextBox4 = new System.Windows.Forms.TextBox();
+            this.PolyFourDegreeLTextBox5 = new System.Windows.Forms.TextBox();
             this.PolyFourDegreeLabel7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.PolyFourDegreeLTextBox6 = new System.Windows.Forms.TextBox();
             this.PolyFourDegreeLabel8 = new System.Windows.Forms.Label();
+            this.PolyFourDegreeResultButton = new CustomUserControls.CustomButton.CustomButton();
+            this.PolyFourDegreeLTextBox4 = new System.Windows.Forms.TextBox();
             this.PolyFourDegreeLTextBox2 = new System.Windows.Forms.TextBox();
-            this.PolyFourDegreeLTextBox3 = new System.Windows.Forms.TextBox();
             this.PolyFourDegreeLTextBox1 = new System.Windows.Forms.TextBox();
             this.PolyFourDegreeLabel6 = new System.Windows.Forms.Label();
             this.PolyFourDegreeLabel4 = new System.Windows.Forms.Label();
             this.PolyFourDegreeLabel3 = new System.Windows.Forms.Label();
             this.PolyFourDegreeLabel2 = new System.Windows.Forms.Label();
+            this.PolyFourDegreeLabel1 = new CustomUserControls.CustomButton.CustomButton();
             this.EquaTwoUnknowsScreen = new System.Windows.Forms.Panel();
-            this.EquaTwoUnknowsResult2 = new System.Windows.Forms.TextBox();
-            this.EquaTwoUnknowsResult1 = new System.Windows.Forms.TextBox();
             this.EquaTwoUnknowsTextBox6 = new System.Windows.Forms.TextBox();
             this.EquaTwoUnknowsTextBox5 = new System.Windows.Forms.TextBox();
             this.EquaTwoUnknowsLabel4 = new System.Windows.Forms.Label();
@@ -103,10 +100,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.EquaTwoUnknowsTextBox7 = new System.Windows.Forms.TextBox();
             this.EquaTwoUnknowsLabe5 = new System.Windows.Forms.Label();
+            this.EquaTwoUnknowsResultButton = new CustomUserControls.CustomButton.CustomButton();
             this.EquaThreeUnknowsScreen = new System.Windows.Forms.Panel();
-            this.EquaThreeUnknowsResult3 = new System.Windows.Forms.TextBox();
-            this.EquaThreeUnknowsResult2 = new System.Windows.Forms.TextBox();
-            this.EquaThreeUnknowsResult1 = new System.Windows.Forms.TextBox();
             this.EquaThreeUnknowsTextBox12 = new System.Windows.Forms.TextBox();
             this.EquaThreeUnknowsLabel9 = new System.Windows.Forms.Label();
             this.EquaThreeUnknowsTextBox11 = new System.Windows.Forms.TextBox();
@@ -131,11 +126,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.EquaThreeUnknowsTextBox13 = new System.Windows.Forms.TextBox();
             this.EquaThreeUnknowsLabel10 = new System.Windows.Forms.Label();
+            this.EquaThreeUnknowsResultButton = new CustomUserControls.CustomButton.CustomButton();
             this.EquaFourUnknowsScreen = new System.Windows.Forms.Panel();
-            this.EquaFourUnknowsResult3 = new System.Windows.Forms.TextBox();
-            this.EquaFourUnknowsResult4 = new System.Windows.Forms.TextBox();
-            this.EquaFourUnknowsResult2 = new System.Windows.Forms.TextBox();
-            this.EquaFourUnknowsResult1 = new System.Windows.Forms.TextBox();
             this.EquaFourUnknowsTextBox19 = new System.Windows.Forms.TextBox();
             this.EquaFourUnknowsLabel15 = new System.Windows.Forms.Label();
             this.EquaFourUnknowsTextBox14 = new System.Windows.Forms.TextBox();
@@ -175,16 +167,8 @@
             this.button6 = new System.Windows.Forms.Button();
             this.EquaFourUnknowTextBox20 = new System.Windows.Forms.TextBox();
             this.EquaFourUnknowsLabel17 = new System.Windows.Forms.Label();
-            this.PolyTwoDegreeResultButton = new CustomUserControls.CustomButton.CustomButton();
-            this.PolyTwoDegreeLabel1 = new CustomUserControls.CustomButton.CustomButton();
             this.EquaFourUnknowsResultButton = new CustomUserControls.CustomButton.CustomButton();
-            this.PolyFourDegreeResultButton = new CustomUserControls.CustomButton.CustomButton();
-            this.PolyFourDegreeLabel1 = new CustomUserControls.CustomButton.CustomButton();
-            this.EquaThreeUnknowsResultButton = new CustomUserControls.CustomButton.CustomButton();
-            this.PolyThreeDegreeResultButton = new CustomUserControls.CustomButton.CustomButton();
-            this.PolyThreeDegreeLabel1 = new CustomUserControls.CustomButton.CustomButton();
-            this.EquaTwoUnknowsResultButton = new CustomUserControls.CustomButton.CustomButton();
-            this.Menu.SuspendLayout();
+            this.MenuPanel.SuspendLayout();
             this.PolyTwoDegreeScreen.SuspendLayout();
             this.NamePagePanel.SuspendLayout();
             this.PolyThreeDegreeScreen.SuspendLayout();
@@ -194,132 +178,181 @@
             this.EquaFourUnknowsScreen.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Menu
+            // MenuPanel
             // 
-            this.Menu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Menu.Controls.Add(this.TwoDegreeMenu);
-            this.Menu.Controls.Add(this.FourUnknowsMenu);
-            this.Menu.Controls.Add(this.ThreeUnknowsMenu);
-            this.Menu.Controls.Add(this.TwoUnknowsMenu);
-            this.Menu.Controls.Add(this.EquaMenu);
-            this.Menu.Controls.Add(this.FourDegreeMenu);
-            this.Menu.Controls.Add(this.ThreeDegreeMenu);
-            this.Menu.Controls.Add(this.PolyMenu);
-            this.Menu.Location = new System.Drawing.Point(-1, 0);
-            this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(199, 592);
-            this.Menu.TabIndex = 0;
+            this.MenuPanel.ArcSize = 10;
+            this.MenuPanel.BackColor = System.Drawing.Color.Transparent;
+            this.MenuPanel.BorderColor = System.Drawing.Color.Black;
+            this.MenuPanel.BorderWidth = 3;
+            this.MenuPanel.Controls.Add(this.MenuPanel_SecondDeg);
+            this.MenuPanel.Controls.Add(this.MenuPanel_FourUnknowns);
+            this.MenuPanel.Controls.Add(this.MenuPanel_ThreeUnknowsMenu);
+            this.MenuPanel.Controls.Add(this.MenuPanel_TwoUnknowns);
+            this.MenuPanel.Controls.Add(this.MenuPanel_EquationTitle);
+            this.MenuPanel.Controls.Add(this.MenuPanel_FourthDeg);
+            this.MenuPanel.Controls.Add(this.MenuPanel_ThirdDeg);
+            this.MenuPanel.Controls.Add(this.MenuPanel_PolyTitle);
+            this.MenuPanel.InteriorColor = System.Drawing.Color.White;
+            this.MenuPanel.Location = new System.Drawing.Point(-10, 10);
+            this.MenuPanel.Name = "MenuPanel";
+            this.MenuPanel.Size = new System.Drawing.Size(211, 592);
+            this.MenuPanel.TabIndex = 0;
             // 
-            // TwoDegreeMenu
+            // MenuPanel_SecondDeg
             // 
-            this.TwoDegreeMenu.BackColor = System.Drawing.SystemColors.Control;
-            this.TwoDegreeMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TwoDegreeMenu.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TwoDegreeMenu.Location = new System.Drawing.Point(-2, 85);
-            this.TwoDegreeMenu.Name = "TwoDegreeMenu";
-            this.TwoDegreeMenu.Size = new System.Drawing.Size(202, 40);
-            this.TwoDegreeMenu.TabIndex = 8;
-            this.TwoDegreeMenu.TabStop = false;
-            this.TwoDegreeMenu.Text = "Two Degree";
-            this.TwoDegreeMenu.UseVisualStyleBackColor = false;
-            this.TwoDegreeMenu.Click += new System.EventHandler(this.Page1Button_Click);
+            this.MenuPanel_SecondDeg.ArcSize = 5;
+            this.MenuPanel_SecondDeg.BackColor = System.Drawing.SystemColors.Control;
+            this.MenuPanel_SecondDeg.BorderColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_SecondDeg.BorderWidth = 2;
+            this.MenuPanel_SecondDeg.Font = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_SecondDeg.InteriorColor = System.Drawing.Color.White;
+            this.MenuPanel_SecondDeg.Location = new System.Drawing.Point(3, 54);
+            this.MenuPanel_SecondDeg.MouseClickBackColor = System.Drawing.Color.Gainsboro;
+            this.MenuPanel_SecondDeg.MouseHoveringBackColor = System.Drawing.Color.WhiteSmoke;
+            this.MenuPanel_SecondDeg.Name = "MenuPanel_SecondDeg";
+            this.MenuPanel_SecondDeg.Size = new System.Drawing.Size(204, 40);
+            this.MenuPanel_SecondDeg.TabIndex = 8;
+            this.MenuPanel_SecondDeg.Text = "Two Degree";
+            this.MenuPanel_SecondDeg.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MenuPanel_SecondDeg.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.MenuPanel_SecondDeg.TextContent = "      Second degree";
+            this.MenuPanel_SecondDeg.TextFont = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_SecondDeg.Click += new System.EventHandler(this.Page1Button_Click);
             // 
-            // FourUnknowsMenu
+            // MenuPanel_FourUnknowns
             // 
-            this.FourUnknowsMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FourUnknowsMenu.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FourUnknowsMenu.Location = new System.Drawing.Point(-2, 353);
-            this.FourUnknowsMenu.Name = "FourUnknowsMenu";
-            this.FourUnknowsMenu.Size = new System.Drawing.Size(202, 40);
-            this.FourUnknowsMenu.TabIndex = 7;
-            this.FourUnknowsMenu.TabStop = false;
-            this.FourUnknowsMenu.Text = "Four Unknows";
-            this.FourUnknowsMenu.UseVisualStyleBackColor = true;
-            this.FourUnknowsMenu.Click += new System.EventHandler(this.Page6Button_Click);
+            this.MenuPanel_FourUnknowns.ArcSize = 5;
+            this.MenuPanel_FourUnknowns.BackColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_FourUnknowns.BorderColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_FourUnknowns.BorderWidth = 2;
+            this.MenuPanel_FourUnknowns.Font = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_FourUnknowns.InteriorColor = System.Drawing.Color.White;
+            this.MenuPanel_FourUnknowns.Location = new System.Drawing.Point(3, 297);
+            this.MenuPanel_FourUnknowns.MouseClickBackColor = System.Drawing.Color.Gainsboro;
+            this.MenuPanel_FourUnknowns.MouseHoveringBackColor = System.Drawing.Color.WhiteSmoke;
+            this.MenuPanel_FourUnknowns.Name = "MenuPanel_FourUnknowns";
+            this.MenuPanel_FourUnknowns.Size = new System.Drawing.Size(204, 40);
+            this.MenuPanel_FourUnknowns.TabIndex = 7;
+            this.MenuPanel_FourUnknowns.Text = "Four Unknows";
+            this.MenuPanel_FourUnknowns.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MenuPanel_FourUnknowns.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.MenuPanel_FourUnknowns.TextContent = "      Four Unknowns";
+            this.MenuPanel_FourUnknowns.TextFont = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_FourUnknowns.Click += new System.EventHandler(this.Page6Button_Click);
             // 
-            // ThreeUnknowsMenu
+            // MenuPanel_ThreeUnknowsMenu
             // 
-            this.ThreeUnknowsMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ThreeUnknowsMenu.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThreeUnknowsMenu.Location = new System.Drawing.Point(-2, 316);
-            this.ThreeUnknowsMenu.Name = "ThreeUnknowsMenu";
-            this.ThreeUnknowsMenu.Size = new System.Drawing.Size(202, 40);
-            this.ThreeUnknowsMenu.TabIndex = 6;
-            this.ThreeUnknowsMenu.TabStop = false;
-            this.ThreeUnknowsMenu.Text = "Three Unknows";
-            this.ThreeUnknowsMenu.UseVisualStyleBackColor = true;
-            this.ThreeUnknowsMenu.Click += new System.EventHandler(this.Page5Button_Click);
+            this.MenuPanel_ThreeUnknowsMenu.ArcSize = 5;
+            this.MenuPanel_ThreeUnknowsMenu.BackColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_ThreeUnknowsMenu.BorderColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_ThreeUnknowsMenu.BorderWidth = 2;
+            this.MenuPanel_ThreeUnknowsMenu.Font = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_ThreeUnknowsMenu.InteriorColor = System.Drawing.Color.White;
+            this.MenuPanel_ThreeUnknowsMenu.Location = new System.Drawing.Point(3, 260);
+            this.MenuPanel_ThreeUnknowsMenu.MouseClickBackColor = System.Drawing.Color.Gainsboro;
+            this.MenuPanel_ThreeUnknowsMenu.MouseHoveringBackColor = System.Drawing.Color.WhiteSmoke;
+            this.MenuPanel_ThreeUnknowsMenu.Name = "MenuPanel_ThreeUnknowsMenu";
+            this.MenuPanel_ThreeUnknowsMenu.Size = new System.Drawing.Size(204, 40);
+            this.MenuPanel_ThreeUnknowsMenu.TabIndex = 6;
+            this.MenuPanel_ThreeUnknowsMenu.Text = "Three Unknows";
+            this.MenuPanel_ThreeUnknowsMenu.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MenuPanel_ThreeUnknowsMenu.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.MenuPanel_ThreeUnknowsMenu.TextContent = "      Three Unknowns";
+            this.MenuPanel_ThreeUnknowsMenu.TextFont = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_ThreeUnknowsMenu.Click += new System.EventHandler(this.Page5Button_Click);
             // 
-            // TwoUnknowsMenu
+            // MenuPanel_TwoUnknowns
             // 
-            this.TwoUnknowsMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TwoUnknowsMenu.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TwoUnknowsMenu.Location = new System.Drawing.Point(-2, 278);
-            this.TwoUnknowsMenu.Name = "TwoUnknowsMenu";
-            this.TwoUnknowsMenu.Size = new System.Drawing.Size(202, 40);
-            this.TwoUnknowsMenu.TabIndex = 5;
-            this.TwoUnknowsMenu.TabStop = false;
-            this.TwoUnknowsMenu.Text = "Two Unknow";
-            this.TwoUnknowsMenu.UseVisualStyleBackColor = true;
-            this.TwoUnknowsMenu.Click += new System.EventHandler(this.Page4Button_Click);
+            this.MenuPanel_TwoUnknowns.ArcSize = 5;
+            this.MenuPanel_TwoUnknowns.BackColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_TwoUnknowns.BorderColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_TwoUnknowns.BorderWidth = 2;
+            this.MenuPanel_TwoUnknowns.Font = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_TwoUnknowns.InteriorColor = System.Drawing.Color.White;
+            this.MenuPanel_TwoUnknowns.Location = new System.Drawing.Point(3, 221);
+            this.MenuPanel_TwoUnknowns.MouseClickBackColor = System.Drawing.Color.Gainsboro;
+            this.MenuPanel_TwoUnknowns.MouseHoveringBackColor = System.Drawing.Color.WhiteSmoke;
+            this.MenuPanel_TwoUnknowns.Name = "MenuPanel_TwoUnknowns";
+            this.MenuPanel_TwoUnknowns.Size = new System.Drawing.Size(204, 40);
+            this.MenuPanel_TwoUnknowns.TabIndex = 5;
+            this.MenuPanel_TwoUnknowns.Text = "Two Unknow";
+            this.MenuPanel_TwoUnknowns.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MenuPanel_TwoUnknowns.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.MenuPanel_TwoUnknowns.TextContent = "      Two Unknowns";
+            this.MenuPanel_TwoUnknowns.TextFont = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_TwoUnknowns.Click += new System.EventHandler(this.Page4Button_Click);
             // 
-            // EquaMenu
+            // MenuPanel_EquationTitle
             // 
-            this.EquaMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MenuPanel_EquationTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EquaMenu.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaMenu.Location = new System.Drawing.Point(2, 199);
-            this.EquaMenu.Name = "EquaMenu";
-            this.EquaMenu.Size = new System.Drawing.Size(193, 76);
-            this.EquaMenu.TabIndex = 4;
-            this.EquaMenu.Text = "Equation";
-            this.EquaMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MenuPanel_EquationTitle.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_EquationTitle.Location = new System.Drawing.Point(15, 177);
+            this.MenuPanel_EquationTitle.Name = "MenuPanel_EquationTitle";
+            this.MenuPanel_EquationTitle.Size = new System.Drawing.Size(189, 41);
+            this.MenuPanel_EquationTitle.TabIndex = 4;
+            this.MenuPanel_EquationTitle.Text = "Equation";
+            this.MenuPanel_EquationTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // FourDegreeMenu
+            // MenuPanel_FourthDeg
             // 
-            this.FourDegreeMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FourDegreeMenu.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FourDegreeMenu.Location = new System.Drawing.Point(-2, 159);
-            this.FourDegreeMenu.Name = "FourDegreeMenu";
-            this.FourDegreeMenu.Size = new System.Drawing.Size(202, 40);
-            this.FourDegreeMenu.TabIndex = 3;
-            this.FourDegreeMenu.TabStop = false;
-            this.FourDegreeMenu.Text = "Four Degree";
-            this.FourDegreeMenu.UseVisualStyleBackColor = true;
-            this.FourDegreeMenu.Click += new System.EventHandler(this.Page3Button_Click);
+            this.MenuPanel_FourthDeg.ArcSize = 5;
+            this.MenuPanel_FourthDeg.BackColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_FourthDeg.BorderColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_FourthDeg.BorderWidth = 2;
+            this.MenuPanel_FourthDeg.Font = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_FourthDeg.InteriorColor = System.Drawing.Color.White;
+            this.MenuPanel_FourthDeg.Location = new System.Drawing.Point(3, 129);
+            this.MenuPanel_FourthDeg.MouseClickBackColor = System.Drawing.Color.Gainsboro;
+            this.MenuPanel_FourthDeg.MouseHoveringBackColor = System.Drawing.Color.WhiteSmoke;
+            this.MenuPanel_FourthDeg.Name = "MenuPanel_FourthDeg";
+            this.MenuPanel_FourthDeg.Size = new System.Drawing.Size(204, 40);
+            this.MenuPanel_FourthDeg.TabIndex = 3;
+            this.MenuPanel_FourthDeg.Text = "Four Degree";
+            this.MenuPanel_FourthDeg.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MenuPanel_FourthDeg.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.MenuPanel_FourthDeg.TextContent = "      Fourth degree";
+            this.MenuPanel_FourthDeg.TextFont = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_FourthDeg.Click += new System.EventHandler(this.Page3Button_Click);
             // 
-            // ThreeDegreeMenu
+            // MenuPanel_ThirdDeg
             // 
-            this.ThreeDegreeMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ThreeDegreeMenu.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThreeDegreeMenu.Location = new System.Drawing.Point(-3, 122);
-            this.ThreeDegreeMenu.Name = "ThreeDegreeMenu";
-            this.ThreeDegreeMenu.Size = new System.Drawing.Size(202, 40);
-            this.ThreeDegreeMenu.TabIndex = 2;
-            this.ThreeDegreeMenu.TabStop = false;
-            this.ThreeDegreeMenu.Text = "Three Degree";
-            this.ThreeDegreeMenu.UseVisualStyleBackColor = true;
-            this.ThreeDegreeMenu.Click += new System.EventHandler(this.Page2Button_Click);
+            this.MenuPanel_ThirdDeg.ArcSize = 5;
+            this.MenuPanel_ThirdDeg.BackColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_ThirdDeg.BorderColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_ThirdDeg.BorderWidth = 2;
+            this.MenuPanel_ThirdDeg.Font = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_ThirdDeg.InteriorColor = System.Drawing.Color.White;
+            this.MenuPanel_ThirdDeg.Location = new System.Drawing.Point(3, 91);
+            this.MenuPanel_ThirdDeg.MouseClickBackColor = System.Drawing.Color.Gainsboro;
+            this.MenuPanel_ThirdDeg.MouseHoveringBackColor = System.Drawing.Color.WhiteSmoke;
+            this.MenuPanel_ThirdDeg.Name = "MenuPanel_ThirdDeg";
+            this.MenuPanel_ThirdDeg.Size = new System.Drawing.Size(204, 40);
+            this.MenuPanel_ThirdDeg.TabIndex = 2;
+            this.MenuPanel_ThirdDeg.Text = "Three Degree";
+            this.MenuPanel_ThirdDeg.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MenuPanel_ThirdDeg.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.MenuPanel_ThirdDeg.TextContent = "      Third degree";
+            this.MenuPanel_ThirdDeg.TextFont = new System.Drawing.Font("Comic Sans MS", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_ThirdDeg.Click += new System.EventHandler(this.Page2Button_Click);
             // 
-            // PolyMenu
+            // MenuPanel_PolyTitle
             // 
-            this.PolyMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MenuPanel_PolyTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PolyMenu.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyMenu.Location = new System.Drawing.Point(2, 5);
-            this.PolyMenu.Name = "PolyMenu";
-            this.PolyMenu.Size = new System.Drawing.Size(193, 76);
-            this.PolyMenu.TabIndex = 0;
-            this.PolyMenu.Text = "Polynomial";
-            this.PolyMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MenuPanel_PolyTitle.BackColor = System.Drawing.Color.Transparent;
+            this.MenuPanel_PolyTitle.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPanel_PolyTitle.Location = new System.Drawing.Point(15, 5);
+            this.MenuPanel_PolyTitle.Name = "MenuPanel_PolyTitle";
+            this.MenuPanel_PolyTitle.Size = new System.Drawing.Size(189, 46);
+            this.MenuPanel_PolyTitle.TabIndex = 0;
+            this.MenuPanel_PolyTitle.Text = "Polynomial";
+            this.MenuPanel_PolyTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PolyTwoDegreeScreen
             // 
-            this.PolyTwoDegreeScreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PolyTwoDegreeScreen.Controls.Add(this.PolyTwoDegreeResult2);
-            this.PolyTwoDegreeScreen.Controls.Add(this.PolyTwoDegreeResult1);
             this.PolyTwoDegreeScreen.Controls.Add(this.button1);
             this.PolyTwoDegreeScreen.Controls.Add(this.PolyTwoDegreeTextBox4);
             this.PolyTwoDegreeScreen.Controls.Add(this.PolyTwoDegreeLabel6);
@@ -332,37 +365,14 @@
             this.PolyTwoDegreeScreen.Controls.Add(this.PolyTwoDegreeLabel3);
             this.PolyTwoDegreeScreen.Controls.Add(this.PolyTwoDegreeLabel2);
             this.PolyTwoDegreeScreen.Controls.Add(this.PolyTwoDegreeLabel1);
-            this.PolyTwoDegreeScreen.Location = new System.Drawing.Point(199, 47);
+            this.PolyTwoDegreeScreen.Location = new System.Drawing.Point(199, 76);
             this.PolyTwoDegreeScreen.Name = "PolyTwoDegreeScreen";
-            this.PolyTwoDegreeScreen.Size = new System.Drawing.Size(553, 543);
+            this.PolyTwoDegreeScreen.Size = new System.Drawing.Size(553, 514);
             this.PolyTwoDegreeScreen.TabIndex = 1;
-            // 
-            // PolyTwoDegreeResult2
-            // 
-            this.PolyTwoDegreeResult2.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyTwoDegreeResult2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PolyTwoDegreeResult2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyTwoDegreeResult2.Location = new System.Drawing.Point(91, 462);
-            this.PolyTwoDegreeResult2.Name = "PolyTwoDegreeResult2";
-            this.PolyTwoDegreeResult2.ReadOnly = true;
-            this.PolyTwoDegreeResult2.Size = new System.Drawing.Size(430, 28);
-            this.PolyTwoDegreeResult2.TabIndex = 107;
-            // 
-            // PolyTwoDegreeResult1
-            // 
-            this.PolyTwoDegreeResult1.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyTwoDegreeResult1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PolyTwoDegreeResult1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyTwoDegreeResult1.Location = new System.Drawing.Point(91, 372);
-            this.PolyTwoDegreeResult1.Name = "PolyTwoDegreeResult1";
-            this.PolyTwoDegreeResult1.ReadOnly = true;
-            this.PolyTwoDegreeResult1.Size = new System.Drawing.Size(430, 28);
-            this.PolyTwoDegreeResult1.TabIndex = 108;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Enabled = false;
+            this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
@@ -391,6 +401,25 @@
             this.PolyTwoDegreeLabel6.Size = new System.Drawing.Size(151, 28);
             this.PolyTwoDegreeLabel6.TabIndex = 14;
             this.PolyTwoDegreeLabel6.Text = "Decimal Places:";
+            // 
+            // PolyTwoDegreeResultButton
+            // 
+            this.PolyTwoDegreeResultButton.BackColor = System.Drawing.Color.White;
+            this.PolyTwoDegreeResultButton.BackgroundColor = System.Drawing.Color.White;
+            this.PolyTwoDegreeResultButton.BorderColor = System.Drawing.Color.Black;
+            this.PolyTwoDegreeResultButton.BorderRadius = 20;
+            this.PolyTwoDegreeResultButton.BorderSize = 2;
+            this.PolyTwoDegreeResultButton.FlatAppearance.BorderSize = 0;
+            this.PolyTwoDegreeResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PolyTwoDegreeResultButton.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyTwoDegreeResultButton.ForeColor = System.Drawing.Color.Black;
+            this.PolyTwoDegreeResultButton.Location = new System.Drawing.Point(27, 268);
+            this.PolyTwoDegreeResultButton.Name = "PolyTwoDegreeResultButton";
+            this.PolyTwoDegreeResultButton.Size = new System.Drawing.Size(126, 46);
+            this.PolyTwoDegreeResultButton.TabIndex = 4;
+            this.PolyTwoDegreeResultButton.Text = "Result";
+            this.PolyTwoDegreeResultButton.TextColor = System.Drawing.Color.Black;
+            this.PolyTwoDegreeResultButton.UseVisualStyleBackColor = false;
             // 
             // PolyTwoDegreeTextBox3
             // 
@@ -455,40 +484,59 @@
             // PolyTwoDegreeLabel2
             // 
             this.PolyTwoDegreeLabel2.AutoSize = true;
-            this.PolyTwoDegreeLabel2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyTwoDegreeLabel2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PolyTwoDegreeLabel2.Location = new System.Drawing.Point(20, 86);
             this.PolyTwoDegreeLabel2.Name = "PolyTwoDegreeLabel2";
-            this.PolyTwoDegreeLabel2.Size = new System.Drawing.Size(84, 32);
+            this.PolyTwoDegreeLabel2.Size = new System.Drawing.Size(80, 31);
             this.PolyTwoDegreeLabel2.TabIndex = 1;
             this.PolyTwoDegreeLabel2.Text = "Input:";
             // 
+            // PolyTwoDegreeLabel1
+            // 
+            this.PolyTwoDegreeLabel1.BackColor = System.Drawing.Color.White;
+            this.PolyTwoDegreeLabel1.BackgroundColor = System.Drawing.Color.White;
+            this.PolyTwoDegreeLabel1.BorderColor = System.Drawing.Color.Black;
+            this.PolyTwoDegreeLabel1.BorderRadius = 10;
+            this.PolyTwoDegreeLabel1.BorderSize = 1;
+            this.PolyTwoDegreeLabel1.FlatAppearance.BorderSize = 0;
+            this.PolyTwoDegreeLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PolyTwoDegreeLabel1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyTwoDegreeLabel1.ForeColor = System.Drawing.Color.Black;
+            this.PolyTwoDegreeLabel1.Location = new System.Drawing.Point(117, 29);
+            this.PolyTwoDegreeLabel1.Name = "PolyTwoDegreeLabel1";
+            this.PolyTwoDegreeLabel1.Size = new System.Drawing.Size(350, 50);
+            this.PolyTwoDegreeLabel1.TabIndex = 0;
+            this.PolyTwoDegreeLabel1.Text = "Ax²+Bx+C=0";
+            this.PolyTwoDegreeLabel1.TextColor = System.Drawing.Color.Black;
+            this.PolyTwoDegreeLabel1.UseVisualStyleBackColor = false;
+            // 
             // NamePagePanel
             // 
-            this.NamePagePanel.BackColor = System.Drawing.Color.Moccasin;
-            this.NamePagePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.NamePagePanel.ArcSize = 8;
+            this.NamePagePanel.BackColor = System.Drawing.Color.Transparent;
+            this.NamePagePanel.BorderColor = System.Drawing.Color.Black;
+            this.NamePagePanel.BorderWidth = 3;
             this.NamePagePanel.Controls.Add(this.NamePageLabel);
-            this.NamePagePanel.Location = new System.Drawing.Point(199, 0);
+            this.NamePagePanel.InteriorColor = System.Drawing.Color.NavajoWhite;
+            this.NamePagePanel.Location = new System.Drawing.Point(203, 12);
             this.NamePagePanel.Name = "NamePagePanel";
-            this.NamePagePanel.Size = new System.Drawing.Size(553, 50);
+            this.NamePagePanel.Size = new System.Drawing.Size(544, 60);
             this.NamePagePanel.TabIndex = 2;
             // 
             // NamePageLabel
             // 
-            this.NamePageLabel.BackColor = System.Drawing.Color.Moccasin;
-            this.NamePageLabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NamePageLabel.Location = new System.Drawing.Point(0, -2);
+            this.NamePageLabel.BackColor = System.Drawing.Color.NavajoWhite;
+            this.NamePageLabel.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NamePageLabel.Location = new System.Drawing.Point(14, 4);
             this.NamePageLabel.Name = "NamePageLabel";
-            this.NamePageLabel.Size = new System.Drawing.Size(524, 50);
+            this.NamePageLabel.Size = new System.Drawing.Size(477, 50);
             this.NamePageLabel.TabIndex = 1;
             this.NamePageLabel.Text = "Polynomial Two Degree:";
             this.NamePageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NamePageLabel.Click += new System.EventHandler(this.NamePageLabel_Click);
             // 
             // PolyThreeDegreeScreen
             // 
-            this.PolyThreeDegreeScreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PolyThreeDegreeScreen.Controls.Add(this.PolyThreeDegreeResult3);
-            this.PolyThreeDegreeScreen.Controls.Add(this.PolyThreeDegreeResult2);
-            this.PolyThreeDegreeScreen.Controls.Add(this.PolyThreeDegreeResult1);
             this.PolyThreeDegreeScreen.Controls.Add(this.PolyThreeDegreeTextBox4);
             this.PolyThreeDegreeScreen.Controls.Add(this.PolyThreeDegreeLabel6);
             this.PolyThreeDegreeScreen.Controls.Add(this.button2);
@@ -503,43 +551,10 @@
             this.PolyThreeDegreeScreen.Controls.Add(this.PolyThreeDegreeLabel3);
             this.PolyThreeDegreeScreen.Controls.Add(this.PolyThreeDegreeLabel2);
             this.PolyThreeDegreeScreen.Controls.Add(this.PolyThreeDegreeLabel1);
-            this.PolyThreeDegreeScreen.Location = new System.Drawing.Point(199, 47);
+            this.PolyThreeDegreeScreen.Location = new System.Drawing.Point(199, 76);
             this.PolyThreeDegreeScreen.Name = "PolyThreeDegreeScreen";
-            this.PolyThreeDegreeScreen.Size = new System.Drawing.Size(553, 543);
+            this.PolyThreeDegreeScreen.Size = new System.Drawing.Size(553, 514);
             this.PolyThreeDegreeScreen.TabIndex = 3;
-            // 
-            // PolyThreeDegreeResult3
-            // 
-            this.PolyThreeDegreeResult3.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyThreeDegreeResult3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PolyThreeDegreeResult3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyThreeDegreeResult3.Location = new System.Drawing.Point(91, 474);
-            this.PolyThreeDegreeResult3.Name = "PolyThreeDegreeResult3";
-            this.PolyThreeDegreeResult3.ReadOnly = true;
-            this.PolyThreeDegreeResult3.Size = new System.Drawing.Size(430, 28);
-            this.PolyThreeDegreeResult3.TabIndex = 107;
-            // 
-            // PolyThreeDegreeResult2
-            // 
-            this.PolyThreeDegreeResult2.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyThreeDegreeResult2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PolyThreeDegreeResult2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyThreeDegreeResult2.Location = new System.Drawing.Point(91, 414);
-            this.PolyThreeDegreeResult2.Name = "PolyThreeDegreeResult2";
-            this.PolyThreeDegreeResult2.ReadOnly = true;
-            this.PolyThreeDegreeResult2.Size = new System.Drawing.Size(430, 28);
-            this.PolyThreeDegreeResult2.TabIndex = 106;
-            // 
-            // PolyThreeDegreeResult1
-            // 
-            this.PolyThreeDegreeResult1.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyThreeDegreeResult1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PolyThreeDegreeResult1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyThreeDegreeResult1.Location = new System.Drawing.Point(91, 354);
-            this.PolyThreeDegreeResult1.Name = "PolyThreeDegreeResult1";
-            this.PolyThreeDegreeResult1.ReadOnly = true;
-            this.PolyThreeDegreeResult1.Size = new System.Drawing.Size(430, 28);
-            this.PolyThreeDegreeResult1.TabIndex = 105;
             // 
             // PolyThreeDegreeTextBox4
             // 
@@ -563,8 +578,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.Enabled = false;
+            this.button2.BackColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
@@ -594,6 +608,25 @@
             this.PolyThreeDegreeLabel7.TabIndex = 14;
             this.PolyThreeDegreeLabel7.Text = "Decimal Places:";
             // 
+            // PolyThreeDegreeResultButton
+            // 
+            this.PolyThreeDegreeResultButton.BackColor = System.Drawing.Color.White;
+            this.PolyThreeDegreeResultButton.BackgroundColor = System.Drawing.Color.White;
+            this.PolyThreeDegreeResultButton.BorderColor = System.Drawing.Color.Black;
+            this.PolyThreeDegreeResultButton.BorderRadius = 20;
+            this.PolyThreeDegreeResultButton.BorderSize = 2;
+            this.PolyThreeDegreeResultButton.FlatAppearance.BorderSize = 0;
+            this.PolyThreeDegreeResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PolyThreeDegreeResultButton.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyThreeDegreeResultButton.ForeColor = System.Drawing.Color.Black;
+            this.PolyThreeDegreeResultButton.Location = new System.Drawing.Point(27, 268);
+            this.PolyThreeDegreeResultButton.Name = "PolyThreeDegreeResultButton";
+            this.PolyThreeDegreeResultButton.Size = new System.Drawing.Size(126, 46);
+            this.PolyThreeDegreeResultButton.TabIndex = 5;
+            this.PolyThreeDegreeResultButton.Text = "Result";
+            this.PolyThreeDegreeResultButton.TextColor = System.Drawing.Color.Black;
+            this.PolyThreeDegreeResultButton.UseVisualStyleBackColor = false;
+            // 
             // PolyThreeDegreeTextBox3
             // 
             this.PolyThreeDegreeTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -601,7 +634,7 @@
             this.PolyThreeDegreeTextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.PolyThreeDegreeTextBox3.Name = "PolyThreeDegreeTextBox3";
             this.PolyThreeDegreeTextBox3.Size = new System.Drawing.Size(109, 30);
-            this.PolyThreeDegreeTextBox3.TabIndex = 1;
+            this.PolyThreeDegreeTextBox3.TabIndex = 2;
             // 
             // PolyThreeDegreeTextBox2
             // 
@@ -610,7 +643,7 @@
             this.PolyThreeDegreeTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.PolyThreeDegreeTextBox2.Name = "PolyThreeDegreeTextBox2";
             this.PolyThreeDegreeTextBox2.Size = new System.Drawing.Size(109, 30);
-            this.PolyThreeDegreeTextBox2.TabIndex = 2;
+            this.PolyThreeDegreeTextBox2.TabIndex = 1;
             // 
             // PolyThreeDegreeTextBox1
             // 
@@ -625,7 +658,7 @@
             // 
             this.PolyThreeDegreeLabel5.AutoSize = true;
             this.PolyThreeDegreeLabel5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyThreeDegreeLabel5.Location = new System.Drawing.Point(128, 172);
+            this.PolyThreeDegreeLabel5.Location = new System.Drawing.Point(330, 136);
             this.PolyThreeDegreeLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PolyThreeDegreeLabel5.Name = "PolyThreeDegreeLabel5";
             this.PolyThreeDegreeLabel5.Size = new System.Drawing.Size(46, 28);
@@ -636,7 +669,7 @@
             // 
             this.PolyThreeDegreeLabel4.AutoSize = true;
             this.PolyThreeDegreeLabel4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyThreeDegreeLabel4.Location = new System.Drawing.Point(330, 136);
+            this.PolyThreeDegreeLabel4.Location = new System.Drawing.Point(128, 172);
             this.PolyThreeDegreeLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PolyThreeDegreeLabel4.Name = "PolyThreeDegreeLabel4";
             this.PolyThreeDegreeLabel4.Size = new System.Drawing.Size(47, 28);
@@ -657,119 +690,89 @@
             // PolyThreeDegreeLabel2
             // 
             this.PolyThreeDegreeLabel2.AutoSize = true;
-            this.PolyThreeDegreeLabel2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyThreeDegreeLabel2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PolyThreeDegreeLabel2.Location = new System.Drawing.Point(20, 86);
             this.PolyThreeDegreeLabel2.Name = "PolyThreeDegreeLabel2";
-            this.PolyThreeDegreeLabel2.Size = new System.Drawing.Size(84, 32);
+            this.PolyThreeDegreeLabel2.Size = new System.Drawing.Size(80, 31);
             this.PolyThreeDegreeLabel2.TabIndex = 1;
             this.PolyThreeDegreeLabel2.Text = "Input:";
             // 
+            // PolyThreeDegreeLabel1
+            // 
+            this.PolyThreeDegreeLabel1.BackColor = System.Drawing.Color.White;
+            this.PolyThreeDegreeLabel1.BackgroundColor = System.Drawing.Color.White;
+            this.PolyThreeDegreeLabel1.BorderColor = System.Drawing.Color.Black;
+            this.PolyThreeDegreeLabel1.BorderRadius = 10;
+            this.PolyThreeDegreeLabel1.BorderSize = 1;
+            this.PolyThreeDegreeLabel1.FlatAppearance.BorderSize = 0;
+            this.PolyThreeDegreeLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PolyThreeDegreeLabel1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyThreeDegreeLabel1.ForeColor = System.Drawing.Color.Black;
+            this.PolyThreeDegreeLabel1.Location = new System.Drawing.Point(117, 29);
+            this.PolyThreeDegreeLabel1.Name = "PolyThreeDegreeLabel1";
+            this.PolyThreeDegreeLabel1.Size = new System.Drawing.Size(350, 50);
+            this.PolyThreeDegreeLabel1.TabIndex = 0;
+            this.PolyThreeDegreeLabel1.Text = "Ax³+Bx²+Cx+D=0";
+            this.PolyThreeDegreeLabel1.TextColor = System.Drawing.Color.Black;
+            this.PolyThreeDegreeLabel1.UseVisualStyleBackColor = false;
+            // 
             // PolyFourDegreeScreen
             // 
-            this.PolyFourDegreeScreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeResult4);
-            this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeResult3);
-            this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeResult2);
-            this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeResult1);
-            this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLTextBox5);
+            this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLTextBox3);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLabel5);
-            this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLTextBox4);
+            this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLTextBox5);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLabel7);
             this.PolyFourDegreeScreen.Controls.Add(this.button3);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLTextBox6);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLabel8);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeResultButton);
+            this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLTextBox4);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLTextBox2);
-            this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLTextBox3);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLTextBox1);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLabel6);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLabel4);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLabel3);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLabel2);
             this.PolyFourDegreeScreen.Controls.Add(this.PolyFourDegreeLabel1);
-            this.PolyFourDegreeScreen.Location = new System.Drawing.Point(199, 47);
+            this.PolyFourDegreeScreen.Location = new System.Drawing.Point(199, 76);
             this.PolyFourDegreeScreen.Name = "PolyFourDegreeScreen";
-            this.PolyFourDegreeScreen.Size = new System.Drawing.Size(553, 543);
+            this.PolyFourDegreeScreen.Size = new System.Drawing.Size(553, 514);
             this.PolyFourDegreeScreen.TabIndex = 4;
             // 
-            // PolyFourDegreeResult4
+            // PolyFourDegreeLTextBox3
             // 
-            this.PolyFourDegreeResult4.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyFourDegreeResult4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PolyFourDegreeResult4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeResult4.Location = new System.Drawing.Point(91, 475);
-            this.PolyFourDegreeResult4.Name = "PolyFourDegreeResult4";
-            this.PolyFourDegreeResult4.ReadOnly = true;
-            this.PolyFourDegreeResult4.Size = new System.Drawing.Size(430, 28);
-            this.PolyFourDegreeResult4.TabIndex = 107;
-            // 
-            // PolyFourDegreeResult3
-            // 
-            this.PolyFourDegreeResult3.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyFourDegreeResult3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PolyFourDegreeResult3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeResult3.Location = new System.Drawing.Point(91, 435);
-            this.PolyFourDegreeResult3.Name = "PolyFourDegreeResult3";
-            this.PolyFourDegreeResult3.ReadOnly = true;
-            this.PolyFourDegreeResult3.Size = new System.Drawing.Size(430, 28);
-            this.PolyFourDegreeResult3.TabIndex = 106;
-            // 
-            // PolyFourDegreeResult2
-            // 
-            this.PolyFourDegreeResult2.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyFourDegreeResult2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PolyFourDegreeResult2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeResult2.Location = new System.Drawing.Point(91, 395);
-            this.PolyFourDegreeResult2.Name = "PolyFourDegreeResult2";
-            this.PolyFourDegreeResult2.ReadOnly = true;
-            this.PolyFourDegreeResult2.Size = new System.Drawing.Size(430, 28);
-            this.PolyFourDegreeResult2.TabIndex = 105;
-            // 
-            // PolyFourDegreeResult1
-            // 
-            this.PolyFourDegreeResult1.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyFourDegreeResult1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PolyFourDegreeResult1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeResult1.Location = new System.Drawing.Point(91, 355);
-            this.PolyFourDegreeResult1.Name = "PolyFourDegreeResult1";
-            this.PolyFourDegreeResult1.ReadOnly = true;
-            this.PolyFourDegreeResult1.Size = new System.Drawing.Size(430, 28);
-            this.PolyFourDegreeResult1.TabIndex = 104;
-            // 
-            // PolyFourDegreeLTextBox5
-            // 
-            this.PolyFourDegreeLTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeLTextBox5.Location = new System.Drawing.Point(173, 206);
-            this.PolyFourDegreeLTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.PolyFourDegreeLTextBox5.Name = "PolyFourDegreeLTextBox5";
-            this.PolyFourDegreeLTextBox5.Size = new System.Drawing.Size(109, 30);
-            this.PolyFourDegreeLTextBox5.TabIndex = 4;
+            this.PolyFourDegreeLTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyFourDegreeLTextBox3.Location = new System.Drawing.Point(173, 206);
+            this.PolyFourDegreeLTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.PolyFourDegreeLTextBox3.Name = "PolyFourDegreeLTextBox3";
+            this.PolyFourDegreeLTextBox3.Size = new System.Drawing.Size(109, 30);
+            this.PolyFourDegreeLTextBox3.TabIndex = 2;
             // 
             // PolyFourDegreeLabel5
             // 
             this.PolyFourDegreeLabel5.AutoSize = true;
             this.PolyFourDegreeLabel5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeLabel5.Location = new System.Drawing.Point(127, 172);
+            this.PolyFourDegreeLabel5.Location = new System.Drawing.Point(128, 208);
             this.PolyFourDegreeLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PolyFourDegreeLabel5.Name = "PolyFourDegreeLabel5";
             this.PolyFourDegreeLabel5.Size = new System.Drawing.Size(46, 28);
             this.PolyFourDegreeLabel5.TabIndex = 20;
             this.PolyFourDegreeLabel5.Text = "C = ";
             // 
-            // PolyFourDegreeLTextBox4
+            // PolyFourDegreeLTextBox5
             // 
-            this.PolyFourDegreeLTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeLTextBox4.Location = new System.Drawing.Point(375, 170);
-            this.PolyFourDegreeLTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.PolyFourDegreeLTextBox4.Name = "PolyFourDegreeLTextBox4";
-            this.PolyFourDegreeLTextBox4.Size = new System.Drawing.Size(109, 30);
-            this.PolyFourDegreeLTextBox4.TabIndex = 3;
+            this.PolyFourDegreeLTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyFourDegreeLTextBox5.Location = new System.Drawing.Point(375, 170);
+            this.PolyFourDegreeLTextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.PolyFourDegreeLTextBox5.Name = "PolyFourDegreeLTextBox5";
+            this.PolyFourDegreeLTextBox5.Size = new System.Drawing.Size(109, 30);
+            this.PolyFourDegreeLTextBox5.TabIndex = 4;
             // 
             // PolyFourDegreeLabel7
             // 
             this.PolyFourDegreeLabel7.AutoSize = true;
             this.PolyFourDegreeLabel7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeLabel7.Location = new System.Drawing.Point(128, 208);
+            this.PolyFourDegreeLabel7.Location = new System.Drawing.Point(330, 172);
             this.PolyFourDegreeLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PolyFourDegreeLabel7.Name = "PolyFourDegreeLabel7";
             this.PolyFourDegreeLabel7.Size = new System.Drawing.Size(46, 28);
@@ -778,8 +781,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
-            this.button3.Enabled = false;
+            this.button3.BackColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
@@ -809,23 +811,42 @@
             this.PolyFourDegreeLabel8.TabIndex = 14;
             this.PolyFourDegreeLabel8.Text = "Decimal Places:";
             // 
+            // PolyFourDegreeResultButton
+            // 
+            this.PolyFourDegreeResultButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
+            this.PolyFourDegreeResultButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
+            this.PolyFourDegreeResultButton.BorderColor = System.Drawing.Color.Black;
+            this.PolyFourDegreeResultButton.BorderRadius = 10;
+            this.PolyFourDegreeResultButton.BorderSize = 2;
+            this.PolyFourDegreeResultButton.FlatAppearance.BorderSize = 0;
+            this.PolyFourDegreeResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PolyFourDegreeResultButton.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyFourDegreeResultButton.ForeColor = System.Drawing.Color.Black;
+            this.PolyFourDegreeResultButton.Location = new System.Drawing.Point(27, 268);
+            this.PolyFourDegreeResultButton.Name = "PolyFourDegreeResultButton";
+            this.PolyFourDegreeResultButton.Size = new System.Drawing.Size(101, 46);
+            this.PolyFourDegreeResultButton.TabIndex = 6;
+            this.PolyFourDegreeResultButton.Text = "Result";
+            this.PolyFourDegreeResultButton.TextColor = System.Drawing.Color.Black;
+            this.PolyFourDegreeResultButton.UseVisualStyleBackColor = false;
+            // 
+            // PolyFourDegreeLTextBox4
+            // 
+            this.PolyFourDegreeLTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyFourDegreeLTextBox4.Location = new System.Drawing.Point(375, 134);
+            this.PolyFourDegreeLTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.PolyFourDegreeLTextBox4.Name = "PolyFourDegreeLTextBox4";
+            this.PolyFourDegreeLTextBox4.Size = new System.Drawing.Size(109, 30);
+            this.PolyFourDegreeLTextBox4.TabIndex = 3;
+            // 
             // PolyFourDegreeLTextBox2
             // 
             this.PolyFourDegreeLTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeLTextBox2.Location = new System.Drawing.Point(375, 134);
+            this.PolyFourDegreeLTextBox2.Location = new System.Drawing.Point(173, 170);
             this.PolyFourDegreeLTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.PolyFourDegreeLTextBox2.Name = "PolyFourDegreeLTextBox2";
             this.PolyFourDegreeLTextBox2.Size = new System.Drawing.Size(109, 30);
             this.PolyFourDegreeLTextBox2.TabIndex = 1;
-            // 
-            // PolyFourDegreeLTextBox3
-            // 
-            this.PolyFourDegreeLTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeLTextBox3.Location = new System.Drawing.Point(173, 170);
-            this.PolyFourDegreeLTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.PolyFourDegreeLTextBox3.Name = "PolyFourDegreeLTextBox3";
-            this.PolyFourDegreeLTextBox3.Size = new System.Drawing.Size(109, 30);
-            this.PolyFourDegreeLTextBox3.TabIndex = 2;
             // 
             // PolyFourDegreeLTextBox1
             // 
@@ -840,7 +861,7 @@
             // 
             this.PolyFourDegreeLabel6.AutoSize = true;
             this.PolyFourDegreeLabel6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeLabel6.Location = new System.Drawing.Point(328, 172);
+            this.PolyFourDegreeLabel6.Location = new System.Drawing.Point(330, 136);
             this.PolyFourDegreeLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PolyFourDegreeLabel6.Name = "PolyFourDegreeLabel6";
             this.PolyFourDegreeLabel6.Size = new System.Drawing.Size(48, 28);
@@ -851,7 +872,7 @@
             // 
             this.PolyFourDegreeLabel4.AutoSize = true;
             this.PolyFourDegreeLabel4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeLabel4.Location = new System.Drawing.Point(328, 136);
+            this.PolyFourDegreeLabel4.Location = new System.Drawing.Point(128, 172);
             this.PolyFourDegreeLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PolyFourDegreeLabel4.Name = "PolyFourDegreeLabel4";
             this.PolyFourDegreeLabel4.Size = new System.Drawing.Size(47, 28);
@@ -862,7 +883,7 @@
             // 
             this.PolyFourDegreeLabel3.AutoSize = true;
             this.PolyFourDegreeLabel3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeLabel3.Location = new System.Drawing.Point(126, 136);
+            this.PolyFourDegreeLabel3.Location = new System.Drawing.Point(128, 136);
             this.PolyFourDegreeLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PolyFourDegreeLabel3.Name = "PolyFourDegreeLabel3";
             this.PolyFourDegreeLabel3.Size = new System.Drawing.Size(42, 28);
@@ -872,18 +893,35 @@
             // PolyFourDegreeLabel2
             // 
             this.PolyFourDegreeLabel2.AutoSize = true;
-            this.PolyFourDegreeLabel2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyFourDegreeLabel2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PolyFourDegreeLabel2.Location = new System.Drawing.Point(20, 86);
             this.PolyFourDegreeLabel2.Name = "PolyFourDegreeLabel2";
-            this.PolyFourDegreeLabel2.Size = new System.Drawing.Size(84, 32);
+            this.PolyFourDegreeLabel2.Size = new System.Drawing.Size(80, 31);
             this.PolyFourDegreeLabel2.TabIndex = 1;
             this.PolyFourDegreeLabel2.Text = "Input:";
             // 
+            // PolyFourDegreeLabel1
+            // 
+            this.PolyFourDegreeLabel1.BackColor = System.Drawing.Color.White;
+            this.PolyFourDegreeLabel1.BackgroundColor = System.Drawing.Color.White;
+            this.PolyFourDegreeLabel1.BorderColor = System.Drawing.Color.Black;
+            this.PolyFourDegreeLabel1.BorderRadius = 10;
+            this.PolyFourDegreeLabel1.BorderSize = 1;
+            this.PolyFourDegreeLabel1.FlatAppearance.BorderSize = 0;
+            this.PolyFourDegreeLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PolyFourDegreeLabel1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolyFourDegreeLabel1.ForeColor = System.Drawing.Color.Black;
+            this.PolyFourDegreeLabel1.Location = new System.Drawing.Point(106, 29);
+            this.PolyFourDegreeLabel1.Name = "PolyFourDegreeLabel1";
+            this.PolyFourDegreeLabel1.Size = new System.Drawing.Size(367, 50);
+            this.PolyFourDegreeLabel1.TabIndex = 0;
+            this.PolyFourDegreeLabel1.Text = "Ax⁴+Bx³+Cx²+Dx+E=0";
+            this.PolyFourDegreeLabel1.TextColor = System.Drawing.Color.Black;
+            this.PolyFourDegreeLabel1.UseVisualStyleBackColor = false;
+            // 
             // EquaTwoUnknowsScreen
             // 
-            this.EquaTwoUnknowsScreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.EquaTwoUnknowsScreen.Controls.Add(this.EquaTwoUnknowsResult2);
-            this.EquaTwoUnknowsScreen.Controls.Add(this.EquaTwoUnknowsResult1);
+            this.EquaTwoUnknowsScreen.BackColor = System.Drawing.Color.Transparent;
             this.EquaTwoUnknowsScreen.Controls.Add(this.EquaTwoUnknowsTextBox6);
             this.EquaTwoUnknowsScreen.Controls.Add(this.EquaTwoUnknowsTextBox5);
             this.EquaTwoUnknowsScreen.Controls.Add(this.EquaTwoUnknowsLabel4);
@@ -898,33 +936,11 @@
             this.EquaTwoUnknowsScreen.Controls.Add(this.EquaTwoUnknowsTextBox7);
             this.EquaTwoUnknowsScreen.Controls.Add(this.EquaTwoUnknowsLabe5);
             this.EquaTwoUnknowsScreen.Controls.Add(this.EquaTwoUnknowsResultButton);
-            this.EquaTwoUnknowsScreen.Location = new System.Drawing.Point(199, 47);
+            this.EquaTwoUnknowsScreen.Location = new System.Drawing.Point(199, 76);
             this.EquaTwoUnknowsScreen.Name = "EquaTwoUnknowsScreen";
-            this.EquaTwoUnknowsScreen.Size = new System.Drawing.Size(553, 543);
+            this.EquaTwoUnknowsScreen.Size = new System.Drawing.Size(553, 514);
             this.EquaTwoUnknowsScreen.TabIndex = 5;
             this.EquaTwoUnknowsScreen.Paint += new System.Windows.Forms.PaintEventHandler(this.EquaTwoUnknowsScreen_Paint);
-            // 
-            // EquaTwoUnknowsResult2
-            // 
-            this.EquaTwoUnknowsResult2.BackColor = System.Drawing.SystemColors.Control;
-            this.EquaTwoUnknowsResult2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EquaTwoUnknowsResult2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaTwoUnknowsResult2.Location = new System.Drawing.Point(91, 462);
-            this.EquaTwoUnknowsResult2.Name = "EquaTwoUnknowsResult2";
-            this.EquaTwoUnknowsResult2.ReadOnly = true;
-            this.EquaTwoUnknowsResult2.Size = new System.Drawing.Size(430, 28);
-            this.EquaTwoUnknowsResult2.TabIndex = 110;
-            // 
-            // EquaTwoUnknowsResult1
-            // 
-            this.EquaTwoUnknowsResult1.BackColor = System.Drawing.SystemColors.Control;
-            this.EquaTwoUnknowsResult1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EquaTwoUnknowsResult1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaTwoUnknowsResult1.Location = new System.Drawing.Point(91, 372);
-            this.EquaTwoUnknowsResult1.Name = "EquaTwoUnknowsResult1";
-            this.EquaTwoUnknowsResult1.ReadOnly = true;
-            this.EquaTwoUnknowsResult1.Size = new System.Drawing.Size(430, 28);
-            this.EquaTwoUnknowsResult1.TabIndex = 109;
             // 
             // EquaTwoUnknowsTextBox6
             // 
@@ -1016,8 +1032,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Control;
-            this.button4.Enabled = false;
+            this.button4.BackColor = System.Drawing.Color.White;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
@@ -1047,12 +1062,27 @@
             this.EquaTwoUnknowsLabe5.TabIndex = 14;
             this.EquaTwoUnknowsLabe5.Text = "Decimal Places:";
             // 
+            // EquaTwoUnknowsResultButton
+            // 
+            this.EquaTwoUnknowsResultButton.BackColor = System.Drawing.Color.White;
+            this.EquaTwoUnknowsResultButton.BackgroundColor = System.Drawing.Color.White;
+            this.EquaTwoUnknowsResultButton.BorderColor = System.Drawing.Color.Black;
+            this.EquaTwoUnknowsResultButton.BorderRadius = 20;
+            this.EquaTwoUnknowsResultButton.BorderSize = 2;
+            this.EquaTwoUnknowsResultButton.FlatAppearance.BorderSize = 0;
+            this.EquaTwoUnknowsResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EquaTwoUnknowsResultButton.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EquaTwoUnknowsResultButton.ForeColor = System.Drawing.Color.Black;
+            this.EquaTwoUnknowsResultButton.Location = new System.Drawing.Point(27, 268);
+            this.EquaTwoUnknowsResultButton.Name = "EquaTwoUnknowsResultButton";
+            this.EquaTwoUnknowsResultButton.Size = new System.Drawing.Size(126, 46);
+            this.EquaTwoUnknowsResultButton.TabIndex = 7;
+            this.EquaTwoUnknowsResultButton.Text = "Result";
+            this.EquaTwoUnknowsResultButton.TextColor = System.Drawing.Color.Black;
+            this.EquaTwoUnknowsResultButton.UseVisualStyleBackColor = false;
+            // 
             // EquaThreeUnknowsScreen
             // 
-            this.EquaThreeUnknowsScreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.EquaThreeUnknowsScreen.Controls.Add(this.EquaThreeUnknowsResult3);
-            this.EquaThreeUnknowsScreen.Controls.Add(this.EquaThreeUnknowsResult2);
-            this.EquaThreeUnknowsScreen.Controls.Add(this.EquaThreeUnknowsResult1);
             this.EquaThreeUnknowsScreen.Controls.Add(this.EquaThreeUnknowsTextBox12);
             this.EquaThreeUnknowsScreen.Controls.Add(this.EquaThreeUnknowsLabel9);
             this.EquaThreeUnknowsScreen.Controls.Add(this.EquaThreeUnknowsTextBox11);
@@ -1078,44 +1108,11 @@
             this.EquaThreeUnknowsScreen.Controls.Add(this.EquaThreeUnknowsTextBox13);
             this.EquaThreeUnknowsScreen.Controls.Add(this.EquaThreeUnknowsLabel10);
             this.EquaThreeUnknowsScreen.Controls.Add(this.EquaThreeUnknowsResultButton);
-            this.EquaThreeUnknowsScreen.Location = new System.Drawing.Point(199, 47);
+            this.EquaThreeUnknowsScreen.Location = new System.Drawing.Point(199, 76);
             this.EquaThreeUnknowsScreen.Name = "EquaThreeUnknowsScreen";
-            this.EquaThreeUnknowsScreen.Size = new System.Drawing.Size(553, 543);
+            this.EquaThreeUnknowsScreen.Size = new System.Drawing.Size(553, 514);
             this.EquaThreeUnknowsScreen.TabIndex = 6;
             this.EquaThreeUnknowsScreen.Paint += new System.Windows.Forms.PaintEventHandler(this.EquaThreeUnknowsScreen_Paint);
-            // 
-            // EquaThreeUnknowsResult3
-            // 
-            this.EquaThreeUnknowsResult3.BackColor = System.Drawing.SystemColors.Control;
-            this.EquaThreeUnknowsResult3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EquaThreeUnknowsResult3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaThreeUnknowsResult3.Location = new System.Drawing.Point(91, 474);
-            this.EquaThreeUnknowsResult3.Name = "EquaThreeUnknowsResult3";
-            this.EquaThreeUnknowsResult3.ReadOnly = true;
-            this.EquaThreeUnknowsResult3.Size = new System.Drawing.Size(430, 28);
-            this.EquaThreeUnknowsResult3.TabIndex = 110;
-            // 
-            // EquaThreeUnknowsResult2
-            // 
-            this.EquaThreeUnknowsResult2.BackColor = System.Drawing.SystemColors.Control;
-            this.EquaThreeUnknowsResult2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EquaThreeUnknowsResult2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaThreeUnknowsResult2.Location = new System.Drawing.Point(91, 414);
-            this.EquaThreeUnknowsResult2.Name = "EquaThreeUnknowsResult2";
-            this.EquaThreeUnknowsResult2.ReadOnly = true;
-            this.EquaThreeUnknowsResult2.Size = new System.Drawing.Size(430, 28);
-            this.EquaThreeUnknowsResult2.TabIndex = 109;
-            // 
-            // EquaThreeUnknowsResult1
-            // 
-            this.EquaThreeUnknowsResult1.BackColor = System.Drawing.SystemColors.Control;
-            this.EquaThreeUnknowsResult1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EquaThreeUnknowsResult1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaThreeUnknowsResult1.Location = new System.Drawing.Point(91, 354);
-            this.EquaThreeUnknowsResult1.Name = "EquaThreeUnknowsResult1";
-            this.EquaThreeUnknowsResult1.ReadOnly = true;
-            this.EquaThreeUnknowsResult1.Size = new System.Drawing.Size(430, 28);
-            this.EquaThreeUnknowsResult1.TabIndex = 108;
             // 
             // EquaThreeUnknowsTextBox12
             // 
@@ -1123,7 +1120,7 @@
             this.EquaThreeUnknowsTextBox12.Location = new System.Drawing.Point(405, 131);
             this.EquaThreeUnknowsTextBox12.Name = "EquaThreeUnknowsTextBox12";
             this.EquaThreeUnknowsTextBox12.Size = new System.Drawing.Size(57, 30);
-            this.EquaThreeUnknowsTextBox12.TabIndex = 11;
+            this.EquaThreeUnknowsTextBox12.TabIndex = 10;
             // 
             // EquaThreeUnknowsLabel9
             // 
@@ -1141,7 +1138,7 @@
             this.EquaThreeUnknowsTextBox11.Location = new System.Drawing.Point(308, 131);
             this.EquaThreeUnknowsTextBox11.Name = "EquaThreeUnknowsTextBox11";
             this.EquaThreeUnknowsTextBox11.Size = new System.Drawing.Size(57, 30);
-            this.EquaThreeUnknowsTextBox11.TabIndex = 10;
+            this.EquaThreeUnknowsTextBox11.TabIndex = 41;
             // 
             // EquaThreeUnknowsTextBox10
             // 
@@ -1305,8 +1302,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.Control;
-            this.button5.Enabled = false;
+            this.button5.BackColor = System.Drawing.Color.White;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
@@ -1323,7 +1319,7 @@
             this.EquaThreeUnknowsTextBox13.Margin = new System.Windows.Forms.Padding(4);
             this.EquaThreeUnknowsTextBox13.Name = "EquaThreeUnknowsTextBox13";
             this.EquaThreeUnknowsTextBox13.Size = new System.Drawing.Size(52, 30);
-            this.EquaThreeUnknowsTextBox13.TabIndex = 12;
+            this.EquaThreeUnknowsTextBox13.TabIndex = 11;
             // 
             // EquaThreeUnknowsLabel10
             // 
@@ -1336,13 +1332,27 @@
             this.EquaThreeUnknowsLabel10.TabIndex = 14;
             this.EquaThreeUnknowsLabel10.Text = "Decimal Places:";
             // 
+            // EquaThreeUnknowsResultButton
+            // 
+            this.EquaThreeUnknowsResultButton.BackColor = System.Drawing.Color.White;
+            this.EquaThreeUnknowsResultButton.BackgroundColor = System.Drawing.Color.White;
+            this.EquaThreeUnknowsResultButton.BorderColor = System.Drawing.Color.Black;
+            this.EquaThreeUnknowsResultButton.BorderRadius = 20;
+            this.EquaThreeUnknowsResultButton.BorderSize = 2;
+            this.EquaThreeUnknowsResultButton.FlatAppearance.BorderSize = 0;
+            this.EquaThreeUnknowsResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EquaThreeUnknowsResultButton.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EquaThreeUnknowsResultButton.ForeColor = System.Drawing.Color.Black;
+            this.EquaThreeUnknowsResultButton.Location = new System.Drawing.Point(27, 268);
+            this.EquaThreeUnknowsResultButton.Name = "EquaThreeUnknowsResultButton";
+            this.EquaThreeUnknowsResultButton.Size = new System.Drawing.Size(126, 46);
+            this.EquaThreeUnknowsResultButton.TabIndex = 12;
+            this.EquaThreeUnknowsResultButton.Text = "Result";
+            this.EquaThreeUnknowsResultButton.TextColor = System.Drawing.Color.Black;
+            this.EquaThreeUnknowsResultButton.UseVisualStyleBackColor = false;
+            // 
             // EquaFourUnknowsScreen
             // 
-            this.EquaFourUnknowsScreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.EquaFourUnknowsScreen.Controls.Add(this.EquaFourUnknowsResult3);
-            this.EquaFourUnknowsScreen.Controls.Add(this.EquaFourUnknowsResult4);
-            this.EquaFourUnknowsScreen.Controls.Add(this.EquaFourUnknowsResult2);
-            this.EquaFourUnknowsScreen.Controls.Add(this.EquaFourUnknowsResult1);
             this.EquaFourUnknowsScreen.Controls.Add(this.EquaFourUnknowsTextBox19);
             this.EquaFourUnknowsScreen.Controls.Add(this.EquaFourUnknowsLabel15);
             this.EquaFourUnknowsScreen.Controls.Add(this.EquaFourUnknowsTextBox14);
@@ -1383,55 +1393,11 @@
             this.EquaFourUnknowsScreen.Controls.Add(this.EquaFourUnknowTextBox20);
             this.EquaFourUnknowsScreen.Controls.Add(this.EquaFourUnknowsLabel17);
             this.EquaFourUnknowsScreen.Controls.Add(this.EquaFourUnknowsResultButton);
-            this.EquaFourUnknowsScreen.Location = new System.Drawing.Point(199, 47);
+            this.EquaFourUnknowsScreen.Location = new System.Drawing.Point(199, 76);
             this.EquaFourUnknowsScreen.Name = "EquaFourUnknowsScreen";
-            this.EquaFourUnknowsScreen.Size = new System.Drawing.Size(553, 543);
+            this.EquaFourUnknowsScreen.Size = new System.Drawing.Size(553, 514);
             this.EquaFourUnknowsScreen.TabIndex = 7;
             this.EquaFourUnknowsScreen.Paint += new System.Windows.Forms.PaintEventHandler(this.EquaFourUnknowsScreen_Paint);
-            // 
-            // EquaFourUnknowsResult3
-            // 
-            this.EquaFourUnknowsResult3.BackColor = System.Drawing.SystemColors.Control;
-            this.EquaFourUnknowsResult3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EquaFourUnknowsResult3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaFourUnknowsResult3.Location = new System.Drawing.Point(91, 435);
-            this.EquaFourUnknowsResult3.Name = "EquaFourUnknowsResult3";
-            this.EquaFourUnknowsResult3.ReadOnly = true;
-            this.EquaFourUnknowsResult3.Size = new System.Drawing.Size(430, 28);
-            this.EquaFourUnknowsResult3.TabIndex = 110;
-            // 
-            // EquaFourUnknowsResult4
-            // 
-            this.EquaFourUnknowsResult4.BackColor = System.Drawing.SystemColors.Control;
-            this.EquaFourUnknowsResult4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EquaFourUnknowsResult4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaFourUnknowsResult4.Location = new System.Drawing.Point(91, 475);
-            this.EquaFourUnknowsResult4.Name = "EquaFourUnknowsResult4";
-            this.EquaFourUnknowsResult4.ReadOnly = true;
-            this.EquaFourUnknowsResult4.Size = new System.Drawing.Size(430, 28);
-            this.EquaFourUnknowsResult4.TabIndex = 111;
-            // 
-            // EquaFourUnknowsResult2
-            // 
-            this.EquaFourUnknowsResult2.BackColor = System.Drawing.SystemColors.Control;
-            this.EquaFourUnknowsResult2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EquaFourUnknowsResult2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaFourUnknowsResult2.Location = new System.Drawing.Point(91, 395);
-            this.EquaFourUnknowsResult2.Name = "EquaFourUnknowsResult2";
-            this.EquaFourUnknowsResult2.ReadOnly = true;
-            this.EquaFourUnknowsResult2.Size = new System.Drawing.Size(430, 28);
-            this.EquaFourUnknowsResult2.TabIndex = 109;
-            // 
-            // EquaFourUnknowsResult1
-            // 
-            this.EquaFourUnknowsResult1.BackColor = System.Drawing.SystemColors.Control;
-            this.EquaFourUnknowsResult1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EquaFourUnknowsResult1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaFourUnknowsResult1.Location = new System.Drawing.Point(91, 355);
-            this.EquaFourUnknowsResult1.Name = "EquaFourUnknowsResult1";
-            this.EquaFourUnknowsResult1.ReadOnly = true;
-            this.EquaFourUnknowsResult1.Size = new System.Drawing.Size(430, 28);
-            this.EquaFourUnknowsResult1.TabIndex = 108;
             // 
             // EquaFourUnknowsTextBox19
             // 
@@ -1755,8 +1721,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.Control;
-            this.button6.Enabled = false;
+            this.button6.BackColor = System.Drawing.Color.White;
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.Control;
@@ -1786,49 +1751,10 @@
             this.EquaFourUnknowsLabel17.TabIndex = 14;
             this.EquaFourUnknowsLabel17.Text = "Decimal Places:";
             // 
-            // PolyTwoDegreeResultButton
-            // 
-            this.PolyTwoDegreeResultButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.PolyTwoDegreeResultButton.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.PolyTwoDegreeResultButton.BorderColor = System.Drawing.Color.Black;
-            this.PolyTwoDegreeResultButton.BorderRadius = 20;
-            this.PolyTwoDegreeResultButton.BorderSize = 2;
-            this.PolyTwoDegreeResultButton.FlatAppearance.BorderSize = 0;
-            this.PolyTwoDegreeResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PolyTwoDegreeResultButton.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyTwoDegreeResultButton.ForeColor = System.Drawing.Color.Black;
-            this.PolyTwoDegreeResultButton.Location = new System.Drawing.Point(27, 268);
-            this.PolyTwoDegreeResultButton.Name = "PolyTwoDegreeResultButton";
-            this.PolyTwoDegreeResultButton.Size = new System.Drawing.Size(126, 46);
-            this.PolyTwoDegreeResultButton.TabIndex = 4;
-            this.PolyTwoDegreeResultButton.Text = "Result";
-            this.PolyTwoDegreeResultButton.TextColor = System.Drawing.Color.Black;
-            this.PolyTwoDegreeResultButton.UseVisualStyleBackColor = false;
-            this.PolyTwoDegreeResultButton.Click += new System.EventHandler(this.PolyTwoDegreeResultButton_Click);
-            // 
-            // PolyTwoDegreeLabel1
-            // 
-            this.PolyTwoDegreeLabel1.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyTwoDegreeLabel1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.PolyTwoDegreeLabel1.BorderColor = System.Drawing.Color.Black;
-            this.PolyTwoDegreeLabel1.BorderRadius = 10;
-            this.PolyTwoDegreeLabel1.BorderSize = 1;
-            this.PolyTwoDegreeLabel1.FlatAppearance.BorderSize = 0;
-            this.PolyTwoDegreeLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PolyTwoDegreeLabel1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyTwoDegreeLabel1.ForeColor = System.Drawing.Color.Black;
-            this.PolyTwoDegreeLabel1.Location = new System.Drawing.Point(117, 29);
-            this.PolyTwoDegreeLabel1.Name = "PolyTwoDegreeLabel1";
-            this.PolyTwoDegreeLabel1.Size = new System.Drawing.Size(350, 50);
-            this.PolyTwoDegreeLabel1.TabIndex = 99;
-            this.PolyTwoDegreeLabel1.Text = "Ax²+Bx+C=0";
-            this.PolyTwoDegreeLabel1.TextColor = System.Drawing.Color.Black;
-            this.PolyTwoDegreeLabel1.UseVisualStyleBackColor = false;
-            // 
             // EquaFourUnknowsResultButton
             // 
-            this.EquaFourUnknowsResultButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.EquaFourUnknowsResultButton.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.EquaFourUnknowsResultButton.BackColor = System.Drawing.Color.White;
+            this.EquaFourUnknowsResultButton.BackgroundColor = System.Drawing.Color.White;
             this.EquaFourUnknowsResultButton.BorderColor = System.Drawing.Color.Black;
             this.EquaFourUnknowsResultButton.BorderRadius = 20;
             this.EquaFourUnknowsResultButton.BorderSize = 2;
@@ -1843,143 +1769,24 @@
             this.EquaFourUnknowsResultButton.Text = "Result";
             this.EquaFourUnknowsResultButton.TextColor = System.Drawing.Color.Black;
             this.EquaFourUnknowsResultButton.UseVisualStyleBackColor = false;
-            this.EquaFourUnknowsResultButton.Click += new System.EventHandler(this.EquaFourUnknowsResultButton_Click);
-            // 
-            // PolyFourDegreeResultButton
-            // 
-            this.PolyFourDegreeResultButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.PolyFourDegreeResultButton.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.PolyFourDegreeResultButton.BorderColor = System.Drawing.Color.Black;
-            this.PolyFourDegreeResultButton.BorderRadius = 20;
-            this.PolyFourDegreeResultButton.BorderSize = 2;
-            this.PolyFourDegreeResultButton.FlatAppearance.BorderSize = 0;
-            this.PolyFourDegreeResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PolyFourDegreeResultButton.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeResultButton.ForeColor = System.Drawing.Color.Black;
-            this.PolyFourDegreeResultButton.Location = new System.Drawing.Point(27, 268);
-            this.PolyFourDegreeResultButton.Name = "PolyFourDegreeResultButton";
-            this.PolyFourDegreeResultButton.Size = new System.Drawing.Size(126, 46);
-            this.PolyFourDegreeResultButton.TabIndex = 6;
-            this.PolyFourDegreeResultButton.Text = "Result";
-            this.PolyFourDegreeResultButton.TextColor = System.Drawing.Color.Black;
-            this.PolyFourDegreeResultButton.UseVisualStyleBackColor = false;
-            this.PolyFourDegreeResultButton.Click += new System.EventHandler(this.PolyFourDegreeResultButton_Click);
-            // 
-            // PolyFourDegreeLabel1
-            // 
-            this.PolyFourDegreeLabel1.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyFourDegreeLabel1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.PolyFourDegreeLabel1.BorderColor = System.Drawing.Color.Black;
-            this.PolyFourDegreeLabel1.BorderRadius = 10;
-            this.PolyFourDegreeLabel1.BorderSize = 1;
-            this.PolyFourDegreeLabel1.FlatAppearance.BorderSize = 0;
-            this.PolyFourDegreeLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PolyFourDegreeLabel1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyFourDegreeLabel1.ForeColor = System.Drawing.Color.Black;
-            this.PolyFourDegreeLabel1.Location = new System.Drawing.Point(106, 29);
-            this.PolyFourDegreeLabel1.Name = "PolyFourDegreeLabel1";
-            this.PolyFourDegreeLabel1.Size = new System.Drawing.Size(367, 50);
-            this.PolyFourDegreeLabel1.TabIndex = 99;
-            this.PolyFourDegreeLabel1.Text = "Ax⁴+Bx³+Cx²+Dx+E=0";
-            this.PolyFourDegreeLabel1.TextColor = System.Drawing.Color.Black;
-            this.PolyFourDegreeLabel1.UseVisualStyleBackColor = false;
-            // 
-            // EquaThreeUnknowsResultButton
-            // 
-            this.EquaThreeUnknowsResultButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.EquaThreeUnknowsResultButton.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.EquaThreeUnknowsResultButton.BorderColor = System.Drawing.Color.Black;
-            this.EquaThreeUnknowsResultButton.BorderRadius = 20;
-            this.EquaThreeUnknowsResultButton.BorderSize = 2;
-            this.EquaThreeUnknowsResultButton.FlatAppearance.BorderSize = 0;
-            this.EquaThreeUnknowsResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EquaThreeUnknowsResultButton.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaThreeUnknowsResultButton.ForeColor = System.Drawing.Color.Black;
-            this.EquaThreeUnknowsResultButton.Location = new System.Drawing.Point(27, 268);
-            this.EquaThreeUnknowsResultButton.Name = "EquaThreeUnknowsResultButton";
-            this.EquaThreeUnknowsResultButton.Size = new System.Drawing.Size(126, 46);
-            this.EquaThreeUnknowsResultButton.TabIndex = 12;
-            this.EquaThreeUnknowsResultButton.Text = "Result";
-            this.EquaThreeUnknowsResultButton.TextColor = System.Drawing.Color.Black;
-            this.EquaThreeUnknowsResultButton.UseVisualStyleBackColor = false;
-            this.EquaThreeUnknowsResultButton.Click += new System.EventHandler(this.EquaThreeUnknowsResultButton_Click);
-            // 
-            // PolyThreeDegreeResultButton
-            // 
-            this.PolyThreeDegreeResultButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.PolyThreeDegreeResultButton.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.PolyThreeDegreeResultButton.BorderColor = System.Drawing.Color.Black;
-            this.PolyThreeDegreeResultButton.BorderRadius = 20;
-            this.PolyThreeDegreeResultButton.BorderSize = 2;
-            this.PolyThreeDegreeResultButton.FlatAppearance.BorderSize = 0;
-            this.PolyThreeDegreeResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PolyThreeDegreeResultButton.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyThreeDegreeResultButton.ForeColor = System.Drawing.Color.Black;
-            this.PolyThreeDegreeResultButton.Location = new System.Drawing.Point(27, 268);
-            this.PolyThreeDegreeResultButton.Name = "PolyThreeDegreeResultButton";
-            this.PolyThreeDegreeResultButton.Size = new System.Drawing.Size(126, 46);
-            this.PolyThreeDegreeResultButton.TabIndex = 5;
-            this.PolyThreeDegreeResultButton.Text = "Result";
-            this.PolyThreeDegreeResultButton.TextColor = System.Drawing.Color.Black;
-            this.PolyThreeDegreeResultButton.UseVisualStyleBackColor = false;
-            this.PolyThreeDegreeResultButton.Click += new System.EventHandler(this.PolyThreeDegreeResultButton_Click);
-            // 
-            // PolyThreeDegreeLabel1
-            // 
-            this.PolyThreeDegreeLabel1.BackColor = System.Drawing.SystemColors.Control;
-            this.PolyThreeDegreeLabel1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.PolyThreeDegreeLabel1.BorderColor = System.Drawing.Color.Black;
-            this.PolyThreeDegreeLabel1.BorderRadius = 10;
-            this.PolyThreeDegreeLabel1.BorderSize = 1;
-            this.PolyThreeDegreeLabel1.FlatAppearance.BorderSize = 0;
-            this.PolyThreeDegreeLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PolyThreeDegreeLabel1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolyThreeDegreeLabel1.ForeColor = System.Drawing.Color.Black;
-            this.PolyThreeDegreeLabel1.Location = new System.Drawing.Point(117, 29);
-            this.PolyThreeDegreeLabel1.Name = "PolyThreeDegreeLabel1";
-            this.PolyThreeDegreeLabel1.Size = new System.Drawing.Size(350, 50);
-            this.PolyThreeDegreeLabel1.TabIndex = 99;
-            this.PolyThreeDegreeLabel1.Text = "Ax³+Bx²+Cx+D=0";
-            this.PolyThreeDegreeLabel1.TextColor = System.Drawing.Color.Black;
-            this.PolyThreeDegreeLabel1.UseVisualStyleBackColor = false;
-            // 
-            // EquaTwoUnknowsResultButton
-            // 
-            this.EquaTwoUnknowsResultButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.EquaTwoUnknowsResultButton.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.EquaTwoUnknowsResultButton.BorderColor = System.Drawing.Color.Black;
-            this.EquaTwoUnknowsResultButton.BorderRadius = 20;
-            this.EquaTwoUnknowsResultButton.BorderSize = 2;
-            this.EquaTwoUnknowsResultButton.FlatAppearance.BorderSize = 0;
-            this.EquaTwoUnknowsResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EquaTwoUnknowsResultButton.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquaTwoUnknowsResultButton.ForeColor = System.Drawing.Color.Black;
-            this.EquaTwoUnknowsResultButton.Location = new System.Drawing.Point(27, 268);
-            this.EquaTwoUnknowsResultButton.Name = "EquaTwoUnknowsResultButton";
-            this.EquaTwoUnknowsResultButton.Size = new System.Drawing.Size(126, 46);
-            this.EquaTwoUnknowsResultButton.TabIndex = 7;
-            this.EquaTwoUnknowsResultButton.Text = "Result";
-            this.EquaTwoUnknowsResultButton.TextColor = System.Drawing.Color.Black;
-            this.EquaTwoUnknowsResultButton.UseVisualStyleBackColor = false;
-            this.EquaTwoUnknowsResultButton.Click += new System.EventHandler(this.EquaTwoUnknowsResultButton_Click);
             // 
             // EquationSolving
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(752, 593);
-            this.Controls.Add(this.PolyTwoDegreeScreen);
-            this.Controls.Add(this.EquaFourUnknowsScreen);
-            this.Controls.Add(this.PolyFourDegreeScreen);
-            this.Controls.Add(this.EquaThreeUnknowsScreen);
-            this.Controls.Add(this.PolyThreeDegreeScreen);
-            this.Controls.Add(this.EquaTwoUnknowsScreen);
             this.Controls.Add(this.NamePagePanel);
-            this.Controls.Add(this.Menu);
+            this.Controls.Add(this.MenuPanel);
+            this.Controls.Add(this.PolyThreeDegreeScreen);
+            this.Controls.Add(this.PolyTwoDegreeScreen);
+            this.Controls.Add(this.PolyFourDegreeScreen);
+            this.Controls.Add(this.EquaFourUnknowsScreen);
+            this.Controls.Add(this.EquaThreeUnknowsScreen);
+            this.Controls.Add(this.EquaTwoUnknowsScreen);
             this.Name = "EquationSolving";
             this.Text = "EquationSolving";
-            this.Load += new System.EventHandler(this.test_Load);
-            this.Menu.ResumeLayout(false);
+            this.MenuPanel.ResumeLayout(false);
             this.PolyTwoDegreeScreen.ResumeLayout(false);
             this.PolyTwoDegreeScreen.PerformLayout();
             this.NamePagePanel.ResumeLayout(false);
@@ -1999,17 +1806,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel Menu;
-        private System.Windows.Forms.Label PolyMenu;
+        private CustomUserControls.RoundedPanel.RoundedPanel MenuPanel;
+        private System.Windows.Forms.Label MenuPanel_PolyTitle;
         private System.Windows.Forms.Panel PolyTwoDegreeScreen;
-        private System.Windows.Forms.Button ThreeDegreeMenu;
-        private System.Windows.Forms.Button TwoDegreeMenu;
-        private System.Windows.Forms.Button FourUnknowsMenu;
-        private System.Windows.Forms.Button ThreeUnknowsMenu;
-        private System.Windows.Forms.Button TwoUnknowsMenu;
-        private System.Windows.Forms.Label EquaMenu;
-        private System.Windows.Forms.Button FourDegreeMenu;
-        private System.Windows.Forms.Panel NamePagePanel;
+        private CustomUserControls.RoundedButton.RoundedButton MenuPanel_ThirdDeg;
+        private CustomUserControls.RoundedButton.RoundedButton MenuPanel_SecondDeg;
+        private CustomUserControls.RoundedButton.RoundedButton MenuPanel_FourUnknowns;
+        private CustomUserControls.RoundedButton.RoundedButton MenuPanel_ThreeUnknowsMenu;
+        private CustomUserControls.RoundedButton.RoundedButton MenuPanel_TwoUnknowns;
+        private System.Windows.Forms.Label MenuPanel_EquationTitle;
+        private CustomUserControls.RoundedButton.RoundedButton MenuPanel_FourthDeg;
+        private RoundedPanel NamePagePanel;
         private System.Windows.Forms.Label NamePageLabel;
         private CustomUserControls.CustomButton.CustomButton PolyTwoDegreeLabel1;
         private System.Windows.Forms.Label PolyTwoDegreeLabel2;
@@ -2032,27 +1839,28 @@
         private System.Windows.Forms.TextBox PolyThreeDegreeTextBox2;
         private System.Windows.Forms.TextBox PolyThreeDegreeTextBox1;
         private System.Windows.Forms.Label PolyThreeDegreeLabel5;
+        private System.Windows.Forms.Label PolyThreeDegreeLabel4;
         private System.Windows.Forms.Label PolyThreeDegreeLabel3;
         private System.Windows.Forms.Label PolyThreeDegreeLabel2;
         private CustomUserControls.CustomButton.CustomButton PolyThreeDegreeLabel1;
         private System.Windows.Forms.TextBox PolyThreeDegreeTextBox4;
         private System.Windows.Forms.Label PolyThreeDegreeLabel6;
         private System.Windows.Forms.Panel PolyFourDegreeScreen;
-        private System.Windows.Forms.TextBox PolyFourDegreeLTextBox4;
+        private System.Windows.Forms.TextBox PolyFourDegreeLTextBox5;
         private System.Windows.Forms.Label PolyFourDegreeLabel7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox PolyFourDegreeLTextBox6;
         private System.Windows.Forms.Label PolyFourDegreeLabel8;
         private CustomUserControls.CustomButton.CustomButton PolyFourDegreeResultButton;
+        private System.Windows.Forms.TextBox PolyFourDegreeLTextBox4;
         private System.Windows.Forms.TextBox PolyFourDegreeLTextBox2;
-        private System.Windows.Forms.TextBox PolyFourDegreeLTextBox3;
         private System.Windows.Forms.TextBox PolyFourDegreeLTextBox1;
         private System.Windows.Forms.Label PolyFourDegreeLabel6;
         private System.Windows.Forms.Label PolyFourDegreeLabel4;
         private System.Windows.Forms.Label PolyFourDegreeLabel3;
         private System.Windows.Forms.Label PolyFourDegreeLabel2;
         private CustomUserControls.CustomButton.CustomButton PolyFourDegreeLabel1;
-        private System.Windows.Forms.TextBox PolyFourDegreeLTextBox5;
+        private System.Windows.Forms.TextBox PolyFourDegreeLTextBox3;
         private System.Windows.Forms.Label PolyFourDegreeLabel5;
         private System.Windows.Forms.Panel EquaTwoUnknowsScreen;
         private System.Windows.Forms.Button button4;
@@ -2136,24 +1944,5 @@
         private System.Windows.Forms.Label EquaFourUnknowsLabel2;
         private System.Windows.Forms.TextBox EquaFourUnknowsTextBox1;
         private System.Windows.Forms.Label EquaFourUnknowsLabel1;
-        private System.Windows.Forms.Label PolyThreeDegreeLabel4;
-        private System.Windows.Forms.TextBox PolyFourDegreeResult4;
-        private System.Windows.Forms.TextBox PolyFourDegreeResult3;
-        private System.Windows.Forms.TextBox PolyFourDegreeResult2;
-        private System.Windows.Forms.TextBox PolyFourDegreeResult1;
-        private System.Windows.Forms.TextBox PolyThreeDegreeResult3;
-        private System.Windows.Forms.TextBox PolyThreeDegreeResult2;
-        private System.Windows.Forms.TextBox PolyThreeDegreeResult1;
-        private System.Windows.Forms.TextBox PolyTwoDegreeResult2;
-        private System.Windows.Forms.TextBox PolyTwoDegreeResult1;
-        private System.Windows.Forms.TextBox EquaTwoUnknowsResult2;
-        private System.Windows.Forms.TextBox EquaTwoUnknowsResult1;
-        private System.Windows.Forms.TextBox EquaThreeUnknowsResult3;
-        private System.Windows.Forms.TextBox EquaThreeUnknowsResult2;
-        private System.Windows.Forms.TextBox EquaThreeUnknowsResult1;
-        private System.Windows.Forms.TextBox EquaFourUnknowsResult3;
-        private System.Windows.Forms.TextBox EquaFourUnknowsResult4;
-        private System.Windows.Forms.TextBox EquaFourUnknowsResult2;
-        private System.Windows.Forms.TextBox EquaFourUnknowsResult1;
     }
 }

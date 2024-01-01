@@ -741,6 +741,7 @@ class Expression
         eB = new Expression_BinaryTree();
         convertingRules.Add("e", "2.718281828");
         convertingRules.Add("pi", "3.141592654");
+        convertingRules.Add("π", "3.141592654");
         convertingRules.Add("√", "sqrt");
         convertingRules.Add("log", "log10");
         convertingRules.Add("-", "+(-1)*");

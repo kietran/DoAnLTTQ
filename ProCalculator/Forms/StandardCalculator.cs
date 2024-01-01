@@ -15,11 +15,12 @@ namespace ProCalculator
     {
         //panel mode
         public bool numberPanelOn = false, funcPanelOn = false, memoryPanelOn = false;
-        bool formOpenerPanelOn = false;
+        public bool formOpenerPanelOn = false;
         bool dockingOn = false;
-        
+        public bool darkModeOn = false;
+
         //calculating
-        private bool onINVMode = false;
+        public bool onINVMode = false;
         public bool unitForFunction = false; //false: RAD, true: DEG
 
         //display invalid result timeout
@@ -137,12 +138,6 @@ namespace ProCalculator
                 }
             };
             MainPanel_PromptUserToEnter.Click += (sender, args) =>
-            {
-                MainPanel_InputTextBox.Select();
-                MainPanel_InputTextBox.ShowBlinkingCursor();
-            };
-
-            ClearMemory.Click += (sender, args) =>
             {
                 MainPanel_InputTextBox.Select();
                 MainPanel_InputTextBox.ShowBlinkingCursor();
@@ -723,7 +718,7 @@ namespace ProCalculator
         }
         private void FUNC_Pi_Click(object sender, EventArgs e)
         {
-            StandardCalculatorControl.InsertContentAtCursor("𝝅");
+            StandardCalculatorControl.InsertContentAtCursor("π");
         }
         private void FUNC_EulerNumber_Click(object sender, EventArgs e)
         {
@@ -801,14 +796,18 @@ namespace ProCalculator
             StandardCalculatorControl.OpenConverter();
         }
 
-        private void FUNC_Ln_MouseHover(object sender, EventArgs e)
-        {
 
+
+        private void FormOpenerPanel_LightTheme_Click(object sender, EventArgs e)
+        {
+            StandardCalculatorControl.SwitchToLightTheme();
+            darkModeOn = false;
         }
 
-        private void ClearMemory_Click(object sender, EventArgs e)
+        private void FormOpenerPanel_DarkTheme_Click(object sender, EventArgs e)
         {
-            StandardCalculatorControl.ClearMemory();
+            StandardCalculatorControl.SwitchToDarkTheme();
+            darkModeOn = true;
         }
 
         private void CTRL_Equal_Click(object sender, EventArgs e)
@@ -826,5 +825,6 @@ namespace ProCalculator
             StandardCalculatorControl.SwitchToDegreeMode();
             unitForFunction = true;
         }
+        
     }
 }

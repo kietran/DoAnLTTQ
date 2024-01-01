@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
 using System;
-using MathNet.Numerics;
-using MathNet.Numerics.RootFinding;
-using System.Numerics;
 
 class Polynomial
 {
@@ -65,16 +62,36 @@ class Polynomial
         return 0;
     }
 
-    public static Complex[] Polynomial4Degree(double a, double b, double c, double d, double e)
+    public static List<int> Factor(int number)
     {
-        double[] coefficients = { e, d, c, b, a };
-        MathNet.Numerics.Polynomial poly = new MathNet.Numerics.Polynomial(coefficients);
+        var factors = new List<int>();
+        int max = (int)System.Math.Sqrt(number);  // Round down
 
-        // Find roots of the polynomial equation
-        Complex[] roots = poly.Roots();
-
-        return roots;
+        for (int factor = 1; factor <= max; ++factor) // EquationSolving from 1 to the square root, or the int below it, inclusive.
+        {
+            if (number % factor == 0)
+            {
+                factors.Add(factor);
+                factors.Add(-factor);
+                if (factor != number / factor) // Get rid of duplicated root
+                    factors.Add(number / factor);
+            }
+        }
+        return factors;
     }
+    /*public static int Polynomial4Degree(double a, double b, double c, double d, double e, ref double x1, ref double x2, ref double x3, ref double x4)
+    {
+        //Find all possible rational root
+        List<int> Degree4Factors = Factor(Convert.ToInt32(a));
+        List<int> ConstantFactors = Factor(Convert.ToInt32(e));
+        List<int> PossibleRoots;
+        //Find a root
+        for(int i = 0; i < Degree4Factors.Count; i++)
+        {
+
+        }
+        //Solve polynomial 3 degree
+    }*/
 }
 class SimulEquation
 {

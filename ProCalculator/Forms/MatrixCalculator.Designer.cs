@@ -28,23 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CREATING_MatrixLabel = new System.Windows.Forms.Label();
             this.StoragePanel_Label = new System.Windows.Forms.Label();
             this.StoreMatrixLabel = new System.Windows.Forms.Label();
             this.ChooseWhereToSaveComboBox = new System.Windows.Forms.ComboBox();
             this.DoneButton = new System.Windows.Forms.Button();
-            this.CREATING_LoadFromLabel = new System.Windows.Forms.Label();
-            this.CREATING_InitValueTextBox = new System.Windows.Forms.TextBox();
-            this.CREATING_InitValueLabel = new System.Windows.Forms.Label();
             this.MessageLabel = new System.Windows.Forms.Label();
             this.MessageContent = new System.Windows.Forms.Label();
-            this.CREATING_LoadFromComboBox = new System.Windows.Forms.ComboBox();
             this.StoragePanel_ScrollBar = new System.Windows.Forms.HScrollBar();
             this.Creating = new System.Windows.Forms.Button();
             this.Calculating = new System.Windows.Forms.Button();
             this.ResultPanel_DivideLine = new System.Windows.Forms.PictureBox();
-            this.CREATING_WorkingPanel = new System.Windows.Forms.Panel();
-            this.CREATING_MatrixOnDisplay = new CustomUserControls.MatrixOnDisplay.MatrixOnDisplay_InDetail();
             this.ResultPanel = new System.Windows.Forms.Panel();
             this.CALCULATING_ChooseLogToSave = new System.Windows.Forms.TextBox();
             this.StoragePanel_LabelBackground = new System.Windows.Forms.Panel();
@@ -61,8 +54,14 @@
             this.StoragePanel = new System.Windows.Forms.Panel();
             this.StoragePanel_SlideClose = new System.Windows.Forms.PictureBox();
             this.WorkingPanel = new System.Windows.Forms.Panel();
+            this.CREATING_WorkingPanel = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.CREATING_MatrixOnDisplay = new CustomUserControls.MatrixOnDisplay.MatrixOnDisplay_InDetail();
+            this.CREATING_MatrixLabel = new System.Windows.Forms.Label();
+            this.CREATING_LoadFromLabel = new System.Windows.Forms.Label();
+            this.CREATING_InitValueLabel = new System.Windows.Forms.Label();
+            this.CREATING_InitValueTextBox = new System.Windows.Forms.TextBox();
+            this.CREATING_LoadFromComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ResultPanel_DivideLine)).BeginInit();
-            this.CREATING_WorkingPanel.SuspendLayout();
             this.ResultPanel.SuspendLayout();
             this.StoragePanel_LabelBackground.SuspendLayout();
             this.ModePanel.SuspendLayout();
@@ -73,18 +72,8 @@
             this.StoragePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StoragePanel_SlideClose)).BeginInit();
             this.WorkingPanel.SuspendLayout();
+            this.CREATING_WorkingPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // CREATING_MatrixLabel
-            // 
-            this.CREATING_MatrixLabel.AutoSize = true;
-            this.CREATING_MatrixLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CREATING_MatrixLabel.Location = new System.Drawing.Point(159, 163);
-            this.CREATING_MatrixLabel.Name = "CREATING_MatrixLabel";
-            this.CREATING_MatrixLabel.Size = new System.Drawing.Size(89, 29);
-            this.CREATING_MatrixLabel.TabIndex = 6;
-            this.CREATING_MatrixLabel.Text = "Matrix: ";
-            this.CREATING_MatrixLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // StoragePanel_Label
             // 
@@ -141,42 +130,6 @@
             this.DoneButton.UseVisualStyleBackColor = false;
             this.DoneButton.Click += new System.EventHandler(this.CREATING_DoneButton_Click);
             // 
-            // CREATING_LoadFromLabel
-            // 
-            this.CREATING_LoadFromLabel.AutoSize = true;
-            this.CREATING_LoadFromLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.CREATING_LoadFromLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CREATING_LoadFromLabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CREATING_LoadFromLabel.Location = new System.Drawing.Point(5, 5);
-            this.CREATING_LoadFromLabel.Name = "CREATING_LoadFromLabel";
-            this.CREATING_LoadFromLabel.Size = new System.Drawing.Size(110, 30);
-            this.CREATING_LoadFromLabel.TabIndex = 34;
-            this.CREATING_LoadFromLabel.Text = "Load from";
-            // 
-            // CREATING_InitValueTextBox
-            // 
-            this.CREATING_InitValueTextBox.BackColor = System.Drawing.Color.White;
-            this.CREATING_InitValueTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CREATING_InitValueTextBox.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CREATING_InitValueTextBox.Location = new System.Drawing.Point(276, 4);
-            this.CREATING_InitValueTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CREATING_InitValueTextBox.Name = "CREATING_InitValueTextBox";
-            this.CREATING_InitValueTextBox.Size = new System.Drawing.Size(61, 33);
-            this.CREATING_InitValueTextBox.TabIndex = 37;
-            this.CREATING_InitValueTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AdditionalTextBox2_KeyDown);
-            // 
-            // CREATING_InitValueLabel
-            // 
-            this.CREATING_InitValueLabel.AutoSize = true;
-            this.CREATING_InitValueLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.CREATING_InitValueLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CREATING_InitValueLabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CREATING_InitValueLabel.Location = new System.Drawing.Point(175, 5);
-            this.CREATING_InitValueLabel.Name = "CREATING_InitValueLabel";
-            this.CREATING_InitValueLabel.Size = new System.Drawing.Size(101, 30);
-            this.CREATING_InitValueLabel.TabIndex = 36;
-            this.CREATING_InitValueLabel.Text = "Init value";
-            // 
             // MessageLabel
             // 
             this.MessageLabel.AutoSize = true;
@@ -198,32 +151,10 @@
             this.MessageContent.TabIndex = 46;
             this.MessageContent.Text = "Successfully saved into slot";
             // 
-            // CREATING_LoadFromComboBox
-            // 
-            this.CREATING_LoadFromComboBox.BackColor = System.Drawing.Color.White;
-            this.CREATING_LoadFromComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CREATING_LoadFromComboBox.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CREATING_LoadFromComboBox.FormattingEnabled = true;
-            this.CREATING_LoadFromComboBox.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H"});
-            this.CREATING_LoadFromComboBox.Location = new System.Drawing.Point(115, 4);
-            this.CREATING_LoadFromComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CREATING_LoadFromComboBox.Name = "CREATING_LoadFromComboBox";
-            this.CREATING_LoadFromComboBox.Size = new System.Drawing.Size(60, 32);
-            this.CREATING_LoadFromComboBox.TabIndex = 47;
-            this.CREATING_LoadFromComboBox.DropDownClosed += new System.EventHandler(this.CREATING_ChooseWhereToLoadFrom_DropDownClosed);
-            // 
             // StoragePanel_ScrollBar
             // 
             this.StoragePanel_ScrollBar.LargeChange = 702;
-            this.StoragePanel_ScrollBar.Location = new System.Drawing.Point(0, 200);
+            this.StoragePanel_ScrollBar.Location = new System.Drawing.Point(0, 209);
             this.StoragePanel_ScrollBar.Maximum = 1280;
             this.StoragePanel_ScrollBar.Name = "StoragePanel_ScrollBar";
             this.StoragePanel_ScrollBar.Size = new System.Drawing.Size(684, 20);
@@ -267,38 +198,6 @@
             this.ResultPanel_DivideLine.Size = new System.Drawing.Size(2, 89);
             this.ResultPanel_DivideLine.TabIndex = 133;
             this.ResultPanel_DivideLine.TabStop = false;
-            // 
-            // CREATING_WorkingPanel
-            // 
-            this.CREATING_WorkingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.CREATING_WorkingPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_MatrixOnDisplay);
-            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_MatrixLabel);
-            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_LoadFromLabel);
-            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_InitValueLabel);
-            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_InitValueTextBox);
-            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_LoadFromComboBox);
-            this.CREATING_WorkingPanel.Location = new System.Drawing.Point(16, 20);
-            this.CREATING_WorkingPanel.Name = "CREATING_WorkingPanel";
-            this.CREATING_WorkingPanel.Size = new System.Drawing.Size(650, 340);
-            this.CREATING_WorkingPanel.TabIndex = 140;
-            // 
-            // CREATING_MatrixOnDisplay
-            // 
-            this.CREATING_MatrixOnDisplay.BackColor = System.Drawing.Color.Transparent;
-            this.CREATING_MatrixOnDisplay.Collumn = 5;
-            this.CREATING_MatrixOnDisplay.Font = new System.Drawing.Font("Comic Sans MS", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CREATING_MatrixOnDisplay.ForeColor = System.Drawing.Color.Black;
-            this.CREATING_MatrixOnDisplay.Location = new System.Drawing.Point(254, 63);
-            this.CREATING_MatrixOnDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CREATING_MatrixOnDisplay.Name = "CREATING_MatrixOnDisplay";
-            this.CREATING_MatrixOnDisplay.NumberOfDisplayedDigitInTextbox = 6;
-            this.CREATING_MatrixOnDisplay.Row = 5;
-            this.CREATING_MatrixOnDisplay.Size = new System.Drawing.Size(199, 229);
-            this.CREATING_MatrixOnDisplay.SpacingHor = 10;
-            this.CREATING_MatrixOnDisplay.SpacingVer = 5;
-            this.CREATING_MatrixOnDisplay.TabIndex = 68;
-            this.CREATING_MatrixOnDisplay.TextboxBackColor = System.Drawing.Color.White;
             // 
             // ResultPanel
             // 
@@ -444,7 +343,7 @@
             // 
             // StoragePanel
             // 
-            this.StoragePanel.BackColor = System.Drawing.Color.Transparent;
+            this.StoragePanel.BackColor = System.Drawing.Color.White;
             this.StoragePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.StoragePanel.Controls.Add(this.StoragePanel_SlideClose);
             this.StoragePanel.Controls.Add(this.StoragePanel_ScrollBar);
@@ -456,18 +355,18 @@
             // 
             // StoragePanel_SlideClose
             // 
-            this.StoragePanel_SlideClose.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.StoragePanel_SlideClose.Image = global::ProCalculator.Properties.Resources.ArrowUp;
+            this.StoragePanel_SlideClose.BackColor = System.Drawing.Color.LightGray;
+            this.StoragePanel_SlideClose.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.StoragePanel_SlideClose.InitialImage = null;
-            this.StoragePanel_SlideClose.Location = new System.Drawing.Point(0, 220);
+            this.StoragePanel_SlideClose.Location = new System.Drawing.Point(0, 229);
             this.StoragePanel_SlideClose.Name = "StoragePanel_SlideClose";
-            this.StoragePanel_SlideClose.Size = new System.Drawing.Size(687, 18);
+            this.StoragePanel_SlideClose.Size = new System.Drawing.Size(687, 10);
             this.StoragePanel_SlideClose.TabIndex = 142;
             this.StoragePanel_SlideClose.TabStop = false;
             // 
             // WorkingPanel
             // 
-            this.WorkingPanel.BackColor = System.Drawing.Color.Transparent;
+            this.WorkingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.WorkingPanel.Controls.Add(this.CALCULATING_InputPanel);
             this.WorkingPanel.Controls.Add(this.CREATING_WorkingPanel);
             this.WorkingPanel.Controls.Add(this.CALCULATING_ResultPanel);
@@ -475,6 +374,110 @@
             this.WorkingPanel.Name = "WorkingPanel";
             this.WorkingPanel.Size = new System.Drawing.Size(685, 375);
             this.WorkingPanel.TabIndex = 144;
+            // 
+            // CREATING_WorkingPanel
+            // 
+            this.CREATING_WorkingPanel.ArcSize = 10;
+            this.CREATING_WorkingPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CREATING_WorkingPanel.BorderColor = System.Drawing.Color.Black;
+            this.CREATING_WorkingPanel.BorderWidth = 2;
+            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_MatrixOnDisplay);
+            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_MatrixLabel);
+            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_LoadFromLabel);
+            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_InitValueLabel);
+            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_InitValueTextBox);
+            this.CREATING_WorkingPanel.Controls.Add(this.CREATING_LoadFromComboBox);
+            this.CREATING_WorkingPanel.InteriorColor = System.Drawing.Color.White;
+            this.CREATING_WorkingPanel.Location = new System.Drawing.Point(16, 20);
+            this.CREATING_WorkingPanel.Name = "CREATING_WorkingPanel";
+            this.CREATING_WorkingPanel.Size = new System.Drawing.Size(650, 340);
+            this.CREATING_WorkingPanel.TabIndex = 140;
+            // 
+            // CREATING_MatrixOnDisplay
+            // 
+            this.CREATING_MatrixOnDisplay.BackColor = System.Drawing.Color.Transparent;
+            this.CREATING_MatrixOnDisplay.Collumn = 5;
+            this.CREATING_MatrixOnDisplay.Font = new System.Drawing.Font("Comic Sans MS", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CREATING_MatrixOnDisplay.ForeColor = System.Drawing.Color.Black;
+            this.CREATING_MatrixOnDisplay.Location = new System.Drawing.Point(254, 63);
+            this.CREATING_MatrixOnDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CREATING_MatrixOnDisplay.Name = "CREATING_MatrixOnDisplay";
+            this.CREATING_MatrixOnDisplay.NumberOfDisplayedDigitInTextbox = 6;
+            this.CREATING_MatrixOnDisplay.Row = 5;
+            this.CREATING_MatrixOnDisplay.Size = new System.Drawing.Size(199, 229);
+            this.CREATING_MatrixOnDisplay.SpacingHor = 10;
+            this.CREATING_MatrixOnDisplay.SpacingVer = 5;
+            this.CREATING_MatrixOnDisplay.TabIndex = 68;
+            this.CREATING_MatrixOnDisplay.TextboxBackColor = System.Drawing.Color.White;
+            // 
+            // CREATING_MatrixLabel
+            // 
+            this.CREATING_MatrixLabel.AutoSize = true;
+            this.CREATING_MatrixLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CREATING_MatrixLabel.Location = new System.Drawing.Point(159, 163);
+            this.CREATING_MatrixLabel.Name = "CREATING_MatrixLabel";
+            this.CREATING_MatrixLabel.Size = new System.Drawing.Size(89, 29);
+            this.CREATING_MatrixLabel.TabIndex = 6;
+            this.CREATING_MatrixLabel.Text = "Matrix: ";
+            this.CREATING_MatrixLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // CREATING_LoadFromLabel
+            // 
+            this.CREATING_LoadFromLabel.AutoSize = true;
+            this.CREATING_LoadFromLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.CREATING_LoadFromLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CREATING_LoadFromLabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CREATING_LoadFromLabel.Location = new System.Drawing.Point(5, 5);
+            this.CREATING_LoadFromLabel.Name = "CREATING_LoadFromLabel";
+            this.CREATING_LoadFromLabel.Size = new System.Drawing.Size(110, 30);
+            this.CREATING_LoadFromLabel.TabIndex = 34;
+            this.CREATING_LoadFromLabel.Text = "Load from";
+            // 
+            // CREATING_InitValueLabel
+            // 
+            this.CREATING_InitValueLabel.AutoSize = true;
+            this.CREATING_InitValueLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.CREATING_InitValueLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CREATING_InitValueLabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CREATING_InitValueLabel.Location = new System.Drawing.Point(175, 5);
+            this.CREATING_InitValueLabel.Name = "CREATING_InitValueLabel";
+            this.CREATING_InitValueLabel.Size = new System.Drawing.Size(101, 30);
+            this.CREATING_InitValueLabel.TabIndex = 36;
+            this.CREATING_InitValueLabel.Text = "Init value";
+            // 
+            // CREATING_InitValueTextBox
+            // 
+            this.CREATING_InitValueTextBox.BackColor = System.Drawing.Color.White;
+            this.CREATING_InitValueTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CREATING_InitValueTextBox.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CREATING_InitValueTextBox.Location = new System.Drawing.Point(276, 4);
+            this.CREATING_InitValueTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CREATING_InitValueTextBox.Name = "CREATING_InitValueTextBox";
+            this.CREATING_InitValueTextBox.Size = new System.Drawing.Size(61, 33);
+            this.CREATING_InitValueTextBox.TabIndex = 37;
+            this.CREATING_InitValueTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AdditionalTextBox2_KeyDown);
+            // 
+            // CREATING_LoadFromComboBox
+            // 
+            this.CREATING_LoadFromComboBox.BackColor = System.Drawing.Color.White;
+            this.CREATING_LoadFromComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CREATING_LoadFromComboBox.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CREATING_LoadFromComboBox.FormattingEnabled = true;
+            this.CREATING_LoadFromComboBox.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"});
+            this.CREATING_LoadFromComboBox.Location = new System.Drawing.Point(115, 4);
+            this.CREATING_LoadFromComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CREATING_LoadFromComboBox.Name = "CREATING_LoadFromComboBox";
+            this.CREATING_LoadFromComboBox.Size = new System.Drawing.Size(60, 32);
+            this.CREATING_LoadFromComboBox.TabIndex = 47;
+            this.CREATING_LoadFromComboBox.DropDownClosed += new System.EventHandler(this.CREATING_ChooseWhereToLoadFrom_DropDownClosed);
             // 
             // MatrixCalculator
             // 
@@ -496,8 +499,6 @@
             this.Load += new System.EventHandler(this.MatrixCalculator_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MatrixCalculator_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.ResultPanel_DivideLine)).EndInit();
-            this.CREATING_WorkingPanel.ResumeLayout(false);
-            this.CREATING_WorkingPanel.PerformLayout();
             this.ResultPanel.ResumeLayout(false);
             this.ResultPanel.PerformLayout();
             this.StoragePanel_LabelBackground.ResumeLayout(false);
@@ -512,29 +513,24 @@
             this.StoragePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.StoragePanel_SlideClose)).EndInit();
             this.WorkingPanel.ResumeLayout(false);
+            this.CREATING_WorkingPanel.ResumeLayout(false);
+            this.CREATING_WorkingPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        internal System.Windows.Forms.Label CREATING_MatrixLabel;
         internal System.Windows.Forms.Label StoragePanel_Label;
         internal System.Windows.Forms.Label StoreMatrixLabel;
         internal System.Windows.Forms.ComboBox ChooseWhereToSaveComboBox;
         internal System.Windows.Forms.Button DoneButton;
-        internal System.Windows.Forms.Label CREATING_LoadFromLabel;
-        internal System.Windows.Forms.Label CREATING_InitValueLabel;
-        internal System.Windows.Forms.TextBox CREATING_InitValueTextBox;
         private System.Windows.Forms.Label MessageLabel;
         internal System.Windows.Forms.Label MessageContent;
-        internal System.Windows.Forms.ComboBox CREATING_LoadFromComboBox;
-        internal CustomUserControls.MatrixOnDisplay.MatrixOnDisplay_InDetail CREATING_MatrixOnDisplay;
         internal System.Windows.Forms.HScrollBar StoragePanel_ScrollBar;
         private System.Windows.Forms.PictureBox ResultPanel_DivideLine;
         private System.Windows.Forms.Panel ResultPanel;
         private System.Windows.Forms.Panel StoragePanel_LabelBackground;
         private System.Windows.Forms.Panel ModePanel;
-        internal System.Windows.Forms.Panel CREATING_WorkingPanel;
         private System.Windows.Forms.PictureBox ResultPanel_StrikeLine;
         private System.Windows.Forms.Label ResultPanel_Label;
         private System.Windows.Forms.Button InputPanel_Go;
@@ -550,6 +546,13 @@
         private System.Windows.Forms.PictureBox StoragePanel_SlideClose;
         private System.Windows.Forms.Panel WorkingPanel;
         internal System.Windows.Forms.TextBox CALCULATING_ChooseLogToSave;
+        internal CustomUserControls.RoundedPanel.RoundedPanel CREATING_WorkingPanel;
+        internal CustomUserControls.MatrixOnDisplay.MatrixOnDisplay_InDetail CREATING_MatrixOnDisplay;
+        internal System.Windows.Forms.Label CREATING_MatrixLabel;
+        internal System.Windows.Forms.Label CREATING_LoadFromLabel;
+        internal System.Windows.Forms.Label CREATING_InitValueLabel;
+        internal System.Windows.Forms.TextBox CREATING_InitValueTextBox;
+        internal System.Windows.Forms.ComboBox CREATING_LoadFromComboBox;
 
         //internal CustomUserControls.MatrixOnDisplay.MatrixOnDisplay CREATING_MatrixOnDisplay;
     }
