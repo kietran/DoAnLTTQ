@@ -62,7 +62,7 @@
             this.NUMB_4 = new CustomUserControls.RoundedButton.RoundedButton();
             this.NUMB_1 = new CustomUserControls.RoundedButton.RoundedButton();
             this.NUMB_0 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.FUNC_Percentage = new CustomUserControls.RoundedButton.RoundedButton();
+            this.FUNC_Negate = new CustomUserControls.RoundedButton.RoundedButton();
             this.NUMB_8 = new CustomUserControls.RoundedButton.RoundedButton();
             this.NUMB_5 = new CustomUserControls.RoundedButton.RoundedButton();
             this.NUMB_2 = new CustomUserControls.RoundedButton.RoundedButton();
@@ -71,7 +71,7 @@
             this.NUMB_9 = new CustomUserControls.RoundedButton.RoundedButton();
             this.NUMB_6 = new CustomUserControls.RoundedButton.RoundedButton();
             this.NUMB_3 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.FUNC_Negate = new CustomUserControls.RoundedButton.RoundedButton();
+            this.MISC_Ans = new CustomUserControls.RoundedButton.RoundedButton();
             this.OPER_Div = new CustomUserControls.RoundedButton.RoundedButton();
             this.OPER_Mul = new CustomUserControls.RoundedButton.RoundedButton();
             this.OPER_Sub = new CustomUserControls.RoundedButton.RoundedButton();
@@ -138,8 +138,8 @@
             this.MainPanel.Controls.Add(this.MainPanel_OnTopButtonWithDeclineMark);
             this.MainPanel.Controls.Add(this.MainPanel_CurrentModeTitle);
             this.MainPanel.Controls.Add(this.MainPanel_DecorLine4);
-            this.MainPanel.Controls.Add(this.MainPanel_PromptUserToEnter);
             this.MainPanel.Controls.Add(this.MainPanel_InputTextBox);
+            this.MainPanel.Controls.Add(this.MainPanel_PromptUserToEnter);
             this.MainPanel.InteriorColor = System.Drawing.Color.Transparent;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
@@ -319,7 +319,7 @@
             // 
             // MainPanel_InputTextBox
             // 
-            this.MainPanel_InputTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.MainPanel_InputTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.MainPanel_InputTextBox.BlinkingCursorColor = System.Drawing.Color.Black;
             this.MainPanel_InputTextBox.BlinkingCursorWidth = 1;
             this.MainPanel_InputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -529,7 +529,7 @@
             this.NumberPanel.Controls.Add(this.NUMB_4);
             this.NumberPanel.Controls.Add(this.NUMB_1);
             this.NumberPanel.Controls.Add(this.NUMB_0);
-            this.NumberPanel.Controls.Add(this.FUNC_Percentage);
+            this.NumberPanel.Controls.Add(this.FUNC_Negate);
             this.NumberPanel.Controls.Add(this.NUMB_8);
             this.NumberPanel.Controls.Add(this.NUMB_5);
             this.NumberPanel.Controls.Add(this.NUMB_2);
@@ -538,7 +538,7 @@
             this.NumberPanel.Controls.Add(this.NUMB_9);
             this.NumberPanel.Controls.Add(this.NUMB_6);
             this.NumberPanel.Controls.Add(this.NUMB_3);
-            this.NumberPanel.Controls.Add(this.FUNC_Negate);
+            this.NumberPanel.Controls.Add(this.MISC_Ans);
             this.NumberPanel.Controls.Add(this.OPER_Div);
             this.NumberPanel.Controls.Add(this.OPER_Mul);
             this.NumberPanel.Controls.Add(this.OPER_Sub);
@@ -651,25 +651,25 @@
             this.NUMB_0.TextFont = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_0.Click += new System.EventHandler(this.NUMB_0_Click);
             // 
-            // FUNC_Percentage
+            // FUNC_Negate
             // 
-            this.FUNC_Percentage.ArcSize = 7;
-            this.FUNC_Percentage.BackColor = System.Drawing.Color.Transparent;
-            this.FUNC_Percentage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.FUNC_Percentage.BorderWidth = 1;
-            this.FUNC_Percentage.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FUNC_Percentage.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.FUNC_Percentage.Location = new System.Drawing.Point(209, 8);
-            this.FUNC_Percentage.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.FUNC_Percentage.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.FUNC_Percentage.Name = "FUNC_Percentage";
-            this.FUNC_Percentage.Size = new System.Drawing.Size(97, 60);
-            this.FUNC_Percentage.TabIndex = 14;
-            this.FUNC_Percentage.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.FUNC_Percentage.TextColor = System.Drawing.Color.Black;
-            this.FUNC_Percentage.TextContent = "%";
-            this.FUNC_Percentage.TextFont = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FUNC_Percentage.Click += new System.EventHandler(this.FUNC_Percentage_Click);
+            this.FUNC_Negate.ArcSize = 7;
+            this.FUNC_Negate.BackColor = System.Drawing.Color.Transparent;
+            this.FUNC_Negate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.FUNC_Negate.BorderWidth = 1;
+            this.FUNC_Negate.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Negate.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.FUNC_Negate.Location = new System.Drawing.Point(209, 8);
+            this.FUNC_Negate.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.FUNC_Negate.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.FUNC_Negate.Name = "FUNC_Negate";
+            this.FUNC_Negate.Size = new System.Drawing.Size(97, 60);
+            this.FUNC_Negate.TabIndex = 14;
+            this.FUNC_Negate.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FUNC_Negate.TextColor = System.Drawing.Color.Black;
+            this.FUNC_Negate.TextContent = "+/-";
+            this.FUNC_Negate.TextFont = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Negate.Click += new System.EventHandler(this.FUNC_Percentage_Click);
             // 
             // NUMB_8
             // 
@@ -833,24 +833,25 @@
             this.NUMB_3.TextFont = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMB_3.Click += new System.EventHandler(this.NUMB_3_Click);
             // 
-            // FUNC_Negate
+            // MISC_Ans
             // 
-            this.FUNC_Negate.ArcSize = 7;
-            this.FUNC_Negate.BackColor = System.Drawing.Color.Transparent;
-            this.FUNC_Negate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.FUNC_Negate.BorderWidth = 1;
-            this.FUNC_Negate.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FUNC_Negate.InteriorColor = System.Drawing.Color.White;
-            this.FUNC_Negate.Location = new System.Drawing.Point(209, 264);
-            this.FUNC_Negate.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
-            this.FUNC_Negate.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            this.FUNC_Negate.Name = "FUNC_Negate";
-            this.FUNC_Negate.Size = new System.Drawing.Size(97, 60);
-            this.FUNC_Negate.TabIndex = 5;
-            this.FUNC_Negate.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.FUNC_Negate.TextColor = System.Drawing.SystemColors.ControlText;
-            this.FUNC_Negate.TextContent = "+/-";
-            this.FUNC_Negate.TextFont = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_Ans.ArcSize = 7;
+            this.MISC_Ans.BackColor = System.Drawing.Color.Transparent;
+            this.MISC_Ans.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.MISC_Ans.BorderWidth = 1;
+            this.MISC_Ans.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_Ans.InteriorColor = System.Drawing.Color.White;
+            this.MISC_Ans.Location = new System.Drawing.Point(209, 264);
+            this.MISC_Ans.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
+            this.MISC_Ans.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            this.MISC_Ans.Name = "MISC_Ans";
+            this.MISC_Ans.Size = new System.Drawing.Size(97, 60);
+            this.MISC_Ans.TabIndex = 5;
+            this.MISC_Ans.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MISC_Ans.TextColor = System.Drawing.SystemColors.ControlText;
+            this.MISC_Ans.TextContent = "Ans";
+            this.MISC_Ans.TextFont = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_Ans.Click += new System.EventHandler(this.MISC_Ans_Click);
             // 
             // OPER_Div
             // 
@@ -1378,7 +1379,6 @@
         internal CustomUserControls.RoundedButton.RoundedButton NUMB_4;
         internal CustomUserControls.RoundedButton.RoundedButton NUMB_1;
         internal CustomUserControls.RoundedButton.RoundedButton NUMB_0;
-        internal CustomUserControls.RoundedButton.RoundedButton FUNC_Percentage;
         internal CustomUserControls.RoundedButton.RoundedButton NUMB_8;
         internal CustomUserControls.RoundedButton.RoundedButton NUMB_5;
         internal CustomUserControls.RoundedButton.RoundedButton NUMB_2;
@@ -1427,6 +1427,7 @@
         internal System.Windows.Forms.Label MainPanel_PromptUserToEnter;
         internal System.Windows.Forms.PictureBox FormOpenerPanel_CloseButton;
         internal System.Windows.Forms.Panel DummyPanel;
+        internal CustomUserControls.RoundedButton.RoundedButton MISC_Ans;
     }
 }
 

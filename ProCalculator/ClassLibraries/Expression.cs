@@ -80,6 +80,8 @@ class Expression_Helper
     static public void init()
     {
         FunctionHeaders = new List<string> {
+                "!",
+
                 "sinh", "cosh", "tanh",
 
                 "asin","acos","atan",
@@ -429,7 +431,7 @@ class FunctionNode : BaseNode
 
             else if (functionHeader == "NOT") return Math.NOT(iResult);
             else if (functionHeader == "~") return Math.BitwiseNegate(iResult);
-            else if (functionHeader == "fact") return Math.Fact(iResult);
+            else if (functionHeader == "fact"|| functionHeader == "!") return Math.Fact(iResult);
         }
         else if (numberOfChild == 2)
         {
@@ -651,8 +653,17 @@ class Expression_BinaryTree
                 return;
             }
         }
-
         //check for function header
+        //special case for !
+        if (s[s.Length - 1] == '!')
+        {
+            root = new FunctionNode("!");
+            s = s.Substring(0,s.Length - 1);
+            while (Expression_Helper.peelOffExtraBracket(ref s)) ;
+            root.numberOfChild = 1;
+            buildTreeFromExpression_Helper(ref root.left, s, variablePairs);
+            return;
+        }
         string header = Expression_Helper.getFunctionHeader(s);
         if (header != "NONE")
         {

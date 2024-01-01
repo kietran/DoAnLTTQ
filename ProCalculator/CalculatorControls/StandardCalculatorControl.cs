@@ -1,4 +1,5 @@
 ﻿using CustomUserControls.RoundedButton;
+using MatrixExpression;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -555,10 +556,34 @@ namespace ProCalculator
             }
             string text = (System.Math.Round(result,15)).ToString();
             form1.MainPanel_OutputTextbox.Text = text;
-
+            form1.ans = text;
             //cachesNewMemory();
             //form1.on = true;
             return true;
+        }
+        static public void NegateCurrentInput()
+        {
+            string input = form1.MainPanel_InputTextBox.Text;
+            if (input != string.Empty)
+            {
+                string result = input;
+                if (result[0] == '-' && result[1] == '(' && result[result.Length-1]==')')
+                {
+                    result = result.Substring(2,result.Length - 3);
+                    form1.MainPanel_InputTextBox.Text = result;
+                    form1.MainPanel_InputTextBox.CurrentCursorPosition -= 2;
+                    form1.MainPanel_InputTextBox.ImmediatelyDrawBlinkingCursor();
+                }
+                else
+                {
+                    result = result.Insert(0, "-(");
+                    result = result.Insert(result.Length, ")");
+                    form1.MainPanel_InputTextBox.Text = result;
+                    form1.MainPanel_InputTextBox.CurrentCursorPosition += 2;
+                    form1.MainPanel_InputTextBox.ImmediatelyDrawBlinkingCursor();
+                }
+                
+            }
         }
         static public void TurnOnDisplayInvalidResultMode(string errorMessage)
         {

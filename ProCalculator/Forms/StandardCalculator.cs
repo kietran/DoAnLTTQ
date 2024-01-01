@@ -22,6 +22,7 @@ namespace ProCalculator
         //calculating
         public bool onINVMode = false;
         public bool unitForFunction = false; //false: RAD, true: DEG
+        public string ans = string.Empty;
 
         //display invalid result timeout
         public bool onDisplayingResult = false;
@@ -91,20 +92,22 @@ namespace ProCalculator
         }
         private void StandardCalculator_Load(object sender, EventArgs e)
         {
+            //render priority
             NumberPanel.BringToFront();
             FunctionPanel.BringToFront();
             MainPanel.BringToFront();
             DummyPanel.SendToBack();
             MemoryPanel.SendToBack();
-            StandardCalculatorControl.CloseFuncPanel();
-            StandardCalculatorControl.CloseNumberPanel();
-            StandardCalculatorControl.CloseMemoryPanel();
+
+            FunctionPanel.Location = new Point(0, MainPanel.Height - FunctionPanel.Height);
+            MemoryPanel.Location = new Point(MainPanel.Width - MemoryPanel.Width, 0);
+            NumberPanel.Location = new Point(0, MainPanel.Height - NumberPanel.Height);
+            FormOpenerPanel.Location = new Point(-243, 12);
+
             StandardCalculatorControl.TurnOnNormalModeForFuncPanel();
             StandardCalculatorControl.SwitchToRadianMode();
-            StandardCalculatorControl.CloseFormOpenerPanel();
             MainPanel_OnTopButtonWithDeclineMark.Visible = false;
-            //STATE_Radian.PerformClick();
-            //MainPanel_OutputTextbox.Text = MainPanel_InputTextBox.Text.Substring(0, 10);
+
         }
         private void initInputTextbox()
         {
@@ -636,7 +639,7 @@ namespace ProCalculator
         }
         private void FUNC_Percentage_Click(object sender, EventArgs e)
         {
-            StandardCalculatorControl.InsertContentAtCursor("%");
+            StandardCalculatorControl.NegateCurrentInput();
         }
         private void OPER_Div_Click(object sender, EventArgs e)
         {
@@ -834,6 +837,14 @@ namespace ProCalculator
         private void MemoryPanel_LocationChanged(object sender, EventArgs e)
         {
             Width = MemoryPanel.Width + MemoryPanel.Location.X + 20;
+        }
+
+        private void MISC_Ans_Click(object sender, EventArgs e)
+        {
+            if (ans != string.Empty)
+            {
+                StandardCalculatorControl.InsertContentAtCursor(ans);
+            }
         }
 
         private void CTRL_Equal_Click(object sender, EventArgs e)
