@@ -28,7 +28,7 @@ jobs:
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Build the application
-      run: msbuild ProCalculator/ProCalculator.sln /p:Configuration=Release /p:RuntimeIdentifier=win-x64
+      run: msbuild ProCalculator/ProCalculator.csproj /p:Configuration=Release /p:RuntimeIdentifier=win-x64
 
     - name: Create Release
       id: create_release
