@@ -31,7 +31,12 @@ jobs:
     - name: Build the application
       run: msbuild ProCalculator/ProCalculator.sln /t:publish /p:RuntimeIdentifier=win-x64 /p:Configuration=Release
       
-    - uses: csexton/release-asset-action@v2
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        pattern: ProCalculator/bin/Release/*.exe
+        asset_path: ProCalculator/bin/Release/ProCalculator.exe
+        asset_name: ProCalculator.exe
+        asset_content_type: application/exe
