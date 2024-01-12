@@ -29,18 +29,10 @@ jobs:
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Build the application
-      run: msbuild ProCalculator/ProCalculator.sln /p:Configuration=Release
-
-    - name: Release on Github
-      uses: actions/create-release@v1
-      id: create_release
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: ${{ github.ref }}
+      run: msbuild ProCalculator/ProCalculator.sln /t:publish /p:RuntimeIdentifier=win-x64 /p:Configuration=Release
 
     - uses: csexton/release-asset-action@v2
       with: 
         github-token: ${{ secrets.GITHUB_TOKEN }}
         pattern: ProCalculator/bin/Release/app.publish/*.exe
-        release-url: ${{ steps.create_release.outputs.upload_url }}
           
