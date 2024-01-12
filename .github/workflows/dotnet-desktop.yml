@@ -43,5 +43,5 @@ jobs:
       uses: csexton/release-asset-action@v2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        pattern: ProCalculator/bin/Release/app.publish/ProCalculator.exe
+        pattern: ProCalculator/bin/Release/app.publish/Application Files/ProCalculator_1_0_0_0/ProCalculator.exe
         release-url: ${{ steps.create_release.outputs.upload_url }}
