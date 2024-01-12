@@ -31,19 +31,8 @@ jobs:
     - name: Build the application
       run: msbuild ProCalculator/ProCalculator.sln /t:publish /p:RuntimeIdentifier=win-x64 /p:Configuration=Release
 
-    - uses: actions/checkout@v1
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-
     - uses: csexton/release-asset-action@v2
       with: 
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        pattern: "ProCalculator/bin/Release/app.publish/*.exe"
-        release-url: ${{ steps.create_release.outputs.upload_url }}
+        file: ProCalculator/bin/Release/ProCalculator.exe
           
