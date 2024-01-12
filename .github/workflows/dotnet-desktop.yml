@@ -15,7 +15,7 @@ jobs:
       contents: read
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
       
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     - name: Setup MSBuild
@@ -37,8 +37,12 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ github.ref }}
-        release_name: ${{ github.ref }}
-        
+        release_name: ${{ github.ref }} 
+        body: Auto generated release
+        draft: false
+        prerelease: false
+    - name: Build
+      run: make
     - uses: csexton/release-asset-action@v2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
