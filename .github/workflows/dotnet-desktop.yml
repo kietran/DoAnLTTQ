@@ -36,8 +36,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: calculator/v1.0.6-beta
-        release_name: calculator/v1.0.6-beta
+        tag_name: calculator/v1.0.7-beta
+        release_name: calculator/v1.0.7-beta
         body: Auto generated release
         draft: false
         prerelease: false
