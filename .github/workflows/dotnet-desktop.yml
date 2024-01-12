@@ -24,8 +24,8 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.2.0
 
-    #- name: Restore NuGet Packages
-     # run: nuget restore ProCalculator/ProCalculator.sln
+    - name: Restore NuGet Packages
+      run: nuget restore .\ProCalculator\ProCalculator.sln
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Build the application
@@ -44,6 +44,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ProCalculator/bin/Release/ProCalculator.exe
+        asset_path: .\ProCalculator\bin\Release\ProCalculator.exe
         asset_name: ProCalculator.exe
         asset_content_type: application/exe
