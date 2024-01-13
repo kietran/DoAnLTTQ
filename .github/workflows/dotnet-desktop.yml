@@ -31,7 +31,6 @@ jobs:
       run: msbuild ProCalculator/ProCalculator.csproj /p:Configuration=Release /p:RuntimeIdentifier=win-x64
 
     - name: Create Release
-      id: create_release
     # You may pin to the exact commit or the version.
     # uses: ncipollo/release-action@6c75be85e571768fa31b40abf38de58ba0397db5
       uses: ncipollo/release-action@v1.13.0
@@ -39,4 +38,6 @@ jobs:
     - uses: AButler/upload-release-assets@v3.0
       with:
         files: ProCalculator/bin/Release/ProCalculator.exe
+        release-tag: ${{ github.ref }} 
+        release-id: ${{ github.ref }} 
         repo-token: ${{ secrets.GITHUB_TOKEN }}
