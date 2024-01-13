@@ -32,16 +32,17 @@ jobs:
 
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+    # You may pin to the exact commit or the version.
+    # uses: ncipollo/release-action@6c75be85e571768fa31b40abf38de58ba0397db5
+      uses: ncipollo/release-action@v1.13.0
       
     - name: Upload Release Asset
-      uses: csexton/release-asset-action@v2
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        pattern: ProCalculator/bin/Release/ProCalculator.exe
-        release-url: ${{ steps.create_release.outputs.upload_url }}
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ProCalculator/bin/Release/ProCalculator.exe
+        asset_name: ProCalculator.exe
+        asset_content_type: application/exe
