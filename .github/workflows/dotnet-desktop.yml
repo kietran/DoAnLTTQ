@@ -40,4 +40,4 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         tag: ${{ env.RELEASE_TAG }}
-        file: ProCalculator/bin/Release/
+        files: ProCalculator/bin/Release/
