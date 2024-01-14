@@ -48,6 +48,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <Target Name="ZipOutputPath" AfterTargets="Build">
+	  <ZipDirectory
+      SourceDirectory="bin\Release"
+		  DestinationFile="bin\Release.zip"/>
+  </Target>
   <PropertyGroup>
     <ManifestCertificateThumbprint>A0EAF7703B64374834CDCAA831EDEE2637F9BAD1</ManifestCertificateThumbprint>
   </PropertyGroup>
