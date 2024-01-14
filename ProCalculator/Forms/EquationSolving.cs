@@ -279,22 +279,22 @@ namespace ProCalculator
                 int numberOfSolutions = 0;
                 if (result[0].Imaginary == 0)
                 {
-                    toDisplay[0] = result[0].Real.Round(round);
+                    toDisplay[numberOfSolutions] = result[0].Real.Round(round);
                     numberOfSolutions++;
                 }
                 if (result[1].Imaginary == 0)
                 {
-                    toDisplay[1] = result[1].Real.Round(round);
+                    toDisplay[numberOfSolutions] = result[1].Real.Round(round);
                     numberOfSolutions++;
                 }
                 if (result[2].Imaginary == 0)
                 {
-                    toDisplay[2] = result[2].Real.Round(round);
+                    toDisplay[numberOfSolutions] = result[2].Real.Round(round);
                     numberOfSolutions++;
                 }
                 if (result[3].Imaginary == 0)
                 {
-                    toDisplay[3] = result[3].Real.Round(round);
+                    toDisplay[numberOfSolutions] = result[3].Real.Round(round);
                     numberOfSolutions++;
                 }
                 PolyFourDegreeResult1.Hide();

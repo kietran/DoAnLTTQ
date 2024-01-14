@@ -185,10 +185,10 @@ namespace CustomUserControls.RoundedPanel
                 //finish
                 if (step <= 1)
                 {
-                    isPlayingAnimation = false;
                     Location = end;
                     animationTmr.Stop();
-                    animationTmr.Dispose(); 
+                    animationTmr.Dispose();
+                    isPlayingAnimation = false;
                 }
                 step--;
             };

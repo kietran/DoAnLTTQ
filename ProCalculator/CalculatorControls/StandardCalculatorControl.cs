@@ -49,12 +49,15 @@ namespace ProCalculator
         }
 
         //number panel
-        static public void OpenNumberPanel()
+        static public void OpenNumberPanel(bool responsiveTurn)
         {
             if (form1.NumberPanel.isPlayingAnimation)
             {
                 return;
             }
+            form1.numberPanelOn = true;
+            form1.disableResponsive = !responsiveTurn;
+            form1.NumberPanel.Show();
             form1.MainPanel_OpenNumberPanelButton.InteriorColor = Color.FromArgb(150, 180, 94);
             Point NumbStart = new Point(0, form1.MainPanel.Height - form1.NumberPanel.Height);
             Point NumbEnd = new Point(0, form1.MainPanel.Height + 5);  
@@ -62,13 +65,15 @@ namespace ProCalculator
             if (form1.funcPanelOn)
                 NumbEnd.Y = form1.MainPanel.Height + form1.FunctionPanel.Height + 10;
             form1.NumberPanel.StartSliding(NumbStart, NumbEnd,20,3);
+
         }
-        static public void CloseNumberPanel()
+        static public void CloseNumberPanel(bool responsiveTurn)
         {
             if (form1.NumberPanel.isPlayingAnimation)
             {
                 return;
             }
+            form1.disableResponsive = !responsiveTurn;
             form1.MainPanel_OpenNumberPanelButton.InteriorColor = Color.FromArgb(205, 235, 139);
             Point NumbStart = new Point();
             NumbStart.X = 0;
@@ -82,16 +87,21 @@ namespace ProCalculator
             }
             Point NumbEnd = new Point(0, form1.MainPanel.Height - form1.NumberPanel.Height);
             form1.NumberPanel.StartSliding(NumbStart, NumbEnd, 20, 3);
+
+            form1.numberPanelOn = false;
         }
         //func panel
-        static public void OpenFuncPanel()
+        static public void OpenFuncPanel(bool responsiveTurn)
         {
             if (form1.FunctionPanel.isPlayingAnimation)
             {
                 return;
             }
+            form1.funcPanelOn = true;
+            form1.disableResponsive = !responsiveTurn;
             form1.MainPanel_OpenFuncPanelButton.InteriorColor = Color.FromArgb(200, 187, 149);
-            
+            form1.FunctionPanel.Show();
+
             Point FuncStart = new Point(0, form1.MainPanel.Height-form1.FunctionPanel.Height);
             Point FuncEnd = new Point(0, form1.MainPanel.Height+5);
 
@@ -111,12 +121,13 @@ namespace ProCalculator
                 form1.NumberPanel.StartSliding(NumbStart, NumbEnd, 20, 2);
             }
         }
-        static public void CloseFuncPanel()
+        static public void CloseFuncPanel(bool responsiveTurn)
         {
             if (form1.FunctionPanel.isPlayingAnimation)
             {
                 return;
             }
+            form1.disableResponsive = !responsiveTurn;
             form1.MainPanel_OpenFuncPanelButton.InteriorColor = Color.FromArgb(255, 242, 204);
 
             Point FuncEnd = new Point(0, form1.MainPanel.Height - form1.FunctionPanel.Height);
@@ -127,40 +138,38 @@ namespace ProCalculator
             //Check if Number Panel is on
             if (form1.numberPanelOn)
             {
-                Point NumbEnd = new Point();
-                NumbEnd.X = 0;
-                NumbEnd.Y = FuncStart.Y;
-
-                Point NumbStart = new Point();
-                NumbStart.X = 0;
-                NumbStart.Y = form1.NumberPanel.Location.Y;
-
-                form1.NumberPanel.StartSliding(NumbStart, NumbEnd, 30, 2);
+                form1.NumberPanel.Location = FuncStart;
+                
             }
-            form1.MemoryPanel.Height -= form1.FunctionPanel.Height;
+            form1.funcPanelOn = false;
         }
         //meory panel
-        static public void OpenMemoryPanel()
+        static public void OpenMemoryPanel(bool responsiveTurn)
         {
             if (form1.MemoryPanel.isPlayingAnimation)
             {
                 return;
             }
+            form1.disableResponsive = !responsiveTurn;
+            form1.MemoryPanel.Show();
             form1.MainPanel_OpenMemoryPanelButton.InteriorColor = Color.FromArgb(193, 151, 141);
             Point start = new Point(form1.MainPanel.Width - form1.MemoryPanel.Width,0);
             Point end = new Point(form1.MainPanel.Width + 5, 0);
             form1.MemoryPanel.StartSliding(start, end, 10, 2);  
+            form1.memoryPanelOn = true;
         }
-        static public void CloseMemoryPanel()
+        static public void CloseMemoryPanel(bool responsiveTurn)
         {
             if (form1.MemoryPanel.isPlayingAnimation)
             {
                 return;
             }
+            form1.disableResponsive = !responsiveTurn;
             form1.MainPanel_OpenMemoryPanelButton.InteriorColor = Color.FromArgb(248, 206, 204);
             Point start = new Point(form1.MainPanel.Width - form1.MemoryPanel.Width, 0);
             Point end = new Point(form1.MainPanel.Width + 5, 0);
             form1.MemoryPanel.StartSliding(end, start, 10, 2);
+            form1.memoryPanelOn = false;
         }
 
         //form opener
@@ -170,6 +179,7 @@ namespace ProCalculator
             {
                 return;
             }
+            form1.formOpenerPanelOn = true;
             form1.FormOpenerPanel.Height = form1.MemoryPanel.Height;
             form1.FormOpenerPanel.Show();
             form1.FormOpenerPanel.BringToFront();
@@ -305,7 +315,7 @@ namespace ProCalculator
                 }
             }
             form1.CTRL_Ac.TextColor = Color.DarkRed;
-            form1.CTRL_Del.TextColor = Color.DarkRed;
+            form1.CTRL_Back.TextColor = Color.DarkRed;
 
             form1.NUMB_0.InteriorColor = Color.White;
             form1.NUMB_0.MouseHoveringBackColor = Color.FromArgb(251, 252, 253);
@@ -424,6 +434,7 @@ namespace ProCalculator
             form1.FormOpenerPanel_LightTheme.MouseClickBackColor = Color.LightGray;
 
             form1.MemoryPanel_Title.ForeColor = Color.Black;
+            TurnLightModeForMemory();
             CloseFormOpenerPanel();
         }
         static public void SwitchToDarkTheme()
@@ -446,7 +457,7 @@ namespace ProCalculator
                 }
             }
             form1.CTRL_Ac.TextColor = Color.Gold;
-            form1.CTRL_Del.TextColor = Color.Gold;
+            form1.CTRL_Back.TextColor = Color.Gold;
 
             form1.NUMB_0.InteriorColor = Color.FromArgb(57, 58, 67);
             form1.NUMB_1.InteriorColor = Color.FromArgb(57, 58, 67);
@@ -459,7 +470,6 @@ namespace ProCalculator
             form1.NUMB_8.InteriorColor = Color.FromArgb(57, 58, 67);
             form1.NUMB_9.InteriorColor = Color.FromArgb(57, 58, 67);
             form1.MISC_Dot.InteriorColor = Color.FromArgb(57, 58, 67);
-            form1.FUNC_Negate.InteriorColor = Color.FromArgb(57, 58, 67);
             //func panel
             form1.FunctionPanel.BorderWidth = 0;
             for (int i = 0; i < form1.FunctionPanel.Controls.Count; i++)
@@ -528,6 +538,7 @@ namespace ProCalculator
             form1.FormOpenerPanel_LightTheme.MouseClickBackColor = Color.FromArgb(48, 50, 59);
 
             form1.MemoryPanel_Title.ForeColor = Color.White;
+            TurnDarkModeForMemory();
             CloseFormOpenerPanel();
         }
     }
@@ -734,6 +745,13 @@ namespace ProCalculator
         {
             Tuple<string, string> inputOutput = new Tuple<string, string>(input, output);
             MemoryBlock comp = new MemoryBlock();
+            if (form1.darkModeOn)
+            {
+                comp.Input.ForeColor = Color.WhiteSmoke;
+                comp.Output.ForeColor = Color.White;
+                comp.BorderColor = Color.WhiteSmoke;
+            }
+            comp.Width = form1.MemoryPanel.Width - 5;
             form1.MemoryPanel.Controls.Add(comp);
             //Display om-screen memory block
             var temp = inputOutput;
@@ -759,5 +777,32 @@ namespace ProCalculator
             updateMemoryBlockPositionStartAfterPos(0);
         }
 
+        static public void TurnDarkModeForMemory()
+        {
+            for(int i = 0;i < memoryBlocks.Count; i++)
+            {
+                memoryBlocks[i].Input.ForeColor = Color.WhiteSmoke;
+                memoryBlocks[i].Output.ForeColor = Color.White;
+                memoryBlocks[i].BorderColor = Color.WhiteSmoke;
+            }
+        }
+        static public void TurnLightModeForMemory()
+        {
+            for (int i = 0; i < memoryBlocks.Count; i++)
+            {
+                memoryBlocks[i].Input.ForeColor = Color.DimGray;
+                memoryBlocks[i].Output.ForeColor = Color.Black;
+                memoryBlocks[i].BorderColor = Color.Gray;
+            }
+        }
+        static public void ResizeMemoryBlock()
+        {
+            for (int i = 0; i < memoryBlocks.Count; i++)
+            {
+                memoryBlocks[i].Width = form1.MemoryPanel.Width - 5;
+                memoryBlocks[i].Output.ForeColor = Color.Black;
+                memoryBlocks[i].BorderColor = Color.Gainsboro;
+            }
+        }
     }
 }

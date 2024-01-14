@@ -29,7 +29,27 @@
         internal void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StandardCalculator));
-            this.DummyPanel = new System.Windows.Forms.Panel();
+            this.NumberPanel = new CustomUserControls.RoundedPanel.RoundedPanel();
+            this.CTRL_Ac = new CustomUserControls.RoundedButton.RoundedButton();
+            this.NUMB_7 = new CustomUserControls.RoundedButton.RoundedButton();
+            this.NUMB_4 = new CustomUserControls.RoundedButton.RoundedButton();
+            this.NUMB_1 = new CustomUserControls.RoundedButton.RoundedButton();
+            this.NUMB_0 = new CustomUserControls.RoundedButton.RoundedButton();
+            this.FUNC_Negate = new CustomUserControls.RoundedButton.RoundedButton();
+            this.NUMB_8 = new CustomUserControls.RoundedButton.RoundedButton();
+            this.NUMB_5 = new CustomUserControls.RoundedButton.RoundedButton();
+            this.NUMB_2 = new CustomUserControls.RoundedButton.RoundedButton();
+            this.MISC_Dot = new CustomUserControls.RoundedButton.RoundedButton();
+            this.CTRL_Back = new CustomUserControls.RoundedButton.RoundedButton();
+            this.NUMB_9 = new CustomUserControls.RoundedButton.RoundedButton();
+            this.NUMB_6 = new CustomUserControls.RoundedButton.RoundedButton();
+            this.NUMB_3 = new CustomUserControls.RoundedButton.RoundedButton();
+            this.MISC_Ans = new CustomUserControls.RoundedButton.RoundedButton();
+            this.OPER_Div = new CustomUserControls.RoundedButton.RoundedButton();
+            this.OPER_Mul = new CustomUserControls.RoundedButton.RoundedButton();
+            this.OPER_Sub = new CustomUserControls.RoundedButton.RoundedButton();
+            this.OPER_Plus = new CustomUserControls.RoundedButton.RoundedButton();
+            this.CTRL_Equal = new CustomUserControls.RoundedButton.RoundedButton();
             this.MainPanel = new CustomUserControls.RoundedPanel.RoundedPanel();
             this.MainPanel_ThereIsMore = new System.Windows.Forms.Label();
             this.MainPanel_OpenFormOpenerPanelButton = new System.Windows.Forms.PictureBox();
@@ -43,10 +63,10 @@
             this.MainPanel_OnTopButtonWithDeclineMark = new System.Windows.Forms.PictureBox();
             this.MainPanel_CurrentModeTitle = new System.Windows.Forms.Label();
             this.MainPanel_DecorLine4 = new System.Windows.Forms.PictureBox();
-            this.MainPanel_InputTextBox = new CustomUserControls.CalculatorTextBox.CalculatorTextbox();
             this.MainPanel_NotifyOutput = new System.Windows.Forms.Label();
             this.MainPanel_OutputTextbox = new System.Windows.Forms.Label();
             this.MainPanel_PromptUserToEnter = new System.Windows.Forms.Label();
+            this.MainPanel_InputTextBox = new CustomUserControls.CalculatorTextBox.CalculatorTextbox();
             this.FormOpenerPanel = new CustomUserControls.RoundedPanel.RoundedPanel();
             this.FormOpenerPanel_DarkTheme = new CustomUserControls.RoundedButton.RoundedButton();
             this.FormOpenerPanel_LightTheme = new CustomUserControls.RoundedButton.RoundedButton();
@@ -57,27 +77,6 @@
             this.FormOpenerPanel_MatrixOpener = new CustomUserControls.RoundedButton.RoundedButton();
             this.FormOpenerPanel_TitleLabel1 = new System.Windows.Forms.Label();
             this.FormOpenerPanel_CloseButton = new System.Windows.Forms.PictureBox();
-            this.NumberPanel = new CustomUserControls.RoundedPanel.RoundedPanel();
-            this.CTRL_Ac = new CustomUserControls.RoundedButton.RoundedButton();
-            this.NUMB_7 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.NUMB_4 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.NUMB_1 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.NUMB_0 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.FUNC_Negate = new CustomUserControls.RoundedButton.RoundedButton();
-            this.NUMB_8 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.NUMB_5 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.NUMB_2 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.MISC_Dot = new CustomUserControls.RoundedButton.RoundedButton();
-            this.CTRL_Del = new CustomUserControls.RoundedButton.RoundedButton();
-            this.NUMB_9 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.NUMB_6 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.NUMB_3 = new CustomUserControls.RoundedButton.RoundedButton();
-            this.MISC_Ans = new CustomUserControls.RoundedButton.RoundedButton();
-            this.OPER_Div = new CustomUserControls.RoundedButton.RoundedButton();
-            this.OPER_Mul = new CustomUserControls.RoundedButton.RoundedButton();
-            this.OPER_Sub = new CustomUserControls.RoundedButton.RoundedButton();
-            this.OPER_Plus = new CustomUserControls.RoundedButton.RoundedButton();
-            this.CTRL_Equal = new CustomUserControls.RoundedButton.RoundedButton();
             this.FunctionPanel = new CustomUserControls.RoundedPanel.RoundedPanel();
             this.STATE_Degree = new CustomUserControls.RoundedButton.RoundedButton();
             this.FUNC_Not = new CustomUserControls.RoundedButton.RoundedButton();
@@ -98,6 +97,7 @@
             this.MemoryPanel_DecorLine1 = new System.Windows.Forms.PictureBox();
             this.MemoryPanel_Title = new System.Windows.Forms.Label();
             this.ClearMemory = new System.Windows.Forms.Button();
+            this.NumberPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenFormOpenerPanelButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_DecorLine1)).BeginInit();
@@ -108,436 +108,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_DecorLine4)).BeginInit();
             this.FormOpenerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FormOpenerPanel_CloseButton)).BeginInit();
-            this.NumberPanel.SuspendLayout();
             this.FunctionPanel.SuspendLayout();
             this.MemoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemoryPanel_DecorLine1)).BeginInit();
             this.SuspendLayout();
             // 
-            // DummyPanel
-            // 
-            this.DummyPanel.Location = new System.Drawing.Point(0, 0);
-            this.DummyPanel.Name = "DummyPanel";
-            this.DummyPanel.Size = new System.Drawing.Size(415, 1000);
-            this.DummyPanel.TabIndex = 19;
-            // 
-            // MainPanel
-            // 
-            this.MainPanel.ArcSize = 15;
-            this.MainPanel.BackColor = System.Drawing.Color.Transparent;
-            this.MainPanel.BorderColor = System.Drawing.Color.Transparent;
-            this.MainPanel.BorderWidth = 1;
-            this.MainPanel.Controls.Add(this.MainPanel_ThereIsMore);
-            this.MainPanel.Controls.Add(this.MainPanel_OpenFormOpenerPanelButton);
-            this.MainPanel.Controls.Add(this.MainPanel_OpenMemoryPanelButton);
-            this.MainPanel.Controls.Add(this.MainPanel_OpenNumberPanelButton);
-            this.MainPanel.Controls.Add(this.MainPanel_OpenFuncPanelButton);
-            this.MainPanel.Controls.Add(this.MainPanel_DecorLine1);
-            this.MainPanel.Controls.Add(this.MainPanel_DecorLine2);
-            this.MainPanel.Controls.Add(this.MainPanel_DecorLine3);
-            this.MainPanel.Controls.Add(this.MainPanel_OnTopButton);
-            this.MainPanel.Controls.Add(this.MainPanel_OnTopButtonWithDeclineMark);
-            this.MainPanel.Controls.Add(this.MainPanel_CurrentModeTitle);
-            this.MainPanel.Controls.Add(this.MainPanel_DecorLine4);
-            this.MainPanel.Controls.Add(this.MainPanel_InputTextBox);
-            this.MainPanel.Controls.Add(this.MainPanel_NotifyOutput);
-            this.MainPanel.Controls.Add(this.MainPanel_OutputTextbox);
-            this.MainPanel.Controls.Add(this.MainPanel_PromptUserToEnter);
-            this.MainPanel.InteriorColor = System.Drawing.Color.Transparent;
-            this.MainPanel.Location = new System.Drawing.Point(0, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(415, 275);
-            this.MainPanel.TabIndex = 12;
-            this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
-            // 
-            // MainPanel_ThereIsMore
-            // 
-            this.MainPanel_ThereIsMore.AutoSize = true;
-            this.MainPanel_ThereIsMore.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_ThereIsMore.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.MainPanel_ThereIsMore.Location = new System.Drawing.Point(376, 100);
-            this.MainPanel_ThereIsMore.Name = "MainPanel_ThereIsMore";
-            this.MainPanel_ThereIsMore.Size = new System.Drawing.Size(33, 33);
-            this.MainPanel_ThereIsMore.TabIndex = 19;
-            this.MainPanel_ThereIsMore.Text = "...";
-            // 
-            // MainPanel_OpenFormOpenerPanelButton
-            // 
-            this.MainPanel_OpenFormOpenerPanelButton.BackColor = System.Drawing.Color.Transparent;
-            this.MainPanel_OpenFormOpenerPanelButton.Image = ((System.Drawing.Image)(resources.GetObject("MainPanel_OpenFormOpenerPanelButton.Image")));
-            this.MainPanel_OpenFormOpenerPanelButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("MainPanel_OpenFormOpenerPanelButton.InitialImage")));
-            this.MainPanel_OpenFormOpenerPanelButton.Location = new System.Drawing.Point(22, 41);
-            this.MainPanel_OpenFormOpenerPanelButton.Name = "MainPanel_OpenFormOpenerPanelButton";
-            this.MainPanel_OpenFormOpenerPanelButton.Size = new System.Drawing.Size(30, 30);
-            this.MainPanel_OpenFormOpenerPanelButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.MainPanel_OpenFormOpenerPanelButton.TabIndex = 0;
-            this.MainPanel_OpenFormOpenerPanelButton.TabStop = false;
-            this.MainPanel_OpenFormOpenerPanelButton.Click += new System.EventHandler(this.MainPanel_OpenFormOpenerPanelButton_Click);
-            // 
-            // MainPanel_OpenMemoryPanelButton
-            // 
-            this.MainPanel_OpenMemoryPanelButton.ArcSize = 5;
-            this.MainPanel_OpenMemoryPanelButton.BackColor = System.Drawing.Color.Transparent;
-            this.MainPanel_OpenMemoryPanelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(84)))), ((int)(((byte)(80)))));
-            this.MainPanel_OpenMemoryPanelButton.BorderWidth = 1;
-            this.MainPanel_OpenMemoryPanelButton.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(206)))), ((int)(((byte)(204)))));
-            this.MainPanel_OpenMemoryPanelButton.Location = new System.Drawing.Point(359, 232);
-            this.MainPanel_OpenMemoryPanelButton.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(151)))), ((int)(((byte)(141)))));
-            this.MainPanel_OpenMemoryPanelButton.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(181)))), ((int)(((byte)(171)))));
-            this.MainPanel_OpenMemoryPanelButton.Name = "MainPanel_OpenMemoryPanelButton";
-            this.MainPanel_OpenMemoryPanelButton.Size = new System.Drawing.Size(45, 30);
-            this.MainPanel_OpenMemoryPanelButton.TabIndex = 17;
-            this.MainPanel_OpenMemoryPanelButton.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.MainPanel_OpenMemoryPanelButton.TextColor = System.Drawing.SystemColors.ControlText;
-            this.MainPanel_OpenMemoryPanelButton.TextContent = "Mem";
-            this.MainPanel_OpenMemoryPanelButton.TextFont = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_OpenMemoryPanelButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainPanel_OpenMemoryPanelButton_MouseUp);
-            // 
-            // MainPanel_OpenNumberPanelButton
-            // 
-            this.MainPanel_OpenNumberPanelButton.ArcSize = 5;
-            this.MainPanel_OpenNumberPanelButton.BackColor = System.Drawing.Color.Transparent;
-            this.MainPanel_OpenNumberPanelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
-            this.MainPanel_OpenNumberPanelButton.BorderWidth = 1;
-            this.MainPanel_OpenNumberPanelButton.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(235)))), ((int)(((byte)(139)))));
-            this.MainPanel_OpenNumberPanelButton.Location = new System.Drawing.Point(239, 232);
-            this.MainPanel_OpenNumberPanelButton.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(180)))), ((int)(((byte)(94)))));
-            this.MainPanel_OpenNumberPanelButton.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(210)))), ((int)(((byte)(114)))));
-            this.MainPanel_OpenNumberPanelButton.Name = "MainPanel_OpenNumberPanelButton";
-            this.MainPanel_OpenNumberPanelButton.Size = new System.Drawing.Size(40, 30);
-            this.MainPanel_OpenNumberPanelButton.TabIndex = 17;
-            this.MainPanel_OpenNumberPanelButton.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.MainPanel_OpenNumberPanelButton.TextColor = System.Drawing.SystemColors.ControlText;
-            this.MainPanel_OpenNumberPanelButton.TextContent = "+/-";
-            this.MainPanel_OpenNumberPanelButton.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_OpenNumberPanelButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainPanel_OpenNumberPanelButton_MouseUp);
-            // 
-            // MainPanel_OpenFuncPanelButton
-            // 
-            this.MainPanel_OpenFuncPanelButton.ArcSize = 5;
-            this.MainPanel_OpenFuncPanelButton.BackColor = System.Drawing.Color.Transparent;
-            this.MainPanel_OpenFuncPanelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(182)))), ((int)(((byte)(86)))));
-            this.MainPanel_OpenFuncPanelButton.BorderWidth = 1;
-            this.MainPanel_OpenFuncPanelButton.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(204)))));
-            this.MainPanel_OpenFuncPanelButton.Location = new System.Drawing.Point(299, 232);
-            this.MainPanel_OpenFuncPanelButton.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(187)))), ((int)(((byte)(149)))));
-            this.MainPanel_OpenFuncPanelButton.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(217)))), ((int)(((byte)(179)))));
-            this.MainPanel_OpenFuncPanelButton.Name = "MainPanel_OpenFuncPanelButton";
-            this.MainPanel_OpenFuncPanelButton.Size = new System.Drawing.Size(40, 30);
-            this.MainPanel_OpenFuncPanelButton.TabIndex = 16;
-            this.MainPanel_OpenFuncPanelButton.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.MainPanel_OpenFuncPanelButton.TextColor = System.Drawing.SystemColors.ControlText;
-            this.MainPanel_OpenFuncPanelButton.TextContent = "f(x)";
-            this.MainPanel_OpenFuncPanelButton.TextFont = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_OpenFuncPanelButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainPanel_OpenFuncPanelButton_MouseUp);
-            // 
-            // MainPanel_DecorLine1
-            // 
-            this.MainPanel_DecorLine1.BackColor = System.Drawing.Color.Silver;
-            this.MainPanel_DecorLine1.Location = new System.Drawing.Point(11, 76);
-            this.MainPanel_DecorLine1.Name = "MainPanel_DecorLine1";
-            this.MainPanel_DecorLine1.Size = new System.Drawing.Size(390, 1);
-            this.MainPanel_DecorLine1.TabIndex = 8;
-            this.MainPanel_DecorLine1.TabStop = false;
-            // 
-            // MainPanel_DecorLine2
-            // 
-            this.MainPanel_DecorLine2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.MainPanel_DecorLine2.Location = new System.Drawing.Point(11, 77);
-            this.MainPanel_DecorLine2.Name = "MainPanel_DecorLine2";
-            this.MainPanel_DecorLine2.Size = new System.Drawing.Size(390, 1);
-            this.MainPanel_DecorLine2.TabIndex = 7;
-            this.MainPanel_DecorLine2.TabStop = false;
-            // 
-            // MainPanel_DecorLine3
-            // 
-            this.MainPanel_DecorLine3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.MainPanel_DecorLine3.Location = new System.Drawing.Point(28, 218);
-            this.MainPanel_DecorLine3.Name = "MainPanel_DecorLine3";
-            this.MainPanel_DecorLine3.Size = new System.Drawing.Size(370, 1);
-            this.MainPanel_DecorLine3.TabIndex = 9;
-            this.MainPanel_DecorLine3.TabStop = false;
-            // 
-            // MainPanel_OnTopButton
-            // 
-            this.MainPanel_OnTopButton.BackColor = System.Drawing.Color.Transparent;
-            this.MainPanel_OnTopButton.Image = global::ProCalculator.Properties.Resources.push_pin;
-            this.MainPanel_OnTopButton.InitialImage = null;
-            this.MainPanel_OnTopButton.Location = new System.Drawing.Point(40, 237);
-            this.MainPanel_OnTopButton.Name = "MainPanel_OnTopButton";
-            this.MainPanel_OnTopButton.Size = new System.Drawing.Size(30, 30);
-            this.MainPanel_OnTopButton.TabIndex = 11;
-            this.MainPanel_OnTopButton.TabStop = false;
-            this.MainPanel_OnTopButton.Click += new System.EventHandler(this.MainPanel_OnTopButton_Click);
-            // 
-            // MainPanel_OnTopButtonWithDeclineMark
-            // 
-            this.MainPanel_OnTopButtonWithDeclineMark.BackColor = System.Drawing.Color.Transparent;
-            this.MainPanel_OnTopButtonWithDeclineMark.Image = global::ProCalculator.Properties.Resources.push_pin_with_decline;
-            this.MainPanel_OnTopButtonWithDeclineMark.InitialImage = null;
-            this.MainPanel_OnTopButtonWithDeclineMark.Location = new System.Drawing.Point(27, 224);
-            this.MainPanel_OnTopButtonWithDeclineMark.Name = "MainPanel_OnTopButtonWithDeclineMark";
-            this.MainPanel_OnTopButtonWithDeclineMark.Size = new System.Drawing.Size(55, 55);
-            this.MainPanel_OnTopButtonWithDeclineMark.TabIndex = 18;
-            this.MainPanel_OnTopButtonWithDeclineMark.TabStop = false;
-            this.MainPanel_OnTopButtonWithDeclineMark.Click += new System.EventHandler(this.MainPanel_OnTopButtonWithDeclineMark_Click);
-            // 
-            // MainPanel_CurrentModeTitle
-            // 
-            this.MainPanel_CurrentModeTitle.AutoSize = true;
-            this.MainPanel_CurrentModeTitle.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_CurrentModeTitle.Location = new System.Drawing.Point(58, 40);
-            this.MainPanel_CurrentModeTitle.Name = "MainPanel_CurrentModeTitle";
-            this.MainPanel_CurrentModeTitle.Size = new System.Drawing.Size(118, 33);
-            this.MainPanel_CurrentModeTitle.TabIndex = 1;
-            this.MainPanel_CurrentModeTitle.Text = "Standard";
-            // 
-            // MainPanel_DecorLine4
-            // 
-            this.MainPanel_DecorLine4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.MainPanel_DecorLine4.Location = new System.Drawing.Point(29, 219);
-            this.MainPanel_DecorLine4.Name = "MainPanel_DecorLine4";
-            this.MainPanel_DecorLine4.Size = new System.Drawing.Size(370, 1);
-            this.MainPanel_DecorLine4.TabIndex = 10;
-            this.MainPanel_DecorLine4.TabStop = false;
-            // 
-            // MainPanel_InputTextBox
-            // 
-            this.MainPanel_InputTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.MainPanel_InputTextBox.BlinkingCursorColor = System.Drawing.Color.Black;
-            this.MainPanel_InputTextBox.BlinkingCursorWidth = 1;
-            this.MainPanel_InputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.MainPanel_InputTextBox.CurrentCursorPosition = 0;
-            this.MainPanel_InputTextBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_InputTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.MainPanel_InputTextBox.Location = new System.Drawing.Point(29, 97);
-            this.MainPanel_InputTextBox.Name = "MainPanel_InputTextBox";
-            this.MainPanel_InputTextBox.ReadOnly = true;
-            this.MainPanel_InputTextBox.Size = new System.Drawing.Size(341, 33);
-            this.MainPanel_InputTextBox.TabIndex = 15;
-            this.MainPanel_InputTextBox.TickInterval = 700;
-            // 
-            // MainPanel_NotifyOutput
-            // 
-            this.MainPanel_NotifyOutput.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_NotifyOutput.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.MainPanel_NotifyOutput.Location = new System.Drawing.Point(29, 147);
-            this.MainPanel_NotifyOutput.Name = "MainPanel_NotifyOutput";
-            this.MainPanel_NotifyOutput.Size = new System.Drawing.Size(378, 59);
-            this.MainPanel_NotifyOutput.TabIndex = 14;
-            this.MainPanel_NotifyOutput.Text = "Output here...";
-            this.MainPanel_NotifyOutput.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // MainPanel_OutputTextbox
-            // 
-            this.MainPanel_OutputTextbox.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_OutputTextbox.Location = new System.Drawing.Point(29, 147);
-            this.MainPanel_OutputTextbox.Name = "MainPanel_OutputTextbox";
-            this.MainPanel_OutputTextbox.Size = new System.Drawing.Size(378, 59);
-            this.MainPanel_OutputTextbox.TabIndex = 3;
-            this.MainPanel_OutputTextbox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // MainPanel_PromptUserToEnter
-            // 
-            this.MainPanel_PromptUserToEnter.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_PromptUserToEnter.ForeColor = System.Drawing.Color.DimGray;
-            this.MainPanel_PromptUserToEnter.Location = new System.Drawing.Point(29, 97);
-            this.MainPanel_PromptUserToEnter.Name = "MainPanel_PromptUserToEnter";
-            this.MainPanel_PromptUserToEnter.Size = new System.Drawing.Size(341, 35);
-            this.MainPanel_PromptUserToEnter.TabIndex = 13;
-            this.MainPanel_PromptUserToEnter.Text = "Enter expression here...";
-            // 
-            // FormOpenerPanel
-            // 
-            this.FormOpenerPanel.ArcSize = 10;
-            this.FormOpenerPanel.AutoScroll = true;
-            this.FormOpenerPanel.BackColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel.BorderColor = System.Drawing.Color.DarkGray;
-            this.FormOpenerPanel.BorderWidth = 1;
-            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_DarkTheme);
-            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_LightTheme);
-            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_TitleLabel2);
-            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_GraphOpener);
-            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_ConverterOpener);
-            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_EquationOpener);
-            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_MatrixOpener);
-            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_TitleLabel1);
-            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_CloseButton);
-            this.FormOpenerPanel.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.FormOpenerPanel.Location = new System.Drawing.Point(-10, 12);
-            this.FormOpenerPanel.Name = "FormOpenerPanel";
-            this.FormOpenerPanel.Size = new System.Drawing.Size(233, 760);
-            this.FormOpenerPanel.TabIndex = 19;
-            // 
-            // FormOpenerPanel_DarkTheme
-            // 
-            this.FormOpenerPanel_DarkTheme.ArcSize = 5;
-            this.FormOpenerPanel_DarkTheme.BackColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_DarkTheme.BorderColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_DarkTheme.BorderWidth = 0;
-            this.FormOpenerPanel_DarkTheme.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_DarkTheme.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormOpenerPanel_DarkTheme.InteriorColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_DarkTheme.Location = new System.Drawing.Point(10, 314);
-            this.FormOpenerPanel_DarkTheme.MouseClickBackColor = System.Drawing.Color.LightGray;
-            this.FormOpenerPanel_DarkTheme.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
-            this.FormOpenerPanel_DarkTheme.Name = "FormOpenerPanel_DarkTheme";
-            this.FormOpenerPanel_DarkTheme.Size = new System.Drawing.Size(220, 35);
-            this.FormOpenerPanel_DarkTheme.TabIndex = 6;
-            this.FormOpenerPanel_DarkTheme.Text = "Solving equation(s)\r\n";
-            this.FormOpenerPanel_DarkTheme.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FormOpenerPanel_DarkTheme.TextColor = System.Drawing.SystemColors.ControlDark;
-            this.FormOpenerPanel_DarkTheme.TextContent = "      Dark theme";
-            this.FormOpenerPanel_DarkTheme.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_DarkTheme.Click += new System.EventHandler(this.FormOpenerPanel_DarkTheme_Click);
-            // 
-            // FormOpenerPanel_LightTheme
-            // 
-            this.FormOpenerPanel_LightTheme.ArcSize = 5;
-            this.FormOpenerPanel_LightTheme.BackColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_LightTheme.BorderColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_LightTheme.BorderWidth = 0;
-            this.FormOpenerPanel_LightTheme.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_LightTheme.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormOpenerPanel_LightTheme.InteriorColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_LightTheme.Location = new System.Drawing.Point(10, 279);
-            this.FormOpenerPanel_LightTheme.MouseClickBackColor = System.Drawing.Color.LightGray;
-            this.FormOpenerPanel_LightTheme.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
-            this.FormOpenerPanel_LightTheme.Name = "FormOpenerPanel_LightTheme";
-            this.FormOpenerPanel_LightTheme.Size = new System.Drawing.Size(220, 35);
-            this.FormOpenerPanel_LightTheme.TabIndex = 5;
-            this.FormOpenerPanel_LightTheme.Text = "Matrix calculator";
-            this.FormOpenerPanel_LightTheme.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FormOpenerPanel_LightTheme.TextColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormOpenerPanel_LightTheme.TextContent = "      Light theme";
-            this.FormOpenerPanel_LightTheme.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_LightTheme.Click += new System.EventHandler(this.FormOpenerPanel_LightTheme_Click);
-            // 
-            // FormOpenerPanel_TitleLabel2
-            // 
-            this.FormOpenerPanel_TitleLabel2.AutoSize = true;
-            this.FormOpenerPanel_TitleLabel2.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_TitleLabel2.Location = new System.Drawing.Point(22, 247);
-            this.FormOpenerPanel_TitleLabel2.Name = "FormOpenerPanel_TitleLabel2";
-            this.FormOpenerPanel_TitleLabel2.Size = new System.Drawing.Size(89, 33);
-            this.FormOpenerPanel_TitleLabel2.TabIndex = 7;
-            this.FormOpenerPanel_TitleLabel2.Text = "Theme";
-            // 
-            // FormOpenerPanel_GraphOpener
-            // 
-            this.FormOpenerPanel_GraphOpener.ArcSize = 5;
-            this.FormOpenerPanel_GraphOpener.BackColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_GraphOpener.BorderColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_GraphOpener.BorderWidth = 0;
-            this.FormOpenerPanel_GraphOpener.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_GraphOpener.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormOpenerPanel_GraphOpener.InteriorColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_GraphOpener.Location = new System.Drawing.Point(10, 170);
-            this.FormOpenerPanel_GraphOpener.MouseClickBackColor = System.Drawing.Color.LightGray;
-            this.FormOpenerPanel_GraphOpener.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
-            this.FormOpenerPanel_GraphOpener.Name = "FormOpenerPanel_GraphOpener";
-            this.FormOpenerPanel_GraphOpener.Size = new System.Drawing.Size(220, 35);
-            this.FormOpenerPanel_GraphOpener.TabIndex = 6;
-            this.FormOpenerPanel_GraphOpener.Text = "Graph Calculator";
-            this.FormOpenerPanel_GraphOpener.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FormOpenerPanel_GraphOpener.TextColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormOpenerPanel_GraphOpener.TextContent = "      Graph calculator";
-            this.FormOpenerPanel_GraphOpener.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_GraphOpener.Click += new System.EventHandler(this.FormOpenerPanel_GraphOpener_Click);
-            // 
-            // FormOpenerPanel_ConverterOpener
-            // 
-            this.FormOpenerPanel_ConverterOpener.ArcSize = 5;
-            this.FormOpenerPanel_ConverterOpener.BackColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_ConverterOpener.BorderColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_ConverterOpener.BorderWidth = 0;
-            this.FormOpenerPanel_ConverterOpener.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_ConverterOpener.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormOpenerPanel_ConverterOpener.InteriorColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_ConverterOpener.Location = new System.Drawing.Point(10, 205);
-            this.FormOpenerPanel_ConverterOpener.MouseClickBackColor = System.Drawing.Color.LightGray;
-            this.FormOpenerPanel_ConverterOpener.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
-            this.FormOpenerPanel_ConverterOpener.Name = "FormOpenerPanel_ConverterOpener";
-            this.FormOpenerPanel_ConverterOpener.Size = new System.Drawing.Size(220, 35);
-            this.FormOpenerPanel_ConverterOpener.TabIndex = 5;
-            this.FormOpenerPanel_ConverterOpener.Text = "Converter";
-            this.FormOpenerPanel_ConverterOpener.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FormOpenerPanel_ConverterOpener.TextColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormOpenerPanel_ConverterOpener.TextContent = "      Converter";
-            this.FormOpenerPanel_ConverterOpener.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // FormOpenerPanel_EquationOpener
-            // 
-            this.FormOpenerPanel_EquationOpener.ArcSize = 5;
-            this.FormOpenerPanel_EquationOpener.BackColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_EquationOpener.BorderColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_EquationOpener.BorderWidth = 0;
-            this.FormOpenerPanel_EquationOpener.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_EquationOpener.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormOpenerPanel_EquationOpener.InteriorColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_EquationOpener.Location = new System.Drawing.Point(10, 135);
-            this.FormOpenerPanel_EquationOpener.MouseClickBackColor = System.Drawing.Color.LightGray;
-            this.FormOpenerPanel_EquationOpener.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
-            this.FormOpenerPanel_EquationOpener.Name = "FormOpenerPanel_EquationOpener";
-            this.FormOpenerPanel_EquationOpener.Size = new System.Drawing.Size(220, 35);
-            this.FormOpenerPanel_EquationOpener.TabIndex = 4;
-            this.FormOpenerPanel_EquationOpener.Text = "Solving equation(s)\r\n";
-            this.FormOpenerPanel_EquationOpener.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FormOpenerPanel_EquationOpener.TextColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormOpenerPanel_EquationOpener.TextContent = "      Solving equation(s)";
-            this.FormOpenerPanel_EquationOpener.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_EquationOpener.Click += new System.EventHandler(this.FormOpenerPanel_EquationOpener_Click);
-            // 
-            // FormOpenerPanel_MatrixOpener
-            // 
-            this.FormOpenerPanel_MatrixOpener.ArcSize = 5;
-            this.FormOpenerPanel_MatrixOpener.BackColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_MatrixOpener.BorderColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_MatrixOpener.BorderWidth = 0;
-            this.FormOpenerPanel_MatrixOpener.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_MatrixOpener.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormOpenerPanel_MatrixOpener.InteriorColor = System.Drawing.Color.Transparent;
-            this.FormOpenerPanel_MatrixOpener.Location = new System.Drawing.Point(10, 100);
-            this.FormOpenerPanel_MatrixOpener.MouseClickBackColor = System.Drawing.Color.LightGray;
-            this.FormOpenerPanel_MatrixOpener.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
-            this.FormOpenerPanel_MatrixOpener.Name = "FormOpenerPanel_MatrixOpener";
-            this.FormOpenerPanel_MatrixOpener.Size = new System.Drawing.Size(220, 35);
-            this.FormOpenerPanel_MatrixOpener.TabIndex = 3;
-            this.FormOpenerPanel_MatrixOpener.Text = "Matrix calculator";
-            this.FormOpenerPanel_MatrixOpener.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FormOpenerPanel_MatrixOpener.TextColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormOpenerPanel_MatrixOpener.TextContent = "      Matrix calculator";
-            this.FormOpenerPanel_MatrixOpener.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_MatrixOpener.Click += new System.EventHandler(this.FormOpenerPanel_MatrixOpener_Click);
-            // 
-            // FormOpenerPanel_TitleLabel1
-            // 
-            this.FormOpenerPanel_TitleLabel1.AutoSize = true;
-            this.FormOpenerPanel_TitleLabel1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormOpenerPanel_TitleLabel1.Location = new System.Drawing.Point(22, 65);
-            this.FormOpenerPanel_TitleLabel1.Name = "FormOpenerPanel_TitleLabel1";
-            this.FormOpenerPanel_TitleLabel1.Size = new System.Drawing.Size(199, 33);
-            this.FormOpenerPanel_TitleLabel1.TabIndex = 2;
-            this.FormOpenerPanel_TitleLabel1.Text = "Other Calculator";
-            // 
-            // FormOpenerPanel_CloseButton
-            // 
-            this.FormOpenerPanel_CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FormOpenerPanel_CloseButton.Image = ((System.Drawing.Image)(resources.GetObject("FormOpenerPanel_CloseButton.Image")));
-            this.FormOpenerPanel_CloseButton.Location = new System.Drawing.Point(32, 29);
-            this.FormOpenerPanel_CloseButton.Name = "FormOpenerPanel_CloseButton";
-            this.FormOpenerPanel_CloseButton.Size = new System.Drawing.Size(30, 30);
-            this.FormOpenerPanel_CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.FormOpenerPanel_CloseButton.TabIndex = 0;
-            this.FormOpenerPanel_CloseButton.TabStop = false;
-            this.FormOpenerPanel_CloseButton.Click += new System.EventHandler(this.FormOpenerPanel_CloseButton_Click);
-            // 
             // NumberPanel
             // 
-            this.NumberPanel.ArcSize = 10;
+            this.NumberPanel.ArcSize = 5;
             this.NumberPanel.BackColor = System.Drawing.Color.Transparent;
-            this.NumberPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.NumberPanel.BorderWidth = 1;
+            this.NumberPanel.BorderColor = System.Drawing.Color.Transparent;
+            this.NumberPanel.BorderWidth = 3;
             this.NumberPanel.Controls.Add(this.CTRL_Ac);
             this.NumberPanel.Controls.Add(this.NUMB_7);
             this.NumberPanel.Controls.Add(this.NUMB_4);
@@ -548,7 +129,7 @@
             this.NumberPanel.Controls.Add(this.NUMB_5);
             this.NumberPanel.Controls.Add(this.NUMB_2);
             this.NumberPanel.Controls.Add(this.MISC_Dot);
-            this.NumberPanel.Controls.Add(this.CTRL_Del);
+            this.NumberPanel.Controls.Add(this.CTRL_Back);
             this.NumberPanel.Controls.Add(this.NUMB_9);
             this.NumberPanel.Controls.Add(this.NUMB_6);
             this.NumberPanel.Controls.Add(this.NUMB_3);
@@ -564,6 +145,7 @@
             this.NumberPanel.Size = new System.Drawing.Size(415, 330);
             this.NumberPanel.TabIndex = 13;
             this.NumberPanel.LocationChanged += new System.EventHandler(this.NumberPanel_LocationChanged);
+            this.NumberPanel.Resize += new System.EventHandler(this.NumberPanel_Resize);
             // 
             // CTRL_Ac
             // 
@@ -765,27 +347,27 @@
             this.MISC_Dot.TextFont = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MISC_Dot.Click += new System.EventHandler(this.MISC_Dot_Click);
             // 
-            // CTRL_Del
+            // CTRL_Back
             // 
-            this.CTRL_Del.ArcSize = 7;
-            this.CTRL_Del.BackColor = System.Drawing.Color.Transparent;
-            this.CTRL_Del.BackgroundImage = global::ProCalculator.Properties.Resources.del_icon60;
-            this.CTRL_Del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.CTRL_Del.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.CTRL_Del.BorderWidth = 1;
-            this.CTRL_Del.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CTRL_Del.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.CTRL_Del.Location = new System.Drawing.Point(108, 8);
-            this.CTRL_Del.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.CTRL_Del.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.CTRL_Del.Name = "CTRL_Del";
-            this.CTRL_Del.Size = new System.Drawing.Size(97, 60);
-            this.CTRL_Del.TabIndex = 9;
-            this.CTRL_Del.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.CTRL_Del.TextColor = System.Drawing.Color.DarkRed;
-            this.CTRL_Del.TextContent = "Back";
-            this.CTRL_Del.TextFont = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CTRL_Del.Click += new System.EventHandler(this.CTRL_Del_Click);
+            this.CTRL_Back.ArcSize = 7;
+            this.CTRL_Back.BackColor = System.Drawing.Color.Transparent;
+            this.CTRL_Back.BackgroundImage = global::ProCalculator.Properties.Resources.del_icon60;
+            this.CTRL_Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.CTRL_Back.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.CTRL_Back.BorderWidth = 1;
+            this.CTRL_Back.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTRL_Back.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.CTRL_Back.Location = new System.Drawing.Point(108, 8);
+            this.CTRL_Back.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.CTRL_Back.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.CTRL_Back.Name = "CTRL_Back";
+            this.CTRL_Back.Size = new System.Drawing.Size(97, 60);
+            this.CTRL_Back.TabIndex = 9;
+            this.CTRL_Back.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CTRL_Back.TextColor = System.Drawing.Color.DarkRed;
+            this.CTRL_Back.TextContent = "Back";
+            this.CTRL_Back.TextFont = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTRL_Back.Click += new System.EventHandler(this.CTRL_Del_Click);
             // 
             // NUMB_9
             // 
@@ -967,12 +549,422 @@
             this.CTRL_Equal.TextFont = new System.Drawing.Font("Comic Sans MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CTRL_Equal.Click += new System.EventHandler(this.CTRL_Equal_Click);
             // 
+            // MainPanel
+            // 
+            this.MainPanel.ArcSize = 5;
+            this.MainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel.BorderColor = System.Drawing.Color.DimGray;
+            this.MainPanel.BorderWidth = 1;
+            this.MainPanel.Controls.Add(this.MainPanel_ThereIsMore);
+            this.MainPanel.Controls.Add(this.MainPanel_OpenFormOpenerPanelButton);
+            this.MainPanel.Controls.Add(this.MainPanel_OpenMemoryPanelButton);
+            this.MainPanel.Controls.Add(this.MainPanel_OpenNumberPanelButton);
+            this.MainPanel.Controls.Add(this.MainPanel_OpenFuncPanelButton);
+            this.MainPanel.Controls.Add(this.MainPanel_DecorLine1);
+            this.MainPanel.Controls.Add(this.MainPanel_DecorLine2);
+            this.MainPanel.Controls.Add(this.MainPanel_DecorLine3);
+            this.MainPanel.Controls.Add(this.MainPanel_OnTopButton);
+            this.MainPanel.Controls.Add(this.MainPanel_OnTopButtonWithDeclineMark);
+            this.MainPanel.Controls.Add(this.MainPanel_CurrentModeTitle);
+            this.MainPanel.Controls.Add(this.MainPanel_DecorLine4);
+            this.MainPanel.Controls.Add(this.MainPanel_NotifyOutput);
+            this.MainPanel.Controls.Add(this.MainPanel_OutputTextbox);
+            this.MainPanel.Controls.Add(this.MainPanel_PromptUserToEnter);
+            this.MainPanel.Controls.Add(this.MainPanel_InputTextBox);
+            this.MainPanel.InteriorColor = System.Drawing.Color.Transparent;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(415, 275);
+            this.MainPanel.TabIndex = 12;
+            this.MainPanel.SizeChanged += new System.EventHandler(this.MainPanel_SizeChanged);
+            // 
+            // MainPanel_ThereIsMore
+            // 
+            this.MainPanel_ThereIsMore.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_ThereIsMore.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.MainPanel_ThereIsMore.Location = new System.Drawing.Point(376, 105);
+            this.MainPanel_ThereIsMore.Name = "MainPanel_ThereIsMore";
+            this.MainPanel_ThereIsMore.Size = new System.Drawing.Size(25, 33);
+            this.MainPanel_ThereIsMore.TabIndex = 19;
+            this.MainPanel_ThereIsMore.Text = "...";
+            // 
+            // MainPanel_OpenFormOpenerPanelButton
+            // 
+            this.MainPanel_OpenFormOpenerPanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel_OpenFormOpenerPanelButton.Image = ((System.Drawing.Image)(resources.GetObject("MainPanel_OpenFormOpenerPanelButton.Image")));
+            this.MainPanel_OpenFormOpenerPanelButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("MainPanel_OpenFormOpenerPanelButton.InitialImage")));
+            this.MainPanel_OpenFormOpenerPanelButton.Location = new System.Drawing.Point(22, 41);
+            this.MainPanel_OpenFormOpenerPanelButton.Name = "MainPanel_OpenFormOpenerPanelButton";
+            this.MainPanel_OpenFormOpenerPanelButton.Size = new System.Drawing.Size(30, 30);
+            this.MainPanel_OpenFormOpenerPanelButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MainPanel_OpenFormOpenerPanelButton.TabIndex = 0;
+            this.MainPanel_OpenFormOpenerPanelButton.TabStop = false;
+            this.MainPanel_OpenFormOpenerPanelButton.Click += new System.EventHandler(this.MainPanel_OpenFormOpenerPanelButton_Click);
+            // 
+            // MainPanel_OpenMemoryPanelButton
+            // 
+            this.MainPanel_OpenMemoryPanelButton.ArcSize = 5;
+            this.MainPanel_OpenMemoryPanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel_OpenMemoryPanelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(84)))), ((int)(((byte)(80)))));
+            this.MainPanel_OpenMemoryPanelButton.BorderWidth = 1;
+            this.MainPanel_OpenMemoryPanelButton.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(206)))), ((int)(((byte)(204)))));
+            this.MainPanel_OpenMemoryPanelButton.Location = new System.Drawing.Point(355, 230);
+            this.MainPanel_OpenMemoryPanelButton.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(151)))), ((int)(((byte)(141)))));
+            this.MainPanel_OpenMemoryPanelButton.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(181)))), ((int)(((byte)(171)))));
+            this.MainPanel_OpenMemoryPanelButton.Name = "MainPanel_OpenMemoryPanelButton";
+            this.MainPanel_OpenMemoryPanelButton.Size = new System.Drawing.Size(45, 30);
+            this.MainPanel_OpenMemoryPanelButton.TabIndex = 17;
+            this.MainPanel_OpenMemoryPanelButton.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MainPanel_OpenMemoryPanelButton.TextColor = System.Drawing.SystemColors.ControlText;
+            this.MainPanel_OpenMemoryPanelButton.TextContent = "Mem";
+            this.MainPanel_OpenMemoryPanelButton.TextFont = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_OpenMemoryPanelButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainPanel_OpenMemoryPanelButton_MouseUp);
+            // 
+            // MainPanel_OpenNumberPanelButton
+            // 
+            this.MainPanel_OpenNumberPanelButton.ArcSize = 5;
+            this.MainPanel_OpenNumberPanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel_OpenNumberPanelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(61)))));
+            this.MainPanel_OpenNumberPanelButton.BorderWidth = 1;
+            this.MainPanel_OpenNumberPanelButton.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(235)))), ((int)(((byte)(139)))));
+            this.MainPanel_OpenNumberPanelButton.Location = new System.Drawing.Point(245, 230);
+            this.MainPanel_OpenNumberPanelButton.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(180)))), ((int)(((byte)(94)))));
+            this.MainPanel_OpenNumberPanelButton.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(210)))), ((int)(((byte)(114)))));
+            this.MainPanel_OpenNumberPanelButton.Name = "MainPanel_OpenNumberPanelButton";
+            this.MainPanel_OpenNumberPanelButton.Size = new System.Drawing.Size(40, 30);
+            this.MainPanel_OpenNumberPanelButton.TabIndex = 17;
+            this.MainPanel_OpenNumberPanelButton.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MainPanel_OpenNumberPanelButton.TextColor = System.Drawing.SystemColors.ControlText;
+            this.MainPanel_OpenNumberPanelButton.TextContent = "+/-";
+            this.MainPanel_OpenNumberPanelButton.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_OpenNumberPanelButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainPanel_OpenNumberPanelButton_MouseUp);
+            // 
+            // MainPanel_OpenFuncPanelButton
+            // 
+            this.MainPanel_OpenFuncPanelButton.ArcSize = 5;
+            this.MainPanel_OpenFuncPanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel_OpenFuncPanelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(182)))), ((int)(((byte)(86)))));
+            this.MainPanel_OpenFuncPanelButton.BorderWidth = 1;
+            this.MainPanel_OpenFuncPanelButton.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(204)))));
+            this.MainPanel_OpenFuncPanelButton.Location = new System.Drawing.Point(300, 230);
+            this.MainPanel_OpenFuncPanelButton.MouseClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(187)))), ((int)(((byte)(149)))));
+            this.MainPanel_OpenFuncPanelButton.MouseHoveringBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(217)))), ((int)(((byte)(179)))));
+            this.MainPanel_OpenFuncPanelButton.Name = "MainPanel_OpenFuncPanelButton";
+            this.MainPanel_OpenFuncPanelButton.Size = new System.Drawing.Size(40, 30);
+            this.MainPanel_OpenFuncPanelButton.TabIndex = 16;
+            this.MainPanel_OpenFuncPanelButton.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MainPanel_OpenFuncPanelButton.TextColor = System.Drawing.SystemColors.ControlText;
+            this.MainPanel_OpenFuncPanelButton.TextContent = "f(x)";
+            this.MainPanel_OpenFuncPanelButton.TextFont = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_OpenFuncPanelButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainPanel_OpenFuncPanelButton_MouseUp);
+            // 
+            // MainPanel_DecorLine1
+            // 
+            this.MainPanel_DecorLine1.BackColor = System.Drawing.Color.Silver;
+            this.MainPanel_DecorLine1.Location = new System.Drawing.Point(10, 75);
+            this.MainPanel_DecorLine1.Name = "MainPanel_DecorLine1";
+            this.MainPanel_DecorLine1.Size = new System.Drawing.Size(390, 1);
+            this.MainPanel_DecorLine1.TabIndex = 8;
+            this.MainPanel_DecorLine1.TabStop = false;
+            // 
+            // MainPanel_DecorLine2
+            // 
+            this.MainPanel_DecorLine2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.MainPanel_DecorLine2.Location = new System.Drawing.Point(10, 75);
+            this.MainPanel_DecorLine2.Name = "MainPanel_DecorLine2";
+            this.MainPanel_DecorLine2.Size = new System.Drawing.Size(390, 1);
+            this.MainPanel_DecorLine2.TabIndex = 7;
+            this.MainPanel_DecorLine2.TabStop = false;
+            // 
+            // MainPanel_DecorLine3
+            // 
+            this.MainPanel_DecorLine3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.MainPanel_DecorLine3.Location = new System.Drawing.Point(30, 215);
+            this.MainPanel_DecorLine3.Name = "MainPanel_DecorLine3";
+            this.MainPanel_DecorLine3.Size = new System.Drawing.Size(370, 1);
+            this.MainPanel_DecorLine3.TabIndex = 9;
+            this.MainPanel_DecorLine3.TabStop = false;
+            // 
+            // MainPanel_OnTopButton
+            // 
+            this.MainPanel_OnTopButton.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel_OnTopButton.Image = global::ProCalculator.Properties.Resources.push_pin;
+            this.MainPanel_OnTopButton.InitialImage = null;
+            this.MainPanel_OnTopButton.Location = new System.Drawing.Point(40, 230);
+            this.MainPanel_OnTopButton.Name = "MainPanel_OnTopButton";
+            this.MainPanel_OnTopButton.Size = new System.Drawing.Size(30, 30);
+            this.MainPanel_OnTopButton.TabIndex = 11;
+            this.MainPanel_OnTopButton.TabStop = false;
+            this.MainPanel_OnTopButton.Click += new System.EventHandler(this.MainPanel_OnTopButton_Click);
+            // 
+            // MainPanel_OnTopButtonWithDeclineMark
+            // 
+            this.MainPanel_OnTopButtonWithDeclineMark.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel_OnTopButtonWithDeclineMark.Image = global::ProCalculator.Properties.Resources.push_pin_with_decline;
+            this.MainPanel_OnTopButtonWithDeclineMark.InitialImage = null;
+            this.MainPanel_OnTopButtonWithDeclineMark.Location = new System.Drawing.Point(27, 217);
+            this.MainPanel_OnTopButtonWithDeclineMark.Name = "MainPanel_OnTopButtonWithDeclineMark";
+            this.MainPanel_OnTopButtonWithDeclineMark.Size = new System.Drawing.Size(55, 55);
+            this.MainPanel_OnTopButtonWithDeclineMark.TabIndex = 18;
+            this.MainPanel_OnTopButtonWithDeclineMark.TabStop = false;
+            this.MainPanel_OnTopButtonWithDeclineMark.Click += new System.EventHandler(this.MainPanel_OnTopButtonWithDeclineMark_Click);
+            // 
+            // MainPanel_CurrentModeTitle
+            // 
+            this.MainPanel_CurrentModeTitle.AutoSize = true;
+            this.MainPanel_CurrentModeTitle.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_CurrentModeTitle.Location = new System.Drawing.Point(58, 40);
+            this.MainPanel_CurrentModeTitle.Name = "MainPanel_CurrentModeTitle";
+            this.MainPanel_CurrentModeTitle.Size = new System.Drawing.Size(118, 33);
+            this.MainPanel_CurrentModeTitle.TabIndex = 1;
+            this.MainPanel_CurrentModeTitle.Text = "Standard";
+            // 
+            // MainPanel_DecorLine4
+            // 
+            this.MainPanel_DecorLine4.BackColor = System.Drawing.Color.Gray;
+            this.MainPanel_DecorLine4.Location = new System.Drawing.Point(30, 216);
+            this.MainPanel_DecorLine4.Name = "MainPanel_DecorLine4";
+            this.MainPanel_DecorLine4.Size = new System.Drawing.Size(370, 1);
+            this.MainPanel_DecorLine4.TabIndex = 10;
+            this.MainPanel_DecorLine4.TabStop = false;
+            // 
+            // MainPanel_NotifyOutput
+            // 
+            this.MainPanel_NotifyOutput.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_NotifyOutput.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.MainPanel_NotifyOutput.Location = new System.Drawing.Point(29, 147);
+            this.MainPanel_NotifyOutput.Name = "MainPanel_NotifyOutput";
+            this.MainPanel_NotifyOutput.Size = new System.Drawing.Size(372, 59);
+            this.MainPanel_NotifyOutput.TabIndex = 14;
+            this.MainPanel_NotifyOutput.Text = "Output here...";
+            this.MainPanel_NotifyOutput.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // MainPanel_OutputTextbox
+            // 
+            this.MainPanel_OutputTextbox.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_OutputTextbox.Location = new System.Drawing.Point(29, 147);
+            this.MainPanel_OutputTextbox.Name = "MainPanel_OutputTextbox";
+            this.MainPanel_OutputTextbox.Size = new System.Drawing.Size(378, 59);
+            this.MainPanel_OutputTextbox.TabIndex = 3;
+            this.MainPanel_OutputTextbox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // MainPanel_PromptUserToEnter
+            // 
+            this.MainPanel_PromptUserToEnter.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_PromptUserToEnter.ForeColor = System.Drawing.Color.DimGray;
+            this.MainPanel_PromptUserToEnter.Location = new System.Drawing.Point(29, 97);
+            this.MainPanel_PromptUserToEnter.Name = "MainPanel_PromptUserToEnter";
+            this.MainPanel_PromptUserToEnter.Size = new System.Drawing.Size(340, 35);
+            this.MainPanel_PromptUserToEnter.TabIndex = 13;
+            this.MainPanel_PromptUserToEnter.Text = "Enter expression here...";
+            // 
+            // MainPanel_InputTextBox
+            // 
+            this.MainPanel_InputTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.MainPanel_InputTextBox.BlinkingCursorColor = System.Drawing.Color.Black;
+            this.MainPanel_InputTextBox.BlinkingCursorWidth = 1;
+            this.MainPanel_InputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MainPanel_InputTextBox.CurrentCursorPosition = 0;
+            this.MainPanel_InputTextBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_InputTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MainPanel_InputTextBox.Location = new System.Drawing.Point(29, 97);
+            this.MainPanel_InputTextBox.Name = "MainPanel_InputTextBox";
+            this.MainPanel_InputTextBox.ReadOnly = true;
+            this.MainPanel_InputTextBox.Size = new System.Drawing.Size(340, 33);
+            this.MainPanel_InputTextBox.TabIndex = 15;
+            this.MainPanel_InputTextBox.TickInterval = 700;
+            // 
+            // FormOpenerPanel
+            // 
+            this.FormOpenerPanel.ArcSize = 10;
+            this.FormOpenerPanel.AutoScroll = true;
+            this.FormOpenerPanel.BackColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel.BorderColor = System.Drawing.Color.DarkGray;
+            this.FormOpenerPanel.BorderWidth = 1;
+            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_DarkTheme);
+            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_LightTheme);
+            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_TitleLabel2);
+            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_GraphOpener);
+            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_ConverterOpener);
+            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_EquationOpener);
+            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_MatrixOpener);
+            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_TitleLabel1);
+            this.FormOpenerPanel.Controls.Add(this.FormOpenerPanel_CloseButton);
+            this.FormOpenerPanel.InteriorColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.FormOpenerPanel.Location = new System.Drawing.Point(-10, 12);
+            this.FormOpenerPanel.Name = "FormOpenerPanel";
+            this.FormOpenerPanel.Size = new System.Drawing.Size(233, 760);
+            this.FormOpenerPanel.TabIndex = 19;
+            // 
+            // FormOpenerPanel_DarkTheme
+            // 
+            this.FormOpenerPanel_DarkTheme.ArcSize = 5;
+            this.FormOpenerPanel_DarkTheme.BackColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_DarkTheme.BorderColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_DarkTheme.BorderWidth = 0;
+            this.FormOpenerPanel_DarkTheme.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_DarkTheme.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormOpenerPanel_DarkTheme.InteriorColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_DarkTheme.Location = new System.Drawing.Point(10, 314);
+            this.FormOpenerPanel_DarkTheme.MouseClickBackColor = System.Drawing.Color.LightGray;
+            this.FormOpenerPanel_DarkTheme.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
+            this.FormOpenerPanel_DarkTheme.Name = "FormOpenerPanel_DarkTheme";
+            this.FormOpenerPanel_DarkTheme.Size = new System.Drawing.Size(220, 35);
+            this.FormOpenerPanel_DarkTheme.TabIndex = 6;
+            this.FormOpenerPanel_DarkTheme.Text = "Solving equation(s)\r\n";
+            this.FormOpenerPanel_DarkTheme.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FormOpenerPanel_DarkTheme.TextColor = System.Drawing.SystemColors.ControlDark;
+            this.FormOpenerPanel_DarkTheme.TextContent = "      Dark theme";
+            this.FormOpenerPanel_DarkTheme.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_DarkTheme.Click += new System.EventHandler(this.FormOpenerPanel_DarkTheme_Click);
+            // 
+            // FormOpenerPanel_LightTheme
+            // 
+            this.FormOpenerPanel_LightTheme.ArcSize = 5;
+            this.FormOpenerPanel_LightTheme.BackColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_LightTheme.BorderColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_LightTheme.BorderWidth = 0;
+            this.FormOpenerPanel_LightTheme.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_LightTheme.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormOpenerPanel_LightTheme.InteriorColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_LightTheme.Location = new System.Drawing.Point(10, 279);
+            this.FormOpenerPanel_LightTheme.MouseClickBackColor = System.Drawing.Color.LightGray;
+            this.FormOpenerPanel_LightTheme.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
+            this.FormOpenerPanel_LightTheme.Name = "FormOpenerPanel_LightTheme";
+            this.FormOpenerPanel_LightTheme.Size = new System.Drawing.Size(220, 35);
+            this.FormOpenerPanel_LightTheme.TabIndex = 5;
+            this.FormOpenerPanel_LightTheme.Text = "Matrix calculator";
+            this.FormOpenerPanel_LightTheme.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FormOpenerPanel_LightTheme.TextColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormOpenerPanel_LightTheme.TextContent = "      Light theme";
+            this.FormOpenerPanel_LightTheme.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_LightTheme.Click += new System.EventHandler(this.FormOpenerPanel_LightTheme_Click);
+            // 
+            // FormOpenerPanel_TitleLabel2
+            // 
+            this.FormOpenerPanel_TitleLabel2.AutoSize = true;
+            this.FormOpenerPanel_TitleLabel2.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_TitleLabel2.Location = new System.Drawing.Point(22, 247);
+            this.FormOpenerPanel_TitleLabel2.Name = "FormOpenerPanel_TitleLabel2";
+            this.FormOpenerPanel_TitleLabel2.Size = new System.Drawing.Size(89, 33);
+            this.FormOpenerPanel_TitleLabel2.TabIndex = 7;
+            this.FormOpenerPanel_TitleLabel2.Text = "Theme";
+            // 
+            // FormOpenerPanel_GraphOpener
+            // 
+            this.FormOpenerPanel_GraphOpener.ArcSize = 5;
+            this.FormOpenerPanel_GraphOpener.BackColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_GraphOpener.BorderColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_GraphOpener.BorderWidth = 0;
+            this.FormOpenerPanel_GraphOpener.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_GraphOpener.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormOpenerPanel_GraphOpener.InteriorColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_GraphOpener.Location = new System.Drawing.Point(10, 170);
+            this.FormOpenerPanel_GraphOpener.MouseClickBackColor = System.Drawing.Color.LightGray;
+            this.FormOpenerPanel_GraphOpener.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
+            this.FormOpenerPanel_GraphOpener.Name = "FormOpenerPanel_GraphOpener";
+            this.FormOpenerPanel_GraphOpener.Size = new System.Drawing.Size(220, 35);
+            this.FormOpenerPanel_GraphOpener.TabIndex = 6;
+            this.FormOpenerPanel_GraphOpener.Text = "Graph Calculator";
+            this.FormOpenerPanel_GraphOpener.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FormOpenerPanel_GraphOpener.TextColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormOpenerPanel_GraphOpener.TextContent = "      Graph calculator";
+            this.FormOpenerPanel_GraphOpener.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_GraphOpener.Click += new System.EventHandler(this.FormOpenerPanel_GraphOpener_Click);
+            // 
+            // FormOpenerPanel_ConverterOpener
+            // 
+            this.FormOpenerPanel_ConverterOpener.ArcSize = 5;
+            this.FormOpenerPanel_ConverterOpener.BackColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_ConverterOpener.BorderColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_ConverterOpener.BorderWidth = 0;
+            this.FormOpenerPanel_ConverterOpener.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_ConverterOpener.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormOpenerPanel_ConverterOpener.InteriorColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_ConverterOpener.Location = new System.Drawing.Point(10, 205);
+            this.FormOpenerPanel_ConverterOpener.MouseClickBackColor = System.Drawing.Color.LightGray;
+            this.FormOpenerPanel_ConverterOpener.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
+            this.FormOpenerPanel_ConverterOpener.Name = "FormOpenerPanel_ConverterOpener";
+            this.FormOpenerPanel_ConverterOpener.Size = new System.Drawing.Size(220, 35);
+            this.FormOpenerPanel_ConverterOpener.TabIndex = 5;
+            this.FormOpenerPanel_ConverterOpener.Text = "Converter";
+            this.FormOpenerPanel_ConverterOpener.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FormOpenerPanel_ConverterOpener.TextColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormOpenerPanel_ConverterOpener.TextContent = "      Converter";
+            this.FormOpenerPanel_ConverterOpener.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // FormOpenerPanel_EquationOpener
+            // 
+            this.FormOpenerPanel_EquationOpener.ArcSize = 5;
+            this.FormOpenerPanel_EquationOpener.BackColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_EquationOpener.BorderColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_EquationOpener.BorderWidth = 0;
+            this.FormOpenerPanel_EquationOpener.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_EquationOpener.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormOpenerPanel_EquationOpener.InteriorColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_EquationOpener.Location = new System.Drawing.Point(10, 135);
+            this.FormOpenerPanel_EquationOpener.MouseClickBackColor = System.Drawing.Color.LightGray;
+            this.FormOpenerPanel_EquationOpener.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
+            this.FormOpenerPanel_EquationOpener.Name = "FormOpenerPanel_EquationOpener";
+            this.FormOpenerPanel_EquationOpener.Size = new System.Drawing.Size(220, 35);
+            this.FormOpenerPanel_EquationOpener.TabIndex = 4;
+            this.FormOpenerPanel_EquationOpener.Text = "Solving equation(s)\r\n";
+            this.FormOpenerPanel_EquationOpener.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FormOpenerPanel_EquationOpener.TextColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormOpenerPanel_EquationOpener.TextContent = "      Solving equation(s)";
+            this.FormOpenerPanel_EquationOpener.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_EquationOpener.Click += new System.EventHandler(this.FormOpenerPanel_EquationOpener_Click);
+            // 
+            // FormOpenerPanel_MatrixOpener
+            // 
+            this.FormOpenerPanel_MatrixOpener.ArcSize = 5;
+            this.FormOpenerPanel_MatrixOpener.BackColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_MatrixOpener.BorderColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_MatrixOpener.BorderWidth = 0;
+            this.FormOpenerPanel_MatrixOpener.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_MatrixOpener.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormOpenerPanel_MatrixOpener.InteriorColor = System.Drawing.Color.Transparent;
+            this.FormOpenerPanel_MatrixOpener.Location = new System.Drawing.Point(10, 100);
+            this.FormOpenerPanel_MatrixOpener.MouseClickBackColor = System.Drawing.Color.LightGray;
+            this.FormOpenerPanel_MatrixOpener.MouseHoveringBackColor = System.Drawing.Color.Gainsboro;
+            this.FormOpenerPanel_MatrixOpener.Name = "FormOpenerPanel_MatrixOpener";
+            this.FormOpenerPanel_MatrixOpener.Size = new System.Drawing.Size(220, 35);
+            this.FormOpenerPanel_MatrixOpener.TabIndex = 3;
+            this.FormOpenerPanel_MatrixOpener.Text = "Matrix calculator";
+            this.FormOpenerPanel_MatrixOpener.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FormOpenerPanel_MatrixOpener.TextColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormOpenerPanel_MatrixOpener.TextContent = "      Matrix calculator";
+            this.FormOpenerPanel_MatrixOpener.TextFont = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_MatrixOpener.Click += new System.EventHandler(this.FormOpenerPanel_MatrixOpener_Click);
+            // 
+            // FormOpenerPanel_TitleLabel1
+            // 
+            this.FormOpenerPanel_TitleLabel1.AutoSize = true;
+            this.FormOpenerPanel_TitleLabel1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormOpenerPanel_TitleLabel1.Location = new System.Drawing.Point(22, 65);
+            this.FormOpenerPanel_TitleLabel1.Name = "FormOpenerPanel_TitleLabel1";
+            this.FormOpenerPanel_TitleLabel1.Size = new System.Drawing.Size(199, 33);
+            this.FormOpenerPanel_TitleLabel1.TabIndex = 2;
+            this.FormOpenerPanel_TitleLabel1.Text = "Other Calculator";
+            // 
+            // FormOpenerPanel_CloseButton
+            // 
+            this.FormOpenerPanel_CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FormOpenerPanel_CloseButton.Image = ((System.Drawing.Image)(resources.GetObject("FormOpenerPanel_CloseButton.Image")));
+            this.FormOpenerPanel_CloseButton.Location = new System.Drawing.Point(32, 29);
+            this.FormOpenerPanel_CloseButton.Name = "FormOpenerPanel_CloseButton";
+            this.FormOpenerPanel_CloseButton.Size = new System.Drawing.Size(30, 30);
+            this.FormOpenerPanel_CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FormOpenerPanel_CloseButton.TabIndex = 0;
+            this.FormOpenerPanel_CloseButton.TabStop = false;
+            this.FormOpenerPanel_CloseButton.Click += new System.EventHandler(this.FormOpenerPanel_CloseButton_Click);
+            // 
             // FunctionPanel
             // 
-            this.FunctionPanel.ArcSize = 10;
+            this.FunctionPanel.ArcSize = 5;
             this.FunctionPanel.BackColor = System.Drawing.Color.Transparent;
-            this.FunctionPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.FunctionPanel.BorderWidth = 1;
+            this.FunctionPanel.BorderColor = System.Drawing.Color.Transparent;
+            this.FunctionPanel.BorderWidth = 3;
             this.FunctionPanel.Controls.Add(this.STATE_Degree);
             this.FunctionPanel.Controls.Add(this.FUNC_Not);
             this.FunctionPanel.Controls.Add(this.FUNC_Ln);
@@ -994,6 +986,7 @@
             this.FunctionPanel.Size = new System.Drawing.Size(415, 160);
             this.FunctionPanel.TabIndex = 14;
             this.FunctionPanel.LocationChanged += new System.EventHandler(this.FunctionPanel_LocationChanged);
+            this.FunctionPanel.SizeChanged += new System.EventHandler(this.FunctionPanel_SizeChanged);
             // 
             // STATE_Degree
             // 
@@ -1297,9 +1290,9 @@
             // 
             // MemoryPanel
             // 
-            this.MemoryPanel.ArcSize = 15;
+            this.MemoryPanel.ArcSize = 5;
             this.MemoryPanel.BackColor = System.Drawing.Color.Transparent;
-            this.MemoryPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.MemoryPanel.BorderColor = System.Drawing.Color.Gray;
             this.MemoryPanel.BorderWidth = 1;
             this.MemoryPanel.Controls.Add(this.MemoryPanel_DecorLine1);
             this.MemoryPanel.Controls.Add(this.MemoryPanel_Title);
@@ -1310,13 +1303,14 @@
             this.MemoryPanel.Size = new System.Drawing.Size(275, 784);
             this.MemoryPanel.TabIndex = 15;
             this.MemoryPanel.LocationChanged += new System.EventHandler(this.MemoryPanel_LocationChanged);
+            this.MemoryPanel.SizeChanged += new System.EventHandler(this.MemoryPanel_SizeChanged);
             // 
             // MemoryPanel_DecorLine1
             // 
             this.MemoryPanel_DecorLine1.BackColor = System.Drawing.Color.Silver;
-            this.MemoryPanel_DecorLine1.Location = new System.Drawing.Point(0, 75);
+            this.MemoryPanel_DecorLine1.Location = new System.Drawing.Point(5, 75);
             this.MemoryPanel_DecorLine1.Name = "MemoryPanel_DecorLine1";
-            this.MemoryPanel_DecorLine1.Size = new System.Drawing.Size(280, 1);
+            this.MemoryPanel_DecorLine1.Size = new System.Drawing.Size(270, 1);
             this.MemoryPanel_DecorLine1.TabIndex = 12;
             this.MemoryPanel_DecorLine1.TabStop = false;
             // 
@@ -1334,7 +1328,7 @@
             // 
             this.ClearMemory.BackgroundImage = global::ProCalculator.Properties.Resources.basket;
             this.ClearMemory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClearMemory.Location = new System.Drawing.Point(228, 38);
+            this.ClearMemory.Location = new System.Drawing.Point(225, 40);
             this.ClearMemory.Name = "ClearMemory";
             this.ClearMemory.Size = new System.Drawing.Size(35, 35);
             this.ClearMemory.TabIndex = 13;
@@ -1344,25 +1338,24 @@
             // 
             // StandardCalculator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(696, 784);
+            this.Controls.Add(this.NumberPanel);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.FormOpenerPanel);
-            this.Controls.Add(this.NumberPanel);
             this.Controls.Add(this.FunctionPanel);
-            this.Controls.Add(this.DummyPanel);
             this.Controls.Add(this.MemoryPanel);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MinimumSize = new System.Drawing.Size(435, 322);
             this.Name = "StandardCalculator";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.StandardCalculator_Load);
+            this.SizeChanged += new System.EventHandler(this.StandardCalculator_SizeChanged);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.StandardCalculator_KeyDown);
-            this.Resize += new System.EventHandler(this.StandardCalculator_Resize);
+            this.NumberPanel.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenFormOpenerPanelButton)).EndInit();
@@ -1375,7 +1368,6 @@
             this.FormOpenerPanel.ResumeLayout(false);
             this.FormOpenerPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FormOpenerPanel_CloseButton)).EndInit();
-            this.NumberPanel.ResumeLayout(false);
             this.FunctionPanel.ResumeLayout(false);
             this.MemoryPanel.ResumeLayout(false);
             this.MemoryPanel.PerformLayout();
@@ -1412,7 +1404,7 @@
         internal CustomUserControls.RoundedButton.RoundedButton NUMB_5;
         internal CustomUserControls.RoundedButton.RoundedButton NUMB_2;
         internal CustomUserControls.RoundedButton.RoundedButton MISC_Dot;
-        internal CustomUserControls.RoundedButton.RoundedButton CTRL_Del;
+        internal CustomUserControls.RoundedButton.RoundedButton CTRL_Back;
         internal CustomUserControls.RoundedButton.RoundedButton NUMB_9;
         internal CustomUserControls.RoundedButton.RoundedButton NUMB_6;
         internal CustomUserControls.RoundedButton.RoundedButton NUMB_3;
@@ -1455,7 +1447,6 @@
         internal System.Windows.Forms.Label FormOpenerPanel_TitleLabel2;
         internal System.Windows.Forms.Label MainPanel_PromptUserToEnter;
         internal System.Windows.Forms.PictureBox FormOpenerPanel_CloseButton;
-        internal System.Windows.Forms.Panel DummyPanel;
         internal CustomUserControls.RoundedButton.RoundedButton MISC_Ans;
 
         private System.Windows.Forms.Button ClearMemory;

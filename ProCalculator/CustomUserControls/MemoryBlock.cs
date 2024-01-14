@@ -87,7 +87,6 @@ namespace CustomUserControls.MemoryBlock
             Output.Size = new Size(245, 30);
             Output.Font = new Font("Comic Sans MS", 14F);
             Output.BackColor = Color.Transparent;
-            Output.AutoSize = true;
             Output.TextAlign = ContentAlignment.MiddleRight;
             Output.MouseEnter += (Sender, e) =>
             {
@@ -104,14 +103,17 @@ namespace CustomUserControls.MemoryBlock
             Output.SizeChanged += (Sender, args) =>
             {
                 if (Output.Parent.Width > Output.Width)
-                    Output.Location = new Point(Output.Parent.Width - Output.Width, Output.Top);
+                    Output.TextAlign = ContentAlignment.MiddleLeft;
+                else
+                {
+                    Output.TextAlign = ContentAlignment.MiddleRight;
+                }
             };
             Output.Click += (Sender, e) =>
             {
                 OnClick(e);
             };
             quitButton.ForeColor = Color.Brown;
-            quitButton.Location = new Point(253, 0);
             quitButton.AutoSize = true;
             quitButton.BackColor = Color.Transparent;
             quitButton.Font = new Font("Comic Sans MS", 9F);
@@ -141,7 +143,6 @@ namespace CustomUserControls.MemoryBlock
             Controls.Add(Output);
 
             Controls.Add(quitButton);
-
         }
 
         protected override void OnMouseEnter(EventArgs e)
@@ -155,15 +156,12 @@ namespace CustomUserControls.MemoryBlock
             await Task.Delay(1000);
             quitButton.Hide();
         }
-
-
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-            Width = 270;
-            Height = 63;
+            Height = 60;
 
-            InteriorColor = Color.FromArgb(250, 252, 255);
+            InteriorColor = Color.Transparent;
             BorderWidth = 1;
             ArcSize = 5;
             BorderColor = Color.Gainsboro;
@@ -183,6 +181,7 @@ namespace CustomUserControls.MemoryBlock
         protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
+            quitButton.Location = new Point(Width - 20, 0);
             alignContentInMiddle();
         }
     }
@@ -198,6 +197,10 @@ namespace CustomUserControls.MemoryBlock
 
             Input.Location = new Point(InputStartPointX, 0);
             Output.Location = new Point(OutputStartPointX, (Height - Input.Height - 3));
+
+            Input.Width = Width - 25;
+            Output.Width = Width - 25;
+            Output.TextAlign = ContentAlignment.MiddleRight;
         }
 
     }

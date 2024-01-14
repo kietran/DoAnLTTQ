@@ -13,6 +13,9 @@ namespace ProCalculator
 {
     public partial class StandardCalculator : Form
     {
+        //responsive
+        public bool disableResponsive = false;
+        public bool finishedLoading = false;
         //panel mode
         public bool numberPanelOn = false, funcPanelOn = false, memoryPanelOn = false;
         public bool formOpenerPanelOn = false;
@@ -42,10 +45,10 @@ namespace ProCalculator
         /// </summary>
         public StandardCalculator()
         {
+            finishedLoading = false;
             KeyPreview = true;
             StandardCalculatorControl.Init(this);
             InitializeComponent();
-
             initInputTextbox();
             initOutputTextbox();
             initHoldEventForButton();
@@ -89,25 +92,30 @@ namespace ProCalculator
 
             //steal focus mechanism
             Select();
+
         }
         private void StandardCalculator_Load(object sender, EventArgs e)
         {
-            //render priority
             NumberPanel.BringToFront();
             FunctionPanel.BringToFront();
             MainPanel.BringToFront();
-            DummyPanel.SendToBack();
             MemoryPanel.SendToBack();
 
             FunctionPanel.Location = new Point(0, MainPanel.Height - FunctionPanel.Height);
-            MemoryPanel.Location = new Point(MainPanel.Width - MemoryPanel.Width, 0);
             NumberPanel.Location = new Point(0, MainPanel.Height - NumberPanel.Height);
-            FormOpenerPanel.Location = new Point(-243, 12);
+            MemoryPanel.Location = new Point(MainPanel.Width - MemoryPanel.Width,0);
 
+            FunctionPanel.Hide();
+            FormOpenerPanel.Hide();
+
+            StandardCalculatorControl.OpenNumberPanel(false);
             StandardCalculatorControl.TurnOnNormalModeForFuncPanel();
             StandardCalculatorControl.SwitchToRadianMode();
             MainPanel_OnTopButtonWithDeclineMark.Visible = false;
 
+            Width = MainPanel.Width + 18;
+            Height = MainPanel.Height + NumberPanel.Height + 5 + 47;
+            finishedLoading = true;
         }
         private void initInputTextbox()
         {
@@ -188,18 +196,18 @@ namespace ProCalculator
 
         private void initHoldEventForButton()
         {
-            CTRL_Del.MouseDown += (sender, args) =>
+            CTRL_Back.MouseDown += (sender, args) =>
             {
                 isHoldingButton = true;
-                currentlyHoldingButton = CTRL_Del;
+                currentlyHoldingButton = CTRL_Back;
                 holdButtonTimer.Enabled = true; holdButtonTimer.Interval = 500;
             };
-            CTRL_Del.MouseUp += (sender, args) =>
+            CTRL_Back.MouseUp += (sender, args) =>
             {
                 isHoldingButton = false;
                 holdButtonTimer.Enabled = false;
             };
-            CTRL_Del.MouseLeave += (sender, args) =>
+            CTRL_Back.MouseLeave += (sender, args) =>
             {
                 isHoldingButton = false;
                 holdButtonTimer.Enabled = false;
@@ -382,39 +390,36 @@ namespace ProCalculator
         {
             if (!numberPanelOn)
             {
-                StandardCalculatorControl.OpenNumberPanel();
+                StandardCalculatorControl.OpenNumberPanel(false);
             }
             else
             {
-                StandardCalculatorControl.CloseNumberPanel();
+                StandardCalculatorControl.CloseNumberPanel(false);
             }
-            numberPanelOn = !numberPanelOn;
         }
         private void MainPanel_OpenFuncPanelButton_MouseUp(object sender, MouseEventArgs e)
         {
             if (!funcPanelOn)
             {
 
-                StandardCalculatorControl.OpenFuncPanel();
+                StandardCalculatorControl.OpenFuncPanel(false);
             }
             else
             {
-                StandardCalculatorControl.CloseFuncPanel();
+                StandardCalculatorControl.CloseFuncPanel(false);
             }
-            funcPanelOn = !funcPanelOn;
         }
 
         private void MainPanel_OpenMemoryPanelButton_MouseUp(object sender, MouseEventArgs e)
         {
             if (!memoryPanelOn)
             {
-                StandardCalculatorControl.OpenMemoryPanel();
+                StandardCalculatorControl.OpenMemoryPanel(false);
             }
             else
             {
-                StandardCalculatorControl.CloseMemoryPanel();
+                StandardCalculatorControl.CloseMemoryPanel(false);
             }
-            memoryPanelOn = !memoryPanelOn;
         }
         private void FormOpenerPanel_CloseButton_Click(object sender, EventArgs e)
         {
@@ -792,11 +797,6 @@ namespace ProCalculator
             StandardCalculatorControl.ClearCalculatorScreen();
         }
 
-        private void MainPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void FormOpenerPanel_MatrixOpener_Click(object sender, EventArgs e)
         {
             StandardCalculatorControl.OpenMatrixCalculator();
@@ -816,8 +816,6 @@ namespace ProCalculator
             StandardCalculatorControl.OpenConverter();
         }
 
-
-
         private void FormOpenerPanel_LightTheme_Click(object sender, EventArgs e)
         {
             StandardCalculatorControl.SwitchToLightTheme();
@@ -832,23 +830,95 @@ namespace ProCalculator
 
         private void FunctionPanel_LocationChanged(object sender, EventArgs e)
         {
+            if (!disableResponsive)
+            {
+                return;
+            }
+            //check if need to update form's size
             int currentHeight = System.Math.Max(MainPanel.Height, NumberPanel.Location.Y + NumberPanel.Height);
             currentHeight = System.Math.Max(currentHeight, FunctionPanel.Location.Y + FunctionPanel.Height);
             Height = currentHeight+47;
-            MemoryPanel.Height = currentHeight;
+
+            //re-enable responsive
+            if (funcPanelOn)
+            {
+                if (FunctionPanel.Location.Y >= MainPanel.Height + 5)
+                {
+                    disableResponsive = false;
+                }
+            }
+            else
+            {
+                if (FunctionPanel.Location.Y <= MainPanel.Height - FunctionPanel.Height)
+                {
+                    disableResponsive = false;
+                    FunctionPanel.Hide();
+                }
+            }
+            
         }
 
         private void NumberPanel_LocationChanged(object sender, EventArgs e)
         {
+            if(!disableResponsive) { 
+                return; 
+            }
             int currentHeight = System.Math.Max(MainPanel.Height, NumberPanel.Location.Y + NumberPanel.Height);
             currentHeight = System.Math.Max(currentHeight, FunctionPanel.Location.Y + FunctionPanel.Height);
             Height = currentHeight+47;
-            MemoryPanel.Height = currentHeight;
+
+            if (numberPanelOn)
+            {
+                if (funcPanelOn)
+                {
+                    if (NumberPanel.Location.Y >= MainPanel.Height + FunctionPanel.Height + 5)
+                    {
+                        disableResponsive = false;
+                    }
+                }
+                else
+                {
+                    if (NumberPanel.Location.Y >= MainPanel.Height + 5)
+                    {
+                        disableResponsive = false;
+                    }
+                }
+                
+            }
+            else
+            {
+                if (NumberPanel.Location.Y <= MainPanel.Height - NumberPanel.Height)
+                {
+                    disableResponsive = false;
+                    NumberPanel.Hide();
+                }
+            }
         }
 
         private void MemoryPanel_LocationChanged(object sender, EventArgs e)
         {
-            Width = MemoryPanel.Width + MemoryPanel.Location.X + 20;
+            if (!disableResponsive)
+            {
+                return;
+            }
+            int currentWidth = System.Math.Max(MemoryPanel.Width + MemoryPanel.Location.X, MainPanel.Width);
+            Width = currentWidth + 18;
+            if (memoryPanelOn)
+            {
+                if (MemoryPanel.Location.X >= MainPanel.Width + 5)
+                {
+                    disableResponsive = false;
+                }
+            }
+            else
+            {
+                if (MemoryPanel.Location.X <= MainPanel.Width - MemoryPanel.Width)
+                {
+                    disableResponsive = false;
+                    MemoryPanel.Hide();
+                }
+            }
+           
         }
 
         private void MISC_Ans_Click(object sender, EventArgs e)
@@ -864,10 +934,303 @@ namespace ProCalculator
             StandardCalculatorControl.CheckValidityAndComputeResult();
         }
 
-        private void StandardCalculator_Resize(object sender, EventArgs e)
+        private void MainPanel_SizeChanged(object sender, EventArgs e)
         {
+            Size originMainPanel = new Size(415, 275);
+            //scale mainPanel
+            double widthScalingFactor = MainPanel.Width / originMainPanel.Width;
+            double heightScalingFactor = MainPanel.Height / originMainPanel.Height;
+
+            MainPanel_DecorLine1.Width = MainPanel.Width - 25;
+            MainPanel_DecorLine2.Width = MainPanel.Width - 25;
+
+            MainPanel_DecorLine3.Width = MainPanel.Width - 45;
+            MainPanel_DecorLine4.Width = MainPanel.Width - 45;
+
+            //scale vertically
+            MainPanel_DecorLine4.Location = new Point(MainPanel_DecorLine4.Location.X, MainPanel.Height - 60);
+            MainPanel_DecorLine3.Location = new Point(MainPanel_DecorLine4.Location.X, MainPanel.Height - 61);
+
+            //font
+
+            MainPanel_InputTextBox.Width = MainPanel.Width - 75;
+            MainPanel_PromptUserToEnter.Width = MainPanel.Width - 75;
+
+            MainPanel_ThereIsMore.Location = new Point(MainPanel_DecorLine1.Location.X + MainPanel_DecorLine1.Width - MainPanel_ThereIsMore.Width, MainPanel_ThereIsMore.Location.Y);
+            MainPanel_InputTextBox.Width = MainPanel.Width - 75;
+
+            int y1 = MainPanel_InputTextBox.Location.Y + MainPanel_InputTextBox.Height;
+            int y2 = MainPanel_DecorLine3.Location.Y;
+            int y3 = MainPanel_OutputTextbox.Height;
+            MainPanel_OutputTextbox.Location = new Point(MainPanel_DecorLine1.Location.X + MainPanel_DecorLine1.Width - MainPanel_OutputTextbox.Width, (y1 + y2 - y3) / 2);
+            MainPanel_NotifyOutput.Location = MainPanel_OutputTextbox.Location;
+
+            Size formOpenerButtonOrigin = new Size(45, 30);
+
+            MainPanel_OpenFuncPanelButton.Width = Convert.ToInt32(formOpenerButtonOrigin.Width * widthScalingFactor);
+            MainPanel_OpenMemoryPanelButton.Width = Convert.ToInt32(formOpenerButtonOrigin.Width * widthScalingFactor);
+            MainPanel_OpenNumberPanelButton.Width = Convert.ToInt32(formOpenerButtonOrigin.Width * widthScalingFactor);
+
+            MainPanel_OpenMemoryPanelButton.Location = new Point(MainPanel_DecorLine1.Location.X + MainPanel_DecorLine1.Width - MainPanel_OpenFuncPanelButton.Width, MainPanel_DecorLine4.Location.Y + 15);
+            MainPanel_OpenFuncPanelButton.Location = new Point(MainPanel_OpenMemoryPanelButton.Location.X - MainPanel_OpenFuncPanelButton.Width - 10, MainPanel_OpenMemoryPanelButton.Location.Y);
+            MainPanel_OpenNumberPanelButton.Location = new Point(MainPanel_OpenFuncPanelButton.Location.X - MainPanel_OpenFuncPanelButton.Width - 10, MainPanel_OpenMemoryPanelButton.Location.Y);
+
+            MainPanel_OnTopButton.Location = new Point(MainPanel_OnTopButton.Location.X, MainPanel_DecorLine3.Location.Y + 15);
+            MainPanel_OnTopButtonWithDeclineMark.Location = new Point(MainPanel_OnTopButtonWithDeclineMark.Location.X, MainPanel_DecorLine3.Location.Y + 2);
+
+            //function panel
+            FunctionPanel.Width = MainPanel.Width;
+            NumberPanel.Width = MainPanel.Width;
         }
 
+        private void FunctionPanel_SizeChanged(object sender, EventArgs e)
+        {
+            int offsetX = 5, offsetY = 5;
+            //scale mainPanel            
+
+            Size buttonNewSize = new Size((FunctionPanel.Width-6*offsetX)/5, (FunctionPanel.Height - 4 * offsetX)/3);
+            //size
+            foreach(Control c in FunctionPanel.Controls)
+            {
+                c.Size = buttonNewSize;
+            }
+            FUNC_Sin.Location = new Point(offsetX, offsetY);
+            FUNC_Cos.Location = new Point(FUNC_Sin.Location.X + FUNC_Sin.Width + offsetX, offsetY);
+            FUNC_Tan.Location = new Point(FUNC_Cos.Location.X + FUNC_Cos.Width + offsetX, offsetY);
+            FUNC_Logarit.Location = new Point(FUNC_Tan.Location.X + FUNC_Tan.Width + offsetX, offsetY);
+            FUNC_Ln.Location = new Point(FUNC_Logarit.Location.X + FUNC_Logarit.Width + offsetX, offsetY);
+
+            MISC_OpenBracket.Location = new Point(offsetX, FUNC_Sin.Location.Y + FUNC_Sin.Height + offsetY);
+            MISC_CloseBracket.Location = new Point(FUNC_Cos.Location.X, MISC_OpenBracket.Location.Y);
+            FUNC_Pow.Location = new Point(FUNC_Tan.Location.X, MISC_OpenBracket.Location.Y);
+            FUNC_Sqrt.Location = new Point(FUNC_Logarit.Location.X, MISC_OpenBracket.Location.Y);
+            FUNC_Not.Location = new Point(FUNC_Ln.Location.X, MISC_OpenBracket.Location.Y);
+
+            FUNC_Pi.Location = new Point(offsetX, MISC_OpenBracket.Location.Y + MISC_OpenBracket.Height + offsetY);
+            FUNC_EulerNumber.Location = new Point(FUNC_Cos.Location.X, FUNC_Pi.Location.Y);
+            STATE_INV.Location = new Point(FUNC_Tan.Location.X, FUNC_Pi.Location.Y);
+            STATE_Radian.Location = new Point(FUNC_Logarit.Location.X, FUNC_Pi.Location.Y);
+            STATE_Degree.Location = new Point(FUNC_Ln.Location.X, FUNC_Pi.Location.Y);
+        }
+
+        private void NumberPanel_Resize(object sender, EventArgs e)
+        {
+            int offsetX = 3, offsetY = 3;
+            //scale mainPanel            
+
+            Size buttonNewSize = new Size((NumberPanel.Width - 3 * offsetX-10) / 4, (NumberPanel.Height - 4 * offsetX - 16) / 5);
+            //size
+            foreach (Control c in NumberPanel.Controls)
+            {
+                c.Size = buttonNewSize;
+            }
+            CTRL_Ac.Location = new Point(5, offsetY);
+            CTRL_Back.Location = new Point(CTRL_Ac.Location.X + CTRL_Ac.Width + offsetX, offsetY);
+            FUNC_Negate.Location = new Point(CTRL_Back.Location.X + CTRL_Back.Width + offsetX, offsetY);
+            OPER_Div.Location = new Point(FUNC_Negate.Location.X + FUNC_Negate.Width + offsetX, offsetY);
+
+            NUMB_7.Location = new Point(5, CTRL_Ac.Location.Y + CTRL_Ac.Height + offsetY);
+            NUMB_8.Location = new Point(CTRL_Back.Location.X, NUMB_7.Location.Y);
+            NUMB_9.Location = new Point(FUNC_Negate.Location.X, NUMB_7.Location.Y);
+            OPER_Mul.Location = new Point(OPER_Div.Location.X, NUMB_7.Location.Y);
+
+            NUMB_4.Location = new Point(5, NUMB_7.Location.Y + NUMB_7.Height + offsetY);
+            NUMB_5.Location = new Point(CTRL_Back.Location.X, NUMB_4.Location.Y);
+            NUMB_6.Location = new Point(FUNC_Negate.Location.X, NUMB_4.Location.Y);
+            OPER_Sub.Location = new Point(OPER_Div.Location.X, NUMB_4.Location.Y);
+
+            NUMB_1.Location = new Point(5, NUMB_4.Location.Y + NUMB_4.Height + offsetY);
+            NUMB_2.Location = new Point(CTRL_Back.Location.X, NUMB_1.Location.Y);
+            NUMB_3.Location = new Point(FUNC_Negate.Location.X, NUMB_1.Location.Y);
+            OPER_Plus.Location = new Point(OPER_Div.Location.X, NUMB_1.Location.Y);
+
+            NUMB_0.Location = new Point(5, NUMB_1.Location.Y + NUMB_1.Height + offsetY);
+            MISC_Dot.Location = new Point(CTRL_Back.Location.X, NUMB_0.Location.Y);
+            MISC_Ans.Location = new Point(FUNC_Negate.Location.X, NUMB_0.Location.Y);
+            CTRL_Equal.Location = new Point(OPER_Div.Location.X, NUMB_0.Location.Y);
+        }
+        private void MemoryPanel_SizeChanged(object sender, EventArgs e)
+        {
+            MemoryPanel_DecorLine1.Width = MemoryPanel.Width - 10;
+            ClearMemory.Location = new Point(MemoryPanel_DecorLine1.Width + MemoryPanel_DecorLine1.Location.X - 45, ClearMemory.Location.Y);
+            StandardCalculatorControl.ResizeMemoryBlock();
+        }
+        private void StandardCalculator_SizeChanged(object sender, EventArgs e)
+        {
+            FormOpenerPanel.Height = Height - 47;
+            MemoryPanel.Height = Height - 47;
+            if (disableResponsive)
+            {
+                return;
+            }
+            if (!finishedLoading)
+            {
+                return;
+            }
+            if (NumberPanel.isPlayingAnimation || FunctionPanel.isPlayingAnimation || MemoryPanel.isPlayingAnimation)
+            {
+                return;
+            }
+            breakPointHorizontal();
+            breakPointVertical();
+        }
+        private void breakPointVertical()
+        {
+            int realHeight = Height - 47;
+            MemoryPanel.Height = realHeight;
+            FormOpenerPanel.Height = realHeight;
+            //1. relocation and resize
+            //big logic         
+            //On Top button
+            Size mainPanelOriginSize = new Size(415, 275);
+            Size funcPanelOriginSize = new Size(415, 160);
+            Size numberPanelOriginSize = new Size(415, 330);
+            //break point for pop up
+            //case 1: only main panel and open funcPanel
+            if (realHeight > (mainPanelOriginSize.Height + funcPanelOriginSize.Height + numberPanelOriginSize.Height + 10))
+            {
+                if (!funcPanelOn)
+                {
+                    StandardCalculatorControl.OpenFuncPanel(true);
+                }
+                if (!numberPanelOn)
+                {
+                    StandardCalculatorControl.OpenNumberPanel(true);
+                }
+                rescaleVertically();
+            }
+            else if ((!funcPanelOn) && (!numberPanelOn) && (realHeight > (mainPanelOriginSize.Height + funcPanelOriginSize.Height + 5)))
+            {
+                MainPanel.Height = mainPanelOriginSize.Height;
+                StandardCalculatorControl.OpenFuncPanel(true);
+            }
+            //case 2: open func panel when reaching maximum size
+            else if(((!funcPanelOn) && (numberPanelOn)) && (realHeight > mainPanelOriginSize.Height + funcPanelOriginSize.Height + numberPanelOriginSize.Height + 10))
+            {
+                MainPanel.Height = mainPanelOriginSize.Height;
+                NumberPanel.Height = numberPanelOriginSize.Height;
+                StandardCalculatorControl.OpenFuncPanel(true);
+            }
+            //case 3: open number panel when reaching maximum size
+            else if(((funcPanelOn) && (!numberPanelOn)) && (realHeight > mainPanelOriginSize.Height + funcPanelOriginSize.Height + numberPanelOriginSize.Height + 10))
+            {
+                MainPanel.Height = mainPanelOriginSize.Height;
+                FunctionPanel.Height = funcPanelOriginSize.Height;
+                StandardCalculatorControl.OpenNumberPanel(true);
+            }
+            //break point for close down
+            else if((numberPanelOn && funcPanelOn) && (realHeight < mainPanelOriginSize.Height + funcPanelOriginSize.Height + numberPanelOriginSize.Height + 5))
+            {
+                StandardCalculatorControl.CloseFuncPanel(true);
+                FunctionPanel.Hide();
+            }
+            else if((!numberPanelOn) && funcPanelOn && (realHeight < mainPanelOriginSize.Height + funcPanelOriginSize.Height - 5))
+            {
+                StandardCalculatorControl.CloseFuncPanel(true);
+                FunctionPanel.Hide();
+            }
+            else if((numberPanelOn) && (!funcPanelOn) && (realHeight < mainPanelOriginSize.Height + numberPanelOriginSize.Height - 5))
+            {
+                StandardCalculatorControl.CloseNumberPanel(true);
+                NumberPanel.Hide();
+            }
+            rescaleVertically();
+        }
+        private void breakPointHorizontal()
+        {
+            int realWidth = Width - 18;
+            
+            Size mainPanelOriginSize = new Size(415, 275);
+            Size memoryPanelOriginSize = new Size(275, 999);
+            //memory open
+            if (!memoryPanelOn && (realWidth > mainPanelOriginSize.Width + memoryPanelOriginSize.Width + 5))
+            {
+                MainPanel.Width = mainPanelOriginSize.Width;
+                StandardCalculatorControl.OpenMemoryPanel(true);
+            }
+            else if ((memoryPanelOn) && (realWidth < mainPanelOriginSize.Width + memoryPanelOriginSize.Width - 5))
+            {
+                StandardCalculatorControl.CloseMemoryPanel(true);
+                MemoryPanel.Hide();
+            }
+            rescaleHorizontally();
+        }
+        private void rescaleVertically()
+        {
+            int realHeight = Height - 47;
+
+            Size mainPanelOriginSize = new Size(415, 275);
+            Size funcPanelOriginSize = new Size(415, 160);
+            Size numberPanelOriginSize = new Size(415, 330);
+            //allocating slot and resizing
+            //vertical
+            if (funcPanelOn && !numberPanelOn)
+            {
+                double total = mainPanelOriginSize.Height + funcPanelOriginSize.Height;
+                int heightForMainPanel = Convert.ToInt32((realHeight - 5) * (mainPanelOriginSize.Height / total));
+                int heightForFuncPanel = Convert.ToInt32((realHeight - 5) * (funcPanelOriginSize.Height / total));
+
+                MainPanel.Height = heightForMainPanel;
+                FunctionPanel.Location = new Point(0, MainPanel.Height + 5);
+                FunctionPanel.Height = heightForFuncPanel;
+            }
+            else if (numberPanelOn && !funcPanelOn)
+            {
+                double total = mainPanelOriginSize.Height + numberPanelOriginSize.Height;
+                int heightForMainPanel = Convert.ToInt32((realHeight - 5) * (mainPanelOriginSize.Height / total));
+                int heightForNumberPanel = Convert.ToInt32((realHeight - 5) * (numberPanelOriginSize.Height / total));
+
+                MainPanel.Height = heightForMainPanel;
+                NumberPanel.Location = new Point(0, MainPanel.Height + 5);
+                NumberPanel.Height = heightForNumberPanel;
+            }
+            else if (numberPanelOn && funcPanelOn)
+            {
+                double total = mainPanelOriginSize.Height + numberPanelOriginSize.Height + funcPanelOriginSize.Height;
+                int heightForMainPanel = Convert.ToInt32((realHeight - 5) * (mainPanelOriginSize.Height / total));
+                int heightForFuncPanel = Convert.ToInt32((realHeight - 5) * (funcPanelOriginSize.Height / total));
+                int heightForNumberPanel = Convert.ToInt32((realHeight - 5) * (numberPanelOriginSize.Height / total));
+
+                MainPanel.Height = heightForMainPanel;
+                FunctionPanel.Location = new Point(0, MainPanel.Height + 5);
+                FunctionPanel.Height = heightForFuncPanel;
+
+                NumberPanel.Location = new Point(0, FunctionPanel.Location.Y + FunctionPanel.Height + 5);
+                NumberPanel.Height = heightForNumberPanel;
+            }
+            else
+            {
+                MainPanel.Height = realHeight;
+            }
+        }
+
+        private void StandardCalculator_Layout(object sender, LayoutEventArgs e)
+        {
+            OnSizeChanged(e);
+        }
+        private void rescaleHorizontally()
+        {
+            int realWidth = Width - 18;
+
+            Size mainPanelOriginSize = new Size(415, 275);
+            Size funcPanelOriginSize = new Size(415, 160);
+            Size numberPanelOriginSize = new Size(415, 330);
+            Size memoryPanelOriginSize = new Size(275, 999);
+            if (memoryPanelOn)
+            {
+                double total = mainPanelOriginSize.Width + memoryPanelOriginSize.Width;
+                int widthForMainPanel = Convert.ToInt32((realWidth - 5) * (mainPanelOriginSize.Width / total));
+                int widthForMemoryPanel = Convert.ToInt32((realWidth - 5) * (memoryPanelOriginSize.Width / total));
+
+                MainPanel.Width = widthForMainPanel;
+                MemoryPanel.Location = new Point(MainPanel.Width + 5, 0);
+                MemoryPanel.Width = widthForMemoryPanel;
+            }
+            else
+            {
+                MainPanel.Width = realWidth;
+            }
+        }
         private void CTRL_Del_Click(object sender, EventArgs e)
         {
             StandardCalculatorControl.DeleteContentAtCursor();

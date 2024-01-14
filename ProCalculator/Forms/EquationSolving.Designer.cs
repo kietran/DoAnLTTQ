@@ -35,7 +35,7 @@ namespace ProCalculator
             this.PolyTwoDegreeScreen = new CustomUserControls.RoundedPanel.RoundedPanel();
             this.PolyTwoDegreeLabel2 = new System.Windows.Forms.Label();
             this.roundedPanel4 = new CustomUserControls.RoundedPanel.RoundedPanel();
-            this.PolyTwoDegreeLabel1 = new CustomUserControls.CustomButton.CustomButton();
+            this.PolyTwoDegreeLabel1 = new System.Windows.Forms.Label();
             this.PolyTwoDegreeLabel3 = new System.Windows.Forms.Label();
             this.PolyTwoDegreeResultButton = new CustomUserControls.RoundedButton.RoundedButton();
             this.PolyTwoDegreeTextBox3 = new System.Windows.Forms.TextBox();
@@ -76,7 +76,7 @@ namespace ProCalculator
             this.PolyFourDegreeResult1 = new System.Windows.Forms.TextBox();
             this.PolyFourDegreeResult2 = new System.Windows.Forms.TextBox();
             this.roundedPanel6 = new CustomUserControls.RoundedPanel.RoundedPanel();
-            this.PolyFourDegreeLabel1 = new CustomUserControls.CustomButton.CustomButton();
+            this.PolyFourDegreeLabel1 = new System.Windows.Forms.Label();
             this.PolyFourDegreeLabel2 = new System.Windows.Forms.Label();
             this.PolyFourDegreeLabel3 = new System.Windows.Forms.Label();
             this.PolyFourDegreeLabel4 = new System.Windows.Forms.Label();
@@ -184,7 +184,7 @@ namespace ProCalculator
             this.label3 = new System.Windows.Forms.Label();
             this.PolyThreeDegreeResult1 = new System.Windows.Forms.TextBox();
             this.roundedPanel2 = new CustomUserControls.RoundedPanel.RoundedPanel();
-            this.PolyThreeDegreeLabel1 = new CustomUserControls.CustomButton.CustomButton();
+            this.PolyThreeDegreeLabel1 = new System.Windows.Forms.Label();
             this.PolyThreeDegreeLabel2 = new System.Windows.Forms.Label();
             this.PolyThreeDegreeResultButton = new CustomUserControls.RoundedButton.RoundedButton();
             this.PolyThreeDegreeTextBox4 = new System.Windows.Forms.TextBox();
@@ -277,11 +277,6 @@ namespace ProCalculator
             // PolyTwoDegreeLabel1
             // 
             this.PolyTwoDegreeLabel1.BackColor = System.Drawing.Color.White;
-            this.PolyTwoDegreeLabel1.BackgroundColor = System.Drawing.Color.White;
-            this.PolyTwoDegreeLabel1.BorderColor = System.Drawing.Color.Transparent;
-            this.PolyTwoDegreeLabel1.BorderRadius = 10;
-            this.PolyTwoDegreeLabel1.BorderSize = 1;
-            this.PolyTwoDegreeLabel1.FlatAppearance.BorderSize = 0;
             this.PolyTwoDegreeLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PolyTwoDegreeLabel1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PolyTwoDegreeLabel1.ForeColor = System.Drawing.Color.Black;
@@ -290,8 +285,6 @@ namespace ProCalculator
             this.PolyTwoDegreeLabel1.Size = new System.Drawing.Size(350, 50);
             this.PolyTwoDegreeLabel1.TabIndex = 99;
             this.PolyTwoDegreeLabel1.Text = "Ax²+ Bx + C = 0";
-            this.PolyTwoDegreeLabel1.TextColor = System.Drawing.Color.Black;
-            this.PolyTwoDegreeLabel1.UseVisualStyleBackColor = false;
             // 
             // PolyTwoDegreeLabel3
             // 
@@ -789,11 +782,6 @@ namespace ProCalculator
             // PolyFourDegreeLabel1
             // 
             this.PolyFourDegreeLabel1.BackColor = System.Drawing.Color.White;
-            this.PolyFourDegreeLabel1.BackgroundColor = System.Drawing.Color.White;
-            this.PolyFourDegreeLabel1.BorderColor = System.Drawing.Color.Black;
-            this.PolyFourDegreeLabel1.BorderRadius = 10;
-            this.PolyFourDegreeLabel1.BorderSize = 0;
-            this.PolyFourDegreeLabel1.FlatAppearance.BorderSize = 0;
             this.PolyFourDegreeLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PolyFourDegreeLabel1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PolyFourDegreeLabel1.ForeColor = System.Drawing.Color.Black;
@@ -802,8 +790,6 @@ namespace ProCalculator
             this.PolyFourDegreeLabel1.Size = new System.Drawing.Size(525, 50);
             this.PolyFourDegreeLabel1.TabIndex = 99;
             this.PolyFourDegreeLabel1.Text = "Ax⁴+ Bx³+ Cx²+ Dx + E = 0";
-            this.PolyFourDegreeLabel1.TextColor = System.Drawing.Color.Black;
-            this.PolyFourDegreeLabel1.UseVisualStyleBackColor = false;
             // 
             // PolyFourDegreeLabel2
             // 
@@ -2069,11 +2055,6 @@ namespace ProCalculator
             // PolyThreeDegreeLabel1
             // 
             this.PolyThreeDegreeLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.PolyThreeDegreeLabel1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.PolyThreeDegreeLabel1.BorderColor = System.Drawing.Color.Transparent;
-            this.PolyThreeDegreeLabel1.BorderRadius = 10;
-            this.PolyThreeDegreeLabel1.BorderSize = 1;
-            this.PolyThreeDegreeLabel1.FlatAppearance.BorderSize = 0;
             this.PolyThreeDegreeLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PolyThreeDegreeLabel1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PolyThreeDegreeLabel1.ForeColor = System.Drawing.Color.Black;
@@ -2082,8 +2063,6 @@ namespace ProCalculator
             this.PolyThreeDegreeLabel1.Size = new System.Drawing.Size(350, 50);
             this.PolyThreeDegreeLabel1.TabIndex = 99;
             this.PolyThreeDegreeLabel1.Text = "Ax³+ Bx²+ Cx + D = 0";
-            this.PolyThreeDegreeLabel1.TextColor = System.Drawing.Color.Black;
-            this.PolyThreeDegreeLabel1.UseVisualStyleBackColor = false;
             // 
             // PolyThreeDegreeLabel2
             // 
@@ -2268,7 +2247,7 @@ namespace ProCalculator
         private RoundedButton TwoUnknowsMenu;
         private System.Windows.Forms.Label EquaMenu;
         private RoundedButton FourDegreeMenu;
-        private CustomUserControls.CustomButton.CustomButton PolyTwoDegreeLabel1;
+        private System.Windows.Forms.Label PolyTwoDegreeLabel1;
         private System.Windows.Forms.Label PolyTwoDegreeLabel2;
         private System.Windows.Forms.TextBox PolyTwoDegreeTextBox2;
         private System.Windows.Forms.TextBox PolyTwoDegreeTextBox1;
@@ -2287,7 +2266,7 @@ namespace ProCalculator
         private System.Windows.Forms.Label PolyThreeDegreeLabel5;
         private System.Windows.Forms.Label PolyThreeDegreeLabel3;
         private System.Windows.Forms.Label PolyThreeDegreeLabel2;
-        private CustomUserControls.CustomButton.CustomButton PolyThreeDegreeLabel1;
+        private System.Windows.Forms.Label PolyThreeDegreeLabel1;
         private System.Windows.Forms.TextBox PolyThreeDegreeTextBox4;
         private System.Windows.Forms.Label PolyThreeDegreeLabel6;
         private RoundedPanel PolyFourDegreeScreen;
@@ -2302,7 +2281,7 @@ namespace ProCalculator
         private System.Windows.Forms.Label PolyFourDegreeLabel4;
         private System.Windows.Forms.Label PolyFourDegreeLabel3;
         private System.Windows.Forms.Label PolyFourDegreeLabel2;
-        private CustomUserControls.CustomButton.CustomButton PolyFourDegreeLabel1;
+        private System.Windows.Forms.Label PolyFourDegreeLabel1;
         private System.Windows.Forms.TextBox PolyFourDegreeLTextBox5;
         private System.Windows.Forms.Label PolyFourDegreeLabel5;
         private RoundedPanel EquaTwoUnknowsScreen;
