@@ -31,6 +31,7 @@ namespace ProCalculator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EquationSolving));
             this.NamePageLabel = new System.Windows.Forms.Label();
             this.PolyTwoDegreeScreen = new CustomUserControls.RoundedPanel.RoundedPanel();
             this.PolyTwoDegreeLabel2 = new System.Windows.Forms.Label();
@@ -2196,6 +2197,7 @@ namespace ProCalculator
             this.Controls.Add(this.EquaThreeUnknowsScreen);
             this.Controls.Add(this.PolyThreeDegreeScreen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EquationSolving";
             this.Text = "EquationSolving";
             this.Load += new System.EventHandler(this.EquationSolving_Load);

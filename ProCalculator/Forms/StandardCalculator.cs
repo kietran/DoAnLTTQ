@@ -106,6 +106,7 @@ namespace ProCalculator
             MemoryPanel.Location = new Point(MainPanel.Width - MemoryPanel.Width,0);
 
             FunctionPanel.Hide();
+            MemoryPanel.Hide();
             FormOpenerPanel.Hide();
 
             StandardCalculatorControl.OpenNumberPanel(false);
@@ -1057,6 +1058,10 @@ namespace ProCalculator
         }
         private void StandardCalculator_SizeChanged(object sender, EventArgs e)
         {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                return;
+            }
             FormOpenerPanel.Height = Height - 47;
             MemoryPanel.Height = Height - 47;
             if (disableResponsive)

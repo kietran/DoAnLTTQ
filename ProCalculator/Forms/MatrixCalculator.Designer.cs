@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MatrixCalculator));
             this.StoragePanel_Label = new System.Windows.Forms.Label();
             this.StoreMatrixLabel = new System.Windows.Forms.Label();
             this.ChooseWhereToSaveComboBox = new System.Windows.Forms.ComboBox();
@@ -490,6 +491,7 @@
             this.Controls.Add(this.StoragePanel);
             this.Controls.Add(this.WorkingPanel);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(703, 805);
