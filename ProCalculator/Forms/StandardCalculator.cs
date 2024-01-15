@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProCalculator
 {
@@ -120,6 +121,14 @@ namespace ProCalculator
         }
         private void initInputTextbox()
         {
+            /*
+            MainPanel_InputTextBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            MainPanel_InputTextBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection src = new AutoCompleteStringCollection();
+            src.AddRange(Expression_Helper.FunctionHeaders.ToArray());
+            
+            MainPanel_InputTextBox.AutoCompleteCustomSource = src;
+            */
             MainPanel_InputTextBox.Click += (sender, args) =>
             {
                 MainPanel_InputTextBox.CurrentCursorPosition = MainPanel_InputTextBox.SelectionStart;

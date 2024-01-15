@@ -12,6 +12,7 @@ using CustomUserControls.MatrixOnDisplay;
 using CustomUserControls.ResultLogComponent;
 using ProCalculator.ClassLibraries;
 using ProCalculator.ClassLibraries;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProCalculator
 {
@@ -53,7 +54,21 @@ namespace ProCalculator
             typeof(Panel).InvokeMember("DoubleBuffered", System.Reflection.BindingFlags.SetProperty
                           | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic, null,
                           ResultPanel_ScrollPanel, new object[] { true });
+
+            initKeyboard();
             DoubleBuffered = true;
+        }
+        private void initKeyboard()
+        {
+            InputPanel_InputTextbox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            InputPanel_InputTextbox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection col = new AutoCompleteStringCollection();
+            col.Add("rref");
+            col.Add("rank");
+            col.Add("inv");
+            col.Add("trans");
+            col.Add("det");
+            InputPanel_InputTextbox.AutoCompleteCustomSource = col;
         }
         private void MatrixCalculator_Load(object sender, EventArgs e)
         {

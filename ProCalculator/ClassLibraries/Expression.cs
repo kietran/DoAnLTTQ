@@ -4,7 +4,7 @@ using System;
 
 partial class Math
 {
-    public static long GCD(long a, long b)
+    public static long gcd(long a, long b)
     {
         while (b != 0)
         {
@@ -14,7 +14,7 @@ partial class Math
         }
         return a;
     }
-    public static long LCM(long x, long y)
+    public static long lcm(long x, long y)
     {
         long a;
         // a is greater number
@@ -92,7 +92,7 @@ class Expression_Helper
 
                 "abs", "fact",
 
-                "GCD", "LCM",
+                "gcd", "lcm",
 
                 "NOT","~",
 
@@ -188,7 +188,7 @@ class Expression_Helper
     }
     static public int getNumberOfOperands(string functionHeader)
     {
-        if (functionHeader == "GCD" || functionHeader == "LCM" || functionHeader == "log" || functionHeader == "poly" || functionHeader == "comb")
+        if (functionHeader == "gcd" || functionHeader == "lcm" || functionHeader == "log" || functionHeader == "poly" || functionHeader == "comb")
         {
             return 2;
         }
@@ -446,11 +446,11 @@ class FunctionNode : BaseNode
                 soFarSoGood = false;
                 return -1;
             }
-            if (functionHeader == "GCD")
+            if (functionHeader == "gcd")
             {
-                return Math.GCD(iResult1, iResult2);
+                return Math.gcd(iResult1, iResult2);
             }
-            else if (functionHeader == "LCM")
+            else if (functionHeader == "lcm")
             {
                 if (iResult1 != result1 || (int)result2 != result2)
                 {
@@ -458,7 +458,7 @@ class FunctionNode : BaseNode
                 }
                 else
                 {
-                    return Math.LCM(iResult1, iResult2);
+                    return Math.lcm(iResult1, iResult2);
                 }
             }
             else if (functionHeader == "poly")

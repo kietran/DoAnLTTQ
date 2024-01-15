@@ -248,8 +248,8 @@ namespace MatrixExpression
             }
 
             // Applying Gauss-Jordan elimination
-            double det = Det(a, ref succeeded, ref errorMessage);
-            if (det == 0)
+            double d = det(a, ref succeeded, ref errorMessage);
+            if (d == 0)
             {
                 succeeded = false;
                 errorMessage = "The matrix is singular//Its determinant is 0, the matrix is not invertible.";
@@ -348,9 +348,56 @@ namespace MatrixExpression
             }
             return result;
         }
+        static public int Rank(MyMatrix _matrix)
+        {
+            int rank = 0;
+            int _row = _matrix._row;
+            int _col = _matrix._col;
+            MyMatrix tempMatrix = new MyMatrix(_matrix);
 
+            for (int i = 0; i < _col; i++)
+            {
+                // Find the pivot row
+                int pivotRow = rank;
+                while (pivotRow < _row && tempMatrix._matrix[pivotRow, i] == 0)
+                {
+                    pivotRow++;
+                }
+
+                if (pivotRow == _row)
+                {
+                    // No pivot element in this column, move to the next column
+                    continue;
+                }
+
+                // Swap rows to make the pivot element non-zero
+                for (int j = 0; j < _col; j++)
+                {
+                    double temp = tempMatrix._matrix[rank, j];
+                    tempMatrix._matrix[rank, j] = tempMatrix._matrix[pivotRow, j];
+                    tempMatrix._matrix[pivotRow, j] = temp;
+                }
+
+                // Make other elements in the column zero
+                for (int j = 0; j < _row; j++)
+                {
+                    if (j != rank)
+                    {
+                        double factor = tempMatrix._matrix[j, i] / tempMatrix._matrix[rank, i];
+                        for (int k = 0; k < _col; k++)
+                        {
+                            tempMatrix._matrix[j, k] -= factor * tempMatrix._matrix[rank, k];
+                        }
+                    }
+                }
+
+                rank++;
+            }
+
+            return rank;
+        }
         //correct
-        static public double Det(MyMatrix a, ref bool succeeded, ref string errorMessage)
+        static public double det(MyMatrix a, ref bool succeeded, ref string errorMessage)
         {
             if (a == null)
             {
@@ -448,7 +495,7 @@ namespace MatrixExpression
 
                 "poly","comb",
 
-                "Inv", "RREF", "Det", "Trans"
+                "inv", "rref", "det", "trans", "rank"
            };
             MatrixSymbols = new List<string> { "A", "B", "C", "D", "E", "F", "G", "H" };
             List<string> Prior1 = new List<string>()
@@ -874,7 +921,7 @@ namespace MatrixExpression {
                 }
 
                 //MyMatrix case
-                if (functionHeader == "Inv")
+                if (functionHeader == "inv")
                 {
                     if (!result.type)
                     {
@@ -883,11 +930,11 @@ namespace MatrixExpression {
                     else
                     {
                         soFarSoGood = false;
-                        errorMessage = "Inverse is for MyMatrix only";
+                        errorMessage = "Inverse is for matrix only";
                     }
 
                 }
-                else if (functionHeader == "RREF")
+                else if (functionHeader == "rref")
                 {
                     if (!result.type)
                     {
@@ -901,21 +948,21 @@ namespace MatrixExpression {
                     }
 
                 }
-                else if (functionHeader == "Det")
+                else if (functionHeader == "det")
                 {
                     if (!result.type)
                     {
-                        result.number_val = MatrixMath.Det(result.matrix_val, ref soFarSoGood, ref errorMessage);
+                        result.number_val = MatrixMath.det(result.matrix_val, ref soFarSoGood, ref errorMessage);
                         result.type = true;
                     }
                     else
                     {
                         soFarSoGood = false;
-                        errorMessage = "Determina is for MyMatrix only";
+                        errorMessage = "Determinant is for matrix only";
                     }
 
                 }
-                else if (functionHeader == "Trans")
+                else if (functionHeader == "trans")
                 {
                     if (!result.type)
                     {
@@ -924,7 +971,20 @@ namespace MatrixExpression {
                     else
                     {
                         soFarSoGood = false;
-                        errorMessage = "Transpose is for MyMatrix only";
+                        errorMessage = "Transpose is for matrix only";
+                    }
+                }
+                else if (functionHeader == "rank")
+                {
+                    if (!result.type)
+                    {
+                        result.number_val = MatrixMath.Rank(result.matrix_val);
+                        result.type = true;
+                    }
+                    else
+                    {
+                        soFarSoGood = false;
+                        errorMessage = "Rank is for matrix only";
                     }
                 }
                 if (soFarSoGood)
@@ -935,6 +995,7 @@ namespace MatrixExpression {
                 {
                     return null;
                 }
+
             }
             else if (numberOfChild == 2)
             {
