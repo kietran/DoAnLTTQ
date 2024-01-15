@@ -529,7 +529,7 @@ namespace CustomUserControls.MatrixOnDisplay
             {
                 for(int j =0; j < col; j++)
                 {
-                    textBoxMatrix[i,j].Text = System.Math.Round(matrix._matrix[i,j],3).ToString();
+                    textBoxMatrix[i,j].Text = System.Math.Round(matrix._matrix[i,j],6).ToString();
                 }
             }
             showSectionOfTextboxes(row, col);

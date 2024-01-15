@@ -170,7 +170,7 @@
             this.Creating.Location = new System.Drawing.Point(0, 0);
             this.Creating.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Creating.Name = "Creating";
-            this.Creating.Size = new System.Drawing.Size(175, 39);
+            this.Creating.Size = new System.Drawing.Size(204, 39);
             this.Creating.TabIndex = 120;
             this.Creating.Text = "Creating/Updating";
             this.Creating.UseVisualStyleBackColor = false;
@@ -180,7 +180,7 @@
             // 
             this.Calculating.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Calculating.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calculating.Location = new System.Drawing.Point(169, 0);
+            this.Calculating.Location = new System.Drawing.Point(190, 0);
             this.Calculating.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Calculating.Name = "Calculating";
             this.Calculating.Size = new System.Drawing.Size(175, 39);

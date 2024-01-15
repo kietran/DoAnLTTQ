@@ -16,6 +16,7 @@ namespace ProCalculator
     //insert + panel open/close
     internal partial class StandardCalculatorControl
     {
+        
         static private StandardCalculator form1;
         
         static public void Init(StandardCalculator f)
@@ -570,7 +571,16 @@ namespace ProCalculator
                 TurnOnDisplayInvalidResultMode(errorMessage);
                 return false;
             }
-            string text = result.ToString();
+            string text;
+            if (result > System.Math.Pow(10, 18)){
+                text = "A very large number...";
+            }
+            else
+            {
+                result = System.Math.Round(result, 10);
+                text = result.ToString();
+            }     
+
             form1.MainPanel_OutputTextbox.Text = text;
             form1.ans = text;
             AddToMemoryPanel(input, text.ToString());
@@ -689,7 +699,7 @@ namespace ProCalculator
             comp.Click += (sender, arg) =>
             {
                 MemoryBlock lb = sender as MemoryBlock;             
-                DialogResult r = MessageBox.Show("Load from memory?", "Load from memory", MessageBoxButtons.YesNo);
+                DialogResult r = MessageBox.Show("Load from memory?", "Load from memory", MessageBoxButtons.YesNoCancel);
                 if(r == DialogResult.Yes)
                 {
                     ClearCalculatorScreen();
@@ -745,12 +755,7 @@ namespace ProCalculator
         {
             Tuple<string, string> inputOutput = new Tuple<string, string>(input, output);
             MemoryBlock comp = new MemoryBlock();
-            if (form1.darkModeOn)
-            {
-                comp.Input.ForeColor = Color.WhiteSmoke;
-                comp.Output.ForeColor = Color.White;
-                comp.BorderColor = Color.WhiteSmoke;
-            }
+
             comp.Width = form1.MemoryPanel.Width - 5;
             form1.MemoryPanel.Controls.Add(comp);
             //Display om-screen memory block
@@ -762,11 +767,18 @@ namespace ProCalculator
             history.Add(inputOutput);
             AddRoundedPanelsToList(comp);
 
-            //
             MemoryBlock block = memoryBlocks[memoryBlocks.Count - 1];
             //block.Visible = true;
             block.Controls[0].Text = inputString;
             block.Controls[1].Text = outputString;
+
+            if (form1.darkModeOn)
+            {
+                comp.Output.ForeColor = Color.White;
+                comp.BorderColor = Color.WhiteSmoke;             
+            }
+            comp.Input.ForeColor = Color.Gray;
+            comp.Output.BackColor = form1.BackColor;
         }
         static public void ClearMemory()
         {
@@ -781,8 +793,8 @@ namespace ProCalculator
         {
             for(int i = 0;i < memoryBlocks.Count; i++)
             {
-                memoryBlocks[i].Input.ForeColor = Color.WhiteSmoke;
                 memoryBlocks[i].Output.ForeColor = Color.White;
+                memoryBlocks[i].Output.BackColor = form1.BackColor;
                 memoryBlocks[i].BorderColor = Color.WhiteSmoke;
             }
         }
@@ -790,8 +802,8 @@ namespace ProCalculator
         {
             for (int i = 0; i < memoryBlocks.Count; i++)
             {
-                memoryBlocks[i].Input.ForeColor = Color.DimGray;
                 memoryBlocks[i].Output.ForeColor = Color.Black;
+                memoryBlocks[i].Output.BackColor = form1.BackColor;
                 memoryBlocks[i].BorderColor = Color.Gray;
             }
         }
@@ -800,8 +812,6 @@ namespace ProCalculator
             for (int i = 0; i < memoryBlocks.Count; i++)
             {
                 memoryBlocks[i].Width = form1.MemoryPanel.Width - 5;
-                memoryBlocks[i].Output.ForeColor = Color.Black;
-                memoryBlocks[i].BorderColor = Color.Gainsboro;
             }
         }
     }

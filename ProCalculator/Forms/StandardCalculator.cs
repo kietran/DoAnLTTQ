@@ -731,7 +731,7 @@ namespace ProCalculator
         {
             if (!onINVMode)
             {
-                StandardCalculatorControl.InsertContentAtCursor("√");
+                StandardCalculatorControl.InsertContentAtCursor("√(");
             }
             else
             {

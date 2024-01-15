@@ -13,7 +13,8 @@ namespace CustomUserControls.MemoryBlock
     partial class MemoryBlock : RoundedPanel.RoundedPanel
     {
         //main panel -- inherited from panel;
-        private Label _input, _output;
+        private Label _input;
+        private TextBox _output;
         //quit button;
         public Label quitButton;
         //built in index
@@ -30,7 +31,7 @@ namespace CustomUserControls.MemoryBlock
             }
         }
 
-        public Label Output
+        public TextBox Output
         {
             get { return _output; }
             set
@@ -54,15 +55,15 @@ namespace CustomUserControls.MemoryBlock
             }
         }
 
-
         public MemoryBlock()
         {
             DoubleBuffered = true;
             Input = new Label();
-            Output = new Label();
+            Output = new TextBox();
 
             quitButton = new Label();
 
+            Input.Location = new Point(10, 0);
             Input.Size = new Size(245, 30);
             Input.Font = new Font("Comic Sans MS", 12F);
             Input.BackColor = Color.Transparent;
@@ -84,10 +85,14 @@ namespace CustomUserControls.MemoryBlock
             {
                 OnClick(e);
             };
-            Output.Size = new Size(245, 30);
+            Output.Location = new Point(10, 30);
+            Output.AutoSize = false;
+            Output.Size = new Size(245, 28);         
+
             Output.Font = new Font("Comic Sans MS", 14F);
-            Output.BackColor = Color.Transparent;
-            Output.TextAlign = ContentAlignment.MiddleRight;
+            Output.TextAlign = HorizontalAlignment.Right;
+            Output.BorderStyle = BorderStyle.None;
+            Output.ReadOnly = true;
             Output.MouseEnter += (Sender, e) =>
             {
                 quitButton.Show();
@@ -100,13 +105,17 @@ namespace CustomUserControls.MemoryBlock
             {
                 OnMouseLeave(e);
             };
-            Output.SizeChanged += (Sender, args) =>
+            Output.TextChanged += (Sender, args) =>
             {
-                if (Output.Parent.Width > Output.Width)
-                    Output.TextAlign = ContentAlignment.MiddleLeft;
+                Graphics g = this.CreateGraphics();
+                int textLength = (int)g.MeasureString(Output.Text, Output.Font).Width;
+                if (textLength > Output.Width) {
+                    Output.TextAlign = HorizontalAlignment.Left;
+                }
                 else
                 {
-                    Output.TextAlign = ContentAlignment.MiddleRight;
+                    Output.Width = Width - 25;
+                    Output.TextAlign = HorizontalAlignment.Right;
                 }
             };
             Output.Click += (Sender, e) =>
@@ -164,8 +173,7 @@ namespace CustomUserControls.MemoryBlock
             InteriorColor = Color.Transparent;
             BorderWidth = 1;
             ArcSize = 5;
-            BorderColor = Color.Gainsboro;
-            alignContentInMiddle();
+            BorderColor = Color.Gray;
             quitButton.Visible = false;
         }
         protected override void OnBackColorChanged(EventArgs e)
@@ -182,27 +190,10 @@ namespace CustomUserControls.MemoryBlock
         {
             base.OnSizeChanged(e);
             quitButton.Location = new Point(Width - 20, 0);
-            alignContentInMiddle();
-        }
-    }
-
-    partial class MemoryBlock : RoundedPanel.RoundedPanel
-    {
-        private void alignContentInMiddle()
-        {
-            //position text in middle
-            int InputStartPointX = 10;
-            int OutputStartPointX = 10;
-
-
-            Input.Location = new Point(InputStartPointX, 0);
-            Output.Location = new Point(OutputStartPointX, (Height - Input.Height - 3));
 
             Input.Width = Width - 25;
             Output.Width = Width - 25;
-            Output.TextAlign = ContentAlignment.MiddleRight;
         }
-
     }
 
 }
